@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page restore.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/administrator/components/com_joomlaupdate/restore.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|									<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Akeeba Restore  A JSON-powered JPA, JPS and ZIP archive extraction library</p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> 2010-2012 Nicholas K. Dionysopoulos / AkeebaBackup.com</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> GNU</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|										<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/Akeeba_Services_JSON.html">Akeeba_Services_JSON</a>
+					</td>
+					<td>
+											Converts to and from JSON format.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/Akeeba_Services_JSON_Error.html">Akeeba_Services_JSON_Error</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a>
+					</td>
+					<td>
+											The base class of Akeeba Engine objects. Allows for error and warnings logging  and propagation. Largely based on the Joomla! 1.5 JObject class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../akeebabackup/kickstart/AKAbstractPostproc.html">AKAbstractPostproc</a>
+					</td>
+					<td>
+											File post processor engines base class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html">AKAbstractUnarchiver</a>
+					</td>
+					<td>
+											The base class of unarchiver classes
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../akeebabackup/kickstart/AKAbstractPart.html">AKAbstractPart</a>
+					</td>
+					<td>
+											The superclass of all Akeeba Kickstart parts. The &quot;parts&quot; are intelligent stateful
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../akeebabackup/kickstart/AKAbstractPartObserver.html">AKAbstractPartObserver</a>
+					</td>
+					<td>
+											Descendants of this class can be used in the unarchiver's observer methods (attach, detach and notify)
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKPostprocDirect.html">AKPostprocDirect</a>
+					</td>
+					<td>
+											Direct file writer
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKPostprocFTP.html">AKPostprocFTP</a>
+					</td>
+					<td>
+											FTP file writer
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html">AKUnarchiverJPA</a>
+					</td>
+					<td>
+											JPA archive extraction class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKUnarchiverZIP.html">AKUnarchiverZIP</a>
+					</td>
+					<td>
+											ZIP archive extraction class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKCoreTimer.html">AKCoreTimer</a>
+					</td>
+					<td>
+											Timer class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKUnarchiverJPS.html">AKUnarchiverJPS</a>
+					</td>
+					<td>
+											JPS archive extraction class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKUtilsLister.html">AKUtilsLister</a>
+					</td>
+					<td>
+											A filesystem scanner which uses opendir()
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKText.html">AKText</a>
+					</td>
+					<td>
+											A simple INI-based i18n engine
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKFactory.html">AKFactory</a>
+					</td>
+					<td>
+											The Akeeba Kickstart Factory class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/AKEncryptionAES.html">AKEncryptionAES</a>
+					</td>
+					<td>
+											AES implementation in PHP (c) Chris Veness 2005-2011
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../akeebabackup/kickstart/RestorationObserver.html">RestorationObserver</a>
+					</td>
+					<td>
+											Descendants of this class can be used in the unarchiver's observer methods (attach, detach and notify)
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|									<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineAK_STATE_DATA"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">AK_STATE_DATA</span> = 2
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a18">18</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAK_STATE_DATAREAD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">AK_STATE_DATAREAD</span> = 3
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a19">19</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAK_STATE_DONE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">AK_STATE_DONE</span> = 5
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a21">21</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAK_STATE_HEADER"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">AK_STATE_HEADER</span> = 1
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a17">17</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAK_STATE_NOFILE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">AK_STATE_NOFILE</span> = 0
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a16">16</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAK_STATE_POSTPROC"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">AK_STATE_POSTPROC</span> = 4
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a20">20</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineDS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">DS</span> = DIRECTORY_SEPARATOR
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a13">13</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineJSON_FORCE_OBJECT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">JSON_FORCE_OBJECT</span> = 1
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a147">147</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts to and from JSON format.</p>
+<p class="description"><p>JSON (JavaScript Object Notation) is a lightweight data-interchange  format. It is easy for humans to read and write. It is easy for machines  to parse and generate. It is based on a subset of the JavaScript  Programming Language, Standard ECMA-262 3rd Edition - December 1999.  This feature can also be found in  Python. JSON is a text format that is  completely language independent but uses conventions that are familiar  to programmers of the C-family of languages, including C, C++, C#, Java,  JavaScript, Perl, TCL, and many others. These properties make JSON an  ideal data-interchange language.</p><p>This package provides a simple encoder and decoder for JSON notation. It  is intended for use with client-side Javascript applications that make  use of HTTPRequest to perform server communication functions - data can  be encoded into JSON notation for use in a client-side javascript, or  decoded from incoming Javascript requests. JSON format is native to  Javascript, and can be directly eval()'ed with no further parsing  overhead</p><p>All strings should be in ASCII or UTF-8 format!</p><p>LICENSE: Redistribution and use in source and binary forms, with or  without modification, are permitted provided that the following  conditions are met: Redistributions of source code must retain the  above copyright notice, this list of conditions and the following  disclaimer. Redistributions in binary form must reproduce the above  copyright notice, this list of conditions and the following disclaimer  in the documentation and/or other materials provided with the  distribution.</p><p>THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN  NO EVENT SHALL CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS  OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH  DAMAGE.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Brett Stimmerman &lt;<a href="mailto:brettstimmerman[at]gmail[dot]com">brettstimmerman[at]gmail[dot]com</a>&gt;</li>
+				<li><span class="field">author:</span> Michal Migurski &lt;<a href="mailto:mike-json@teczno.com">mike-json@teczno.com</a>&gt;</li>
+				<li><span class="field">author:</span> Matt Knapp &lt;<a href="mailto:mdknapp[at]gmail[dot]com">mdknapp[at]gmail[dot]com</a>&gt;</li>
+				<li><span class="field">version:</span> CVS: $Id: restore.php 612 2011-05-19 08:26:26Z nikosdion $</li>
+				<li><span class="field">copyright:</span> 2005 Michal Migurski</li>
+				<li><span class="field">link:</span> <a href="http://pear.php.net/pepr/pepr-proposal-show.php?id=198">http://pear.php.net/pepr/pepr-proposal-show.php?id=198</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/bsd-license.php">http://www.opensource.org/licenses/bsd-license.php</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_IN_ARR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_IN_ARR</span> = 3
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a165">165</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Marker constant for Services_JSON::decode(), used to flag stack state</p>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_IN_CMT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_IN_CMT</span> = 5
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a175">175</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Marker constant for Services_JSON::decode(), used to flag stack state</p>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_IN_OBJ"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_IN_OBJ</span> = 4
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a170">170</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Marker constant for Services_JSON::decode(), used to flag stack state</p>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_IN_STR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_IN_STR</span> = 2
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a160">160</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Marker constant for Services_JSON::decode(), used to flag stack state</p>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_LOOSE_TYPE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_LOOSE_TYPE</span> = 16
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a180">180</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Behavior switch for Services_JSON::decode()</p>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_SLICE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_SLICE</span> = 1
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a155">155</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Marker constant for Services_JSON::decode(), used to flag stack state</p>
+	
+		
+</div>
+<a name="defineSERVICES_JSON_SUPPRESS_ERRORS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SERVICES_JSON_SUPPRESS_ERRORS</span> = 32
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a185">185</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Behavior switch for Services_JSON::decode()</p>
+	
+		
+</div>
+<a name="define_AKEEBA_IS_WINDOWS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_AKEEBA_IS_WINDOWS</span> = stristr(php_uname(),'windows')
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a27">27</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="define_AKEEBA_RESTORATION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">_AKEEBA_RESTORATION</span> = 1
+			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a12">12</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|													<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionakstringlen" id="functionakstringlen"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">akstringlen</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a51">51</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			akstringlen
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionfnmatch" id="functionfnmatch"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">fnmatch</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a41">41</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fnmatch
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$pattern</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pattern</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiongetQueryParam" id="functiongetQueryParam"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">getQueryParam</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a61">61</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a query parameter from GET or POST data</p>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getQueryParam
+		</span>
+					(<span class="var-type">$key</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">$default</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$key</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">$default</span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionjson_decode" id="functionjson_decode"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">json_decode</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a894">894</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			json_decode
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$assoc</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assoc</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionjson_encode" id="functionjson_encode"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">json_encode</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a884">884</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			json_encode
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionmasterSetup" id="functionmasterSetup"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">masterSetup</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a5394">5394</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The Master Setup will read the configuration parameters from restoration.php, abiautomation.ini, or  the JSON-encoded &quot;configuration&quot; input variable and return the status.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the master configuration was applied to the Factory object</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			masterSetup
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionrecursive_remove_directory" id="functionrecursive_remove_directory"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">recursive_remove_directory</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a5691">5691</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			recursive_remove_directory
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:37:27 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

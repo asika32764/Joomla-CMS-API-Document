@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JDatabaseFactory</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JDatabaseFactory</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla Platform Database Factory class</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---database---factory.php.html">/libraries/joomla/database/factory.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseFactory.html">JDatabaseFactory</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#setInstance" title="details" class="method-name">setInstance</a>
+											([<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseFactory.html">JDatabaseFactory</a></span>&nbsp;<span class="var-name">$instance</span> = <span class="var-default">null</span>])
+									</div>
+																			
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+										<a href="#getDriver" title="details" class="method-name">getDriver</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'mysqli'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseExporter.html">JDatabaseExporter</a></span>
+										<a href="#getExporter" title="details" class="method-name">getExporter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseImporter.html">JDatabaseImporter</a></span>
+										<a href="#getImporter" title="details" class="method-name">getImporter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#getQuery" title="details" class="method-name">getQuery</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+									</div>
+																			</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a148">148</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets an instance of the factory object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseFactory.html">JDatabaseFactory</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetInstance" id="setInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static setInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a188">188</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets an instance of a factory object to return on subsequent calls of getInstance.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			setInstance
+		</span>
+					([<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseFactory.html">JDatabaseFactory</a></span>&nbsp;<span class="var-name">$instance</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseFactory.html">JDatabaseFactory</a></span>
+				<span class="var-name">$instance</span><span class="var-description">: A JDatabaseFactory object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDriver" id="getDriver"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDriver</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a46">46</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a JDatabaseDriver instance based on the given options. There are three global options and then  the rest are specific to the database driver. The 'database' option determines which database is to  be used for the connection. The 'select' option determines whether the connector should automatically select  the chosen database.</p>
+<p class="description"><p>Instances are unique to the given options and new objects are only created when a unique options array is  passed into the method.  This ensures that we don't end up with unnecessary database connection resources.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A database driver object.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+		<span class="method-name">
+			getDriver
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'mysqli'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the database driver you'd like to instantiate</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Parameters to be passed to the database driver.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExporter" id="getExporter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getExporter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a86">86</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets an exporter class object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An exporter object.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseExporter.html">JDatabaseExporter</a></span>
+		<span class="method-name">
+			getExporter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the driver you want an exporter for.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: Optional JDatabaseDriver instance</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetImporter" id="getImporter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getImporter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets an importer class object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An importer object.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseImporter.html">JDatabaseImporter</a></span>
+		<span class="method-name">
+			getImporter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the driver you want an importer for.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: Optional JDatabaseDriver instance</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetQuery" id="getQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasefactory.php.html#a164">164</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the current query object or a new JDatabaseQuery object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current query object or a new object extending the JDatabaseQuery class.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			getQuery
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the driver you want an query object for.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: Optional JDatabaseDriver instance</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:30:19 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

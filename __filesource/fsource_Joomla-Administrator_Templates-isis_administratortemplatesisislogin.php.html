@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for login.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file login.php</h1>
+<p>Documentation is available at <a href="../Joomla-Administrator/Templates-isis/_administrator---templates---isis---login.php.html">login.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Administrator</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;Templates.isis</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE.txt</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'_JEXEC'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-var">$app&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetApplication">getApplication</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-var">$doc&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetDocument">getDocument</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-var">$lang&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetLanguage">getLanguage</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">//&nbsp;Add&nbsp;JavaScript&nbsp;Frameworks</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'bootstrap.framework'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'bootstrap.tooltip'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-comm">//&nbsp;Add&nbsp;Stylesheets</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-var">$doc</span><span class="src-sym">-&gt;</span><span class="src-id">addStyleSheet</span><span class="src-sym">(</span><span class="src-str">'templates/'&nbsp;</span>.<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">template</span>.&nbsp;<span class="src-str">'/css/template.css'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-comm">//&nbsp;Load&nbsp;optional&nbsp;RTL&nbsp;Bootstrap&nbsp;CSS</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'bootstrap.loadCss'</span><span class="src-sym">,&nbsp;</span><span class="src-id">false</span><span class="src-sym">,&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">direction</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">//&nbsp;Load&nbsp;specific&nbsp;language&nbsp;related&nbsp;CSS</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-var">$file&nbsp;</span>=&nbsp;<span class="src-str">'language/'&nbsp;</span>.&nbsp;<span class="src-var">$lang</span><span class="src-sym">-&gt;</span><span class="src-id">getTag</span><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/'&nbsp;</span>.&nbsp;<span class="src-var">$lang</span><span class="src-sym">-&gt;</span><span class="src-id">getTag</span><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'.css'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_file">is_file</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$doc</span><span class="src-sym">-&gt;</span><span class="src-id">addStyleSheet</span><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-comm">//&nbsp;Detecting&nbsp;Active&nbsp;Variables</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-var">$option&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">input</span><span class="src-sym">-&gt;</span><span class="src-id">getCmd</span><span class="src-sym">(</span><span class="src-str">'option'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-var">$view&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">input</span><span class="src-sym">-&gt;</span><span class="src-id">getCmd</span><span class="src-sym">(</span><span class="src-str">'view'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-var">$layout&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">input</span><span class="src-sym">-&gt;</span><span class="src-id">getCmd</span><span class="src-sym">(</span><span class="src-str">'layout'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-var">$task&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">input</span><span class="src-sym">-&gt;</span><span class="src-id">getCmd</span><span class="src-sym">(</span><span class="src-str">'task'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-var">$itemid&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">input</span><span class="src-sym">-&gt;</span><span class="src-id">getCmd</span><span class="src-sym">(</span><span class="src-str">'Itemid'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-var">$sitename&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">getCfg</span><span class="src-sym">(</span><span class="src-str">'sitename'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-comm">//&nbsp;Check&nbsp;if&nbsp;debug&nbsp;is&nbsp;on</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-var">$config&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetConfig">getConfig</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-var">$debug&nbsp;&nbsp;</span>=&nbsp;(boolean)&nbsp;<span class="src-var">$config</span><span class="src-sym">-&gt;</span><span class="src-id">get</span><span class="src-sym">(</span><span class="src-str">'debug'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&lt;!DOCTYPE&nbsp;html&gt;</div></li>
+<li><div class="src-line"><a name="a46"></a>&lt;html&nbsp;xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&nbsp;xml:lang=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">language</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>&quot;&nbsp;lang=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">language</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>&quot;&nbsp;dir=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">direction</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>&quot;&nbsp;&gt;</div></li>
+<li><div class="src-line"><a name="a47"></a>&lt;head&gt;</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;width=device-width,&nbsp;initial-scale=1.0&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;http-equiv=&quot;X-UA-Compatible&quot;&nbsp;content=&quot;IE=edge&quot;&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;jdoc:include&nbsp;type=&quot;head&quot;&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.addEvent('domready',&nbsp;function&nbsp;()</div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('form-login').username.select();</div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('form-login').username.focus();</div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;Responsive&nbsp;Styles&nbsp;*/</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@media&nbsp;(max-width:&nbsp;480px)&nbsp;{</div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.view-login&nbsp;.container&nbsp;{</div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;-170px;</div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.btn&nbsp;{</div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;13px;</div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;4px&nbsp;10px&nbsp;4px;</div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$debug</span><span class="src-sym">)&nbsp;</span>:&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.view-login&nbsp;.container&nbsp;{</div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;static;</div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;20px;</div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-left:&nbsp;auto;</div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin-right:&nbsp;auto;</div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.view-login&nbsp;.navbar-fixed-bottom&nbsp;{</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;none;</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php&nbsp;</span><span class="src-key">endif</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--[if&nbsp;lt&nbsp;IE&nbsp;9]&gt;</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;../media/jui/js/html5.js&quot;&gt;&lt;/script&gt;</div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;![endif]--&gt;</div></li>
+<li><div class="src-line"><a name="a84"></a>&lt;/head&gt;</div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a86"></a>&lt;body&nbsp;class=&quot;site&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$option&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;view-&quot;&nbsp;</span>.&nbsp;<span class="src-var">$view&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;layout-&quot;&nbsp;</span>.&nbsp;<span class="src-var">$layout&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;task-&quot;&nbsp;</span>.&nbsp;<span class="src-var">$task&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;itemid-&quot;&nbsp;</span>.&nbsp;<span class="src-var">$itemid&nbsp;</span>.&nbsp;<span class="src-str">&quot;&nbsp;&quot;</span><span class="src-sym">;</span><span class="src-php">?&gt;</span>&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Container&nbsp;--&gt;</div></li>
+<li><div class="src-line"><a name="a88"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;container&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a89"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;id=&quot;content&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a90"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Begin&nbsp;Content&nbsp;--&gt;</div></li>
+<li><div class="src-line"><a name="a91"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;id=&quot;element-box&quot;&nbsp;class=&quot;login&nbsp;well&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">baseurl</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>/templates/<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">template&nbsp;</span><span class="src-php">?&gt;</span>/images/joomla.png&quot;&nbsp;alt=&quot;Joomla!&quot;&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;jdoc:include&nbsp;type=&quot;message&quot;&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;jdoc:include&nbsp;type=&quot;component&quot;&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;noscript&gt;</div></li>
+<li><div class="src-line"><a name="a98"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'JGLOBAL_WARNJAVASCRIPT'</span><span class="src-sym">)&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/noscript&gt;</div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;End&nbsp;Content&nbsp;--&gt;</div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;navbar&nbsp;navbar-fixed-bottom&nbsp;hidden-phone&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;pull-right&quot;&gt;&amp;copy;&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$sitename</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;&nbsp;</span><span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<a href="../Joomla-Libraries/HTML/_libraries---cms---html---html.php.html#functiondate">date</a><span class="src-sym">(</span><span class="src-str">'Y'</span><span class="src-sym">)</span><span class="src-sym">;</span><span class="src-php">?&gt;</span>&lt;/p&gt;</div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;login-joomla&quot;&nbsp;href=&quot;http://www.joomla.org&quot;&nbsp;class=&quot;hasTooltip&quot;&nbsp;title=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><span class="src-id">tooltipText</span><span class="src-sym">(</span><span class="src-str">'TPL_ISIS_ISFREESOFTWARE'</span><span class="src-sym">)</span><span class="src-sym">;</span><span class="src-php">?&gt;</span>&quot;&gt;Joomla!&amp;#174;&lt;/a&gt;</div></li>
+<li><div class="src-line"><a name="a106"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Joomla-Platform/Uri/JUri.html">JUri</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Uri/JUri.html#methodroot">root</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-php">?&gt;</span>&quot;&nbsp;class=&quot;pull-left&quot;&gt;&lt;i&nbsp;class=&quot;icon-share&nbsp;icon-white&quot;&gt;&lt;/i&gt;&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'COM_LOGIN_RETURN_TO_SITE_HOME_PAGE'</span><span class="src-sym">)&nbsp;</span><span class="src-php">?&gt;</span>&lt;/a&gt;</div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;jdoc:include&nbsp;type=&quot;modules&quot;&nbsp;name=&quot;debug&quot;&nbsp;style=&quot;none&quot;&nbsp;/&gt;</div></li>
+<li><div class="src-line"><a name="a109"></a>&lt;/body&gt;</div></li>
+<li><div class="src-line"><a name="a110"></a>&lt;/html&gt;</div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:48 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

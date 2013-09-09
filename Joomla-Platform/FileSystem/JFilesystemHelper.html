@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JFilesystemHelper</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JFilesystemHelper</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File system helper</p>
+<p class="description"><p>Holds support functions for the filesystem, particularly the stream</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---filesystem---helper.php.html">/libraries/joomla/filesystem/helper.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#ftpChmod" title="details" class="method-name">ftpChmod</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$mode</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getFilters" title="details" class="method-name">getFilters</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getJStreams" title="details" class="method-name">getJStreams</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getSupported" title="details" class="method-name">getSupported</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getTransports" title="details" class="method-name">getTransports</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getWriteModes" title="details" class="method-name">getWriteModes</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isJoomlaStream" title="details" class="method-name">isJoomlaStream</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$streamname</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#remotefsize" title="details" class="method-name">remotefsize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																																																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodftpChmod" id="ftpChmod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static ftpChmod</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quick FTP chmod</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/en/function.ftp-chmod.php">http://www.php.net/manual/en/function.ftp-chmod.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			ftpChmod
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$mode</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: Link identifier</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$mode</span><span class="var-description">: The new permissions, given as an octal value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFilters" id="getFilters"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getFilters</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a247">247</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of filters</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getFilters
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetJStreams" id="getJStreams"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getJStreams</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a261">261</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of J! streams</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getJStreams
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSupported" id="getSupported"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getSupported</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a214">214</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stream and Filter Support Operations</p>
+<p class="description"><p>Returns the supported streams, in addition to direct file access  Also includes Joomla! streams as well as PHP streams</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Streams</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getSupported
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTransports" id="getTransports"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getTransports</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a234">234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of transports</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getTransports
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetWriteModes" id="getWriteModes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getWriteModes</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a199">199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Modes that require a write operation</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getWriteModes
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisJoomlaStream" id="isJoomlaStream"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isJoomlaStream</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a296">296</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if a stream is a Joomla stream.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True for a Joomla Stream</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isJoomlaStream
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$streamname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$streamname</span><span class="var-description">: The name of a stream</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremotefsize" id="remotefsize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static remotefsize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemhelper.php.html#a33">33</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remote file size function for streams that don't support it</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> 71098</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			remotefsize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: TODO Add text</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:31:38 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

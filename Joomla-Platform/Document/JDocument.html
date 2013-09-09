@@ -1,0 +1,2558 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JDocument</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JDocument</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document class, provides an easy interface to parse and display a document</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---document---document.php.html">/libraries/joomla/document/document.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentError.html">JDocumentError</a>
+					</td>
+					<td>
+											DocumentError class, provides an easy interface to parse and display an error page
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentFeed.html">JDocumentFeed</a>
+					</td>
+					<td>
+											DocumentFeed class, provides an easy interface to parse and display any feed document
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentHTML.html">JDocumentHTML</a>
+					</td>
+					<td>
+											DocumentHTML class, provides an easy interface to parse and display a HTML document
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentImage.html">JDocumentImage</a>
+					</td>
+					<td>
+											DocumentImage class, provides an easy interface to output image data
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentJSON.html">JDocumentJSON</a>
+					</td>
+					<td>
+											JDocumentJSON class, provides an easy interface to parse and display JSON output
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentOpensearch.html">JDocumentOpensearch</a>
+					</td>
+					<td>
+											OpenSearch class, provides an easy interface to display an OpenSearch document
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRaw.html">JDocumentRaw</a>
+					</td>
+					<td>
+											DocumentRAW class, provides an easy interface to parse and display raw output
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentXml.html">JDocumentXml</a>
+					</td>
+					<td>
+											DocumentXML class, provides an easy interface to parse and display XML output
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																				<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$instances" title="details" class="var-name">$instances</a>
+				</div>
+																																								<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_buffer" title="details" class="var-name">$_buffer</a>
+				</div>
+																																																																																																																																												<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$base" title="details" class="var-name">$base</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$description" title="details" class="var-name">$description</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$direction" title="details" class="var-name">$direction</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$language" title="details" class="var-name">$language</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$link" title="details" class="var-name">$link</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$title" title="details" class="var-name">$title</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_charset" title="details" class="var-name">$_charset</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$_engine" title="details" class="var-name">$_engine</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_generator" title="details" class="var-name">$_generator</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_lineEnd" title="details" class="var-name">$_lineEnd</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_mdate" title="details" class="var-name">$_mdate</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_metaTags" title="details" class="var-name">$_metaTags</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_mime" title="details" class="var-name">$_mime</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_namespace" title="details" class="var-name">$_namespace</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_profile" title="details" class="var-name">$_profile</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_script" title="details" class="var-name">$_script</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_scripts" title="details" class="var-name">$_scripts</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_style" title="details" class="var-name">$_style</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_styleSheets" title="details" class="var-name">$_styleSheets</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_tab" title="details" class="var-name">$_tab</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_type" title="details" class="var-name">$_type</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'html'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attributes</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																																																																																																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JDocument</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#addScript" title="details" class="method-name">addScript</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&quot;text/javascript&quot;</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$defer</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$async</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#addScriptDeclaration" title="details" class="method-name">addScriptDeclaration</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/javascript'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#addStyleDeclaration" title="details" class="method-name">addStyleDeclaration</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/css'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#addStyleSheet" title="details" class="method-name">addStyleSheet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/css'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$media</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attribs</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getBase" title="details" class="method-name">getBase</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#getBuffer" title="details" class="method-name">getBuffer</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCharset" title="details" class="method-name">getCharset</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getDescription" title="details" class="method-name">getDescription</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getDirection" title="details" class="method-name">getDirection</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getGenerator" title="details" class="method-name">getGenerator</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLanguage" title="details" class="method-name">getLanguage</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLink" title="details" class="method-name">getLink</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMetaData" title="details" class="method-name">getMetaData</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$httpEquiv</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMimeEncoding" title="details" class="method-name">getMimeEncoding</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getModifiedDate" title="details" class="method-name">getModifiedDate</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTitle" title="details" class="method-name">getTitle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getType" title="details" class="method-name">getType</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocumentRenderer.html">JDocumentRenderer</a></span>
+										<a href="#loadRenderer" title="details" class="method-name">loadRenderer</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#render" title="details" class="method-name">render</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$cache</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setBase" title="details" class="method-name">setBase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$base</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setBuffer" title="details" class="method-name">setBuffer</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setCharset" title="details" class="method-name">setCharset</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'utf-8'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setDescription" title="details" class="method-name">setDescription</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setDirection" title="details" class="method-name">setDirection</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span> = <span class="var-default">&quot;ltr&quot;</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setGenerator" title="details" class="method-name">setGenerator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$generator</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setLanguage" title="details" class="method-name">setLanguage</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">&quot;en-gb&quot;</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setLineEnd" title="details" class="method-name">setLineEnd</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setLink" title="details" class="method-name">setLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setMetaData" title="details" class="method-name">setMetaData</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$http_equiv</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setMimeEncoding" title="details" class="method-name">setMimeEncoding</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/html'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$sync</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setModifiedDate" title="details" class="method-name">setModifiedDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setTab" title="details" class="method-name">setTab</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setTitle" title="details" class="method-name">setTitle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#setType" title="details" class="method-name">setType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_getLineEnd" title="details" class="method-name">_getLineEnd</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_getTab" title="details" class="method-name">_getTab</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instances" id="$instances"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$instances</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a202">202</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> JDocument instances container.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_buffer" id="$_buffer"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_buffer</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a196">196</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of buffered output</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> (depends on the renderer)</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$base" id="$base"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$base</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document base URL</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$description" id="$description"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$description</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document description</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$direction" id="$direction"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$direction</span>
+			 = <span class="var-default"> 'ltr'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a69">69</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contains the document direction setting</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$language" id="$language"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$language</span>
+			 = <span class="var-default"> 'en-gb'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contains the document language setting</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$link" id="$link"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$link</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document full URL</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$title" id="$title"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$title</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document title</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_charset" id="$_charset"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_charset</span>
+			 = <span class="var-default"> 'utf-8'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a108">108</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contains the character encoding string</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_engine" id="$_engine"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$_engine</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a180">180</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The rendering engine</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_generator" id="$_generator"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_generator</span>
+			 = <span class="var-default"> 'Joomla! - Open Source Content Management'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a76">76</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document generator</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_lineEnd" id="$_lineEnd"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_lineEnd</span>
+			 = <span class="var-default"> &quot;\12&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a100">100</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contains the line end string</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_mdate" id="$_mdate"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_mdate</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a84">84</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document modified date</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_metaTags" id="$_metaTags"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_metaTags</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a172">172</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of meta tags</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_mime" id="$_mime"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_mime</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a116">116</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document mime type</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_namespace" id="$_namespace"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_namespace</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a124">124</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document namespace</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_profile" id="$_profile"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_profile</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a132">132</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Document profile</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_script" id="$_script"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_script</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a148">148</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of scripts placed in the header</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_scripts" id="$_scripts"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_scripts</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a140">140</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of linked scripts</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_style" id="$_style"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_style</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a164">164</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of included style declarations</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_styleSheets" id="$_styleSheets"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_styleSheets</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a156">156</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of linked style sheets</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tab" id="$_tab"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_tab</span>
+			 = <span class="var-default"> &quot;\11&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a92">92</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tab string</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_type" id="$_type"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_type</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a188">188</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The document type</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a261">261</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global JDocument object, only creating it  if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> document object.</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'html'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attributes</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The document type to instantiate</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$attributes</span><span class="var-description">: Array of attributes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a211">211</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JDocument</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Associative array of options</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentError.html#method__construct">JDocumentError::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentFeed.html#method__construct">JDocumentFeed::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentHTML.html#method__construct">JDocumentHTML::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentImage.html#method__construct">JDocumentImage::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentJSON.html#method__construct">JDocumentJSON::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentOpensearch.html#method__construct">JDocumentOpensearch::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRaw.html#method__construct">JDocumentRaw::__construct()</a>
+								: Class constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentXml.html#method__construct">JDocumentXml::__construct()</a>
+								: Class constructor
+							</li>
+				</ul>
+	</div>
+<a name="methodaddScript" id="addScript"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addScript</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a450">450</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a linked script to the page</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			addScript
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&quot;text/javascript&quot;</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$defer</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$async</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL to the linked script</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type of script. Defaults to 'text/javascript'</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$defer</span><span class="var-description">: Adds the defer attribute.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$async</span><span class="var-description">: Adds the async attribute.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddScriptDeclaration" id="addScriptDeclaration"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addScriptDeclaration</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a469">469</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a script to the page</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			addScriptDeclaration
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/javascript'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: Script</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Scripting mime (defaults to 'text/javascript')</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddStyleDeclaration" id="addStyleDeclaration"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addStyleDeclaration</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a514">514</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a stylesheet declaration to the page</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			addStyleDeclaration
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/css'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: Style declarations</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type of stylesheet (defaults to 'text/css')</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddStyleSheet" id="addStyleSheet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addStyleSheet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a495">495</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a linked stylesheet to the page</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			addStyleSheet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/css'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$media</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attribs</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL to the linked style sheet</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Mime encoding type</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$media</span><span class="var-description">: Media type that this stylesheet applies to</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$attribs</span><span class="var-description">: Array of attributes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBase" id="getBase"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBase</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a663">663</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the base URI of the document.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBase
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBuffer" id="getBuffer"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBuffer</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a342">342</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the contents of the document buffer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> contents of the document buffer</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			getBuffer
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentHTML.html#methodgetBuffer">JDocumentHTML::getBuffer()</a>
+								: Get the contents of a document include
+							</li>
+				</ul>
+	</div>
+<a name="methodgetCharset" id="getCharset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCharset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a551">551</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document charset encoding.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCharset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDescription" id="getDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDescription</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a691">691</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the title of the page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getDescription
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDirection" id="getDirection"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDirection</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a607">607</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document direction declaration.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getDirection
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetGenerator" id="getGenerator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getGenerator</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a747">747</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document generator</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getGenerator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLanguage" id="getLanguage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a579">579</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLanguage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLink" id="getLink"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLink</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a719">719</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document base url</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLink
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMetaData" id="getMetaData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMetaData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a374">374</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a meta tag.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMetaData
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$httpEquiv</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Value of name or http-equiv tag</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$httpEquiv</span><span class="var-description">: META type &quot;http-equiv&quot; defaults to null</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMimeEncoding" id="getMimeEncoding"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMimeEncoding</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a818">818</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the document MIME encoding that is sent to the browser.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMimeEncoding
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetModifiedDate" id="getModifiedDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getModifiedDate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a775">775</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document modified date</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getModifiedDate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTitle" id="getTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a635">635</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the title of the document.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTitle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetType" id="getType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a330">330</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the document type</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadRenderer" id="loadRenderer"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadRenderer</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a902">902</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load a renderer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Object or null if class does not exist</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocumentRenderer.html">JDocumentRenderer</a></span>
+		<span class="method-name">
+			loadRenderer
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The renderer type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a939">939</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses the document and prepares the buffers</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			parse
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: The array of parameters</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentHTML.html#methodparse">JDocumentHTML::parse()</a>
+								: Parses the template and populates the buffer
+							</li>
+				</ul>
+	</div>
+<a name="methodrender" id="render"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">render</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a954">954</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Outputs the document</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> rendered data</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			render
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$cache</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$cache</span><span class="var-description">: If true, cache the output</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: Associative array of attributes</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentError.html#methodrender">JDocumentError::render()</a>
+								: Render the document
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentFeed.html#methodrender">JDocumentFeed::render()</a>
+								: Render the document
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentHTML.html#methodrender">JDocumentHTML::render()</a>
+								: Outputs the template to the browser.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentImage.html#methodrender">JDocumentImage::render()</a>
+								: Render the document.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentJSON.html#methodrender">JDocumentJSON::render()</a>
+								: Render the document.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentOpensearch.html#methodrender">JDocumentOpensearch::render()</a>
+								: Render the document
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRaw.html#methodrender">JDocumentRaw::render()</a>
+								: Render the document.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentXml.html#methodrender">JDocumentXml::render()</a>
+								: Render the document.
+							</li>
+				</ul>
+	</div>
+<a name="methodsetBase" id="setBase"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setBase</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a649">649</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the base URI of the document</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setBase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$base</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$base</span><span class="var-description">: The base URI to be set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBuffer" id="setBuffer"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setBuffer</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a357">357</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the contents of the document buffer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setBuffer
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: The content to be set in the buffer.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array of optional elements.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentHTML.html#methodsetBuffer">JDocumentHTML::setBuffer()</a>
+								: Set the contents a document includes
+							</li>
+				</ul>
+	</div>
+<a name="methodsetCharset" id="setCharset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCharset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a537">537</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the document charset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setCharset
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'utf-8'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Charset encoding string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDescription" id="setDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDescription</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a677">677</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the description of the document</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setDescription
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$description</span><span class="var-description">: The description to set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDirection" id="setDirection"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDirection</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a593">593</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the global document direction declaration. Default is left-to-right (ltr).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setDirection
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span> = <span class="var-default">&quot;ltr&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dir</span><span class="var-description">: The language direction to be set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetGenerator" id="setGenerator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setGenerator</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a733">733</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the document generator</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setGenerator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$generator</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$generator</span><span class="var-description">: The generator to be set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLanguage" id="setLanguage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a565">565</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the global document language declaration. Default is English (en-gb).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setLanguage
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">&quot;en-gb&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The language to be set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLineEnd" id="setLineEnd"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLineEnd</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a832">832</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the line end style to Windows, Mac, Unix or a custom string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setLineEnd
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$style</span><span class="var-description">: &quot;win&quot;, &quot;mac&quot;, &quot;unix&quot; or custom string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLink" id="setLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLink</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a705">705</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the document link</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: A url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMetaData" id="setMetaData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMetaData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a411">411</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets or alters a meta tag.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setMetaData
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$http_equiv</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Value of name or http-equiv tag</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: Value of the content tag</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$http_equiv</span><span class="var-description">: META type &quot;http-equiv&quot; defaults to null</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMimeEncoding" id="setMimeEncoding"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMimeEncoding</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a798">798</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the document MIME encoding that is sent to the browser.</p>
+<p class="description"><p>This usually will be text/html because most browsers cannot yet  accept the proper mime settings for XHTML: application/xhtml+xml  and to a lesser extent application/xml and text/xml. See the W3C note  (<a href="http://www.w3.org/TR/xhtml-media-types/">http://www.w3.org/TR/xhtml-media-types/</a>) for more details.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/xhtml-media-types">http://www.w3.org/TR/xhtml-media-types</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setMimeEncoding
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'text/html'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$sync</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The document type to be sent</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$sync</span><span class="var-description">: Should the type be synced with HTML?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetModifiedDate" id="setModifiedDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setModifiedDate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a761">761</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the document modified date</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setModifiedDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: The date to be set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTab" id="setTab"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setTab</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a873">873</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the string used to indent HTML</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setTab
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: String used to indent (&quot;\11&quot;, &quot;\t&quot;, '  ', etc.).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTitle" id="setTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a621">621</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the title of the document</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setTitle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title to be set</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetType" id="setType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a316">316</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the document type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance of $this to allow chaining</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			setType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type document is to set to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getLineEnd" id="_getLineEnd"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getLineEnd</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a859">859</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the lineEnd</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_getLineEnd
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_getTab" id="_getTab"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getTab</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentdocument.php.html#a887">887</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a string containing the unit for indenting HTML</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_getTab
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:28:59 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

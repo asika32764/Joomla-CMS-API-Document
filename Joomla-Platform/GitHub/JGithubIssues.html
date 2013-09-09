@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JGithubIssues</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JGithubIssues</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GitHub API Issues class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---github---issues.php.html">/libraries/joomla/github/issues.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/GitHub/JGithubObject.html">JGithubObject</a>
+   |
+   --JGithubIssues</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#create" title="details" class="method-name">create</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$assignee</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$milestone</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#createComment" title="details" class="method-name">createComment</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#createLabel" title="details" class="method-name">createLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#deleteComment" title="details" class="method-name">deleteComment</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#deleteLabel" title="details" class="method-name">deleteLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#edit" title="details" class="method-name">edit</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$assignee</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$milestone</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#editComment" title="details" class="method-name">editComment</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#editLabel" title="details" class="method-name">editLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getComment" title="details" class="method-name">getComment</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getComments" title="details" class="method-name">getComments</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getLabel" title="details" class="method-name">getLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getLabels" title="details" class="method-name">getLabels</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getList" title="details" class="method-name">getList</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$filter</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sort</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>&nbsp;<span class="var-name">$since</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getListByRepository" title="details" class="method-name">getListByRepository</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$milestone</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$assignee</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$mentioned</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sort</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>&nbsp;<span class="var-name">$since</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/GitHub/JGithubObject.html">JGithubObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/GitHub/JGithubObject.html#var$client">JGithubObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/GitHub/JGithubObject.html#var$options">JGithubObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreate" id="create"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">create</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a36">36</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			create
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$assignee</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$milestone</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title of the new issue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: The body text for the new issue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$assignee</span><span class="var-description">: The login for the GitHub user that this issue should be assigned to.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$milestone</span><span class="var-description">: The milestone to associate this issue with.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$labels</span><span class="var-description">: The labels to associate with this issue.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateComment" id="createComment"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createComment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a84">84</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a comment on an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			createComment
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$issueId</span><span class="var-description">: The issue number.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: The comment body text.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateLabel" id="createLabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createLabel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a122">122</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a label on a repo.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			createLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The label name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$color</span><span class="var-description">: The label color.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteComment" id="deleteComment"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteComment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a160">160</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a comment on an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteComment
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$commentId</span><span class="var-description">: The id of the comment to delete.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteLabel" id="deleteLabel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteLabel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a188">188</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a label on a repo.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			deleteLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: The label name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodedit" id="edit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">edit</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a222">222</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to update an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			edit
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$body</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$assignee</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$milestone</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$issueId</span><span class="var-description">: The issue number.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$state</span><span class="var-description">: The optional new state for the issue. [open, closed]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title of the new issue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: The body text for the new issue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$assignee</span><span class="var-description">: The login for the GitHub user that this issue should be assigned to.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$milestone</span><span class="var-description">: The milestone to associate this issue with.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$labels</span><span class="var-description">: The labels to associate with this issue.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodeditComment" id="editComment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">editComment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a301">301</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to update a comment on an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			editComment
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$commentId</span><span class="var-description">: The id of the comment to update.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: The new body text for the comment.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodeditLabel" id="editLabel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">editLabel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a340">340</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to update a label on a repo.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			editLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$label</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: The label name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The label name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$color</span><span class="var-description">: The label color.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a378">378</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a single issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$issueId</span><span class="var-description">: The issue number.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetComment" id="getComment"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getComment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a408">408</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a specific comment on an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getComment
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$commentId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$commentId</span><span class="var-description">: The comment id to get.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetComments" id="getComments"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getComments</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a440">440</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the list of comments on an issue.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getComments
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$issueId</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$issueId</span><span class="var-description">: The issue number.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$page</span><span class="var-description">: The page number from which to get items.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span><span class="var-description">: The number of items on a page.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLabel" id="getLabel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a470">470</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a specific label on a repo.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The label name to get.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLabels" id="getLabels"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabels</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a499">499</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the list of labels on a repo.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getLabels
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetList" id="getList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getList</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a534">534</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to list an authenticated user's issues.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getList
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$filter</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sort</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>&nbsp;<span class="var-name">$since</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filter</span><span class="var-description">: The filter type: assigned, created, mentioned, subscribed.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$state</span><span class="var-description">: The optional state to filter requests by. [open, closed]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$labels</span><span class="var-description">: The list of comma separated Label names. Example: bug,ui,@high.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sort</span><span class="var-description">: The sort order: created, updated, comments, default: created.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direction</span><span class="var-description">: The list direction: asc or desc, default: desc.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>
+				<span class="var-name">$since</span><span class="var-description">: The date/time since when issues should be returned.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$page</span><span class="var-description">: The page number from which to get items.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span><span class="var-description">: The number of items on a page.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetListByRepository" id="getListByRepository"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getListByRepository</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubissues.php.html#a575">575</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to list issues.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getListByRepository
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repo</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$milestone</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$assignee</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$mentioned</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$labels</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sort</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>&nbsp;<span class="var-name">$since</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The name of the owner of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repo</span><span class="var-description">: The name of the GitHub repository.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$milestone</span><span class="var-description">: The milestone number, 'none', or *.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$state</span><span class="var-description">: The optional state to filter requests by. [open, closed]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$assignee</span><span class="var-description">: The assignee name, 'none', or *.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mentioned</span><span class="var-description">: The GitHub user name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$labels</span><span class="var-description">: The list of comma separated Label names. Example: bug,ui,@high.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sort</span><span class="var-description">: The sort order: created, updated, comments, default: created.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direction</span><span class="var-description">: The list direction: asc or desc, default: desc.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>
+				<span class="var-name">$since</span><span class="var-description">: The date/time since when issues should be returned.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$page</span><span class="var-description">: The page number from which to get items.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span><span class="var-description">: The number of items on a page.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/GitHub/JGithubObject.html">JGithubObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/GitHub/JGithubObject.html#method__construct">JGithubObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/GitHub/JGithubObject.html#methodfetchUrl">JGithubObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/GitHub/JGithubObject.html#methodprocessResponse">JGithubObject::processResponse()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:32:41 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JHelperTags</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JHelperTags</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tags helper class, provides methods to perform various tasks relevant  tagging of content.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---cms---helper---tags.php.html">/libraries/cms/helper/tags.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$replaceTags" title="details" class="var-name">$replaceTags</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$tagsChanged" title="details" class="var-name">$tagsChanged</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$typeAlias" title="details" class="var-name">$typeAlias</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#convertPathsToNames" title="details" class="method-name">convertPathsToNames</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getTypes" title="details" class="method-name">getTypes</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$arrayType</span> = <span class="var-default">'objectList'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$selectTypes</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$useAlias</span> = <span class="var-default">true</span>])
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#searchTags" title="details" class="method-name">searchTags</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$filters</span> = <span class="var-default">array()</span>])
+									</div>
+																																											
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#addTagMapping" title="details" class="method-name">addTagMapping</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$ucmId</span>, <span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#createTagsFromField" title="details" class="method-name">createTagsFromField</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#createTagsFromMetadata" title="details" class="method-name">createTagsFromMetadata</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$metadata</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#deleteTagData" title="details" class="method-name">deleteTagData</a>
+											(<span class="var-type">JTable</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$contentItemId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getItemTags" title="details" class="method-name">getItemTags</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$contentType</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$getTagData</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTagIds" title="details" class="method-name">getTagIds</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#getTagItemsQuery" title="details" class="method-name">getTagItemsQuery</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tagId</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$typesr</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$includeChildren</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$orderByOption</span> = <span class="var-default">'c.core_title'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$orderDir</span> = <span class="var-default">'ASC'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$anyOrAll</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$languageFilter</span> = <span class="var-default">'all'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$stateFilter</span> = <span class="var-default">'0,1'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTagNames" title="details" class="method-name">getTagNames</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$tagIds</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getTagTreeArray" title="details" class="method-name">getTagTreeArray</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">&$tagTreeArray</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTypeId" title="details" class="method-name">getTypeId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$typeAlias</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#postStoreProcess" title="details" class="method-name">postStoreProcess</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$newTags</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">null</span>
+										<a href="#preStoreProcess" title="details" class="method-name">preStoreProcess</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$newTags</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#tagDeleteInstances" title="details" class="method-name">tagDeleteInstances</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$tag_id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#tagItem" title="details" class="method-name">tagItem</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$ucmId</span>, <span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#unTagItem" title="details" class="method-name">unTagItem</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$contentId</span>, <span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$replaceTags" id="$replaceTags"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$replaceTags</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Whether up replace all tags or just add tags</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$tagsChanged" id="$tagsChanged"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$tagsChanged</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Helper object for storing and deleting tag information.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$typeAlias" id="$typeAlias"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$typeAlias</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alias for quering mapping and content type table.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodconvertPathsToNames" id="convertPathsToNames"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static convertPathsToNames</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a93">93</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function that converts tags paths into paths of names</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			convertPathsToNames
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTypes" id="getTypes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getTypes</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a709">709</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a list of types with associated data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of of types</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getTypes
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$arrayType</span> = <span class="var-default">'objectList'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$selectTypes</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$useAlias</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$arrayType</span><span class="var-description">: Optionally specify that the returned list consist of objects, associative arrays, or arrays.                                  Options are: rowList, assocList, and objectList</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$selectTypes</span><span class="var-description">: Optional array of type ids to limit the results to. Often from a request.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$useAlias</span><span class="var-description">: If true, the alias is used to match, if false the type_id is used.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearchTags" id="searchTags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static searchTags</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a861">861</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to search tags</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			searchTags
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$filters</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$filters</span><span class="var-description">: Filter to apply to the search</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddTagMapping" id="addTagMapping"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addTagMapping</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a57">57</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add tag rows to mapping table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success, otherwise false.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			addTagMapping
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$ucmId</span>, <span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$ucmId</span><span class="var-description">: ID of the #__ucm_content item being tagged</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: JTable object being tagged</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags to be applied.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateTagsFromField" id="createTagsFromField"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createTagsFromField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a178">178</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create any new tags by looking for #new# in the strings</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> If successful, metadata with new tag titles replaced by tag ids. Otherwise false.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			createTagsFromField
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Tags text array from the field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateTagsFromMetadata" id="createTagsFromMetadata"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createTagsFromMetadata</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a257">257</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create any new tags by looking for #new# in the metadata</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> If successful, metadata with new tag titles replaced by tag ids. Otherwise false.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			createTagsFromMetadata
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$metadata</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$metadata</span><span class="var-description">: Metadata JSON string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteTagData" id="deleteTagData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteTagData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a346">346</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete the tag mappings and #__ucm_content record for for an item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success, false on failure</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			deleteTagData
+		</span>
+					(<span class="var-type">JTable</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$contentItemId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: JTable object of content table where delete occurred</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$contentItemId</span><span class="var-description">: ID of the content item.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetItemTags" id="getItemTags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getItemTags</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a369">369</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a list of tags for an item, optionally with the tag data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of of tag objects</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getItemTags
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$contentType</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$getTagData</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$contentType</span><span class="var-description">: Content type alias. Dot separated.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Id of the item to retrieve tags for.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$getTagData</span><span class="var-description">: If true, data from the tags table will be included, defaults to true.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTagIds" id="getTagIds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTagIds</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a430">430</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a list of tags for a given item.</p>
+<p class="description"><p>Normally used for displaying a list of tags within a layout</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Comma separated list of tag Ids.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTagIds
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The id (primary key) of the item to be tagged.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Dot separated string with the option and view to be used for a url.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTagItemsQuery" id="getTagItemsQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTagItemsQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a483">483</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a query to retrieve a detailed list of items for a tag.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Query to retrieve a list of tags</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			getTagItemsQuery
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tagId</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$typesr</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$includeChildren</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$orderByOption</span> = <span class="var-default">'c.core_title'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$orderDir</span> = <span class="var-default">'ASC'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$anyOrAll</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$languageFilter</span> = <span class="var-default">'all'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$stateFilter</span> = <span class="var-default">'0,1'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$tagId</span><span class="var-description">: Tag or array of tags to be matched</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$typesr</span><span class="var-description">: Null, type or array of type aliases for content types to be included in the results</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$includeChildren</span><span class="var-description">: True to include the results from child tags</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$orderByOption</span><span class="var-description">: Column to order the results by</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$orderDir</span><span class="var-description">: Direction to sort the results in</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$anyOrAll</span><span class="var-description">: True to include items matching at least one tag, false to include                                      items all tags in the array.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$languageFilter</span><span class="var-description">: Optional filter on language. Options are 'all', 'current' or any string.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$stateFilter</span><span class="var-description">: Optional filtering on publication state, defaults to published or unpublished.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTagNames" id="getTagNames"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTagNames</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a615">615</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function that converts tag ids to their tag names</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of tag names.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTagNames
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$tagIds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tagIds</span><span class="var-description">: Array of integer tag ids.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTagTreeArray" id="getTagTreeArray"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTagTreeArray</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a648">648</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of tag ids for the current tag and its children</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getTagTreeArray
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">&$tagTreeArray</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: An optional ID</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$tagTreeArray</span><span class="var-description">: Array containing the tag tree</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTypeId" id="getTypeId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTypeId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a683">683</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the type id for a type alias.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Name of the table for a type</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTypeId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$typeAlias</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$typeAlias</span><span class="var-description">: A type alias.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpostStoreProcess" id="postStoreProcess"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">postStoreProcess</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a767">767</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function that handles saving tags used in a table class after a store()</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			postStoreProcess
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$newTags</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: JTable being processed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$newTags</span><span class="var-description">: Array of new tags</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$replace</span><span class="var-description">: Flag indicating if all exising tags should be replaced</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpreStoreProcess" id="preStoreProcess"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">preStoreProcess</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a826">826</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function that preProcesses data from a table prior to a store() to ensure proper tag handling</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">null</span>
+		<span class="method-name">
+			preStoreProcess
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$newTags</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: JTable being processed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$newTags</span><span class="var-description">: Array of new tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtagDeleteInstances" id="tagDeleteInstances"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tagDeleteInstances</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a948">948</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete all instances of a tag from the mapping table. Generally used when a tag is deleted.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			tagDeleteInstances
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$tag_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tag_id</span><span class="var-description">: The tag_id (primary key) for the deleted tag.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtagItem" id="tagItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tagItem</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a971">971</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add or update tags associated with an item.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success, otherwise false.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			tagItem
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$ucmId</span>, <span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$ucmId</span><span class="var-description">: Id of the #__ucm_content item being tagged</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: JTable object being tagged</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags to be applied.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$replace</span><span class="var-description">: Flag indicating if all exising tags should be replaced</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunTagItem" id="unTagItem"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">unTagItem</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Helper_librariescmshelpertags.php.html#a1018">1018</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to untag an item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success, otherwise false.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			unTagItem
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$contentId</span>, <span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$contentId</span><span class="var-description">: ID of the content item being untagged</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: JTable object being untagged</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags to be untagged. Use an empty array to untag all existing tags.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:40:12 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

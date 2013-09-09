@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page bootstrap.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/libraries/cms/html/bootstrap.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|													<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> GNU</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|																<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../Joomla-Libraries/HTML/JHtmlBootstrap.html">JHtmlBootstrap</a>
+					</td>
+					<td>
+											Utility class for Bootstrap elements.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionaddPanel" id="functionaddPanel"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">addPanel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a805">805</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Begins the display of a new tab content panel.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to start a new panel</li>
+				<li><span class="field">deprecated:</span> 4.0 Use JHtml::_('bootstrap.addTab') instead.</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addPanel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Identifier of the panel.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the div element</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionaddSlide" id="functionaddSlide"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">addSlide</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a618">618</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Begins the display of a new accordion slide.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to add the slide</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addSlide
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Identifier of the accordion group.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Text to display.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: Identifier of the slide.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Class of the accordion group.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionaddTab" id="functionaddTab"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">addTab</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a708">708</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Begins the display of a new tab content panel.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to start a new panel</li>
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			addTab
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Identifier of the panel.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the div element</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title text for the new UL tab</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionalert" id="functionalert"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">alert</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a81">81</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap alerts</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			alert
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;alert&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Common class for the alerts</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionbutton" id="functionbutton"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">button</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a113">113</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap buttons</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			button
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;button&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Common class for the buttons</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncarousel" id="functioncarousel"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">carousel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a151">151</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap carousels</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			carousel
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;carousel&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Common class for the carousels.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of options for the modal.                              Options for the modal can be: <ul><li>interval  number  The amount of time to delay between automatically cycling an item.
+                                                 If false, carousel will not automatically cycle.</li><li>pause     string  Pauses the cycling of the carousel on mouseenter and resumes the cycling
+                                                 of the carousel on mouseleave.</li></ul></span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondropdown" id="functiondropdown"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">dropdown</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a189">189</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap dropdowns</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			dropdown
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;dropdown-toggle&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Common class for the dropdowns</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionendAccordion" id="functionendAccordion"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">endAccordion</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a601">601</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close the current accordion</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to close the accordian</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			endAccordion
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionendPane" id="functionendPane"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">endPane</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a789">789</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close the current tab pane</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to close the pane</li>
+				<li><span class="field">deprecated:</span> 4.0    Use JHtml::_('bootstrap.endTabSet') instead.</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			endPane
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionendPanel" id="functionendPanel"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">endPanel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a820">820</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close the current tab content panel</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to close the pane</li>
+				<li><span class="field">deprecated:</span> 4.0 Use JHtml::_('bootstrap.endTab') instead.</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			endPanel
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionendSlide" id="functionendSlide"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">endSlide</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a642">642</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close the current slide</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to close the slide</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			endSlide
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionendTab" id="functionendTab"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">endTab</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a734">734</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close the current tab content panel</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to close the pane</li>
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			endTab
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionendTabSet" id="functionendTabSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">endTabSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a690">690</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close the current tab pane</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML to close the pane</li>
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			endTabSet
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionframework" id="functionframework"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">framework</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a223">223</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load the Bootstrap JavaScript framework into the document head</p>
+<p class="description"><p>If debugging mode is on an uncompressed version of Bootstrap is included for easier debugging.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			framework
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$debug</span><span class="var-description">: Is debugging mode on? [optional]</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionloadCss" id="functionloadCss"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">loadCss</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a836">836</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads CSS files needed by Bootstrap</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadCss
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$includeMainCss</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">&#039;ltr&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attribs</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$includeMainCss</span><span class="var-description">: If true, main bootstrap.css files are loaded</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direction</span><span class="var-description">: rtl or ltr direction. If empty, ltr is assumed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$attribs</span><span class="var-description">: Optional array of attributes to be passed to JHtml::_('stylesheet')</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpopover" id="functionpopover"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">popover</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a353">353</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap popovers</p>
+<p class="description"><p>Use element's Title as popover content</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			popover
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;.hasPopover&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: Selector for the tooltip</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of options for the tooltip.                   Options for the tooltip can be:                       animation  boolean          apply a css fade transition to the tooltip                       html       boolean          Insert HTML into the tooltip. If false, jQuery's text method will be used to insert                                                   content into the dom.                       placement  string|function  how to position the tooltip - top | bottom | left | right                       selector   string           If a selector is provided, tooltip objects will be delegated to the specified targets.                       trigger    string           how tooltip is triggered - hover | focus | manual                       title      string|function  default title value if `title` tag isn't present                       content    string|function  default content value if `data-content` attribute isn't present                       delay      number|object    delay showing and hiding the tooltip (ms) - does not apply to manual trigger type                                                   If a number is supplied, delay is applied to both hide/show                                                   Object structure is: delay: { show: 500, hide: 100 }                       container  string|boolean   Appends the popover to a specific element: { container: 'body' }</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionrenderModal" id="functionrenderModal"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">renderModal</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a304">304</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to render a Bootstrap modal</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML markup for a modal</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderModal
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;modal&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$footer</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: The ID selector for the modal.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of options for the modal.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$footer</span><span class="var-description">: Optional markup for the modal footer</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionscrollspy" id="functionscrollspy"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">scrollspy</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a401">401</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap ScrollSpy</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			scrollspy
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;navbar&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: The ID selector for the ScrollSpy element.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of options for the ScrollSpy.                              Options for the modal can be: <ul><li>offset  number  Pixels to offset from top when calculating position of scroll.</li></ul></span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstartAccordion" id="functionstartAccordion"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">startAccordion</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a563">563</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap accordians and insert the accordian</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for the accordian</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			startAccordion
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;myAccordian&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: The ID selector for the tooltip.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of options for the tooltip.                              Options for the tooltip can be: <ul><li>parent  selector  If selector then all collapsible elements under the specified parent will be closed when this
+                                                 collapsible item is shown. (similar to traditional accordion behavior)</li><li>toggle  boolean   Toggles the collapsible element on invocation</li><li>active  string    Sets the active slide during load</li></ul></span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstartPane" id="functionstartPane"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">startPane</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a752">752</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a tab pane</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 4.0    Use JHtml::_('bootstrap.startTabSet') instead.</li>
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			startPane
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;myTab&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: The pane identifier.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: The parameters for the pane</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstartTabSet" id="functionstartTabSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">startTabSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a657">657</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a tab pane</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			startTabSet
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;myTab&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: The pane identifier.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: The parameters for the pane</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontypeahead" id="functiontypeahead"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">typeahead</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmlbootstrap.php.html#a515">515</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add javascript support for Bootstrap typeahead</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			typeahead
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;.typeahead&#039;</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: The selector for the typeahead element.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of options for the typeahead element.                              Options for the tooltip can be: <ul><li>source       array, function  The data source to query against. May be an array of strings or a function.
+                                                             The function is passed two arguments, the query value in the input field and the
+                                                             process callback. The function may be used synchronously by returning the data
+                                                             source directly or asynchronously via the process callback's single argument.</li><li>items        number           The max number of items to display in the dropdown.</li><li>minLength    number           The minimum character length needed before triggering autocomplete suggestions</li><li>matcher      function         The method used to determine if a query matches an item. Accepts a single argument,
+                                                             the item against which to test the query. Access the current query with this.query.
+                                                             Return a boolean true if query is a match.</li><li>sorter       function         Method used to sort autocomplete results. Accepts a single argument items and has
+                                                             the scope of the typeahead instance. Reference the current query with this.query.</li><li>updater      function         The method used to return selected item. Accepts a single argument, the item and
+                                                             has the scope of the typeahead instance.</li><li>highlighter  function         Method used to highlight autocomplete results. Accepts a single argument item and
+                                                             has the scope of the typeahead instance. Should return html.</li></ul></span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:23:26 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for view.opensearch.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file view.opensearch.php</h1>
+<p>Documentation is available at <a href="../Joomla-Site/com_finder/_components---com_finder---views---search---view.opensearch.php.html">view.opensearch.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Site</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;com_finder</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'_JEXEC'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;OpenSearch&nbsp;View&nbsp;class&nbsp;for&nbsp;Finder</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Site</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;com_finder</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.5</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-key">class&nbsp;</span><a href="../Joomla-Site/com_finder/FinderViewSearch.html">FinderViewSearch</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../Joomla-Legacy/View/JViewLegacy.html">JViewLegacy</a></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Method&nbsp;to&nbsp;display&nbsp;the&nbsp;view.</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">$tpl&nbsp;</span><span class="src-doc">&nbsp;A&nbsp;template&nbsp;file&nbsp;to&nbsp;load.&nbsp;[optional]</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">&nbsp;JError&nbsp;object&nbsp;on&nbsp;failure,&nbsp;void&nbsp;on&nbsp;success.</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;2.5</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Site/com_finder/FinderViewSearch.html#methoddisplay">display</a><span class="src-sym">(</span><span class="src-var">$tpl&nbsp;</span>=&nbsp;<span class="src-id">null</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$doc&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetDocument">getDocument</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$app&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetApplication">getApplication</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$params&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Legacy/Component/JComponentHelper.html">JComponentHelper</a></span><span class="src-sym">::</span><a href="../Joomla-Legacy/Component/JComponentHelper.html#methodgetParams">getParams</a><span class="src-sym">(</span><span class="src-str">'com_finder'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$doc</span><span class="src-sym">-&gt;</span><span class="src-id">setShortName</span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">-&gt;</span><span class="src-id">get</span><span class="src-sym">(</span><span class="src-str">'opensearch_name'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">getCfg</span><span class="src-sym">(</span><span class="src-str">'sitename'</span><span class="src-sym">)))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$doc</span><span class="src-sym">-&gt;</span><span class="src-id">setDescription</span><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">-&gt;</span><span class="src-id">get</span><span class="src-sym">(</span><span class="src-str">'opensearch_description'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">getCfg</span><span class="src-sym">(</span><span class="src-str">'MetaDesc'</span><span class="src-sym">)))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Add&nbsp;the&nbsp;URL&nbsp;for&nbsp;the&nbsp;search</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$searchUri&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/Uri/JUri.html">JUri</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Uri/JUri.html#methodbase">base</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'index.php?option=com_finder&amp;q={searchTerms}'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Find&nbsp;the&nbsp;menu&nbsp;item&nbsp;for&nbsp;the&nbsp;search</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$menu&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">getMenu</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$items&nbsp;</span>=&nbsp;<span class="src-var">$menu</span><span class="src-sym">-&gt;</span><span class="src-id">getItems</span><span class="src-sym">(</span><span class="src-str">'link'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'index.php?option=com_finder&amp;view=search'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$items</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$searchUri&nbsp;</span>.=&nbsp;<span class="src-str">'&amp;Itemid='&nbsp;</span>.&nbsp;<span class="src-var">$items</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">-&gt;</span><span class="src-id">id</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$htmlSearch&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Joomla-Platform/Document/JOpenSearchUrl.html">JOpenSearchUrl</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$htmlSearch</span><span class="src-sym">-&gt;</span><span class="src-id">template&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/Application/JRoute.html">JRoute</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Application/JRoute.html#method_">_</a><span class="src-sym">(</span><span class="src-var">$searchUri</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$doc</span><span class="src-sym">-&gt;</span><span class="src-id">addUrl</span><span class="src-sym">(</span><span class="src-var">$htmlSearch</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:42:29 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

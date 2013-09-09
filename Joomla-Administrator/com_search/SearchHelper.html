@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class SearchHelper</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> SearchHelper</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Search component helper.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_search---helpers---search.php.html">/administrator/components/com_search/helpers/search.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#addSubmenu" title="details" class="method-name">addSubmenu</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$vName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#checkNoHtml" title="details" class="method-name">checkNoHtml</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$searchTerm</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$fields</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span>
+										<a href="#getActions" title="details" class="method-name">getActions</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#limitSearchWord" title="details" class="method-name">limitSearchWord</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$searchword</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#logSearch" title="details" class="method-name">logSearch</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$search_term</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#prepareSearchContent" title="details" class="method-name">prepareSearchContent</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$searchword</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#remove_accents" title="details" class="method-name">remove_accents</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#santiseSearchWord" title="details" class="method-name">santiseSearchWord</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$searchword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$searchphrase</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#_smartSubstr" title="details" class="method-name">_smartSubstr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$searchword</span>)
+									</div>
+																																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddSubmenu" id="addSubmenu"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addSubmenu</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a27">27</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Configure the Linkbar.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			addSubmenu
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$vName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$vName</span><span class="var-description">: The name of the active view.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckNoHtml" id="checkNoHtml"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static checkNoHtml</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a177">177</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks an object for search terms (after stripping fields of HTML)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if searchTerm is in object, false otherwise</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			checkNoHtml
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$searchTerm</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$fields</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$object</span><span class="var-description">: The object to check</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$searchTerm</span><span class="var-description">: Search words to check for</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$fields</span><span class="var-description">: List of object variables to check against</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetActions" id="getActions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getActions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a37">37</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a list of the actions that can be performed.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span>
+		<span class="method-name">
+			getActions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlimitSearchWord" id="limitSearchWord"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static limitSearchWord</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a102">102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			limitSearchWord
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$searchword</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$searchword</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlogSearch" id="logSearch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static logSearch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a137">137</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logs a search term</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 4.0  Use JSearchHelper::logSearch() instead</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			logSearch
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$search_term</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search_term</span><span class="var-description">: The term being searched</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprepareSearchContent" id="prepareSearchContent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static prepareSearchContent</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a154">154</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepares results from search for display</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			prepareSearchContent
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$searchword</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: The source string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$searchword</span><span class="var-description">: The searchword to select around</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremove_accents" id="remove_accents"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static remove_accents</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a230">230</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Transliterates given text to ASCII//TRANSLIT.</p>
+<p class="description"><p>Simulates glibc transliteration style even if libiconv is used by PHP</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			remove_accents
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String to remove accents from</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsantiseSearchWord" id="santiseSearchWord"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static santiseSearchWord</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a53">53</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			santiseSearchWord
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$searchword</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$searchphrase</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$searchword</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$searchphrase</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_smartSubstr" id="_smartSubstr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static _smartSubstr</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_search_administratorcomponentscom_searchhelperssearch.php.html#a248">248</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns substring of characters around a searchword</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			_smartSubstr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$searchword</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: The source string</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$searchword</span><span class="var-description">: Number of chars to return</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:38:06 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

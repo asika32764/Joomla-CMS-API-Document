@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+						<script src="media/lib/classTree.js"></script>
+									<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+									<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "media/images/plus.png";
+				imgMinus.src = "media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body><select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
+	  <option value="li_default.html">default</option>
+	  <option value="li_akeebabackup.html">akeebabackup</option>
+	  <option value="li_IDNA.html">IDNA</option>
+	  <option value="li_Joomla.html">Joomla</option>
+	  <option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
+	  <option value="li_Joomla-Cli.html">Joomla-Cli</option>
+	  <option value="li_Joomla-CLI.html">Joomla-CLI</option>
+	  <option value="li_Joomla-CMS.html">Joomla-CMS</option>
+	  <option value="li_Joomla-Compat.html">Joomla-Compat</option>
+	  <option value="li_Joomla-Installation.html">Joomla-Installation</option>
+	  <option value="li_Joomla-Language.html">Joomla-Language</option>
+	  <option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
+	  <option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
+	  <option value="li_Joomla-Platform.html">Joomla-Platform</option>
+	  <option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
+	  <option value="li_Joomla-Site.html">Joomla-Site</option>
+	  <option value="li_phlyMail.html">phlyMail</option>
+	  <option value="li_PHPMailer.html">PHPMailer</option>
+	  <option value="li_SimplePie.html">SimplePie</option>
+	  <option selected value="li_utf8.html">utf8</option>
+</select>
+						<h3 class="package-title">utf8</h3>
+<div class="tree">
+<script language="Javascript">
+if (document.getElementById) {
+			var tree = new WebFXTree('<span class="package">utf8</span>');
+		tree.setBehavior('classic');
+		tree.openIcon = 'media/images/package.png';
+		tree.icon = 'media/images/package.png';
+	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			todos.openIcon = 'media/images/Index.png';
+			todos.icon = 'media/images/Index.png';
+			tree.add(todos);
+		
+		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_utf8.html');
+		class_trees.openIcon = 'media/images/Index.png';
+		class_trees.icon = 'media/images/Index.png';
+		tree.add(class_trees);
+
+		var elements = new WebFXTreeItem('Index of elements', 'elementindex_utf8.html');
+		elements.openIcon = 'media/images/Index.png';
+		elements.icon = 'media/images/Index.png';
+		tree.add(elements);
+
+		var parent_node;
+
+		
+					var tree_classe = new WebFXTreeItem('Interface(s)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+				
+			tree.add(tree_classe);
+		
+					var tree_classe = new WebFXTreeItem('Class(es)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+				
+			tree.add(tree_classe);
+		
+			
+					var tree_file = new WebFXTreeItem('File(s)', '');
+			tree_file.openIcon = 'media/images/folder.png';
+			tree_file.icon = 'media/images/folder.png';
+	
+							var file = new WebFXTreeItem('utf8.php', 'utf8/_libraries---phputf8---utf8.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+				
+			tree.add(tree_file);
+		
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">ascii</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_accents_to_ascii', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html#functionutf8_accents_to_ascii');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_is_ascii', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html#functionutf8_is_ascii');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_is_ascii_ctrl', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html#functionutf8_is_ascii_ctrl');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strip_ascii_ctrl', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html#functionutf8_strip_ascii_ctrl');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strip_non_ascii', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html#functionutf8_strip_non_ascii');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strip_non_ascii_ctrl', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html#functionutf8_strip_non_ascii_ctrl');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('ascii.php', 'utf8/ascii/_libraries---phputf8---utils---ascii.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">bad</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_bad_explain', 'utf8/bad/_libraries---phputf8---utils---bad.php.html#functionutf8_bad_explain');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_bad_find', 'utf8/bad/_libraries---phputf8---utils---bad.php.html#functionutf8_bad_find');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_bad_findall', 'utf8/bad/_libraries---phputf8---utils---bad.php.html#functionutf8_bad_findall');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_bad_identify', 'utf8/bad/_libraries---phputf8---utils---bad.php.html#functionutf8_bad_identify');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_bad_replace', 'utf8/bad/_libraries---phputf8---utils---bad.php.html#functionutf8_bad_replace');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_bad_strip', 'utf8/bad/_libraries---phputf8---utils---bad.php.html#functionutf8_bad_strip');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('bad.php', 'utf8/bad/_libraries---phputf8---utils---bad.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">patterns</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('patterns.php', 'utf8/patterns/_libraries---phputf8---utils---patterns.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">position</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_byte_position', 'utf8/position/_libraries---phputf8---utils---position.php.html#functionutf8_byte_position');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_locate_current_chr', 'utf8/position/_libraries---phputf8---utils---position.php.html#functionutf8_locate_current_chr');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_locate_next_chr', 'utf8/position/_libraries---phputf8---utils---position.php.html#functionutf8_locate_next_chr');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('position.php', 'utf8/position/_libraries---phputf8---utils---position.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">strings</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_ireplace', 'utf8/strings/_libraries---phputf8---str_ireplace.php.html#functionutf8_ireplace');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_ltrim', 'utf8/strings/_libraries---phputf8---trim.php.html#functionutf8_ltrim');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_ord', 'utf8/strings/_libraries---phputf8---ord.php.html#functionutf8_ord');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_rtrim', 'utf8/strings/_libraries---phputf8---trim.php.html#functionutf8_rtrim');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strcasecmp', 'utf8/strings/_libraries---phputf8---strcasecmp.php.html#functionutf8_strcasecmp');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strcspn', 'utf8/strings/_libraries---phputf8---strcspn.php.html#functionutf8_strcspn');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_stristr', 'utf8/strings/_libraries---phputf8---stristr.php.html#functionutf8_stristr');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strlen', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strlen');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strpos', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strpos');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strrev', 'utf8/strings/_libraries---phputf8---strrev.php.html#functionutf8_strrev');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strrpos', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strrpos');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strspn', 'utf8/strings/_libraries---phputf8---strspn.php.html#functionutf8_strspn');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strtolower', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strtolower');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strtoupper', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strtoupper');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_str_pad', 'utf8/strings/_libraries---phputf8---str_pad.php.html#functionutf8_str_pad');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_str_split', 'utf8/strings/_libraries---phputf8---str_split.php.html#functionutf8_str_split');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_substr', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_substr');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_substr_replace', 'utf8/strings/_libraries---phputf8---substr_replace.php.html#functionutf8_substr_replace');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_trim', 'utf8/strings/_libraries---phputf8---trim.php.html#functionutf8_trim');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_ucfirst', 'utf8/strings/_libraries---phputf8---ucfirst.php.html#functionutf8_ucfirst');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_ucwords', 'utf8/strings/_libraries---phputf8---ucwords.php.html#functionutf8_ucwords');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_ucwords_callback', 'utf8/strings/_libraries---phputf8---ucwords.php.html#functionutf8_ucwords_callback');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('core.php', 'utf8/strings/_libraries---phputf8---native---core.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('core.php', 'utf8/strings/_libraries---phputf8---mbstring---core.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('ord.php', 'utf8/strings/_libraries---phputf8---ord.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('strcasecmp.php', 'utf8/strings/_libraries---phputf8---strcasecmp.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('strcspn.php', 'utf8/strings/_libraries---phputf8---strcspn.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('stristr.php', 'utf8/strings/_libraries---phputf8---stristr.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('strrev.php', 'utf8/strings/_libraries---phputf8---strrev.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('strspn.php', 'utf8/strings/_libraries---phputf8---strspn.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('str_ireplace.php', 'utf8/strings/_libraries---phputf8---str_ireplace.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('str_pad.php', 'utf8/strings/_libraries---phputf8---str_pad.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('str_split.php', 'utf8/strings/_libraries---phputf8---str_split.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('substr_replace.php', 'utf8/strings/_libraries---phputf8---substr_replace.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('trim.php', 'utf8/strings/_libraries---phputf8---trim.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('ucfirst.php', 'utf8/strings/_libraries---phputf8---ucfirst.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('ucwords.php', 'utf8/strings/_libraries---phputf8---ucwords.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">unicode</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_from_unicode', 'utf8/unicode/_libraries---phputf8---utils---unicode.php.html#functionutf8_from_unicode');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_to_unicode', 'utf8/unicode/_libraries---phputf8---utils---unicode.php.html#functionutf8_to_unicode');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('unicode.php', 'utf8/unicode/_libraries---phputf8---utils---unicode.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">utils</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_is_word_chars', 'utf8/utils/_libraries---phputf8---utils---specials.php.html#functionutf8_is_word_chars');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_specials_pattern', 'utf8/utils/_libraries---phputf8---utils---specials.php.html#functionutf8_specials_pattern');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_strip_specials', 'utf8/utils/_libraries---phputf8---utils---specials.php.html#functionutf8_strip_specials');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('specials.php', 'utf8/utils/_libraries---phputf8---utils---specials.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">validation</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('utf8_compliant', 'utf8/validation/_libraries---phputf8---utils---validation.php.html#functionutf8_compliant');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('utf8_is_valid', 'utf8/validation/_libraries---phputf8---utils---validation.php.html#functionutf8_is_valid');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('validation.php', 'utf8/validation/_libraries---phputf8---utils---validation.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+	
+document.write(tree);
+}
+</script>
+</div>
+<p class="notes">
+	Generated by 
+	<a href="http://www.phpdoc.org" target="_blank">phpDocumentor <span class="field">1.4.3</span></a>
+</p>
+</body>
+</html>

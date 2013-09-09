@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class SimplePie_Source</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> SimplePie_Source</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_libraries---simplepie---simplepie.php.html">/libraries/simplepie/simplepie.php</a> (line <span class="field"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5729">5729</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$data" title="details" class="var-name">$data</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$item" title="details" class="var-name">$item</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">SimplePie_Source</span>
+										<a href="#SimplePie_Source" title="details" class="method-name">SimplePie_Source</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$item</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_author" title="details" class="method-name">get_author</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_authors" title="details" class="method-name">get_authors</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_base" title="details" class="method-name">get_base</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$element</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_categories" title="details" class="method-name">get_categories</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_category" title="details" class="method-name">get_category</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_contributor" title="details" class="method-name">get_contributor</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_contributors" title="details" class="method-name">get_contributors</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_copyright" title="details" class="method-name">get_copyright</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_description" title="details" class="method-name">get_description</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_image_url" title="details" class="method-name">get_image_url</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_item" title="details" class="method-name">get_item</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_language" title="details" class="method-name">get_language</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_latitude" title="details" class="method-name">get_latitude</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_link" title="details" class="method-name">get_link</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rel</span> = <span class="var-default">'alternate'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_links" title="details" class="method-name">get_links</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$rel</span> = <span class="var-default">'alternate'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_longitude" title="details" class="method-name">get_longitude</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_permalink" title="details" class="method-name">get_permalink</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_source_tags" title="details" class="method-name">get_source_tags</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tag</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#get_title" title="details" class="method-name">get_title</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#sanitize" title="details" class="method-name">sanitize</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$base</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$data" id="$data"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$data</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5732">5732</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$item" id="$item"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$item</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5731">5731</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodSimplePie_Source" id="SimplePie_Source"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor SimplePie_Source</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5734">5734</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">SimplePie_Source</span>
+		<span class="method-name">
+			SimplePie_Source
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$item</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$item</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_author" id="get_author"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_author</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5878">5878</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_author
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_authors" id="get_authors"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_authors</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5891">5891</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_authors
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_base" id="get_base"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_base</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5757">5757</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_base
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$element</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$element</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_categories" id="get_categories"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_categories</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5821">5821</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_categories
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_category" id="get_category"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_category</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5808">5808</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_category
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_contributor" id="get_contributor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_contributor</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5961">5961</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_contributor
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_contributors" id="get_contributors"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_contributors</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5974">5974</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_contributors
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_copyright" id="get_copyright"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_copyright</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6171">6171</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_copyright
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_description" id="get_description"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_description</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6127">6127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_description
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_image_url" id="get_image_url"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_image_url</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6259">6259</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_image_url
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_item" id="get_item"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_item</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5767">5767</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_item
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_language" id="get_language"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_language</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6199">6199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_language
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_latitude" id="get_latitude"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_latitude</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6223">6223</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_latitude
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_link" id="get_link"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_link</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6032">6032</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_link
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rel</span> = <span class="var-default">'alternate'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rel</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_links" id="get_links"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_links</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6053">6053</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_links
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$rel</span> = <span class="var-default">'alternate'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rel</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_longitude" id="get_longitude"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_longitude</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6239">6239</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_longitude
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_permalink" id="get_permalink"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_permalink</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a6048">6048</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Added for parity between the parent-level and the item/entry-level.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_permalink
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_source_tags" id="get_source_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_source_tags</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5745">5745</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_source_tags
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tag</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tag</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_title" id="get_title"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">get_title</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5772">5772</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_title
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsanitize" id="sanitize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">sanitize</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5762">5762</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sanitize
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$base</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$base</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">__toString</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a5740">5740</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTwittersearch</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JTwittersearch</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Twitter API Search class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---twitter---search.php.html">/libraries/joomla/twitter/search.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwittersearch.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a>
+   |
+   --JTwittersearch</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createSavedSearch" title="details" class="method-name">createSavedSearch</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#deleteSavedSearch" title="details" class="method-name">deleteSavedSearch</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getSavedSearches" title="details" class="method-name">getSavedSearches</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getSavedSearchesById" title="details" class="method-name">getSavedSearchesById</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#search" title="details" class="method-name">search</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$geocode</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$result_type</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">15</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$until</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$client">JTwitterObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$oauth">JTwitterObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$options">JTwitterObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateSavedSearch" id="createSavedSearch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createSavedSearch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwittersearch.php.html#a168">168</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a new saved search for the authenticated user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createSavedSearch
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: The query of the search the user would like to save.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteSavedSearch" id="deleteSavedSearch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteSavedSearch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwittersearch.php.html#a189">189</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a saved search for the authenticating user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			deleteSavedSearch
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the saved search.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSavedSearches" id="getSavedSearches"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSavedSearches</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwittersearch.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the authenticated user's saved search queries.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSavedSearches
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSavedSearchesById" id="getSavedSearchesById"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSavedSearchesById</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwittersearch.php.html#a147">147</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the information for the saved search represented by the given id.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSavedSearchesById
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the saved search.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearch" id="search"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">search</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwittersearch.php.html#a43">43</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get tweets that match a specified query.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			search
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$geocode</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$result_type</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">15</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$until</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: Search query. Should be URL encoded. Queries will be limited by complexity.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callback</span><span class="var-description">: If supplied, the response will use the JSONP format with a callback of the given name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$geocode</span><span class="var-description">: Returns tweets by users located within a given radius of the given latitude/longitude. The parameter value is                                     specified by &quot;latitude,longitude,radius&quot;, where radius units must be specified as either &quot;mi&quot; (miles) or &quot;km&quot; (kilometers).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: Restricts tweets to the given language, given by an ISO 639-1 code.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$locale</span><span class="var-description">: Specify the language of the query you are sending (only ja is currently effective). This is intended for                                     language-specific clients and the default should work in the majority of cases.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$result_type</span><span class="var-description">: Specifies what type of search results you would prefer to receive. The current default is &quot;mixed.&quot;</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: The number of tweets to return per page, up to a maximum of 100. Defaults to 15.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$until</span><span class="var-description">: Returns tweets generated before the given date. Date should be formatted as YYYY-MM-DD.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$since_id</span><span class="var-description">: Returns results with an ID greater than (that is, more recent than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_id</span><span class="var-description">: Returns results with an ID less than (that is, older than) or equal to the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to either true, t or 1, each tweet will include a node called &quot;entities,&quot;. This node offers a                                     variety of metadata about the tweet in a discrete structure, including: urls, media and hashtags.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#method__construct">JTwitterObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodcheckRateLimit">JTwitterObject::checkRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodfetchUrl">JTwitterObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetOption">JTwitterObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetRateLimit">JTwitterObject::getRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsendRequest">JTwitterObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsetOption">JTwitterObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:38:04 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

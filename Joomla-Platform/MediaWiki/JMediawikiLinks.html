@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JMediawikiLinks</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JMediawikiLinks</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">MediaWiki API Links class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---mediawiki---links.php.html">/libraries/joomla/mediawiki/links.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a>
+   |
+   --JMediawikiLinks</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#enumerateLinks" title="details" class="method-name">enumerateLinks</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$alcontinue</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alfrom</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alto</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alprefix</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alunique</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$alprop</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$allimit</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getExtLinks" title="details" class="method-name">getExtLinks</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$ellimit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$eloffset</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$elprotocol</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$elquery</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getIWLinks" title="details" class="method-name">getIWLinks</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$iwurl</span> = <span class="var-default">false</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$iwlimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$iwcontinue</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwprefix</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwtitle</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwdir</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getLangLinks" title="details" class="method-name">getLangLinks</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$lllimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$llcontinue</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$llurl</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lllang</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lltitle</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lldir</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getLinks" title="details" class="method-name">getLinks</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$plnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pllimit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$plcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$pltitles</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pldir</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getLinksUsed" title="details" class="method-name">getLinksUsed</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#var$client">JMediawikiObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#var$options">JMediawikiObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodenumerateLinks" id="enumerateLinks"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">enumerateLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a279">279</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to enumerate all links that point to a given namespace.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			enumerateLinks
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$alcontinue</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alfrom</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alto</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alprefix</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alunique</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$alprop</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$allimit</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$alcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alfrom</span><span class="var-description">: Start listing at this title. The title need not exist.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alto</span><span class="var-description">: The page title to stop enumerating at.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alprefix</span><span class="var-description">: Search for all page titles that begin with this value.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alunique</span><span class="var-description">: Only show unique links.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$alprop</span><span class="var-description">: What pieces of information to include.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alnamespace</span><span class="var-description">: The namespace to enumerate.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$allimit</span><span class="var-description">: Number of links to return.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtLinks" id="getExtLinks"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getExtLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a229">229</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return all external urls from the given page(s).</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getExtLinks
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$ellimit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$eloffset</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$elprotocol</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$elquery</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve links.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$ellimit</span><span class="var-description">: Number of links to return.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eloffset</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$elprotocol</span><span class="var-description">: Protocol of the url.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$elquery</span><span class="var-description">: Search string without protocol.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIWLinks" id="getIWLinks"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIWLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a113">113</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return all interwiki links from the given page(s).</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getIWLinks
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$iwurl</span> = <span class="var-default">false</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$iwlimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$iwcontinue</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwprefix</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwtitle</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwdir</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve links.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$iwurl</span><span class="var-description">: Whether to get the full url.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$iwlimit</span><span class="var-description">: Number of interwiki links to return.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$iwcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$iwprefix</span><span class="var-description">: Prefix for the interwiki.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$iwtitle</span><span class="var-description">: Interwiki link to search for.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$iwdir</span><span class="var-description">: The direction in which to list.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLangLinks" id="getLangLinks"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLangLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return all interlanguage links from the given page(s).</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getLangLinks
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$lllimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$llcontinue</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$llurl</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lllang</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lltitle</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lldir</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve links.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$lllimit</span><span class="var-description">: Number of langauge links to return.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$llcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$llurl</span><span class="var-description">: Whether to get the full URL.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lllang</span><span class="var-description">: Language code.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lltitle</span><span class="var-description">: Link to search for.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lldir</span><span class="var-description">: The direction in which to list.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLinks" id="getLinks"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a36">36</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return all links from the given page(s).</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getLinks
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$plnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pllimit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$plcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$pltitles</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pldir</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve links.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$plnamespace</span><span class="var-description">: Namespaces to get links.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pllimit</span><span class="var-description">: Number of links to return.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$plcontinue</span><span class="var-description">: Continue when more results are available.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$pltitles</span><span class="var-description">: List links to these titles.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pldir</span><span class="var-description">: Direction of listing.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLinksUsed" id="getLinksUsed"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLinksUsed</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikilinks.php.html#a84">84</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return info about the link pages.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getLinksUsed
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve links.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#method__construct">JMediawikiObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodbuildParameter">JMediawikiObject::buildParameter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodfetchUrl">JMediawikiObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodvalidateResponse">JMediawikiObject::validateResponse()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:38 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

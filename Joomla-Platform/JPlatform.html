@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JPlatform</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JPlatform</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Version information class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---platform.php.html">/libraries/platform.php</a> (line <span class="field"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a17">17</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#BUILD" title="details" class="const-name">BUILD</a> = 					<span class="var-type"> 0</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CODE_NAME" title="details" class="const-name">CODE_NAME</a> = 					<span class="var-type"> 'Neil Armstrong'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#COPYRIGHT" title="details" class="const-name">COPYRIGHT</a> = 					<span class="var-type"> 'Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#LINK_TEXT" title="details" class="const-name">LINK_TEXT</a> = 					<span class="var-type"> '&lt;a href=&quot;http://www.joomla.org&quot;&gt;Joomla!&lt;/a&gt; is Free Software released under the GNU General Public License.'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#MAINTENANCE" title="details" class="const-name">MAINTENANCE</a> = 					<span class="var-type"> '0'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#PRODUCT" title="details" class="const-name">PRODUCT</a> = 					<span class="var-type"> 'Joomla Platform'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RELEASE" title="details" class="const-name">RELEASE</a> = 					<span class="var-type"> '12.2'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RELEASE_DATE" title="details" class="const-name">RELEASE_DATE</a> = 					<span class="var-type"> '21-September-2012'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RELEASE_TIME" title="details" class="const-name">RELEASE_TIME</a> = 					<span class="var-type"> '00:00'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RELEASE_TIME_ZONE" title="details" class="const-name">RELEASE_TIME_ZONE</a> = 					<span class="var-type"> 'GMT'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#STATUS" title="details" class="const-name">STATUS</a> = 					<span class="var-type"> 'Stable'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getLongVersion" title="details" class="method-name">getLongVersion</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getShortVersion" title="details" class="method-name">getShortVersion</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isCompatible" title="details" class="method-name">isCompatible</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$minimum</span>)
+									</div>
+																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetLongVersion" id="getLongVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getLongVersion</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a86">86</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a version string for the current Joomla Platform with all release information.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Complete version string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getLongVersion
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetShortVersion" id="getShortVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getShortVersion</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a74">74</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a &quot;PHP standardized&quot; version string for the current Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Version string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getShortVersion
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisCompatible" id="isCompatible"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isCompatible</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a62">62</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compares two a &quot;PHP standardized&quot; version number against the current Joomla Platform version.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the version is compatible.</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/version_compare">http://www.php.net/version_compare</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isCompatible
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$minimum</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$minimum</span><span class="var-description">: The minimum version of the Joomla Platform which is compatible.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constBUILD" id="BUILD"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">BUILD</span>
+			 = <span class="const-default"> 0</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constCODE_NAME" id="CODE_NAME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CODE_NAME</span>
+			 = <span class="const-default"> 'Neil Armstrong'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constCOPYRIGHT" id="COPYRIGHT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COPYRIGHT</span>
+			 = <span class="const-default"> 'Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLINK_TEXT" id="LINK_TEXT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LINK_TEXT</span>
+			 = <span class="const-default"> '&lt;a href=&quot;http://www.joomla.org&quot;&gt;Joomla!&lt;/a&gt; is Free Software released under the GNU General Public License.'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constMAINTENANCE" id="MAINTENANCE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">MAINTENANCE</span>
+			 = <span class="const-default"> '0'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constPRODUCT" id="PRODUCT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PRODUCT</span>
+			 = <span class="const-default"> 'Joomla Platform'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a20">20</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constRELEASE" id="RELEASE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RELEASE</span>
+			 = <span class="const-default"> '12.2'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a23">23</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constRELEASE_DATE" id="RELEASE_DATE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RELEASE_DATE</span>
+			 = <span class="const-default"> '21-September-2012'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constRELEASE_TIME" id="RELEASE_TIME"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RELEASE_TIME</span>
+			 = <span class="const-default"> '00:00'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constRELEASE_TIME_ZONE" id="RELEASE_TIME_ZONE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RELEASE_TIME_ZONE</span>
+			 = <span class="const-default"> 'GMT'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSTATUS" id="STATUS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STATUS</span>
+			 = <span class="const-default"> 'Stable'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_Joomla-Platform__librariesplatform.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:36:29 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

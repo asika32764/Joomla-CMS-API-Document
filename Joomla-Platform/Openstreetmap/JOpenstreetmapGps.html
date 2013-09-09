@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JOpenstreetmapGps</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JOpenstreetmapGps</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Openstreetmap API GPS class for the Joomla Platform</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 13.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---openstreetmap---gps.php.html">/libraries/joomla/openstreetmap/gps.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapgps.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a>
+   |
+   --JOpenstreetmapGps</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#downloadTraceMetadata" title="details" class="method-name">downloadTraceMetadata</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#downloadTraceMetadetails" title="details" class="method-name">downloadTraceMetadetails</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#retrieveGps" title="details" class="method-name">retrieveGps</a>
+											(<span class="var-type">float</span>&nbsp;<span class="var-name">$left</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$bottom</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$right</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$top</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/HTTP/JHttpResponse.html">JHttpResponse</a></span>
+										<a href="#uploadTrace" title="details" class="method-name">uploadTrace</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$description</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tags</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$public</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$visibility</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$client">JOpenstreetmapObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$oauth">JOpenstreetmapObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$options">JOpenstreetmapObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoddownloadTraceMetadata" id="downloadTraceMetadata"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">downloadTraceMetadata</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapgps.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to download Trace data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			downloadTraceMetadata
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Trace identifier</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Username</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span><span class="var-description">: Password</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddownloadTraceMetadetails" id="downloadTraceMetadetails"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">downloadTraceMetadetails</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapgps.php.html#a104">104</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to download Trace details</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			downloadTraceMetadetails
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Trace identifier</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Username</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span><span class="var-description">: Password</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodretrieveGps" id="retrieveGps"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">retrieveGps</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapgps.php.html#a34">34</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retrieve GPS points</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response containing GPS points</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			retrieveGps
+		</span>
+					(<span class="var-type">float</span>&nbsp;<span class="var-name">$left</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$bottom</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$right</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$top</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$left</span><span class="var-description">: Left boundary</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$bottom</span><span class="var-description">: Bottom boundary</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$right</span><span class="var-description">: Right boundary</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$top</span><span class="var-description">: Top boundary</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$page</span><span class="var-description">: Page number</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduploadTrace" id="uploadTrace"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">uploadTrace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapgps.php.html#a65">65</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to upload GPS Traces</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/HTTP/JHttpResponse.html">JHttpResponse</a></span>
+		<span class="method-name">
+			uploadTrace
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$description</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tags</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$public</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$visibility</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: File name that contains trace points</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$description</span><span class="var-description">: Description on trace points</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tags</span><span class="var-description">: Tags for trace</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$public</span><span class="var-description">: <ol><li>for public, 0 for private</li></ol></span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$visibility</span><span class="var-description">: One of the following: private, public, trackable, identifiable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Username</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span><span class="var-description">: Password</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#method__construct">JOpenstreetmapObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodgetOption">JOpenstreetmapObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodsendRequest">JOpenstreetmapObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodsetOption">JOpenstreetmapObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:31:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

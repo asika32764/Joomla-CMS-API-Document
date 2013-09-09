@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JGithub</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JGithub</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla Platform class for interacting with a GitHub server instance.</p>
+	<ul class="tags">
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubGists.html">JGithubGists</a> $gists: GitHub API object for gists.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubIssues.html">JGithubIssues</a> $issues: GitHub API object for issues.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubPulls.html">JGithubPulls</a> $pulls: GitHub API object for pulls.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubRefs.html">JGithubRefs</a> $refs: GitHub API object for referencess.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubForks.html">JGithubForks</a> $forks: GitHub API object for forks.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubCommits.html">JGithubCommits</a> $commits: GitHub API object for commits.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubMilestones.html">JGithubMilestones</a> $milestones: GitHub API object for commits.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubStatuses.html">JGithubStatuses</a> $statuses: GitHub API object for commits.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubAccount.html">JGithubAccount</a> $account: GitHub API object for account references.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubHooks.html">JGithubHooks</a> $hooks: GitHub API object for hooks.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubUsers.html">JGithubUsers</a> $users: GitHub API object for users.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/GitHub/JGithubMeta.html">JGithubMeta</a> $meta: GitHub API object for meta.</li>
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---github---github.php.html">/libraries/joomla/github/github.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a32">32</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubAccount.html">JGithubAccount</a></span>
+					<a href="#$account" title="details" class="var-name">$account</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHttp.html">JGithubHttp</a></span>
+					<a href="#$client" title="details" class="var-name">$client</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubCommits.html">JGithubCommits</a></span>
+					<a href="#$commits" title="details" class="var-name">$commits</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubForks.html">JGithubForks</a></span>
+					<a href="#$forks" title="details" class="var-name">$forks</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubGists.html">JGithubGists</a></span>
+					<a href="#$gists" title="details" class="var-name">$gists</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHooks.html">JGithubHooks</a></span>
+					<a href="#$hooks" title="details" class="var-name">$hooks</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubIssues.html">JGithubIssues</a></span>
+					<a href="#$issues" title="details" class="var-name">$issues</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubMeta.html">JGithubMeta</a></span>
+					<a href="#$meta" title="details" class="var-name">$meta</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubMilestones.html">JGithubMilestones</a></span>
+					<a href="#$milestones" title="details" class="var-name">$milestones</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+					<a href="#$options" title="details" class="var-name">$options</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubPulls.html">JGithubPulls</a></span>
+					<a href="#$pulls" title="details" class="var-name">$pulls</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubRefs.html">JGithubRefs</a></span>
+					<a href="#$refs" title="details" class="var-name">$refs</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubStatuses.html">JGithubStatuses</a></span>
+					<a href="#$statuses" title="details" class="var-name">$statuses</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubUsers.html">JGithubUsers</a></span>
+					<a href="#$users" title="details" class="var-name">$users</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JGithub</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHttp.html">JGithubHttp</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getOption" title="details" class="method-name">getOption</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">JGitHub</span>
+										<a href="#setOption" title="details" class="method-name">setOption</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/GitHub/JGithubObject.html">JGithubObject</a></span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$account" id="$account"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubAccount.html">JGithubAccount</a></span>
+			<span class="var-name">$account</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a98">98</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for account references.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$client" id="$client"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHttp.html">JGithubHttp</a></span>
+			<span class="var-name">$client</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The HTTP client object to use in sending HTTP requests.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$commits" id="$commits"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubCommits.html">JGithubCommits</a></span>
+			<span class="var-name">$commits</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a80">80</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for commits.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$forks" id="$forks"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubForks.html">JGithubForks</a></span>
+			<span class="var-name">$forks</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a74">74</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for forks.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$gists" id="$gists"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubGists.html">JGithubGists</a></span>
+			<span class="var-name">$gists</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for gists.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$hooks" id="$hooks"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHooks.html">JGithubHooks</a></span>
+			<span class="var-name">$hooks</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a104">104</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for hooks.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$issues" id="$issues"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubIssues.html">JGithubIssues</a></span>
+			<span class="var-name">$issues</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for issues.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$meta" id="$meta"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubMeta.html">JGithubMeta</a></span>
+			<span class="var-name">$meta</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a116">116</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for meta.</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$milestones" id="$milestones"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubMilestones.html">JGithubMilestones</a></span>
+			<span class="var-name">$milestones</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a86">86</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for milestones.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$options" id="$options"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+			<span class="var-name">$options</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Options for the GitHub object.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pulls" id="$pulls"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubPulls.html">JGithubPulls</a></span>
+			<span class="var-name">$pulls</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for pulls.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$refs" id="$refs"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubRefs.html">JGithubRefs</a></span>
+			<span class="var-name">$refs</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a68">68</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for referencess.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$statuses" id="$statuses"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubStatuses.html">JGithubStatuses</a></span>
+			<span class="var-name">$statuses</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a92">92</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for statuses.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$users" id="$users"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubUsers.html">JGithubUsers</a></span>
+			<span class="var-name">$users</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a110">110</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> GitHub API object for users.</li>
+				<li><span class="field">since:</span> 12.4</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGithub</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHttp.html">JGithubHttp</a></span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+				<span class="var-name">$options</span><span class="var-description">: GitHub options object.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/GitHub/JGithubHttp.html">JGithubHttp</a></span>
+				<span class="var-name">$client</span><span class="var-description">: The HTTP client object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetOption" id="getOption"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOption</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a171">171</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get an option from the JGitHub instance.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The option value.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getOption
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the option to get.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOption" id="setOption"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setOption</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a186">186</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set an option for the JGitHub instance.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> This object for method chaining.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGitHub</span>
+		<span class="method-name">
+			setOption
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the option to set.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The option value to set.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_GitHub_librariesjoomlagithubgithub.php.html#a145">145</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to lazily create API objects</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> GitHub API object (gists, issues, pulls, etc).</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/GitHub/JGithubObject.html">JGithubObject</a></span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of property to retrieve</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:31:15 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

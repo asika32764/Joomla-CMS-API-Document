@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JDocumentRenderer</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JDocumentRenderer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Abstract class for a renderer</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---document---renderer.php.html">/libraries/joomla/document/renderer.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentrenderer.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererAtom.html">JDocumentRendererAtom</a>
+					</td>
+					<td>
+											JDocumentRenderer_Atom is a feed that implements the atom specification
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererRSS.html">JDocumentRendererRSS</a>
+					</td>
+					<td>
+											JDocumentRenderer_RSS is a feed that implements RSS 2.0 Specification
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererComponent.html">JDocumentRendererComponent</a>
+					</td>
+					<td>
+											Component renderer
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererHead.html">JDocumentRendererHead</a>
+					</td>
+					<td>
+											JDocument head renderer
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererMessage.html">JDocumentRendererMessage</a>
+					</td>
+					<td>
+											JDocument system message renderer
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererModule.html">JDocumentRendererModule</a>
+					</td>
+					<td>
+											JDocument Module renderer
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Document/JDocumentRendererModules.html">JDocumentRendererModules</a>
+					</td>
+					<td>
+											JDocument Modules renderer
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+					<a href="#$_doc" title="details" class="var-name">$_doc</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_mime" title="details" class="var-name">$_mime</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JDocumentRenderer</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>&nbsp;<span class="var-name">$doc</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getContentType" title="details" class="method-name">getContentType</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#render" title="details" class="method-name">render</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_doc" id="$_doc"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+			<span class="var-name">$_doc</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentrenderer.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reference to the JDocument object that instantiated the renderer</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_mime" id="$_mime"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_mime</span>
+			 = <span class="var-default"> &quot;text/html&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentrenderer.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renderer mime type</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererAtom.html#var$_mime">JDocumentRendererAtom::$_mime</a>
+								: Document mime type
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererRSS.html#var$_mime">JDocumentRendererRSS::$_mime</a>
+								: Renderer mime type
+							</li>
+				</ul>
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentrenderer.php.html#a44">44</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JDocumentRenderer</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>&nbsp;<span class="var-name">$doc</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+				<span class="var-name">$doc</span><span class="var-description">: A reference to the JDocument object that instantiated the renderer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetContentType" id="getContentType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getContentType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentrenderer.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the content type of the renderer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The contentType</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getContentType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodrender" id="render"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">render</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Document_librariesjoomladocumentrenderer.php.html#a60">60</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders a script and returns the results as a string</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The output of the script</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			render
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the element to render</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: Array of values</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: Override the output of the renderer</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererAtom.html#methodrender">JDocumentRendererAtom::render()</a>
+								: Render the feed.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererRSS.html#methodrender">JDocumentRendererRSS::render()</a>
+								: Render the feed.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererComponent.html#methodrender">JDocumentRendererComponent::render()</a>
+								: Renders a component script and returns the results as a string
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererHead.html#methodrender">JDocumentRendererHead::render()</a>
+								: Renders the document head and returns the results as a string
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererMessage.html#methodrender">JDocumentRendererMessage::render()</a>
+								: Renders the error stack and returns the results as a string
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererModule.html#methodrender">JDocumentRendererModule::render()</a>
+								: Renders a module script and returns the results as a string
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Document/JDocumentRendererModules.html#methodrender">JDocumentRendererModules::render()</a>
+								: Renders multiple modules script and returns the results as a string
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:37:22 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

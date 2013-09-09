@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FinderIndexerTaxonomy</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FinderIndexerTaxonomy</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stemmer base class for the Finder indexer package.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_finder---helpers---indexer---taxonomy.php.html">/administrator/components/com_finder/helpers/indexer/taxonomy.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$branches" title="details" class="var-name">$branches</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$nodes" title="details" class="var-name">$nodes</a>
+				</div>
+																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#addBranch" title="details" class="method-name">addBranch</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$access</span> = <span class="var-default">1</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#addMap" title="details" class="method-name">addMap</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$linkId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nodeId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#addNode" title="details" class="method-name">addNode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$branch</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$access</span> = <span class="var-default">1</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getBranchTitles" title="details" class="method-name">getBranchTitles</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#getNodeByTitle" title="details" class="method-name">getNodeByTitle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$branch</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#removeMaps" title="details" class="method-name">removeMaps</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$linkId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#removeOrphanNodes" title="details" class="method-name">removeOrphanNodes</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#storeNode" title="details" class="method-name">storeNode</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+																																																																															</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$branches" id="$branches"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$branches</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An internal cache of taxonomy branch data.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$nodes" id="$nodes"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$nodes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An internal cache of taxonomy node data.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddBranch" id="addBranch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addBranch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a49">49</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a branch to the taxonomy tree.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The id of the branch.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			addBranch
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$access</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title of the branch.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$state</span><span class="var-description">: The published state of the branch. [optional]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$access</span><span class="var-description">: The access state of the branch. [optional]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddMap" id="addMap"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addMap</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a202">202</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a map entry between a link and a taxonomy node.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			addMap
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$linkId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nodeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$linkId</span><span class="var-description">: The link to map to.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nodeId</span><span class="var-description">: The node to map to.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddNode" id="addNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a125">125</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a node to the taxonomy tree.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The id of the node.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			addNode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$branch</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$access</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$branch</span><span class="var-description">: The title of the branch to store the node in.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title of the node.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$state</span><span class="var-description">: The published state of the node. [optional]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$access</span><span class="var-description">: The access state of the node. [optional]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBranchTitles" id="getBranchTitles"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getBranchTitles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a240">240</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the title of all taxonomy branches.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of branch titles.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getBranchTitles
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetNodeByTitle" id="getNodeByTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getNodeByTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a274">274</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to find a taxonomy node in a branch.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Integer id on success, null on no match.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			getNodeByTitle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$branch</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$branch</span><span class="var-description">: The branch to search.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title of the node.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveMaps" id="removeMaps"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static removeMaps</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a311">311</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove map entries for a link.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			removeMaps
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$linkId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$linkId</span><span class="var-description">: The link to remove.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveOrphanNodes" id="removeOrphanNodes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static removeOrphanNodes</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a332">332</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove orphaned taxonomy nodes and branches.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of deleted rows.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			removeOrphanNodes
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodstoreNode" id="storeNode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static storeNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexertaxonomy.php.html#a357">357</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to store a node to the database.  This method will accept either a branch or a node.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			storeNode
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$item</span><span class="var-description">: The item to store.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:40:14 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JAccess</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JAccess</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class that handles all access authorisation routines.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---access---access.php.html">/libraries/joomla/access/access.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$assetRules" title="details" class="var-name">$assetRules</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$groupsByUser" title="details" class="var-name">$groupsByUser</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$userGroupPaths" title="details" class="var-name">$userGroupPaths</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$userGroups" title="details" class="var-name">$userGroups</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$viewLevels" title="details" class="var-name">$viewLevels</a>
+				</div>
+																																																							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#check" title="details" class="method-name">check</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$asset</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#checkGroup" title="details" class="method-name">checkGroup</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$groupId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$asset</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#clearStatics" title="details" class="method-name">clearStatics</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getActions" title="details" class="method-name">getActions</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">'component'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean|array</span>
+										<a href="#getActionsFromData" title="details" class="method-name">getActionsFromData</a>
+											(<span class="var-type">string|SimpleXMLElement</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">&quot;/access/section[@name='component']/&quot;</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean|array</span>
+										<a href="#getActionsFromFile" title="details" class="method-name">getActionsFromFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">&quot;/access/section[@name='component']/&quot;</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
+										<a href="#getAssetRules" title="details" class="method-name">getAssetRules</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$asset</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getAuthorisedViewLevels" title="details" class="method-name">getAuthorisedViewLevels</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#getGroupPath" title="details" class="method-name">getGroupPath</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$groupId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getGroupsByUser" title="details" class="method-name">getGroupsByUser</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getUsersByGroup" title="details" class="method-name">getUsersByGroup</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$groupId</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">false</span>])
+									</div>
+																																																																																																							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$assetRules" id="$assetRules"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$assetRules</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of rules for the asset</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$groupsByUser" id="$groupsByUser"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$groupsByUser</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of cached groups by user.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$userGroupPaths" id="$userGroupPaths"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$userGroupPaths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of user group paths.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$userGroups" id="$userGroups"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$userGroups</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of user groups.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$viewLevels" id="$viewLevels"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$viewLevels</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of view levels</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheck" id="check"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static check</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a90">90</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to check if a user is authorised to perform an action, optionally on an asset.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if authorised.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			check
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$asset</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Id of the user for which to check authorisation.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: The name of the action to authorise.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$asset</span><span class="var-description">: Integer asset id or the name of the asset as a string.  Defaults to the global asset node.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckGroup" id="checkGroup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static checkGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a131">131</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to check if a group is authorised to perform an action, optionally on an asset.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if authorised.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			checkGroup
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$groupId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$asset</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$groupId</span><span class="var-description">: The path to the group for which to check authorisation.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: The name of the action to authorise.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$asset</span><span class="var-description">: Integer asset id or the name of the asset as a string.  Defaults to the global asset node.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclearStatics" id="clearStatics"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static clearStatics</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method for clearing static caches.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clearStatics
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetActions" id="getActions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getActions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a465">465</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a list of actions for which permissions can be set given a component and section.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> List of actions available for the given component and section.</li>
+				<li><span class="field">deprecated:</span> 12.3 (Platform) &amp; 4.0 (CMS)  Use JAccess::getActionsFromFile or JAccess::getActionsFromData instead.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getActions
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">'component'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The component from which to retrieve the actions.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$section</span><span class="var-description">: The name of the section within the component from which to retrieve the actions.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetActionsFromData" id="getActionsFromData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getActionsFromData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a520">520</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a list of actions from a string or from an xml for which permissions can be set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> False if case of error or the list of actions available.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean|array</span>
+		<span class="method-name">
+			getActionsFromData
+		</span>
+					(<span class="var-type">string|SimpleXMLElement</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">&quot;/access/section[@name='component']/&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|SimpleXMLElement</span>
+				<span class="var-name">$data</span><span class="var-description">: The XML string or an XML element.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetActionsFromFile" id="getActionsFromFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getActionsFromFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a494">494</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a list of actions from a file for which permissions can be set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> False if case of error or the list of actions available.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean|array</span>
+		<span class="method-name">
+			getActionsFromFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">&quot;/access/section[@name='component']/&quot;</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The path to the XML file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAssetRules" id="getAssetRules"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getAssetRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a218">218</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return the JAccessRules object for an asset.  The returned object can optionally hold  only the rules explicitly set for the asset or the summation of all inherited rules from  parent assets and explicit rules.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JAccessRules object for the asset.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
+		<span class="method-name">
+			getAssetRules
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$asset</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$asset</span><span class="var-description">: Integer asset id or the name of the asset as a string.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$recursive</span><span class="var-description">: True to return the rules object with inherited rules.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAuthorisedViewLevels" id="getAuthorisedViewLevels"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getAuthorisedViewLevels</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a402">402</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a list of view levels for which the user is authorised.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> List of view levels for which the user is authorised.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getAuthorisedViewLevels
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Id of the user for which to get the list of authorised view levels.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupPath" id="getGroupPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getGroupPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the parent groups that a leaf group belongs to in its branch back to the root of the tree  (including the leaf group id).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if allowed, false for an explicit deny, null for an implicit deny.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			getGroupPath
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$groupId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$groupId</span><span class="var-description">: An integer or array of integers representing the identities to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGroupsByUser" id="getGroupsByUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getGroupsByUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a285">285</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a list of user groups mapped to a user. The returned list can optionally hold  only the groups explicitly mapped to the user or all groups both explicitly mapped and inherited  by the user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> List of user group ids to which the user is mapped.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getGroupsByUser
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: Id of the user for which to get the list of groups.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$recursive</span><span class="var-description">: True to include inherited user groups.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUsersByGroup" id="getUsersByGroup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getUsersByGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Access_librariesjoomlaaccessaccess.php.html#a368">368</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a list of user Ids contained in a Group</p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> This method should move somewhere else</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getUsersByGroup
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$groupId</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$groupId</span><span class="var-description">: The group Id</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$recursive</span><span class="var-description">: Recursively include all child groups (optional)</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:22:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

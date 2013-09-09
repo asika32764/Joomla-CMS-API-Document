@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTwitterDirectmessages</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JTwitterDirectmessages</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Twitter API Direct Messages class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---twitter---directmessages.php.html">/libraries/joomla/twitter/directmessages.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterdirectmessages.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a>
+   |
+   --JTwitterDirectmessages</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#deleteDirectMessages" title="details" class="method-name">deleteDirectMessages</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getDirectMessages" title="details" class="method-name">getDirectMessages</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$skip_status</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getDirectMessagesById" title="details" class="method-name">getDirectMessagesById</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getSentDirectMessages" title="details" class="method-name">getSentDirectMessages</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#sendDirectMessages" title="details" class="method-name">sendDirectMessages</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$client">JTwitterObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$oauth">JTwitterObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$options">JTwitterObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoddeleteDirectMessages" id="deleteDirectMessages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteDirectMessages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterdirectmessages.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete the direct message specified in the required ID parameter.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			deleteDirectMessages
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the direct message.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to true,  each tweet will include a node called &quot;entities,&quot;. This node offers a variety of metadata                               about the tweet in a discreet structure, including: user_mentions, urls, and hashtags.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDirectMessages" id="getDirectMessages"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDirectMessages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterdirectmessages.php.html#a35">35</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the most recent direct messages sent to the authenticating user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDirectMessages
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$skip_status</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$since_id</span><span class="var-description">: Returns results with an ID greater than (that is, more recent than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_id</span><span class="var-description">: Returns results with an ID less than (that is, older than) or equal to the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of direct messages to try and retrieve, up to a maximum of 200.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to true,  each tweet will include a node called &quot;entities,&quot;. This node offers a variety of metadata                                  about the tweet in a discreet structure, including: user_mentions, urls, and hashtags.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$skip_status</span><span class="var-description">: When set to either true, t or 1 statuses will not be included in the returned user objects.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDirectMessagesById" id="getDirectMessagesById"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDirectMessagesById</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterdirectmessages.php.html#a179">179</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a single direct message, specified by an id parameter.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDirectMessagesById
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the direct message.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSentDirectMessages" id="getSentDirectMessages"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSentDirectMessages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterdirectmessages.php.html#a91">91</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the most recent direct messages sent by the authenticating user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSentDirectMessages
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$since_id</span><span class="var-description">: Returns results with an ID greater than (that is, more recent than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_id</span><span class="var-description">: Returns results with an ID less than (that is, older than) or equal to the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of direct messages to try and retrieve, up to a maximum of 200.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$page</span><span class="var-description">: Specifies the page of results to retrieve.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to true,  each tweet will include a node called &quot;entities,&quot;. This node offers a variety of metadata                               about the tweet in a discreet structure, including: user_mentions, urls, and hashtags.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsendDirectMessages" id="sendDirectMessages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sendDirectMessages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterdirectmessages.php.html#a144">144</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to send a new direct message to the specified user from the authenticating user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			sendDirectMessages
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$user</span><span class="var-description">: Either an integer containing the user ID or a string containing the screen name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: The text of your direct message. Be sure to keep the message under 140 characters.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#method__construct">JTwitterObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodcheckRateLimit">JTwitterObject::checkRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodfetchUrl">JTwitterObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetOption">JTwitterObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetRateLimit">JTwitterObject::getRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsendRequest">JTwitterObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsetOption">JTwitterObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:28:54 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

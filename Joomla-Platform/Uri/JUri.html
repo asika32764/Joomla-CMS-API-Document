@@ -1,0 +1,1829 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JUri</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JUri</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JUri Class</p>
+<p class="description"><p>This class serves two purposes. First it parses a URI and provides a common interface  for the Joomla Platform to access and manipulate a URI.  Second it obtains the URI of  the current executing script from the server regardless of server.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---uri---uri.php.html">/libraries/joomla/uri/uri.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a23">23</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$base" title="details" class="var-name">$base</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">string</span>
+					<a href="#$current" title="details" class="var-name">$current</a>
+				</div>
+																																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$instances" title="details" class="var-name">$instances</a>
+				</div>
+																																																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$root" title="details" class="var-name">$root</a>
+				</div>
+																																																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$fragment" title="details" class="var-name">$fragment</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$host" title="details" class="var-name">$host</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$pass" title="details" class="var-name">$pass</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$path" title="details" class="var-name">$path</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$port" title="details" class="var-name">$port</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$query" title="details" class="var-name">$query</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$scheme" title="details" class="var-name">$scheme</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$uri" title="details" class="var-name">$uri</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$user" title="details" class="var-name">$user</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$vars" title="details" class="var-name">$vars</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#base" title="details" class="method-name">base</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$pathonly</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#buildQuery" title="details" class="method-name">buildQuery</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#current" title="details" class="method-name">current</a>
+										()
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">'SERVER'</span>])
+									</div>
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isInternal" title="details" class="method-name">isInternal</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#reset" title="details" class="method-name">reset</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#root" title="details" class="method-name">root</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$pathonly</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+									</div>
+																																																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JUri</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>])
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#delVar" title="details" class="method-name">delVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getFragment" title="details" class="method-name">getFragment</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getHost" title="details" class="method-name">getHost</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPass" title="details" class="method-name">getPass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPath" title="details" class="method-name">getPath</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getPort" title="details" class="method-name">getPort</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getQuery" title="details" class="method-name">getQuery</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$toArray</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getScheme" title="details" class="method-name">getScheme</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getUser" title="details" class="method-name">getUser</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getVar" title="details" class="method-name">getVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hasVar" title="details" class="method-name">hasVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isSSL" title="details" class="method-name">isSSL</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setFragment" title="details" class="method-name">setFragment</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$anchor</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setHost" title="details" class="method-name">setHost</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setPass" title="details" class="method-name">setPass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setPath" title="details" class="method-name">setPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setPort" title="details" class="method-name">setPort</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$port</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setQuery" title="details" class="method-name">setQuery</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setScheme" title="details" class="method-name">setScheme</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$scheme</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setUser" title="details" class="method-name">setUser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#setVar" title="details" class="method-name">setVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toString" title="details" class="method-name">toString</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$parts</span> = <span class="var-default">array('scheme', 'user', 'pass', 'host', 'port', 'path', 'query', 'fragment')</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_cleanPath" title="details" class="method-name">_cleanPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$base" id="$base"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$base</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a95">95</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current calculated base url segments.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$current" id="$current"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">string</span>
+			<span class="var-name">$current</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a107">107</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current url.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$instances" id="$instances"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$instances</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a89">89</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An array of JUri instances.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$root" id="$root"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$root</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a101">101</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current calculated root url segments.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$fragment" id="$fragment"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$fragment</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a77">77</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Anchor</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$host" id="$host"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$host</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Host</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pass" id="$pass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$pass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Password</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$path" id="$path"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$path</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Path</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$port" id="$port"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$port</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Port</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$query" id="$query"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$query</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a71">71</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Query</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$scheme" id="$scheme"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$scheme</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Protocol</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$uri" id="$uri"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$uri</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Original URI</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$user" id="$user"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$user</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Username</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$vars" id="$vars"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$vars</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a83">83</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Query variable hash</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodbase" id="base"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static base</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a221">221</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the base URI for the request.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The base URI string</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			base
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$pathonly</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$pathonly</span><span class="var-description">: If false, prepend the scheme, host and port information. Default is false.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbuildQuery" id="buildQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static buildQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a547">547</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Build a query from a array (reverse of the PHP parse_str()).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The resulting query string.</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/parse_str">parse_str()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			buildQuery
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: The array of key =&gt; value pairs to return as a query string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcurrent" id="current"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static current</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a305">305</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the URL for the request, minus the query.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			current
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a148">148</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global JUri object, only creating it  if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI object.</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">'SERVER'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: The URI to parse.  [optional: if null uses script URI]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisInternal" id="isInternal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isInternal</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a768">768</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if the supplied URL is internal</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if Internal.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isInternal
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The URL to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreset" id="reset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static reset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a324">324</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to reset class static members for testing and other various issues.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			reset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodroot" id="root"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static root</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a279">279</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the root URI for the request.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The root URI string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			root
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$pathonly</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$pathonly</span><span class="var-description">: If false, prepend the scheme, host and port information. Default is false.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a117">117</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+<p class="description"><p>You can pass a URI string to the constructor to initialise a specific URI.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JUri</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: The optional URI string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelVar" id="delVar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">delVar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a471">471</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes an item from the query string variables if it exists.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of variable to remove.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFragment" id="getFragment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFragment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a727">727</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the URI archor string  Everything after the &quot;#&quot;.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI anchor string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getFragment
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHost" id="getHost"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHost</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a647">647</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get URI host  Returns the hostname/ip or null if no hostname/ip was specified.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI host.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHost
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPass" id="getPass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPass</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a620">620</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get URI password  Returns the password, or null if no password was specified.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI password.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPath" id="getPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a700">700</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the URI path string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI path string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPath
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPort" id="getPort"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPort</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a674">674</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get URI port  Returns the port number, or null if no port was specified.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI port number.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getPort
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetQuery" id="getQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a521">521</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns flat query string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Query string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getQuery
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$toArray</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$toArray</span><span class="var-description">: True to return the query as a key =&gt; value pair array.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetScheme" id="getScheme"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getScheme</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a565">565</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get URI scheme (protocol)  ie. http, https, ftp, etc...</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI scheme.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getScheme
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUser" id="getUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a593">593</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get URI username  Returns the username, or null if no username was specified.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The URI username.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getUser
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetVar" id="getVar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getVar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a452">452</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a query variable by name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Query variables.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the query variable to get.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: Default value to return if the variable is not set.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhasVar" id="hasVar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hasVar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a437">437</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if variable exists.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the variable exists.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the query variable to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisSSL" id="isSSL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isSSL</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a754">754</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks whether the current URI is using HTTPS.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if using SSL via HTTPS.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isSSL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a341">341</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse a given URI and populate the class fields.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parse
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: The URI string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFragment" id="setFragment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setFragment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a742">742</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the URI anchor string  everything after the &quot;#&quot;.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setFragment
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$anchor</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$anchor</span><span class="var-description">: The URI anchor string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHost" id="setHost"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setHost</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a661">661</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set URI host.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setHost
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$host</span><span class="var-description">: The URI host.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPass" id="setPass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPass</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a634">634</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set URI password.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pass</span><span class="var-description">: The URI password.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPath" id="setPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a714">714</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the URI path string.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The URI path string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPort" id="setPort"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPort</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a688">688</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set URI port.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPort
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$port</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$port</span><span class="var-description">: The URI port number.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetQuery" id="setQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a492">492</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the query to a supplied string in format:  foo=bar&amp;x=y</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setQuery
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$query</span><span class="var-description">: The query string or array.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetScheme" id="setScheme"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setScheme</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a580">580</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set URI scheme (protocol)  ie. http, https, ftp, etc...</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setScheme
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$scheme</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$scheme</span><span class="var-description">: The URI scheme.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUser" id="setUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a607">607</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set URI username.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setUser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The URI username.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetVar" id="setVar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setVar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a416">416</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a query variable and value, replacing the value if it  already exists and returning the old value.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Previous value for the query variable.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the query variable to set.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Value of the query variable.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoString" id="toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toString</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a387">387</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns full uri string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The rendered URI string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toString
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$parts</span> = <span class="var-default">array('scheme', 'user', 'pass', 'host', 'port', 'path', 'query', 'fragment')</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$parts</span><span class="var-description">: An array specifying the parts to render.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_cleanPath" id="_cleanPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_cleanPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a796">796</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resolves //, ../ and ./ from a path and returns  the result. Eg:</p>
+<p class="description"><p>/foo/bar/../boo.php	=&gt; /foo/boo.php  /foo/bar/../../boo.php =&gt; /boo.php  /foo/bar/.././/boo.php =&gt; /foo/boo.php</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Cleaned and resolved URI path.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_cleanPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The URI path to clean.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__toString</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Uri_librariesjoomlauriuri.php.html#a132">132</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to get the string representation of the URI object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:40:44 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

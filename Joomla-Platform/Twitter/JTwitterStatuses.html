@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTwitterStatuses</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JTwitterStatuses</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Twitter API Statuses class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---twitter---statuses.php.html">/libraries/joomla/twitter/statuses.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a>
+   |
+   --JTwitterStatuses</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#deleteTweet" title="details" class="method-name">deleteTweet</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getMentions" title="details" class="method-name">getMentions</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$include_rts</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$contributor</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getOembed" title="details" class="method-name">getOembed</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$maxwidth</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hide_media</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hide_thread</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$omit_script</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$align</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$related</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getRetweeters" title="details" class="method-name">getRetweeters</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$stringify_ids</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getRetweetsById" title="details" class="method-name">getRetweetsById</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getRetweetsOfMe" title="details" class="method-name">getRetweetsOfMe</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$user_entities</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTweetById" title="details" class="method-name">getTweetById</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$my_retweet</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getUserTimeline" title="details" class="method-name">getUserTimeline</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$include_rts</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$no_replies</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$contributor</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#retweet" title="details" class="method-name">retweet</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#tweet" title="details" class="method-name">tweet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$status</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$in_reply_to_status_id</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$long</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$place_id</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$display_coordinates</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#tweetWithMedia" title="details" class="method-name">tweetWithMedia</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$status</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$media</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$in_reply_to_status_id</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$long</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$place_id</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$display_coordinates</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$sensitive</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$client">JTwitterObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$oauth">JTwitterObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$options">JTwitterObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoddeleteTweet" id="deleteTweet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteTweet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a447">447</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete the status specified by the required ID parameter.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			deleteTweet
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The numerical ID of the desired status.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                the status author's numerical ID.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMentions" id="getMentions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMentions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a243">243</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retrieve the most recent mentions for the authenticating user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getMentions
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$include_rts</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$contributor</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of tweets to try and retrieve, up to a maximum of 200.  Retweets are always included                                  in the count, so it is always suggested to set $include_rts to true</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$include_rts</span><span class="var-description">: When set to true, the timeline will contain native retweets in addition to the standard stream of tweets.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to true,  each tweet will include a node called &quot;entities,&quot;. This node offers a variety of metadata                                  about the tweet in a discreet structure, including: user_mentions, urls, and hashtags.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$since_id</span><span class="var-description">: Returns results with an ID greater than (that is, more recent than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_id</span><span class="var-description">: Returns results with an ID less than (that is, older than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                  the status author's numerical ID.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$contributor</span><span class="var-description">: This parameter enhances the contributors element of the status response to include the screen_name                                   of the contributor.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetOembed" id="getOembed"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOembed</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a588">588</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get information allowing the creation of an embedded representation of a Tweet on third party sites.</p>
+<p class="description"><p>Note: either the id or url parameters must be specified in a request. It is not necessary to include both.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getOembed
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$maxwidth</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hide_media</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hide_thread</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$omit_script</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$align</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$related</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The Tweet/status ID to return embed code for.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The URL of the Tweet/status to be embedded.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$maxwidth</span><span class="var-description">: The maximum width in pixels that the embed should be rendered at. This value is constrained to be                                     between 250 and 550 pixels.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$hide_media</span><span class="var-description">: Specifies whether the embedded Tweet should automatically expand images which were uploaded via                                     POST statuses/update_with_media.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$hide_thread</span><span class="var-description">: Specifies whether the embedded Tweet should automatically show the original message in the case that                                     the embedded Tweet is a reply.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$omit_script</span><span class="var-description">: Specifies whether the embedded Tweet HTML should include a &lt;script&gt; element pointing to widgets.js. In cases where                                     a page already includes widgets.js, setting this value to true will prevent a redundant script element from being included.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$align</span><span class="var-description">: Specifies whether the embedded Tweet should be left aligned, right aligned, or centered in the page.                                     Valid values are left, right, center, and none.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$related</span><span class="var-description">: A value for the TWT related parameter, as described in Web Intents. This value will be forwarded to all                                     Web Intents calls.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: Language code for the rendered embed. This will affect the text and localization of the rendered HTML.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRetweeters" id="getRetweeters"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRetweeters</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a372">372</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to show user objects of up to 100 members who retweeted the status.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRetweeters
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$stringify_ids</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The numerical ID of the desired status.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of retweets to try and retrieve, up to a maximum of 100.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cursor</span><span class="var-description">: Causes the list of IDs to be broken into pages of no more than 100 IDs at a time.                                       The number of IDs returned is not guaranteed to be 100 as suspended users are                                       filtered out after connections are queried. If no cursor is provided, a value of                                       -1 will be assumed, which is the first &quot;page.&quot;</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$stringify_ids</span><span class="var-description">: Set to true to return IDs as strings, false to return as integers.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRetweetsById" id="getRetweetsById"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRetweetsById</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a415">415</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get up to 100 of the first retweets of a given tweet.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRetweetsById
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The numerical ID of the desired status.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of tweets to try and retrieve, up to a maximum of 200.  Retweets are always included                                in the count, so it is always suggested to set $include_rts to true</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                the status author's numerical ID.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRetweetsOfMe" id="getRetweetsOfMe"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRetweetsOfMe</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a312">312</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the most recent tweets of the authenticated user that have been retweeted by others.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRetweetsOfMe
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$user_entities</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of tweets to try and retrieve, up to a maximum of 200.  Retweets are always included                                     in the count, so it is always suggested to set $include_rts to true</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$since_id</span><span class="var-description">: Returns results with an ID greater than (that is, more recent than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to true,  each tweet will include a node called &quot;entities,&quot;. This node offers a variety of metadata                                     about the tweet in a discreet structure, including: user_mentions, urls, and hashtags.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$user_entities</span><span class="var-description">: The user entities node will be disincluded when set to false.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_id</span><span class="var-description">: Returns results with an ID less than (that is, older than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                     the status author's numerical ID.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTweetById" id="getTweetById"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTweetById</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a36">36</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a single tweet with the given ID.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTweetById
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$entities</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$my_retweet</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID of the tweet to retrieve.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                 the status author's numerical ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$entities</span><span class="var-description">: When set to true,  each tweet will include a node called &quot;entities,&quot;. This node offers a variety of metadata                                 about the tweet in a discreet structure, including: user_mentions, urls, and hashtags.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$my_retweet</span><span class="var-description">: When set to either true, t or 1, any statuses returned that have been retweeted by the authenticating user will                                    include an additional current_user_retweet node, containing the ID of the source status for the retweet.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUserTimeline" id="getUserTimeline"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUserTimeline</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a89">89</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retrieve the latest statuses from the specified user timeline.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUserTimeline
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">20</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$include_rts</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$no_replies</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$since_id</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_id</span> = <span class="var-default">0</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$contributor</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$user</span><span class="var-description">: Either an integer containing the user ID or a string containing the screen name.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Specifies the number of tweets to try and retrieve, up to a maximum of 200.  Retweets are always included                                  in the count, so it is always suggested to set $include_rts to true</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$include_rts</span><span class="var-description">: When set to true, the timeline will contain native retweets in addition to the standard stream of tweets.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$no_replies</span><span class="var-description">: This parameter will prevent replies from appearing in the returned timeline. This parameter is only supported                                  for JSON and XML responses.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$since_id</span><span class="var-description">: Returns results with an ID greater than (that is, more recent than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_id</span><span class="var-description">: Returns results with an ID less than (that is, older than) the specified ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                  the status author's numerical ID.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$contributor</span><span class="var-description">: This parameter enhances the contributors element of the status response to include the screen_name of the                                     contributor. By default only the user_id of the contributor is included.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodretweet" id="retweet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">retweet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a475">475</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retweet a tweet.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			retweet
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The numerical ID of the desired status.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                the status author's numerical ID.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtweet" id="tweet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tweet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a174">174</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to post a tweet.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			tweet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$status</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$in_reply_to_status_id</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$long</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$place_id</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$display_coordinates</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$trim_user</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$status</span><span class="var-description">: The text of the tweet.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$in_reply_to_status_id</span><span class="var-description">: The ID of an existing status that the update is in reply to.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$lat</span><span class="var-description">: The latitude of the location this tweet refers to.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$long</span><span class="var-description">: The longitude of the location this tweet refers to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$place_id</span><span class="var-description">: A place in the world.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$display_coordinates</span><span class="var-description">: Whether or not to put a pin on the exact coordinates a tweet has been sent from.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$trim_user</span><span class="var-description">: When set to true, each tweet returned in a timeline will include a user object including only                                            the status author's numerical ID.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtweetWithMedia" id="tweetWithMedia"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tweetWithMedia</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterstatuses.php.html#a509">509</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to post a tweet with media.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			tweetWithMedia
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$status</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$media</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$in_reply_to_status_id</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$long</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$place_id</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$display_coordinates</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$sensitive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$status</span><span class="var-description">: The text of the tweet.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$media</span><span class="var-description">: File to upload</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$in_reply_to_status_id</span><span class="var-description">: The ID of an existing status that the update is in reply to.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$lat</span><span class="var-description">: The latitude of the location this tweet refers to.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$long</span><span class="var-description">: The longitude of the location this tweet refers to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$place_id</span><span class="var-description">: A place in the world.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$display_coordinates</span><span class="var-description">: Whether or not to put a pin on the exact coordinates a tweet has been sent from.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$sensitive</span><span class="var-description">: Set to true for content which may not be suitable for every audience.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#method__construct">JTwitterObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodcheckRateLimit">JTwitterObject::checkRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodfetchUrl">JTwitterObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetOption">JTwitterObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetRateLimit">JTwitterObject::getRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsendRequest">JTwitterObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsetOption">JTwitterObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:34 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

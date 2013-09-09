@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class SimplePie_Net_IPv6</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> SimplePie_Net_IPv6</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class to validate and to work with IPv6 addresses.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> elfrink at introweb dot nl</li>
+				<li><span class="field">author:</span> Alexander Merz &lt;<a href="mailto:alexander.merz@web.de">alexander.merz@web.de</a>&gt;</li>
+				<li><span class="field">author:</span> Josh Peck &lt;<a href="mailto:jmp">at joshpeck dot org jmp at joshpeck dot org</a>&gt;</li>
+				<li><span class="field">author:</span> Geoffrey Sneddon &lt;<a href="mailto:geoffers@gmail.com">geoffers@gmail.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> 2003-2005 The PHP Group</li>
+				<li><span class="field">link:</span> <a href="http://pear.php.net/package/Net_IPv6">http://pear.php.net/package/Net_IPv6</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/bsd-license.php">http://www.opensource.org/licenses/bsd-license.php</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---simplepie---simplepie.php.html">/libraries/simplepie/simplepie.php</a> (line <span class="field"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a12326">12326</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">bool</span>
+										<a href="#checkIPv6" title="details" class="method-name">checkIPv6</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#removeNetmaskSpec" title="details" class="method-name">removeNetmaskSpec</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#SplitV64" title="details" class="method-name">SplitV64</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#Uncompress" title="details" class="method-name">Uncompress</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+									</div>
+																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheckIPv6" id="checkIPv6"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static checkIPv6</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a12477">12477</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks an IPv6 address</p>
+<p class="description"><p>Checks if the given IP is IPv6-compatible</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if $ip is an IPv6 address</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">bool</span>
+		<span class="method-name">
+			checkIPv6
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ip</span><span class="var-description">: a valid IPv6-address</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveNetmaskSpec" id="removeNetmaskSpec"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static removeNetmaskSpec</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a12337">12337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes a possible existing netmask specification of an IP address.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the IP the without netmask</li>
+				<li><span class="field">since:</span> 1.1.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			removeNetmaskSpec
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ip</span><span class="var-description">: the (compressed) IP as Hex representation</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodSplitV64" id="SplitV64"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static SplitV64</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a12451">12451</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Splits an IPv6 address into the IPv6 and a possible IPv4 part</p>
+<p class="description"><p>RFC 2373 allows you to note the last two parts of an IPv6 address as  an IPv4 compatible address</p><p>Example:	 0:0:0:0:0:0:13.1.68.3 			 0:0:0:0:0:FFFF:129.144.52.38</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> [0] contains the IPv6 part, [1] the IPv4 part (hex format)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			SplitV64
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ip</span><span class="var-description">: a valid IPv6-address (hex format)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodUncompress" id="Uncompress"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static Uncompress</span> (line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a12365">12365</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Uncompresses an IPv6 address</p>
+<p class="description"><p>RFC 2373 allows you to compress zeros in an address to '::'. This  function expects an valid IPv6 address and expands the '::' to  the required zeros.</p><p>Example:	 FF01::101	-&gt;	FF01:0:0:0:0:0:0:101 			 ::1		-&gt;	0:0:0:0:0:0:0:1</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the uncompressed IPv6-address (hex format)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			Uncompress
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ip</span><span class="var-description">: a valid IPv6-address (hex format)</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

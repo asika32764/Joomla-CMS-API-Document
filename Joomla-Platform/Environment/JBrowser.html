@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JBrowser</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JBrowser</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Browser class, provides capability information about the current web client.</p>
+<p class="description"><p>Browser identification is performed by examining the HTTP_USER_AGENT  environment variable provided by the web server.</p><p>This class has many influences from the lib/Browser.php code in  version 3 of Horde by Chuck Hagenbuch and Jon Parise.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---environment---browser.php.html">/libraries/joomla/environment/browser.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a25">25</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																				<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$instances" title="details" class="var-name">$instances</a>
+				</div>
+																																																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$accept" title="details" class="var-name">$accept</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$acceptParsed" title="details" class="var-name">$acceptParsed</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$agent" title="details" class="var-name">$agent</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$browser" title="details" class="var-name">$browser</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$images" title="details" class="var-name">$images</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$lowerAgent" title="details" class="var-name">$lowerAgent</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$majorVersion" title="details" class="var-name">$majorVersion</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$minorVersion" title="details" class="var-name">$minorVersion</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$mobile" title="details" class="var-name">$mobile</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$platform" title="details" class="var-name">$platform</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$robots" title="details" class="var-name">$robots</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Environment/JBrowser.html">JBrowser</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accept</span> = <span class="var-default">null</span>])
+									</div>
+																																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JBrowser</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accept</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAgentString" title="details" class="method-name">getAgentString</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getBrowser" title="details" class="method-name">getBrowser</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getHTTPProtocol" title="details" class="method-name">getHTTPProtocol</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getMajor" title="details" class="method-name">getMajor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getMinor" title="details" class="method-name">getMinor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPlatform" title="details" class="method-name">getPlatform</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getVersion" title="details" class="method-name">getVersion</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#identifyBrowserVersion" title="details" class="method-name">identifyBrowserVersion</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isBrowser" title="details" class="method-name">isBrowser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$browser</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isMobile" title="details" class="method-name">isMobile</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isRobot" title="details" class="method-name">isRobot</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isSSLConnection" title="details" class="method-name">isSSLConnection</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isViewable" title="details" class="method-name">isViewable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$mimetype</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#match" title="details" class="method-name">match</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accept</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setBrowser" title="details" class="method-name">setBrowser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$browser</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_setPlatform" title="details" class="method-name">_setPlatform</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instances" id="$instances"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$instances</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a147">147</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> JBrowser instances container.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$accept" id="$accept"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$accept</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> HTTP_ACCEPT string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$acceptParsed" id="$acceptParsed"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$acceptParsed</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Parsed HTTP_ACCEPT string</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$agent" id="$agent"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$agent</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Full user agent string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$browser" id="$browser"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$browser</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Browser name.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$images" id="$images"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$images</span>
+			 = <span class="var-default">array('jpeg', 'gif', 'png', 'pjpeg', 'x-png', 'bmp')</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a141">141</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of viewable image MIME subtypes.</p>
+<p class="description"><p>This list of viewable images works for IE and Netscape/Mozilla.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$lowerAgent" id="$lowerAgent"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$lowerAgent</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Lower-case user agent string</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$majorVersion" id="$majorVersion"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$majorVersion</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Major version number</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$minorVersion" id="$minorVersion"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$minorVersion</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Minor version number</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mobile" id="$mobile"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$mobile</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a132">132</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Is this a mobile browser?</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$platform" id="$platform"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$platform</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a73">73</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Platform the browser is running on</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$robots" id="$robots"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$robots</span>
+			 = <span class="var-default">array(<br />		/* The most common ones. */<br />		'Googlebot',<br />		'msnbot',<br />		'Slurp',<br />		'Yahoo',<br />		/* The rest alphabetically. */<br />		'Arachnoidea',<br />		'ArchitextSpider',<br />		'Ask Jeeves',<br />		'B-l-i-t-z-Bot',<br />		'Baiduspider',<br />		'BecomeBot',<br />		'cfetch',<br />		'ConveraCrawler',<br />		'ExtractorPro',<br />		'FAST-WebCrawler',<br />		'FDSE robot',<br />		'fido',<br />		'geckobot',<br />		'Gigabot',<br />		'Girafabot',<br />		'grub-client',<br />		'Gulliver',<br />		'HTTrack',<br />		'ia_archiver',<br />		'InfoSeek',<br />		'kinjabot',<br />		'KIT-Fireball',<br />		'larbin',<br />		'LEIA',<br />		'lmspider',<br />		'Lycos_Spider',<br />		'Mediapartners-Google',<br />		'MuscatFerret',<br />		'NaverBot',<br />		'OmniExplorer_Bot',<br />		'polybot',<br />		'Pompos',<br />		'Scooter',<br />		'Teoma',<br />		'TheSuBot',<br />		'TurnitinBot',<br />		'Ultraseek',<br />		'ViolaBot',<br />		'webbandit',<br />		'www.almaden.ibm.com/cs/crawler',<br />		'ZyBorg')</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a79">79</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Known robots.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a173">173</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global Browser object, only creating it  if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The Browser object.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Environment/JBrowser.html">JBrowser</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accept</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The browser string to parse.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accept</span><span class="var-description">: The HTTP_ACCEPT settings to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a browser instance (constructor).</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JBrowser</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accept</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The browser string to parse.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accept</span><span class="var-description">: The HTTP_ACCEPT settings to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAgentString" id="getAgentString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAgentString</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a536">536</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the full browser agent string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The browser agent string</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAgentString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBrowser" id="getBrowser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBrowser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a488">488</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the current browser.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current browser.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBrowser
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHTTPProtocol" id="getHTTPProtocol"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHTTPProtocol</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a548">548</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the server protocol in use on the current server.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTTP server protocol version.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHTTPProtocol
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMajor" id="getMajor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMajor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a500">500</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the current browser's major version.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current browser's major version</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getMajor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMinor" id="getMinor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMinor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a512">512</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the current browser's minor version.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current browser's minor version.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getMinor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPlatform" id="getPlatform"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPlatform</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a439">439</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the currently matched platform.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The user's platform.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPlatform
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetVersion" id="getVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getVersion</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a524">524</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the current browser's version.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current browser's version.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getVersion
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodidentifyBrowserVersion" id="identifyBrowserVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">identifyBrowserVersion</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a452">452</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set browser version, not by engine version  Fallback to use when no other method identify the engine version</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			identifyBrowserVersion
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisBrowser" id="isBrowser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isBrowser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a627">627</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if the given browser is the same as the current.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Is the given browser the same as the current?</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isBrowser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$browser</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$browser</span><span class="var-description">: The browser to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisMobile" id="isMobile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isMobile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a659">659</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if the browser is mobile version or not.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if browser is a known mobile version.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isMobile
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisRobot" id="isRobot"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isRobot</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a639">639</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if the browser is a robot or not.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if browser is a known robot.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isRobot
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisSSLConnection" id="isSSLConnection"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isSSLConnection</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a672">672</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if we are using a secure (SSL) connection.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if using SSL, false if not.</li>
+				<li><span class="field">deprecated:</span> 13.3 (Platform) &amp; 4.0 (CMS) - Use the isSSLConnection method on the application object.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isSSLConnection
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisViewable" id="isViewable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isViewable</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a574">574</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if a browser can display a given MIME type.</p>
+<p class="description"><p>Note that  image/jpeg and image/pjpeg *appear* to be the same  entity, but Mozilla doesn't seem to want to accept the latter.  For our purposes, we will treat them the same.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the browser can display the MIME type.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isViewable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mimetype</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mimetype</span><span class="var-description">: The MIME type to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmatch" id="match"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">match</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses the user agent string and inititializes the object with  all the known features and quirks for the given browser.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			match
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accept</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The browser string to parse.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accept</span><span class="var-description">: The HTTP_ACCEPT settings to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBrowser" id="setBrowser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setBrowser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a476">476</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the current browser.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setBrowser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$browser</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$browser</span><span class="var-description">: The browser to set as current.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_setPlatform" id="_setPlatform"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_setPlatform</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Environment_librariesjoomlaenvironmentbrowser.php.html#a416">416</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Match the platform of the browser.</p>
+<p class="description"><p>This is a pretty simplistic implementation, but it's intended  to let us tell what line breaks to send, so it's good enough  for its purpose.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_setPlatform
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:23:30 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

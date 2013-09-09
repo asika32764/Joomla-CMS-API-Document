@@ -1,0 +1,2534 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JDatabaseDriverPostgresql</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JDatabaseDriverPostgresql</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PostgreSQL database driver</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---database---driver---postgresql.php.html">/libraries/joomla/database/driver/postgresql.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Database/JDatabase.html">JDatabase</a>
+   |
+   --<a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a>
+      |
+      --JDatabaseDriverPostgresql</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																				<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">string</span>
+					<a href="#$dbMinimum" title="details" class="var-name">$dbMinimum</a>
+				</div>
+																																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$concat_operator" title="details" class="var-name">$concat_operator</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$name" title="details" class="var-name">$name</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$nameQuote" title="details" class="var-name">$nameQuote</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$nullDate" title="details" class="var-name">$nullDate</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">JDatabaseDriverPostgresqlQuery</span>
+					<a href="#$queryObject" title="details" class="var-name">$queryObject</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isSupported" title="details" class="method-name">isSupported</a>
+										()
+									</div>
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#test" title="details" class="method-name">test</a>
+										()
+									</div>
+																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JDatabaseDriverPostgresql</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Destructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#connect" title="details" class="method-name">connect</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#connected" title="details" class="method-name">connected</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#disconnect" title="details" class="method-name">disconnect</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#dropTable" title="details" class="method-name">dropTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ifExists</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#escape" title="details" class="method-name">escape</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$extra</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#execute" title="details" class="method-name">execute</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#fetchArray" title="details" class="method-name">fetchArray</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#fetchAssoc" title="details" class="method-name">fetchAssoc</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#fetchObject" title="details" class="method-name">fetchObject</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">'stdClass'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#freeResult" title="details" class="method-name">freeResult</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getAffectedRows" title="details" class="method-name">getAffectedRows</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAlterDbCharacterSet" title="details" class="method-name">getAlterDbCharacterSet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getCollation" title="details" class="method-name">getCollation</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCreateDbQuery" title="details" class="method-name">getCreateDbQuery</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$options</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$utf</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getNumRows" title="details" class="method-name">getNumRows</a>
+											([<span class="var-type">resource</span>&nbsp;<span class="var-name">$cur</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#getQuery" title="details" class="method-name">getQuery</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$asObj</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">float</span>
+										<a href="#getRandom" title="details" class="method-name">getRandom</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getStringPositionSQL" title="details" class="method-name">getStringPositionSQL</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$substring</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTableColumns" title="details" class="method-name">getTableColumns</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$typeOnly</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">char</span>
+										<a href="#getTableCreate" title="details" class="method-name">getTableCreate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tables</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTableKeys" title="details" class="method-name">getTableKeys</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTableList" title="details" class="method-name">getTableList</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTableSequences" title="details" class="method-name">getTableSequences</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getVersion" title="details" class="method-name">getVersion</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#insertid" title="details" class="method-name">insertid</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#insertObject" title="details" class="method-name">insertObject</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">&$object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriverPostgresql.html">JDatabaseDriverPostgresql</a></span>
+										<a href="#lockTable" title="details" class="method-name">lockTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#releaseTransactionSavepoint" title="details" class="method-name">releaseTransactionSavepoint</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$savepointName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriverPostgresql.html">JDatabaseDriverPostgresql</a></span>
+										<a href="#renameTable" title="details" class="method-name">renameTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$oldTable</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newTable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$backup</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#replacePrefix" title="details" class="method-name">replacePrefix</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'#__'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#select" title="details" class="method-name">select</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$database</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#setUTF" title="details" class="method-name">setUTF</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#showTables" title="details" class="method-name">showTables</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#sqlValue" title="details" class="method-name">sqlValue</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$columns</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$field_value</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#transactionCommit" title="details" class="method-name">transactionCommit</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$toSavepoint</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#transactionRollback" title="details" class="method-name">transactionRollback</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$toSavepoint</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#transactionSavepoint" title="details" class="method-name">transactionSavepoint</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$savepointName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#transactionStart" title="details" class="method-name">transactionStart</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$asSavepoint</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriverPostgresql.html">JDatabaseDriverPostgresql</a></span>
+										<a href="#unlockTables" title="details" class="method-name">unlockTables</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#updateObject" title="details" class="method-name">updateObject</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">&$object</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nulls</span> = <span class="var-default">false</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$dbMinimum" id="$dbMinimum"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">string</span>
+			<span class="var-name">$dbMinimum</span>
+			 = <span class="var-default"> '8.3.18'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The minimum supported database version.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$dbMinimum">JDatabaseDriver::$dbMinimum</a></dt>
+					</dl>
+		
+		
+
+</div>
+
+<a name="var$concat_operator" id="$concat_operator"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$concat_operator</span>
+			 = <span class="var-default"> '||'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Operator used for concatenation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$name" id="$name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$name</span>
+			 = <span class="var-default"> 'postgresql'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The database driver name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$name">JDatabaseDriver::$name</a></dt>
+						<dd>The name of the database driver.</dd>
+					</dl>
+		
+		
+
+</div>
+<a name="var$nameQuote" id="$nameQuote"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$nameQuote</span>
+			 = <span class="var-default"> '&quot;'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quote for named objects</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$nameQuote">JDatabaseDriver::$nameQuote</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$nullDate" id="$nullDate"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$nullDate</span>
+			 = <span class="var-default"> '1970-01-01 00:00:00'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The null/zero date string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$nullDate">JDatabaseDriver::$nullDate</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$queryObject" id="$queryObject"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">JDatabaseDriverPostgresqlQuery</span>
+			<span class="var-name">$queryObject</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a60">60</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JDatabaseDriverPostgresqlQuery object returned by getQuery</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$callStacks">JDatabaseDriver::$callStacks</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$connection">JDatabaseDriver::$connection</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$count">JDatabaseDriver::$count</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$cursor">JDatabaseDriver::$cursor</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$debug">JDatabaseDriver::$debug</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$disconnectHandlers">JDatabaseDriver::$disconnectHandlers</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$errorMsg">JDatabaseDriver::$errorMsg</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$errorNum">JDatabaseDriver::$errorNum</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$instances">JDatabaseDriver::$instances</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$limit">JDatabaseDriver::$limit</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$log">JDatabaseDriver::$log</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$offset">JDatabaseDriver::$offset</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$options">JDatabaseDriver::$options</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$sql">JDatabaseDriver::$sql</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$tablePrefix">JDatabaseDriver::$tablePrefix</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$timings">JDatabaseDriver::$timings</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$transactionDepth">JDatabaseDriver::$transactionDepth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#var$utf">JDatabaseDriver::$utf</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodisSupported" id="isSupported"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isSupported</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1102">1102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Test to see if the PostgreSQL connector is available.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isSupported
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtest" id="test"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static test</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a176">176</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Test to see if the PostgreSQL connector is available</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			test
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabase.html#methodtest">JDatabase::test()</a></dt>
+						<dd>Test to see if the connector is available.</dd>
+					</dl>
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a69">69</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database object constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JDatabaseDriverPostgresql</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: List of options used to configure the connection</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#method__construct">JDatabaseDriver::__construct()</a></dt>
+						<dd>Constructor.</dd>
+					</dl>
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Destructor.png" />
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a85">85</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database object destructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodconnect" id="connect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">connect</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a98">98</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to the database if needed.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns void if the database connected successfully.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodconnect">JDatabaseDriver::connect()</a></dt>
+						<dd>Connects to the database if needed.</dd>
+					</dl>
+			
+	</div>
+<a name="methodconnected" id="connected"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">connected</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a188">188</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if the connection to the server is active.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			connected
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodconnected">JDatabaseDriver::connected()</a></dt>
+						<dd>Determines if the connection to the server is active.</dd>
+					</dl>
+			
+	</div>
+<a name="methoddisconnect" id="disconnect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">disconnect</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a131">131</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Disconnects the database.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			disconnect
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methoddisconnect">JDatabaseDriver::disconnect()</a></dt>
+						<dd>Disconnects the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methoddropTable" id="dropTable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dropTable</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a211">211</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Drops a table from the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			dropTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ifExists</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: The name of the database table to drop.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$ifExists</span><span class="var-description">: Optionally specify that the table must exist before it is dropped.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methoddropTable">JDatabaseDriver::dropTable()</a></dt>
+						<dd>Drops a table from the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methodescape" id="escape"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">escape</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to escape a string for usage in an SQL statement.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The escaped string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			escape
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$extra</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: The string to be escaped.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$extra</span><span class="var-description">: Optional parameter to provide extra escaping.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodescape">JDatabaseDriver::escape()</a></dt>
+						<dd>Escapes a string for usage in an SQL statement.</dd>
+					</dl>
+			
+	</div>
+<a name="methodexecute" id="execute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">execute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a612">612</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the SQL statement.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A database cursor resource on success, boolean false on failure.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			execute
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodexecute">JDatabaseDriver::execute()</a></dt>
+						<dd>Execute the SQL statement.</dd>
+					</dl>
+			
+	</div>
+<a name="methodfetchArray" id="fetchArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fetchArray</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a972">972</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to fetch a row from the result set cursor as an array.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either the next row from the result set or false if there are no more rows.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			fetchArray
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$cursor</span><span class="var-description">: The optional result set cursor from which to fetch the row.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfetchArray">JDatabaseDriver::fetchArray()</a></dt>
+						<dd>Method to fetch a row from the result set cursor as an array.</dd>
+					</dl>
+			
+	</div>
+<a name="methodfetchAssoc" id="fetchAssoc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fetchAssoc</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a986">986</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to fetch a row from the result set cursor as an associative array.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either the next row from the result set or false if there are no more rows.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			fetchAssoc
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$cursor</span><span class="var-description">: The optional result set cursor from which to fetch the row.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfetchAssoc">JDatabaseDriver::fetchAssoc()</a></dt>
+						<dd>Method to fetch a row from the result set cursor as an associative array.</dd>
+					</dl>
+			
+	</div>
+<a name="methodfetchObject" id="fetchObject"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fetchObject</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1001">1001</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to fetch a row from the result set cursor as an object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either the next row from the result set or false if there are no more rows.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			fetchObject
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">'stdClass'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$cursor</span><span class="var-description">: The optional result set cursor from which to fetch the row.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: The class name to use for the returned row object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfetchObject">JDatabaseDriver::fetchObject()</a></dt>
+						<dd>Method to fetch a row from the result set cursor as an object.</dd>
+					</dl>
+			
+	</div>
+<a name="methodfreeResult" id="freeResult"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">freeResult</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1015">1015</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to free up the memory used for the result set.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			freeResult
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cursor</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$cursor</span><span class="var-description">: The optional result set cursor from which to fetch the row.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfreeResult">JDatabaseDriver::freeResult()</a></dt>
+						<dd>Method to free up the memory used for the result set.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetAffectedRows" id="getAffectedRows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAffectedRows</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a228">228</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the number of affected rows for the previous executed SQL statement.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of affected rows in the previous operation</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getAffectedRows
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetAffectedRows">JDatabaseDriver::getAffectedRows()</a></dt>
+						<dd>Get the number of affected rows for the previous executed SQL statement.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetAlterDbCharacterSet" id="getAlterDbCharacterSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAlterDbCharacterSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1173">1173</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the query string to alter the database character set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The query that alter the database query string</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAlterDbCharacterSet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: The database name</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetAlterDbCharacterSet">JDatabaseDriver::getAlterDbCharacterSet()</a></dt>
+						<dd>Return the query string to alter the database character set.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetCollation" id="getCollation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCollation</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a243">243</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the database collation in use by sampling a text field of a table in the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The collation in use by the database or boolean false if not supported.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getCollation
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetCollation">JDatabaseDriver::getCollation()</a></dt>
+						<dd>Method to get the database collation in use by sampling a text field of a table in the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetCreateDbQuery" id="getCreateDbQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCreateDbQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1192">1192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the query string to create new Database in correct PostgreSQL syntax.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The query that creates database, owned by $options['user']</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCreateDbQuery
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$options</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$utf</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$options</span><span class="var-description">: object coming from &quot;initialise&quot; function to pass user                                      and database name to database driver.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$utf</span><span class="var-description">: True if the database supports the UTF-8 character set,                                      not used in PostgreSQL &quot;CREATE DATABASE&quot; query.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNumRows" id="getNumRows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getNumRows</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a262">262</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the number of returned rows for the previous executed SQL statement.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of returned rows.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getNumRows
+		</span>
+					([<span class="var-type">resource</span>&nbsp;<span class="var-name">$cur</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$cur</span><span class="var-description">: An optional database cursor resource to extract the row count from.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetNumRows">JDatabaseDriver::getNumRows()</a></dt>
+						<dd>Get the number of returned rows for the previous executed SQL statement.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetQuery" id="getQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a280">280</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the current or query, or new JDatabaseQuery object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current query object or a new object extending the JDatabaseQuery class.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			getQuery
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$asObj</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: False to return the last query set, True to return a new JDatabaseQuery object.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$asObj</span><span class="var-description">: False to return last query as string, true to get JDatabaseQueryPostgresql object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetQuery">JDatabaseDriver::getQuery()</a></dt>
+						<dd>Get the current query object or a new JDatabaseQuery object.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetRandom" id="getRandom"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRandom</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1154">1154</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a random value</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The random generated number</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			getRandom
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetStringPositionSQL" id="getStringPositionSQL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getStringPositionSQL</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1138">1138</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the substring position inside a string</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The position of $substring in $string</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getStringPositionSQL
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$substring</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$substring</span><span class="var-description">: The string being sought</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The string/column being searched</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTableColumns" id="getTableColumns"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableColumns</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a335">335</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves field information about a given table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of fields for the database table.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTableColumns
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$typeOnly</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: The name of the database table.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$typeOnly</span><span class="var-description">: True to only return field types.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableColumns">JDatabaseDriver::getTableColumns()</a></dt>
+						<dd>Retrieves field information about the given tables.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTableCreate" id="getTableCreate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableCreate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a319">319</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Shows the table CREATE statement that creates the given tables.</p>
+<p class="description"><p>This is unsuported by PostgreSQL.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An empty char because this function is not supported by PostgreSQL.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">char</span>
+		<span class="method-name">
+			getTableCreate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tables</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$tables</span><span class="var-description">: A table name or a list of table names.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableCreate">JDatabaseDriver::getTableCreate()</a></dt>
+						<dd>Shows the table CREATE statement that creates the given tables.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTableKeys" id="getTableKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableKeys</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a408">408</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the details list of keys for a table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of the column specification for the table.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTableKeys
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: The name of the table.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableKeys">JDatabaseDriver::getTableKeys()</a></dt>
+						<dd>Retrieves field information about the given tables.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTableList" id="getTableList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableList</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a445">445</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of all tables in the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of all the tables in the database.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTableList
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableList">JDatabaseDriver::getTableList()</a></dt>
+						<dd>Method to get an array of all tables in the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTableSequences" id="getTableSequences"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableSequences</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a474">474</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the details list of sequences for a table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of sequences specification for the table.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTableSequences
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: The name of the table.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetVersion" id="getVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getVersion</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a519">519</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the version of the database connector.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The database connector version.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getVersion
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetVersion">JDatabaseDriver::getVersion()</a></dt>
+						<dd>Get the version of the database connector</dd>
+					</dl>
+			
+	</div>
+<a name="methodinsertid" id="insertid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">insertid</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a557">557</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the auto-incremented value from the last INSERT statement.</p>
+<p class="description"><p>To be called after the INSERT statement, it's MANDATORY to have a sequence on  every primary key table.</p><p>To get the auto incremented value it's possible to call this function after  INSERT INTO query, or use INSERT INTO with RETURNING clause.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the auto-increment field from the last inserted row.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">example:</span> example not found</li>
+				<li><span class="field">example:</span> example not found</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			insertid
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodinsertid">JDatabaseDriver::insertid()</a></dt>
+						<dd>Method to get the auto-incremented value from the last INSERT statement.</dd>
+					</dl>
+			
+	</div>
+<a name="methodinsertObject" id="insertObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">insertObject</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1032">1032</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Inserts a row into a table based on an object's properties.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			insertObject
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">&$object</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: The name of the database table to insert into.</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$object</span><span class="var-description">: A reference to an object whose public properties match the table fields.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the primary key. If provided the object property is updated.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodinsertObject">JDatabaseDriver::insertObject()</a></dt>
+						<dd>Inserts a row into a table based on an object's properties.</dd>
+					</dl>
+			
+	</div>
+<a name="methodlockTable" id="lockTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">lockTable</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a596">596</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Locks a table in the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object to support chaining.</li>
+				<li><span class="field">since:</span> 11.4</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriverPostgresql.html">JDatabaseDriverPostgresql</a></span>
+		<span class="method-name">
+			lockTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: The name of the table to unlock.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodlockTable">JDatabaseDriver::lockTable()</a></dt>
+						<dd>Locks a table in the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methodreleaseTransactionSavepoint" id="releaseTransactionSavepoint"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">releaseTransactionSavepoint</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1286">1286</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to release a savepoint.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			releaseTransactionSavepoint
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$savepointName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$savepointName</span><span class="var-description">: Savepoint's name to release</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenameTable" id="renameTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">renameTable</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a720">720</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renames a table in the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object to support chaining.</li>
+				<li><span class="field">since:</span> 11.4</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriverPostgresql.html">JDatabaseDriverPostgresql</a></span>
+		<span class="method-name">
+			renameTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$oldTable</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$newTable</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$backup</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$oldTable</span><span class="var-description">: The name of the table to be renamed</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$newTable</span><span class="var-description">: The new name for the table.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$backup</span><span class="var-description">: Not used by PostgreSQL.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Not used by PostgreSQL.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodrenameTable">JDatabaseDriver::renameTable()</a></dt>
+						<dd>Renames a table in the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methodreplacePrefix" id="replacePrefix"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">replacePrefix</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1215">1215</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This function replaces a string identifier <var>$prefix</var> with the string held is the  <var>tablePrefix</var> class variable.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The processed SQL statement.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			replacePrefix
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'#__'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: The SQL statement to prepare.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: The common table prefix.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodreplacePrefix">JDatabaseDriver::replacePrefix()</a></dt>
+						<dd>This function replaces a string identifier <var>$prefix</var> with the string held is the  <var>tablePrefix</var> class variable.</dd>
+					</dl>
+			
+	</div>
+<a name="methodselect" id="select"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">select</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a793">793</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Selects the database, but redundant for PostgreSQL</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Always true</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			select
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$database</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$database</span><span class="var-description">: Database name to select.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodselect">JDatabaseDriver::select()</a></dt>
+						<dd>Select a database for use.</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetUTF" id="setUTF"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setUTF</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a805">805</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Custom settings for UTF support</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Zero on success, -1 on failure</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			setUTF
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodsetUTF">JDatabaseDriver::setUTF()</a></dt>
+						<dd>Set the connection to use UTF-8 character encoding.</dd>
+					</dl>
+			
+	</div>
+<a name="methodshowTables" id="showTables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">showTables</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1112">1112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array containing database's table list.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The database's table list.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			showTables
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsqlValue" id="sqlValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sqlValue</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a823">823</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This function return a field value as a prepared string to be used in a SQL statement.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The quoted string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			sqlValue
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$columns</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$field_value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$columns</span><span class="var-description">: Array of table's column returned by ::getTableColumns.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field_name</span><span class="var-description">: The table field's name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field_value</span><span class="var-description">: The variable value to quote and return.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtransactionCommit" id="transactionCommit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">transactionCommit</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a879">879</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to commit a transaction.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			transactionCommit
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$toSavepoint</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$toSavepoint</span><span class="var-description">: If true, commit to the last savepoint.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtransactionCommit">JDatabaseDriver::transactionCommit()</a></dt>
+						<dd>Method to commit a transaction.</dd>
+					</dl>
+			
+	</div>
+<a name="methodtransactionRollback" id="transactionRollback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">transactionRollback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a906">906</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to roll back a transaction.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			transactionRollback
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$toSavepoint</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$toSavepoint</span><span class="var-description">: If true, rollback to the last savepoint.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtransactionRollback">JDatabaseDriver::transactionRollback()</a></dt>
+						<dd>Method to roll back a transaction.</dd>
+					</dl>
+			
+	</div>
+<a name="methodtransactionSavepoint" id="transactionSavepoint"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">transactionSavepoint</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1302">1302</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a savepoint.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			transactionSavepoint
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$savepointName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$savepointName</span><span class="var-description">: Savepoint's name to create</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtransactionStart" id="transactionStart"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">transactionStart</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a940">940</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to initialize a transaction.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			transactionStart
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$asSavepoint</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$asSavepoint</span><span class="var-description">: If true and a transaction is already active, a savepoint will be created.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtransactionStart">JDatabaseDriver::transactionStart()</a></dt>
+						<dd>Method to initialize a transaction.</dd>
+					</dl>
+			
+	</div>
+<a name="methodunlockTables" id="unlockTables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">unlockTables</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1318">1318</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unlocks tables in the database, this command does not exist in PostgreSQL,  it is automatically done on commit or rollback.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object to support chaining.</li>
+				<li><span class="field">since:</span> 11.4</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriverPostgresql.html">JDatabaseDriverPostgresql</a></span>
+		<span class="method-name">
+			unlockTables
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodunlockTables">JDatabaseDriver::unlockTables()</a></dt>
+						<dd>Unlocks tables in the database.</dd>
+					</dl>
+			
+	</div>
+<a name="methodupdateObject" id="updateObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">updateObject</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Database_librariesjoomladatabasedriverpostgresql.php.html#a1337">1337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates a row in a table based on an object's properties.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			updateObject
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">&$object</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nulls</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: The name of the database table to update.</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$object</span><span class="var-description">: A reference to an object whose public properties match the table fields.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the primary key.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$nulls</span><span class="var-description">: True to update null fields or false to ignore them.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodupdateObject">JDatabaseDriver::updateObject()</a></dt>
+						<dd>Updates a row in a table based on an object's properties.</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#method__construct">JDatabaseDriver::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodaddDisconnectHandler">JDatabaseDriver::addDisconnectHandler()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodalterDbCharacterSet">JDatabaseDriver::alterDbCharacterSet()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodconnect">JDatabaseDriver::connect()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodconnected">JDatabaseDriver::connected()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodcreateDatabase">JDatabaseDriver::createDatabase()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methoddisconnect">JDatabaseDriver::disconnect()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methoddropTable">JDatabaseDriver::dropTable()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodescape">JDatabaseDriver::escape()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodexecute">JDatabaseDriver::execute()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfetchArray">JDatabaseDriver::fetchArray()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfetchAssoc">JDatabaseDriver::fetchAssoc()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfetchObject">JDatabaseDriver::fetchObject()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodfreeResult">JDatabaseDriver::freeResult()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetAffectedRows">JDatabaseDriver::getAffectedRows()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetAlterDbCharacterSet">JDatabaseDriver::getAlterDbCharacterSet()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetCallStacks">JDatabaseDriver::getCallStacks()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetCollation">JDatabaseDriver::getCollation()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetConnection">JDatabaseDriver::getConnection()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetConnectors">JDatabaseDriver::getConnectors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetCount">JDatabaseDriver::getCount()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetCreateDatabaseQuery">JDatabaseDriver::getCreateDatabaseQuery()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetDatabase">JDatabaseDriver::getDatabase()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetDateFormat">JDatabaseDriver::getDateFormat()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetExporter">JDatabaseDriver::getExporter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetImporter">JDatabaseDriver::getImporter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetInstance">JDatabaseDriver::getInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetIterator">JDatabaseDriver::getIterator()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetLog">JDatabaseDriver::getLog()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetMinimum">JDatabaseDriver::getMinimum()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetNullDate">JDatabaseDriver::getNullDate()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetNumRows">JDatabaseDriver::getNumRows()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetPrefix">JDatabaseDriver::getPrefix()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetQuery">JDatabaseDriver::getQuery()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableColumns">JDatabaseDriver::getTableColumns()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableCreate">JDatabaseDriver::getTableCreate()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableKeys">JDatabaseDriver::getTableKeys()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTableList">JDatabaseDriver::getTableList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetTimings">JDatabaseDriver::getTimings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetUTFSupport">JDatabaseDriver::getUTFSupport()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodgetVersion">JDatabaseDriver::getVersion()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodhasUTFSupport">JDatabaseDriver::hasUTFSupport()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodinsertid">JDatabaseDriver::insertid()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodinsertObject">JDatabaseDriver::insertObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodisMinimumVersion">JDatabaseDriver::isMinimumVersion()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadAssoc">JDatabaseDriver::loadAssoc()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadAssocList">JDatabaseDriver::loadAssocList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadColumn">JDatabaseDriver::loadColumn()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadNextObject">JDatabaseDriver::loadNextObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadNextRow">JDatabaseDriver::loadNextRow()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadObject">JDatabaseDriver::loadObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadObjectList">JDatabaseDriver::loadObjectList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadResult">JDatabaseDriver::loadResult()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadRow">JDatabaseDriver::loadRow()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodloadRowList">JDatabaseDriver::loadRowList()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodlockTable">JDatabaseDriver::lockTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodquote">JDatabaseDriver::quote()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodquoteName">JDatabaseDriver::quoteName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodquoteNameStr">JDatabaseDriver::quoteNameStr()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodrenameTable">JDatabaseDriver::renameTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodreplacePrefix">JDatabaseDriver::replacePrefix()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodselect">JDatabaseDriver::select()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodsetDebug">JDatabaseDriver::setDebug()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodsetQuery">JDatabaseDriver::setQuery()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodsetUTF">JDatabaseDriver::setUTF()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodsplitSql">JDatabaseDriver::splitSql()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtransactionCommit">JDatabaseDriver::transactionCommit()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtransactionRollback">JDatabaseDriver::transactionRollback()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtransactionStart">JDatabaseDriver::transactionStart()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodtruncateTable">JDatabaseDriver::truncateTable()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodunlockTables">JDatabaseDriver::unlockTables()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#methodupdateObject">JDatabaseDriver::updateObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html#method__call">JDatabaseDriver::__call()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Database/JDatabase.html">JDatabase</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodgetConnectors">JDatabase::getConnectors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodgetErrorMsg">JDatabase::getErrorMsg()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodgetErrorNum">JDatabase::getErrorNum()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodgetInstance">JDatabase::getInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodquery">JDatabase::query()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodsplitSql">JDatabase::splitSql()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodstderr">JDatabase::stderr()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Database/JDatabase.html#methodtest">JDatabase::test()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:36:52 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

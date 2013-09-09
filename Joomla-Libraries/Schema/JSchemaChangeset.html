@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JSchemaChangeset</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JSchemaChangeset</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contains a set of JSchemaChange objects for a particular instance of Joomla.</p>
+<p class="description"><p>Each of these objects contains a DDL query that should have been run against  the database when this database was created or updated. This enables the  Installation Manager to check that the current database schema is up to date.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---cms---schema---changeset.php.html">/libraries/cms/schema/changeset.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$changeItems" title="details" class="var-name">$changeItems</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+					<a href="#$db" title="details" class="var-name">$db</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$folder" title="details" class="var-name">$folder</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Libraries/Schema/JSchemaChangeset.html">JSchemaChangeset</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$folder</span>)
+									</div>
+																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JSchemaChangeset</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$folder</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#check" title="details" class="method-name">check</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#fix" title="details" class="method-name">fix</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getSchema" title="details" class="method-name">getSchema</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getStatus" title="details" class="method-name">getStatus</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$changeItems" id="$changeItems"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$changeItems</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of JSchemaChangeitem objects</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$db" id="$db"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+			<span class="var-name">$db</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JDatabaseDriver object</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$folder" id="$folder"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$folder</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Folder where SQL update files will be found</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a80">80</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a reference to the JSchemaChangeset object, only creating it if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Libraries/Schema/JSchemaChangeset.html">JSchemaChangeset</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$folder</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: The current database object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$folder</span><span class="var-description">: The full path to the folder containing the update queries</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a58">58</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor: builds array of $changeItems by processing the .sql files in a folder.</p>
+<p class="description"><p>The folder for the Joomla core updates is administrator/components/com_admin/sql/updates/&lt;database&gt;.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JSchemaChangeset</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$folder</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: The current database object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$folder</span><span class="var-description">: The full path to the folder containing the update queries</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheck" id="check"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">check</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a101">101</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks the database and returns an array of any errors found.</p>
+<p class="description"><p>Note these are not database errors but rather situations where  the current schema is not up to date.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of errors if any.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			check
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfix" id="fix"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fix</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a122">122</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Runs the update query to apply the change to the database</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fix
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSchema" id="getSchema"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSchema</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the current database schema, based on the highest version number.</p>
+<p class="description"><p>Note that the .sql files are named based on the version and date, so  the file name of the last file should match the database schema version  in the #__schemas table.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the schema version for the database</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getSchema
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetStatus" id="getStatus"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getStatus</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Schema_librariescmsschemachangeset.php.html#a138">138</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array of results for this set</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> associative array of changeitems grouped by unchecked, ok, error, and skipped</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getStatus
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:24:09 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

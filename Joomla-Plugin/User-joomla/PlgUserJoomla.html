@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PlgUserJoomla</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PlgUserJoomla</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla User plugin</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_plugins---user---joomla---joomla.php.html">/plugins/user/joomla/joomla.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Plugin_User-joomla_pluginsuserjoomlajoomla.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a>
+      |
+      --<a href="../../Joomla-Platform/Plugin/JPlugin.html">JPlugin</a>
+         |
+         --PlgUserJoomla</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onUserAfterDelete" title="details" class="method-name">onUserAfterDelete</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$succes</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onUserAfterSave" title="details" class="method-name">onUserAfterSave</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$isnew</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$success</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onUserLogin" title="details" class="method-name">onUserLogin</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object True</span>
+										<a href="#onUserLogout" title="details" class="method-name">onUserLogout</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object A</span>
+										<a href="#_getUser" title="details" class="method-name">_getUser</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Plugin/JPlugin.html">JPlugin</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$autoloadLanguage">JPlugin::$autoloadLanguage</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$params">JPlugin::$params</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$_name">JPlugin::$_name</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$_type">JPlugin::$_type</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Event/JEvent.html#var$_subject">JEvent::$_subject</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodonUserAfterDelete" id="onUserAfterDelete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onUserAfterDelete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_User-joomla_pluginsuserjoomlajoomla.php.html#a33">33</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove all sessions for the user name</p>
+<p class="description"><p>Method is called after user data is deleted from the database</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onUserAfterDelete
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$succes</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$user</span><span class="var-description">: Holds the user data</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$succes</span><span class="var-description">: True if user was succesfully stored in the database</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: Message</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonUserAfterSave" id="onUserAfterSave"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onUserAfterSave</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_User-joomla_pluginsuserjoomlajoomla.php.html#a63">63</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Utility method to act on a user after it has been saved.</p>
+<p class="description"><p>This method sends a registration email to new users created in the backend.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onUserAfterSave
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$isnew</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$success</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$user</span><span class="var-description">: Holds the new user data.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$isnew</span><span class="var-description">: True if a new user is stored.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$success</span><span class="var-description">: True if user was succesfully stored in the database.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: Message.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonUserLogin" id="onUserLogin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onUserLogin</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_User-joomla_pluginsuserjoomlajoomla.php.html#a134">134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method should handle any login logic and report back to the subject</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onUserLogin
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$user</span><span class="var-description">: Holds the user data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array holding options (remember, autoregister, group)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonUserLogout" id="onUserLogout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onUserLogout</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_User-joomla_pluginsuserjoomlajoomla.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method should handle any logout logic and report back to the subject</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> on success</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object True</span>
+		<span class="method-name">
+			onUserLogout
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$user</span><span class="var-description">: Holds the user data.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array holding options (client, ...).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getUser" id="_getUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_User-joomla_pluginsuserjoomlajoomla.php.html#a249">249</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method will return a user object</p>
+<p class="description"><p>If options['autoregister'] is true, if the user doesn't exist yet he will be created</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JUser object</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object A</span>
+		<span class="method-name">
+			_getUser
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$user</span><span class="var-description">: Holds the user data.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array holding options (remember, autoregister, group).</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Plugin/JPlugin.html">JPlugin</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#method__construct">JPlugin::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#methodloadLanguage">JPlugin::loadLanguage()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#method__construct">JEvent::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#methodupdate">JEvent::update()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:32:55 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

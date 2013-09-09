@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for factory.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file factory.php</h1>
+<p>Documentation is available at <a href="../Joomla-Legacy/Simplepie/_libraries---legacy---simplepie---factory.php.html">factory.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Legacy</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;Simplepie</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'JPATH_PLATFORM'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><a href="../Joomla-Platform/_libraries---loader.php.html#functionjimport">jimport</a><span class="src-sym">(</span><span class="src-str">'simplepie.simplepie'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;Class&nbsp;to&nbsp;maintain&nbsp;a&nbsp;pathway.</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;The&nbsp;user's&nbsp;navigated&nbsp;path&nbsp;within&nbsp;the&nbsp;application.</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Legacy</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;Simplepie</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.2</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@deprecated</span><span class="src-doc">&nbsp;&nbsp;12.3&nbsp;(Platform)&nbsp;&amp;&nbsp;4.0&nbsp;(CMS)&nbsp;-&nbsp;Use&nbsp;JFeed&nbsp;or&nbsp;supply&nbsp;your&nbsp;own&nbsp;methods</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-key">class&nbsp;</span><a href="../Joomla-Legacy/Simplepie/JSimplepieFactory.html">JSimplepieFactory</a></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Get&nbsp;a&nbsp;parsed&nbsp;XML&nbsp;Feed&nbsp;Source</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-var">$url&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Url&nbsp;for&nbsp;feed&nbsp;source.</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">$cache_time&nbsp;</span><span class="src-doc">&nbsp;Time&nbsp;to&nbsp;cache&nbsp;feed&nbsp;for&nbsp;(using&nbsp;internal&nbsp;cache&nbsp;mechanism).</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">&nbsp;SimplePie&nbsp;parsed&nbsp;object&nbsp;on&nbsp;success,&nbsp;false&nbsp;on&nbsp;failure.</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;12.2</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@deprecated</span><span class="src-doc">&nbsp;&nbsp;4.0&nbsp;&nbsp;&nbsp;Use&nbsp;JFeedFactory($url)&nbsp;instead.</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-tag">@note</span><span class="src-doc">&nbsp;&nbsp;In&nbsp;3.2&nbsp;will&nbsp;be&nbsp;proxied&nbsp;to&nbsp;JFeedFactory()</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">static&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Legacy/Simplepie/JSimplepieFactory.html#methodgetFeedParser">getFeedParser</a><span class="src-sym">(</span><span class="src-var">$url</span><span class="src-sym">,&nbsp;</span><span class="src-var">$cache_time&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Platform/Log/JLog.html">JLog</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Log/JLog.html#methodadd">add</a><span class="src-sym">(</span>__METHOD__&nbsp;.&nbsp;<span class="src-str">'&nbsp;is&nbsp;deprecated.&nbsp;&nbsp;&nbsp;Use&nbsp;JFeedFactory()&nbsp;or&nbsp;supply&nbsp;Simple&nbsp;Pie&nbsp;instead.'</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLog.html">JLog</a></span><span class="src-sym">::</span><span class="src-id">WARNING</span><span class="src-sym">,&nbsp;</span><span class="src-str">'deprecated'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$cache&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetCache">getCache</a><span class="src-sym">(</span><span class="src-str">'feed_parser'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'callback'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$cache_time&nbsp;</span>&gt;&nbsp;<span class="src-num">0</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$cache</span><span class="src-sym">-&gt;</span><span class="src-id">setLifeTime</span><span class="src-sym">(</span><span class="src-var">$cache_time</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$simplepie&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../SimplePie/SimplePie.html">SimplePie</a></span><span class="src-sym">(</span><span class="src-id">null</span><span class="src-sym">,&nbsp;</span><span class="src-id">null</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$simplepie</span><span class="src-sym">-&gt;</span><span class="src-id">enable_cache</span><span class="src-sym">(</span><span class="src-id">false</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$simplepie</span><span class="src-sym">-&gt;</span><span class="src-id">set_feed_url</span><span class="src-sym">(</span><span class="src-var">$url</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$simplepie</span><span class="src-sym">-&gt;</span><span class="src-id">force_feed</span><span class="src-sym">(</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$contents&nbsp;</span>=&nbsp;<span class="src-var">$cache</span><span class="src-sym">-&gt;</span><span class="src-id">get</span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$simplepie</span><span class="src-sym">,&nbsp;</span><span class="src-str">'init'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id">null</span><span class="src-sym">,&nbsp;</span><span class="src-id">false</span><span class="src-sym">,&nbsp;</span><span class="src-id">false</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$contents</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$simplepie</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Platform/Log/JLog.html">JLog</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Log/JLog.html#methodadd">add</a><span class="src-sym">(</span><span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'JLIB_UTIL_ERROR_LOADING_FEED_DATA'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLog.html">JLog</a></span><span class="src-sym">::</span><span class="src-id">WARNING</span><span class="src-sym">,&nbsp;</span><span class="src-str">'jerror'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:30:19 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

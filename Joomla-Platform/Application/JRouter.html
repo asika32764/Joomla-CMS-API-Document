@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JRouter</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JRouter</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class to create and parse routes</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---application---router.php.html">/libraries/joomla/application/router.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a25">25</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Installation/JRouterInstallation.html">JRouterInstallation</a>
+					</td>
+					<td>
+											Class to create and parse routes
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Libraries/Router/JRouterAdministrator.html">JRouterAdministrator</a>
+					</td>
+					<td>
+											Class to create and parse routes
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Libraries/Router/JRouterSite.html">JRouterSite</a>
+					</td>
+					<td>
+											Class to create and parse routes for the site application
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$instances" title="details" class="var-name">$instances</a>
+				</div>
+																																																																												<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$mode" title="details" class="var-name">$mode</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$rules" title="details" class="var-name">$rules</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$vars" title="details" class="var-name">$vars</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$_mode" title="details" class="var-name">$_mode</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_rules" title="details" class="var-name">$_rules</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_vars" title="details" class="var-name">$_vars</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Application/JRouter.html">JRouter</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JRouter</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#attachBuildRule" title="details" class="method-name">attachBuildRule</a>
+											(<span class="var-type">callback</span>&nbsp;<span class="var-name">$callback</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#attachParseRule" title="details" class="method-name">attachParseRule</a>
+											(<span class="var-type">callback</span>&nbsp;<span class="var-name">$callback</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#build" title="details" class="method-name">build</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getMode" title="details" class="method-name">getMode</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getVar" title="details" class="method-name">getVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getVars" title="details" class="method-name">getVars</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setMode" title="details" class="method-name">setMode</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$mode</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setVar" title="details" class="method-name">setVar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setVars" title="details" class="method-name">setVars</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$vars</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$merge</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_buildRawRoute" title="details" class="method-name">_buildRawRoute</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_buildSefRoute" title="details" class="method-name">_buildSefRoute</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+										<a href="#_createURI" title="details" class="method-name">_createURI</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#_decodeSegments" title="details" class="method-name">_decodeSegments</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$segments</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#_encodeSegments" title="details" class="method-name">_encodeSegments</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$segments</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_parseRawRoute" title="details" class="method-name">_parseRawRoute</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_parseSefRoute" title="details" class="method-name">_parseSefRoute</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_processBuildRules" title="details" class="method-name">_processBuildRules</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#_processParseRules" title="details" class="method-name">_processParseRules</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instances" id="$instances"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$instances</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> JRouter instances container.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$mode" id="$mode"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$mode</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The rewrite mode</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$rules" id="$rules"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$rules</span>
+			 = <span class="var-default">array(<br />		'build' =&gt; array(),'parse'=&gt;array())</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array of rules</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$vars" id="$vars"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$vars</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array of variables</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_mode" id="$_mode"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$_mode</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The rewrite mode</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> use $mode declare as private</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_rules" id="$_rules"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_rules</span>
+			 = <span class="var-default">array(<br />		'build' =&gt; array(),'parse'=&gt;array())</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a79">79</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array of rules</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> use $rules declare as private</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_vars" id="$_vars"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_vars</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array of variables</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> use $vars declare as private</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a121">121</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global JRouter object, only creating it if it  doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JRouter object.</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Application/JRouter.html">JRouter</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$client</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$client</span><span class="var-description">: The name of the client</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An associative array of options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a97">97</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JRouter</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array of options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodattachBuildRule" id="attachBuildRule"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">attachBuildRule</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a329">329</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attach a build rule</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			attachBuildRule
+		</span>
+					(<span class="var-type">callback</span>&nbsp;<span class="var-name">$callback</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callback</span>
+				<span class="var-name">$callback</span><span class="var-description">: The function to be called</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodattachParseRule" id="attachParseRule"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">attachParseRule</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a343">343</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attach a parse rule</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			attachParseRule
+		</span>
+					(<span class="var-type">callback</span>&nbsp;<span class="var-name">$callback</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callback</span>
+				<span class="var-name">$callback</span><span class="var-description">: The function to be called.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbuild" id="build"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">build</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a197">197</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to convert an internal URI to a route</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The absolute search engine friendly URL</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			build
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The internal URL</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Installation/JRouterInstallation.html#methodbuild">JRouterInstallation::build()</a>
+								: Function to convert an internal URI to a route
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterAdministrator.html#methodbuild">JRouterAdministrator::build()</a>
+								: Function to convert an internal URI to a route
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#methodbuild">JRouterSite::build()</a>
+								: Function to convert an internal URI to a route
+							</li>
+				</ul>
+	</div>
+<a name="methodgetMode" id="getMode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a227">227</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the router mode</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getMode
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetVar" id="getVar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getVar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a296">296</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a router variable</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Value of the variable</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the variable</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetVars" id="getVars"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getVars</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a315">315</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the router variable array</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An associative array of router variables</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getVars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a168">168</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to convert a route to an internal URI</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			parse
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The uri.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Installation/JRouterInstallation.html#methodparse">JRouterInstallation::parse()</a>
+								: Function to convert a route to an internal URI
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterAdministrator.html#methodparse">JRouterAdministrator::parse()</a>
+								: Function to convert a route to an internal URI.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#methodparse">JRouterSite::parse()</a>
+								: Function to convert a route to an internal URI
+							</li>
+				</ul>
+	</div>
+<a name="methodsetMode" id="setMode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a241">241</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the router mode</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMode
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$mode</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$mode</span><span class="var-description">: The routing mode.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetVar" id="setVar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setVar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a257">257</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a router variable, creating it if it doesn't exist</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setVar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the variable</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value of the variable</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$create</span><span class="var-description">: If True, the variable will be created if it doesn't exist yet</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetVars" id="setVars"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setVars</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a275">275</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the router variable array</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setVars
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$vars</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$merge</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$vars</span><span class="var-description">: An associative array with variables</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$merge</span><span class="var-description">: If True, the array will be merged instead of overwritten</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_buildRawRoute" id="_buildRawRoute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_buildRawRoute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a385">385</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to build a raw route</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Raw Route</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_buildRawRoute
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The internal URL</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_buildRawRoute">JRouterSite::_buildRawRoute()</a>
+								: Function to build a raw route
+							</li>
+				</ul>
+	</div>
+<a name="method_buildSefRoute" id="_buildSefRoute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_buildSefRoute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a398">398</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to build a sef route</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The SEF route</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_buildSefRoute
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The uri</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_buildSefRoute">JRouterSite::_buildSefRoute()</a>
+								: Function to build a sef route
+							</li>
+				</ul>
+	</div>
+<a name="method_createURI" id="_createURI"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_createURI</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a449">449</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a uri based on a full or partial url string</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+		<span class="method-name">
+			_createURI
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The URI</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_createURI">JRouterSite::_createURI()</a>
+								: Create a uri based on a full or partial url string
+							</li>
+				</ul>
+	</div>
+<a name="method_decodeSegments" id="_decodeSegments"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_decodeSegments</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a510">510</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decode route segments</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of decoded route segments</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_decodeSegments
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$segments</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$segments</span><span class="var-description">: An array of route segments</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_encodeSegments" id="_encodeSegments"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_encodeSegments</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a489">489</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encode route segments</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of encoded route segments</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_encodeSegments
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$segments</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$segments</span><span class="var-description">: An array of route segments</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parseRawRoute" id="_parseRawRoute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_parseRawRoute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a357">357</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to convert a raw route to an internal URI</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_parseRawRoute
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The raw route</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_parseRawRoute">JRouterSite::_parseRawRoute()</a>
+								: Function to convert a raw route to an internal URI
+							</li>
+				</ul>
+	</div>
+<a name="method_parseSefRoute" id="_parseSefRoute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_parseSefRoute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a371">371</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to convert a sef route to an internal URI</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Internal URI</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_parseSefRoute
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The sef URI</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_parseSefRoute">JRouterSite::_parseSefRoute()</a>
+								: Function to convert a sef route to an internal URI
+							</li>
+				</ul>
+	</div>
+<a name="method_processBuildRules" id="_processBuildRules"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_processBuildRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a432">432</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Process the build uri query data based on custom defined rules</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_processBuildRules
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The URI</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_processBuildRules">JRouterSite::_processBuildRules()</a>
+								: Process the build uri query data based on custom defined rules
+							</li>
+				</ul>
+	</div>
+<a name="method_processParseRules" id="_processParseRules"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_processParseRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationrouter.php.html#a411">411</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Process the parsed router variables based on custom defined rules</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of processed URI variables</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_processParseRules
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: The URI to parse</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Libraries/Router/JRouterSite.html#method_processParseRules">JRouterSite::_processParseRules()</a>
+								: Process the parsed router variables based on custom defined rules
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:37:55 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page ftp.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/libraries/joomla/client/ftp.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|									<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_Joomla-Platform_Client_librariesjoomlaclientftp.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> GNU</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|										<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../Joomla-Platform/Client/JClientFtp.html">JClientFtp</a>
+					</td>
+					<td>
+											FTP client class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../Joomla-Platform/Client/JFTP.html">JFTP</a>
+					</td>
+					<td>
+											Deprecated class placeholder. You should use JClientFtp instead.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|									<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="defineCRLF"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">CRLF</span> = &quot;\r\n&quot;
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Client_librariesjoomlaclientftp.php.html#a26">26</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error Codes:</p>
+<p class="description"><p><ul><li>30 : Unable to connect to host</li><li>31 : Not connected</li><li>32 : Unable to send command to server</li><li>33 : Bad username</li><li>34 : Bad password</li><li>35 : Bad response</li><li>36 : Passive mode failed</li><li>37 : Data transfer error</li><li>38 : Local filesystem error</li></ul></p></p>
+	
+		
+</div>
+<a name="defineFTP_ASCII"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">FTP_ASCII</span> = 0
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Client_librariesjoomlaclientftp.php.html#a38">38</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineFTP_AUTOASCII"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">FTP_AUTOASCII</span> = -1
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Client_librariesjoomlaclientftp.php.html#a30">30</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineFTP_BINARY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">FTP_BINARY</span> = 1
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Client_librariesjoomlaclientftp.php.html#a34">34</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineFTP_NATIVE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">FTP_NATIVE</span> = (function_exists('ftp_connect'))?1:0
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Client_librariesjoomlaclientftp.php.html#a43">43</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:31:05 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,2579 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTable</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JTable</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../../Joomla/Observer/JObservableInterface.html">JObservableInterface</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Abstract Table class</p>
+<p class="description"><p>Parent class to all tables.</p></p>
+	<ul class="tags">
+				<li><span class="field">tutorial:</span> jtable.cls</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable">http://docs.joomla.org/JTable</a></li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---table---table.php.html">/libraries/joomla/table/table.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a25">25</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --JTable</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersTableBanner.html">BannersTableBanner</a>
+					</td>
+					<td>
+											Banner table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersTableClient.html">BannersTableClient</a>
+					</td>
+					<td>
+											Client table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_contact/ContactTableContact.html">ContactTableContact</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_content/ContentTableFeatured.html">ContentTableFeatured</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderTableFilter.html">FinderTableFilter</a>
+					</td>
+					<td>
+											Filter table class for the Finder package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderTableLink.html">FinderTableLink</a>
+					</td>
+					<td>
+											Link table class for the Finder package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderTableMap.html">FinderTableMap</a>
+					</td>
+					<td>
+											Map table class for the Finder package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_messages/MessagesTableMessage.html">MessagesTableMessage</a>
+					</td>
+					<td>
+											Message Table class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsTableNewsfeed.html">NewsfeedsTableNewsfeed</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_redirect/RedirectTableLink.html">RedirectTableLink</a>
+					</td>
+					<td>
+											Link Table for Redirect.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html">TemplatesTableStyle</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersTableNote.html">UsersTableNote</a>
+					</td>
+					<td>
+											User notes table class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html">WeblinksTableWeblink</a>
+					</td>
+					<td>
+											Weblink Table class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Libraries/Table/JTableContenttype.html">JTableContenttype</a>
+					</td>
+					<td>
+											Tags table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Libraries/Table/JTableCorecontent.html">JTableCorecontent</a>
+					</td>
+					<td>
+											Core content table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Libraries/Table/JTableUcm.html">JTableUcm</a>
+					</td>
+					<td>
+											UCM map table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableExtension.html">JTableExtension</a>
+					</td>
+					<td>
+											Extension table  Replaces plugins table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableLanguage.html">JTableLanguage</a>
+					</td>
+					<td>
+											Languages table.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableNested.html">JTableNested</a>
+					</td>
+					<td>
+											Table class supporting modified pre-order tree traversal behavior.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableUpdate.html">JTableUpdate</a>
+					</td>
+					<td>
+											Update table  Stores updates temporarily
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableUser.html">JTableUser</a>
+					</td>
+					<td>
+											Users table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableUsergroup.html">JTableUsergroup</a>
+					</td>
+					<td>
+											Usergroup table class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableViewlevel.html">JTableViewlevel</a>
+					</td>
+					<td>
+											Viewlevels table class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Table/JTableContent.html">JTableContent</a>
+					</td>
+					<td>
+											Content table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Table/JTableMenuType.html">JTableMenuType</a>
+					</td>
+					<td>
+											Menu Types table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Table/JTableModule.html">JTableModule</a>
+					</td>
+					<td>
+											Module table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Table/JTableSession.html">JTableSession</a>
+					</td>
+					<td>
+											Session table
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+					<a href="#$_db" title="details" class="var-name">$_db</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$_locked" title="details" class="var-name">$_locked</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla/Observer/JObserverUpdater.html">JObserverUpdater</a></span>
+					<a href="#$_observers" title="details" class="var-name">$_observers</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
+					<a href="#$_rules" title="details" class="var-name">$_rules</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_tbl" title="details" class="var-name">$_tbl</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_tbl_key" title="details" class="var-name">$_tbl_key</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$_trackAssets" title="details" class="var-name">$_trackAssets</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addIncludePath" title="details" class="method-name">addIncludePath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+									</div>
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'JTable'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																																																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JTable</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#attachObserver" title="details" class="method-name">attachObserver</a>
+											(<span class="var-type">JObserverInterface</span>&nbsp;<span class="var-name">$observer</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#bind" title="details" class="method-name">bind</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ignore</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#check" title="details" class="method-name">check</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#checkIn" title="details" class="method-name">checkIn</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#checkOut" title="details" class="method-name">checkOut</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+										<a href="#getDbo" title="details" class="method-name">getDbo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getFields" title="details" class="method-name">getFields</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getKeyName" title="details" class="method-name">getKeyName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getNextOrder" title="details" class="method-name">getNextOrder</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a>|null</span>
+										<a href="#getObserverOfClass" title="details" class="method-name">getObserverOfClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$observerClass</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
+										<a href="#getRules" title="details" class="method-name">getRules</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTableName" title="details" class="method-name">getTableName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hit" title="details" class="method-name">hit</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isCheckedOut" title="details" class="method-name">isCheckedOut</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$with</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$against</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#load" title="details" class="method-name">load</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$keys</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reset</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#move" title="details" class="method-name">move</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$delta</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#publish" title="details" class="method-name">publish</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pks</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#reorder" title="details" class="method-name">reorder</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#reset" title="details" class="method-name">reset</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$orderingFilter</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ignore</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setDBO" title="details" class="method-name">setDBO</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRules" title="details" class="method-name">setRules</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#store" title="details" class="method-name">store</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_getAssetName" title="details" class="method-name">_getAssetName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#_getAssetParentId" title="details" class="method-name">_getAssetParentId</a>
+											([<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_getAssetTitle" title="details" class="method-name">_getAssetTitle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_lock" title="details" class="method-name">_lock</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_unlock" title="details" class="method-name">_unlock</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_db" id="$_db"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+			<span class="var-name">$_db</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JDatabaseDriver object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_locked" id="$_locked"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$_locked</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a81">81</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Indicator that the tables have been locked.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_observers" id="$_observers"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla/Observer/JObserverUpdater.html">JObserverUpdater</a></span>
+			<span class="var-name">$_observers</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a89">89</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generic observers for this JTable (Used e.g. for tags Processing)</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_rules" id="$_rules"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
+			<span class="var-name">$_rules</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a73">73</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The rules associated with this record.</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> A JAccessRules object.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tbl" id="$_tbl"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_tbl</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the database table to model.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tbl_key" id="$_tbl_key"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_tbl_key</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the primary key field in the table.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_trackAssets" id="$_trackAssets"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$_trackAssets</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Should rows be tracked as ACL assets?</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddIncludePath" id="addIncludePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addIncludePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a263">263</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a filesystem path where JTable should search for table class files.</p>
+<p class="description"><p>You may either pass a string or an array of paths.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of filesystem paths to find JTable classes in.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/addIncludePath">http://docs.joomla.org/JTable/addIncludePath</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addIncludePath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: A filesystem path or array of filesystem paths to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a214">214</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Static method to get an instance of a JTable class if it can be found in  the table include paths.  To add include paths for searching for JTable  classes @see JTable::addIncludePath().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JTable object if found or boolean false if one could not be found.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getInstance">http://docs.joomla.org/JTable/getInstance</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'JTable'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The type (name) of the JTable class to get an instance of.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: An optional prefix for the table class name.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: An optional array of configuration values for the JTable object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a102">102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object constructor to set table and key fields.  In most cases this will  be overridden by child classes to explicitly set the table and key fields  for a particular database table.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JTable</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table to model.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: Name of the primary key field in the table.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: JDatabaseDriver object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></dt>
+						<dd>Class constructor, overridden in descendant classes.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableBanner.html#method__construct">BannersTableBanner::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableClient.html#method__construct">BannersTableClient::__construct()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactTableContact.html#method__construct">ContactTableContact::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_content/ContentTableFeatured.html#method__construct">ContentTableFeatured::__construct()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableFilter.html#method__construct">FinderTableFilter::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableLink.html#method__construct">FinderTableLink::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableMap.html#method__construct">FinderTableMap::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesTableMessage.html#method__construct">MessagesTableMessage::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsTableNewsfeed.html#method__construct">NewsfeedsTableNewsfeed::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectTableLink.html#method__construct">RedirectTableLink::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html#method__construct">TemplatesTableStyle::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersTableNote.html#method__construct">UsersTableNote::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html#method__construct">WeblinksTableWeblink::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableContenttype.html#method__construct">JTableContenttype::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableCorecontent.html#method__construct">JTableCorecontent::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableUcm.html#method__construct">JTableUcm::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableExtension.html#method__construct">JTableExtension::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableLanguage.html#method__construct">JTableLanguage::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#method__construct">TagsTableTag::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableAsset.html#method__construct">JTableAsset::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#method__construct">JTableCategory::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenu.html#method__construct">JTableMenu::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUpdate.html#method__construct">JTableUpdate::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUser.html#method__construct">JTableUser::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUsergroup.html#method__construct">JTableUsergroup::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableViewlevel.html#method__construct">JTableViewlevel::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#method__construct">JTableContent::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenuType.html#method__construct">JTableMenuType::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableModule.html#method__construct">JTableModule::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableSession.html#method__construct">JTableSession::__construct()</a>
+								: Constructor
+							</li>
+				</ul>
+	</div>
+<a name="methodattachObserver" id="attachObserver"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">attachObserver</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a153">153</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Implement JObservableInterface:  Adds an observer to this instance.</p>
+<p class="description"><p>This method will be called fron the constructor of classes implementing JObserverInterface  which is instanciated by the constructor of $this with JObserverMapper::attachAllObservers($this)</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			attachObserver
+		</span>
+					(<span class="var-type">JObserverInterface</span>&nbsp;<span class="var-name">$observer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla/Observer/JObserverInterface.html">JObserverInterface</a>|<a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a></span>
+				<span class="var-name">$observer</span><span class="var-description">: The observer object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbind" id="bind"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">bind</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a477">477</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to bind an associative array or object to the JTable instance.This  method only binds properties that are publicly accessible and optionally  takes an array of properties to ignore when binding.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/bind">http://docs.joomla.org/JTable/bind</a></li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			bind
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ignore</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$src</span><span class="var-description">: An associative array or object to bind to the JTable instance.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$ignore</span><span class="var-description">: An optional array or space separated list of properties to ignore while binding.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableBanner.html#methodbind">BannersTableBanner::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactTableContact.html#methodbind">ContactTableContact::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableFilter.html#methodbind">FinderTableFilter::bind()</a>
+								: Method to bind an associative array or object to the JTable instance.  This  method only binds properties that are publicly accessible and optionally  takes an array of properties to ignore when binding.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsTableNewsfeed.html#methodbind">NewsfeedsTableNewsfeed::bind()</a>
+								: Overloaded bind function to pre-process the params.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html#methodbind">TemplatesTableStyle::bind()</a>
+								: Overloaded bind function to pre-process the params.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html#methodbind">WeblinksTableWeblink::bind()</a>
+								: Overloaded bind function to pre-process the params.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableCorecontent.html#methodbind">JTableCorecontent::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableExtension.html#methodbind">JTableExtension::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methodbind">TagsTableTag::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#methodbind">JTableCategory::bind()</a>
+								: Overloaded bind function.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenu.html#methodbind">JTableMenu::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUpdate.html#methodbind">JTableUpdate::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUser.html#methodbind">JTableUser::bind()</a>
+								: Method to bind the user, user groups, and any other necessary data.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableViewlevel.html#methodbind">JTableViewlevel::bind()</a>
+								: Method to bind the data.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#methodbind">JTableContent::bind()</a>
+								: Overloaded bind function
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableModule.html#methodbind">JTableModule::bind()</a>
+								: Overloaded bind function.
+							</li>
+				</ul>
+	</div>
+<a name="methodcheck" id="check"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">check</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a607">607</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to perform sanity checks on the JTable instance properties to ensure  they are safe to store in the database.  Child classes should override this  method to make sure the data they are storing in the database is safe and  as expected before storage.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the instance is sane and able to be stored in the database.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/check">http://docs.joomla.org/JTable/check</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			check
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableBanner.html#methodcheck">BannersTableBanner::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactTableContact.html#methodcheck">ContactTableContact::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableFilter.html#methodcheck">FinderTableFilter::check()</a>
+								: Method to perform sanity checks on the JTable instance properties to ensure  they are safe to store in the database.  Child classes should override this  method to make sure the data they are storing in the database is safe and  as expected before storage.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesTableMessage.html#methodcheck">MessagesTableMessage::check()</a>
+								: Validation and filtering.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsTableNewsfeed.html#methodcheck">NewsfeedsTableNewsfeed::check()</a>
+								: Overloaded check method to ensure data integrity.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectTableLink.html#methodcheck">RedirectTableLink::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html#methodcheck">TemplatesTableStyle::check()</a>
+								: Overloaded check method to ensure data integrity.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html#methodcheck">WeblinksTableWeblink::check()</a>
+								: Overloaded check method to ensure data integrity.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableContenttype.html#methodcheck">JTableContenttype::check()</a>
+								: Overloaded check method to ensure data integrity.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableCorecontent.html#methodcheck">JTableCorecontent::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableExtension.html#methodcheck">JTableExtension::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableLanguage.html#methodcheck">JTableLanguage::check()</a>
+								: Overloaded check method to ensure data integrity
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableNested.html#methodcheck">JTableNested::check()</a>
+								: Checks that the object is valid and able to be stored.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methodcheck">TagsTableTag::check()</a>
+								: Overloaded check method to ensure data integrity.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableAsset.html#methodcheck">JTableAsset::check()</a>
+								: Assert that the nested set data is valid.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#methodcheck">JTableCategory::check()</a>
+								: Override check function
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenu.html#methodcheck">JTableMenu::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUpdate.html#methodcheck">JTableUpdate::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUser.html#methodcheck">JTableUser::check()</a>
+								: Validation and filtering
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUsergroup.html#methodcheck">JTableUsergroup::check()</a>
+								: Method to check the current record to save
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableViewlevel.html#methodcheck">JTableViewlevel::check()</a>
+								: Method to check the current record to save
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#methodcheck">JTableContent::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenuType.html#methodcheck">JTableMenuType::check()</a>
+								: Overloaded check function
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableModule.html#methodcheck">JTableModule::check()</a>
+								: Overloaded check function.
+							</li>
+				</ul>
+	</div>
+<a name="methodcheckIn" id="checkIn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">checkIn</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a929">929</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to check a row in if the necessary properties/fields exist.  Checking  a row in will allow other users the ability to edit the row.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/checkIn">http://docs.joomla.org/JTable/checkIn</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkIn
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pk</span><span class="var-description">: An optional primary key value to check out.  If not set the instance property value is used.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckOut" id="checkOut"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">checkOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a881">881</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to check a row out if the necessary properties/fields exist.  To  prevent race conditions while editing rows in a database, a row can be  checked out if the fields 'checked_out' and 'checked_out_time' are available.</p>
+<p class="description"><p>While a row is checked out, any attempt to store the row by a user other  than the one who checked the row out should be held until the row is checked  in again.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/checkOut">http://docs.joomla.org/JTable/checkOut</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkOut
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The Id of the user checking out the row.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pk</span><span class="var-description">: An optional primary key value to check out.  If not set                             the instance property value is used.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a806">806</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes this row in database (or if provided, the row of key $pk)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/delete">http://docs.joomla.org/JTable/delete</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			delete
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pk</span><span class="var-description">: An optional primary key value to delete.  If not set the instance property value is used.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html#methoddelete">TemplatesTableStyle::delete()</a>
+								: Overloaded store method to unsure existence of a default style for a template.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableCorecontent.html#methoddelete">JTableCorecontent::delete()</a>
+								: Override JTable delete method to include deleting corresponding row from #__ucm_base.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableNested.html#methoddelete">JTableNested::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methoddelete">TagsTableTag::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesTableCategory.html#methoddelete">CategoriesTableCategory::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusTableMenu.html#methoddelete">MenusTableMenu::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUser.html#methoddelete">JTableUser::delete()</a>
+								: Method to delete a user, user groups, and any other necessary data from the database.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUsergroup.html#methoddelete">JTableUsergroup::delete()</a>
+								: Delete this object and its dependencies
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenuType.html#methoddelete">JTableMenuType::delete()</a>
+								: Override parent delete method to delete tags information.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableSession.html#methoddelete">JTableSession::delete()</a>
+								: Overloaded delete method
+							</li>
+				</ul>
+	</div>
+<a name="methodgetDbo" id="getDbo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDbo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a385">385</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the JDatabaseDriver object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The internal database driver object.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getDBO">http://docs.joomla.org/JTable/getDBO</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+		<span class="method-name">
+			getDbo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFields" id="getFields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFields</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a180">180</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the columns from database table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of the field names, or false if an error occurs.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getFields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetKeyName" id="getKeyName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getKeyName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a372">372</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the primary key field name for the table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The name of the primary key for the table.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getKeyName">http://docs.joomla.org/JTable/getKeyName</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getKeyName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetNextOrder" id="getNextOrder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getNextOrder</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1054">1054</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the next ordering value for a group of rows defined by an SQL WHERE clause.</p>
+<p class="description"><p>This is useful for placing a new item last in a group of items in the table.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false an failure or the next ordering value as an integer.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getNextOrder">http://docs.joomla.org/JTable/getNextOrder</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getNextOrder
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: WHERE clause to use for selecting the MAX(ordering) for the table.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetObserverOfClass" id="getObserverOfClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getObserverOfClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a167">167</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the instance of the observer of class $observerClass</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a>|null</span>
+		<span class="method-name">
+			getObserverOfClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$observerClass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$observerClass</span><span class="var-description">: The observer class-name to return the object of</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRules" id="getRules"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a435">435</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the rules for the record.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> object</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
+		<span class="method-name">
+			getRules
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTableName" id="getTableName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a359">359</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the database table name for the class.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The name of the database table being modeled.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getTableName">http://docs.joomla.org/JTable/getTableName</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTableName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhit" id="hit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hit</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a974">974</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to increment the hits for a row if the necessary property/field exists.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/hit">http://docs.joomla.org/JTable/hit</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hit
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pk</span><span class="var-description">: An optional primary key value to increment. If not set the instance property value is used.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisCheckedOut" id="isCheckedOut"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isCheckedOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1020">1020</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine if a row is checked out and therefore uneditable by  a user. If the row is checked out by the same user, then it is considered  not checked out -- as the user can still edit it.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if checked out.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/isCheckedOut">http://docs.joomla.org/JTable/isCheckedOut</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isCheckedOut
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$with</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$against</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$with</span><span class="var-description">: The userid to preform the match with, if an item is checked                              out by this user the function will return false.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$against</span><span class="var-description">: The userid to perform the match against when the function                              is used as a static function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">load</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a528">528</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load a row from the database by primary key and bind the fields  to the JTable instance properties.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful. False if row not found.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/load">http://docs.joomla.org/JTable/load</a></li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			load
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$keys</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reset</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$keys</span><span class="var-description">: An optional primary key value to load the row by, or an array of fields to match.  If not                            set the instance property value is used.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$reset</span><span class="var-description">: True to reset the default values before loading the new row.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUser.html#methodload">JTableUser::load()</a>
+								: Method to load a user, user groups, and any other necessary data  from the database so that it can be bound to the user object.
+							</li>
+				</ul>
+	</div>
+<a name="methodmove" id="move"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">move</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1154">1154</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a row in the ordering sequence of a group of rows defined by an SQL WHERE clause.</p>
+<p class="description"><p>Negative numbers move the row up in the sequence and positive numbers move it down.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean  True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/move">http://docs.joomla.org/JTable/move</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			move
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$delta</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$delta</span><span class="var-description">: The direction and magnitude to move the row in the ordering sequence.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: WHERE clause to use for limiting the selection of rows to compact the                            ordering values.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableNested.html#methodmove">JTableNested::move()</a>
+								: Method to move a row in the ordering sequence of a group of rows defined by an SQL WHERE clause.
+							</li>
+				</ul>
+	</div>
+<a name="methodpublish" id="publish"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">publish</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1250">1250</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success; false if $pks is empty.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/publish">http://docs.joomla.org/JTable/publish</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			publish
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pks</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pks</span><span class="var-description">: An optional array of primary key values to update.                             If not set the instance property value is used.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$state</span><span class="var-description">: The publishing state. eg. [0 = unpublished, 1 = published]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The user id of the user performing the operation.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableBanner.html#methodpublish">BannersTableBanner::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableClient.html#methodpublish">BannersTableClient::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableFilter.html#methodpublish">FinderTableFilter::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table. The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableMap.html#methodpublish">FinderTableMap::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table. The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesTableMessage.html#methodpublish">MessagesTableMessage::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersTableNote.html#methodpublish">UsersTableNote::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to check-in rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html#methodpublish">WeblinksTableWeblink::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableCorecontent.html#methodpublish">JTableCorecontent::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table. The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableExtension.html#methodpublish">JTableExtension::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableNested.html#methodpublish">JTableNested::publish()</a>
+								: Method to set the publishing state for a node or list of nodes in the database
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#methodpublish">JTableContent::publish()</a>
+								: Method to set the publishing state for a row or list of rows in the database  table. The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.
+							</li>
+				</ul>
+	</div>
+<a name="methodreorder" id="reorder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">reorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1091">1091</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to compact the ordering values of rows in a group of rows  defined by an SQL WHERE clause.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean  True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/reorder">http://docs.joomla.org/JTable/reorder</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			reorder
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: WHERE clause to use for limiting the selection of rows to compact the ordering values.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreset" id="reset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">reset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a450">450</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to reset class properties to the defaults set in the class  definition. It will ignore the primary key as well as any private class  properties.</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/reset">http://docs.joomla.org/JTable/reset</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			reset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">save</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a756">756</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to provide a shortcut to binding, checking and storing a JTable</p>
+<p class="description"><p>instance to the database table.  The method will check a row in once the  data has been stored and if an ordering filter is present will attempt to  reorder the table rows based on the filter.  The ordering filter is an instance  property name.  The rows that will be reordered are those whose value matches  the JTable instance for the property specified.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/save">http://docs.joomla.org/JTable/save</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			save
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$orderingFilter</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ignore</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$src</span><span class="var-description">: An associative array or object to bind to the JTable instance.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$orderingFilter</span><span class="var-description">: Filter for the order updating</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$ignore</span><span class="var-description">: An optional array or space separated list of properties                                    to ignore while binding.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDBO" id="setDBO"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDBO</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a400">400</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the JDatabaseDriver object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/setDBO">http://docs.joomla.org/JTable/setDBO</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setDBO
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: A JDatabaseDriver object to be used by the table object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRules" id="setRules"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a416">416</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set rules for the record.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRules
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$input</span><span class="var-description">: A JAccessRules object, JSON string, or array.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstore" id="store"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">store</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a626">626</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to store a row in the database from the JTable instance properties.</p>
+<p class="description"><p>If a primary key value is set the row with that primary key value will be  updated with the instance property values.  If no primary key value is set  a new row will be inserted into the database with the properties from the  JTable instance.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/store">http://docs.joomla.org/JTable/store</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			store
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$updateNulls</span><span class="var-description">: True to update fields even if they are null.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersTableBanner.html#methodstore">BannersTableBanner::store()</a>
+								: Method to store a row
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactTableContact.html#methodstore">ContactTableContact::store()</a>
+								: Stores a contact
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderTableFilter.html#methodstore">FinderTableFilter::store()</a>
+								: Method to store a row in the database from the JTable instance properties.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsTableNewsfeed.html#methodstore">NewsfeedsTableNewsfeed::store()</a>
+								: Overriden JTable::store to set modified data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectTableLink.html#methodstore">RedirectTableLink::store()</a>
+								: Overriden store method to set dates.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html#methodstore">TemplatesTableStyle::store()</a>
+								: Overloaded store method to ensure unicity of default style.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersTableNote.html#methodstore">UsersTableNote::store()</a>
+								: Overloaded store method for the notes table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html#methodstore">WeblinksTableWeblink::store()</a>
+								: Overload the store method for the Weblinks table.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableContenttype.html#methodstore">JTableContenttype::store()</a>
+								: Overridden JTable::store.
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableCorecontent.html#methodstore">JTableCorecontent::store()</a>
+								: Overrides JTable::store to set modified data and user id.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableLanguage.html#methodstore">JTableLanguage::store()</a>
+								: Overrides JTable::store to check unique fields.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableNested.html#methodstore">JTableNested::store()</a>
+								: Method to store a node in the database table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methodstore">TagsTableTag::store()</a>
+								: Overriden JTable::store to set modified data and user id.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#methodstore">JTableCategory::store()</a>
+								: Overridden JTable::store to set created/modified and user id.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenu.html#methodstore">JTableMenu::store()</a>
+								: Overloaded store function
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUser.html#methodstore">JTableUser::store()</a>
+								: Method to store a row in the database from the JTable instance properties.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableUsergroup.html#methodstore">JTableUsergroup::store()</a>
+								: Inserts a new row if id is zero or updates an existing row in the database table
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#methodstore">JTableContent::store()</a>
+								: Overrides JTable::store to set modified data and user id.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenuType.html#methodstore">JTableMenuType::store()</a>
+								: Method to store a row in the database from the JTable instance properties.
+							</li>
+				</ul>
+	</div>
+<a name="method_getAssetName" id="_getAssetName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getAssetName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a300">300</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to compute the default name of the asset.</p>
+<p class="description"><p>The default name is in the form table_name.id  where id is the value of the primary key of the table.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_getAssetName
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#method_getAssetName">JTableCategory::_getAssetName()</a>
+								: Method to compute the default name of the asset.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#method_getAssetName">JTableContent::_getAssetName()</a>
+								: Method to compute the default name of the asset.
+							</li>
+				</ul>
+	</div>
+<a name="method_getAssetParentId" id="_getAssetParentId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getAssetParentId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a337">337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the parent asset under which to register this one.</p>
+<p class="description"><p>By default, all assets are registered to the ROOT node with ID,  which will default to 1 if none exists.  The extended class can define a table and id to lookup.  If the  asset does not exist it will be created.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			_getAssetParentId
+		</span>
+					([<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$table</span><span class="var-description">: A JTable object for the asset parent.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Id to look up</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#method_getAssetParentId">JTableCategory::_getAssetParentId()</a>
+								: Get the parent asset id for the record
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#method_getAssetParentId">JTableContent::_getAssetParentId()</a>
+								: Method to get the parent asset id for the record
+							</li>
+				</ul>
+	</div>
+<a name="method_getAssetTitle" id="_getAssetTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getAssetTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a318">318</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return the title to use for the asset table.  In</p>
+<p class="description"><p>tracking the assets a title is kept for each asset so that there is some  context available in a unified access manager.  Usually this would just  return $this-&gt;title or $this-&gt;name or whatever is being used for the  primary name of the row. If this method is not overridden, the asset name is used.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The string to use as the title in the asset table.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getAssetTitle">http://docs.joomla.org/JTable/getAssetTitle</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_getAssetTitle
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#method_getAssetTitle">JTableCategory::_getAssetTitle()</a>
+								: Method to return the title to use for the asset table.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableContent.html#method_getAssetTitle">JTableContent::_getAssetTitle()</a>
+								: Method to return the title to use for the asset table.
+							</li>
+				</ul>
+	</div>
+<a name="method_lock" id="_lock"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_lock</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1323">1323</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to lock the database table for writing.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_lock
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_unlock" id="_unlock"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_unlock</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1338">1338</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to unlock the database table for writing.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_unlock
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:58 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

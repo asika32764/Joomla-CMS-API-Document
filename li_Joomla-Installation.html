@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+						<script src="media/lib/classTree.js"></script>
+									<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+									<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "media/images/plus.png";
+				imgMinus.src = "media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body><select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
+	  <option value="li_default.html">default</option>
+	  <option value="li_akeebabackup.html">akeebabackup</option>
+	  <option value="li_IDNA.html">IDNA</option>
+	  <option value="li_Joomla.html">Joomla</option>
+	  <option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
+	  <option value="li_Joomla-Cli.html">Joomla-Cli</option>
+	  <option value="li_Joomla-CLI.html">Joomla-CLI</option>
+	  <option value="li_Joomla-CMS.html">Joomla-CMS</option>
+	  <option value="li_Joomla-Compat.html">Joomla-Compat</option>
+	  <option selected value="li_Joomla-Installation.html">Joomla-Installation</option>
+	  <option value="li_Joomla-Language.html">Joomla-Language</option>
+	  <option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
+	  <option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
+	  <option value="li_Joomla-Platform.html">Joomla-Platform</option>
+	  <option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
+	  <option value="li_Joomla-Site.html">Joomla-Site</option>
+	  <option value="li_phlyMail.html">phlyMail</option>
+	  <option value="li_PHPMailer.html">PHPMailer</option>
+	  <option value="li_SimplePie.html">SimplePie</option>
+	  <option value="li_utf8.html">utf8</option>
+</select>
+						<h3 class="package-title">Joomla-Installation</h3>
+<div class="tree">
+<script language="Javascript">
+if (document.getElementById) {
+			var tree = new WebFXTree('<span class="package">Joomla-Installation</span>');
+		tree.setBehavior('classic');
+		tree.openIcon = 'media/images/package.png';
+		tree.icon = 'media/images/package.png';
+	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			todos.openIcon = 'media/images/Index.png';
+			todos.icon = 'media/images/Index.png';
+			tree.add(todos);
+		
+		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Joomla-Installation.html');
+		class_trees.openIcon = 'media/images/Index.png';
+		class_trees.icon = 'media/images/Index.png';
+		tree.add(class_trees);
+
+		var elements = new WebFXTreeItem('Index of elements', 'elementindex_Joomla-Installation.html');
+		elements.openIcon = 'media/images/Index.png';
+		elements.icon = 'media/images/Index.png';
+		tree.add(elements);
+
+		var parent_node;
+
+		
+					var tree_classe = new WebFXTreeItem('Interface(s)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+						    						    						    						    						    						    						    				
+			tree.add(tree_classe);
+		
+					var tree_classe = new WebFXTreeItem('Class(es)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+						    				var classe = new WebFXTreeItem('InstallationHelperDatabase', 'Joomla-Installation/InstallationHelperDatabase.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('JFormFieldLanguage', 'Joomla-Installation/JFormFieldLanguage.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('JFormFieldPrefix', 'Joomla-Installation/JFormFieldPrefix.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('JFormFieldSample', 'Joomla-Installation/JFormFieldSample.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('JFormRulePrefix', 'Joomla-Installation/JFormRulePrefix.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('JHtmlInstallation', 'Joomla-Installation/JHtmlInstallation.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('JRouterInstallation', 'Joomla-Installation/JRouterInstallation.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+								
+			tree.add(tree_classe);
+		
+			
+					var tree_file = new WebFXTreeItem('File(s)', '');
+			tree_file.openIcon = 'media/images/folder.png';
+			tree_file.icon = 'media/images/folder.png';
+	
+							var file = new WebFXTreeItem('body.php', 'Joomla-Installation/_installation---template---body.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('database.php', 'Joomla-Installation/_installation---helper---database.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---ftp---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---defaultlanguage---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---preinstall---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---remove---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---languages---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---complete---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/_installation---view---install---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'Joomla-Installation/_installation---index.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'Joomla-Installation/_installation---template---index.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('installation.php', 'Joomla-Installation/_installation---helper---html---installation.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('language.php', 'Joomla-Installation/_installation---model---fields---language.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('prefix.php', 'Joomla-Installation/_installation---model---rules---prefix.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('prefix.php', 'Joomla-Installation/_installation---model---fields---prefix.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Installation/_installation---application---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sample.php', 'Joomla-Installation/_installation---model---fields---sample.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+				
+			tree.add(tree_file);
+		
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Application</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('InstallationApplicationWeb', 'Joomla-Installation/Application/InstallationApplicationWeb.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('bootstrap.php', 'Joomla-Installation/Application/_installation---application---bootstrap.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('defines.php', 'Joomla-Installation/Application/_installation---application---defines.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('framework.php', 'Joomla-Installation/Application/_installation---application---framework.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('web.php', 'Joomla-Installation/Application/_installation---application---web.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Controller</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('InstallationControllerDatabase', 'Joomla-Installation/Controller/InstallationControllerDatabase.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerDefault', 'Joomla-Installation/Controller/InstallationControllerDefault.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerDetectftproot', 'Joomla-Installation/Controller/InstallationControllerDetectftproot.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerFtp', 'Joomla-Installation/Controller/InstallationControllerFtp.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallConfig', 'Joomla-Installation/Controller/InstallationControllerInstallConfig.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallDatabase', 'Joomla-Installation/Controller/InstallationControllerInstallDatabase.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallDatabase_backup', 'Joomla-Installation/Controller/InstallationControllerInstallDatabase_backup.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallDatabase_remove', 'Joomla-Installation/Controller/InstallationControllerInstallDatabase_remove.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallEmail', 'Joomla-Installation/Controller/InstallationControllerInstallEmail.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallLanguages', 'Joomla-Installation/Controller/InstallationControllerInstallLanguages.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerInstallSample', 'Joomla-Installation/Controller/InstallationControllerInstallSample.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerPreinstall', 'Joomla-Installation/Controller/InstallationControllerPreinstall.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerRemovefolder', 'Joomla-Installation/Controller/InstallationControllerRemovefolder.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerSetdefaultlanguage', 'Joomla-Installation/Controller/InstallationControllerSetdefaultlanguage.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerSetlanguage', 'Joomla-Installation/Controller/InstallationControllerSetlanguage.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerSite', 'Joomla-Installation/Controller/InstallationControllerSite.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerSummary', 'Joomla-Installation/Controller/InstallationControllerSummary.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationControllerVerifyftpsettings', 'Joomla-Installation/Controller/InstallationControllerVerifyftpsettings.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('config.php', 'Joomla-Installation/Controller/_installation---controller---install---config.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('database.php', 'Joomla-Installation/Controller/_installation---controller---install---database.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('database.php', 'Joomla-Installation/Controller/_installation---controller---database.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('database_backup.php', 'Joomla-Installation/Controller/_installation---controller---install---database_backup.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('database_remove.php', 'Joomla-Installation/Controller/_installation---controller---install---database_remove.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/Controller/_installation---controller---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('detectftproot.php', 'Joomla-Installation/Controller/_installation---controller---detectftproot.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('email.php', 'Joomla-Installation/Controller/_installation---controller---install---email.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('ftp.php', 'Joomla-Installation/Controller/_installation---controller---ftp.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('languages.php', 'Joomla-Installation/Controller/_installation---controller---install---languages.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('preinstall.php', 'Joomla-Installation/Controller/_installation---controller---preinstall.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('removefolder.php', 'Joomla-Installation/Controller/_installation---controller---removefolder.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('sample.php', 'Joomla-Installation/Controller/_installation---controller---install---sample.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('setdefaultlanguage.php', 'Joomla-Installation/Controller/_installation---controller---setdefaultlanguage.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('setlanguage.php', 'Joomla-Installation/Controller/_installation---controller---setlanguage.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('site.php', 'Joomla-Installation/Controller/_installation---controller---site.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('summary.php', 'Joomla-Installation/Controller/_installation---controller---summary.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('verifyftpsettings.php', 'Joomla-Installation/Controller/_installation---controller---verifyftpsettings.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Model</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('InstallationModelConfiguration', 'Joomla-Installation/Model/InstallationModelConfiguration.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationModelDatabase', 'Joomla-Installation/Model/InstallationModelDatabase.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationModelFtp', 'Joomla-Installation/Model/InstallationModelFtp.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationModelLanguages', 'Joomla-Installation/Model/InstallationModelLanguages.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationModelSetup', 'Joomla-Installation/Model/InstallationModelSetup.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('configuration.php', 'Joomla-Installation/Model/_installation---model---configuration.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('database.php', 'Joomla-Installation/Model/_installation---model---database.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('ftp.php', 'Joomla-Installation/Model/_installation---model---ftp.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('languages.php', 'Joomla-Installation/Model/_installation---model---languages.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('setup.php', 'Joomla-Installation/Model/_installation---model---setup.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Response</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('InstallationResponseJson', 'Joomla-Installation/Response/InstallationResponseJson.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('json.php', 'Joomla-Installation/Response/_installation---response---json.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">View</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('InstallationViewCompleteHtml', 'Joomla-Installation/View/InstallationViewCompleteHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewDefault', 'Joomla-Installation/View/InstallationViewDefault.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewDefaultlanguageHtml', 'Joomla-Installation/View/InstallationViewDefaultlanguageHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewInstallHtml', 'Joomla-Installation/View/InstallationViewInstallHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewLanguagesHtml', 'Joomla-Installation/View/InstallationViewLanguagesHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewPreinstallHtml', 'Joomla-Installation/View/InstallationViewPreinstallHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewRemoveHtml', 'Joomla-Installation/View/InstallationViewRemoveHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('InstallationViewSummaryHtml', 'Joomla-Installation/View/InstallationViewSummaryHtml.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/View/_installation---view---database---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/View/_installation---view---summary---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/View/_installation---view---site---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Installation/View/_installation---view---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---preinstall---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---summary---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---languages---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---defaultlanguage---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---remove---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---complete---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('html.php', 'Joomla-Installation/View/_installation---view---install---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+	
+document.write(tree);
+}
+</script>
+</div>
+<p class="notes">
+	Generated by 
+	<a href="http://www.phpdoc.org" target="_blank">phpDocumentor <span class="field">1.4.3</span></a>
+</p>
+</body>
+</html>

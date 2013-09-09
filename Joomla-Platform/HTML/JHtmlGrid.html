@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JHtmlGrid</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JHtmlGrid</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Utility class for creating HTML Grids</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 1.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---cms---html---grid.php.html">/libraries/cms/html/grid.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#behavior" title="details" class="method-name">behavior</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#boolean" title="details" class="method-name">boolean</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$taskOn</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$taskOff</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#checkall" title="details" class="method-name">checkall</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'checkall-toggle'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tip</span> = <span class="var-default">'JGLOBAL_CHECK_ALL'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">'Joomla.checkAll(this)'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#checkedOut" title="details" class="method-name">checkedOut</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$row</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$identifier</span> = <span class="var-default">'id'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#id" title="details" class="method-name">id</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$rowNum</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$recId</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$checkedOut</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'cid'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#order" title="details" class="method-name">order</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$rows</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$image</span> = <span class="var-default">'filesave.png'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">'saveorder'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#published" title="details" class="method-name">published</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$img1</span> = <span class="var-default">'tick.png'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$img0</span> = <span class="var-default">'publish_x.png'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#sort" title="details" class="method-name">sort</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$order</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">'asc'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$selected</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$new_direction</span> = <span class="var-default">'asc'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tip</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#state" title="details" class="method-name">state</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$filter_state</span> = <span class="var-default">'*'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$published</span> = <span class="var-default">'Published'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$unpublished</span> = <span class="var-default">'Unpublished'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$archived</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$trashed</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#_checkedOut" title="details" class="method-name">_checkedOut</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$row</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overlib</span> = <span class="var-default">true</span>])
+									</div>
+																																																																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodbehavior" id="behavior"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static behavior</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a312">312</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to build the behavior script and add it to the document head.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			behavior
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodboolean" id="boolean"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static boolean</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a33">33</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display a boolean setting widget.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The boolean setting widget.</li>
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			boolean
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$taskOn</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$taskOff</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$i</span><span class="var-description">: The row index.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span><span class="var-description">: The value of the boolean field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$taskOn</span><span class="var-description">: Task to turn the boolean setting on.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$taskOff</span><span class="var-description">: Task to turn the boolean setting off.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckall" id="checkall"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static checkall</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a124">124</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to check all checkboxes in a grid</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			checkall
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'checkall-toggle'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tip</span> = <span class="var-default">'JGLOBAL_CHECK_ALL'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">'Joomla.checkAll(this)'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form element</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tip</span><span class="var-description">: The text shown as tooltip title instead of $tip</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: The action to perform on clicking the checkbox</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckedOut" id="checkedOut"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static checkedOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a160">160</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays a checked out icon.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			checkedOut
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$row</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$identifier</span> = <span class="var-default">'id'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$row</span><span class="var-description">: A data object (must contain checkedout as a property).</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$i</span><span class="var-description">: The index of the row.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$identifier</span><span class="var-description">: The property name of the primary key or index of the row.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodid" id="id"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static id</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a143">143</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a checkbox for a grid row.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> String of html with a checkbox if item is not checked out, null if checked out.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			id
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$rowNum</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$recId</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$checkedOut</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">'cid'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$rowNum</span><span class="var-description">: The row index</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$recId</span><span class="var-description">: The record id</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$checkedOut</span><span class="var-description">: True if item is checke out</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form element</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorder" id="order"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static order</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a271">271</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create an icon for saving a new ordering in a grid</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			order
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$rows</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$image</span> = <span class="var-default">'filesave.png'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">'saveorder'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rows</span><span class="var-description">: The array of rows of rows</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$image</span><span class="var-description">: The image [UNUSED]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$task</span><span class="var-description">: The task to use, defaults to save order</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpublished" id="published"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static published</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a clickable icon to change the state of an item</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			published
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$img1</span> = <span class="var-default">'tick.png'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$img0</span> = <span class="var-default">'publish_x.png'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: Either the scalar value or an object (for backward compatibility, deprecated)</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$i</span><span class="var-description">: The index</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$img1</span><span class="var-description">: Image for a positive or on value</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$img0</span><span class="var-description">: Image for the empty or off value</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: An optional prefix for the task</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsort" id="sort"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static sort</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a74">74</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to sort a column in a grid</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			sort
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$order</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">'asc'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$selected</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$new_direction</span> = <span class="var-default">'asc'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tip</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The link title</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$order</span><span class="var-description">: The order field for the column</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direction</span><span class="var-description">: The current direction</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selected</span><span class="var-description">: The selected ordering</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$task</span><span class="var-description">: An optional task override</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$new_direction</span><span class="var-description">: An optional direction for the new column</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tip</span><span class="var-description">: An optional text shown as tooltip title instead of $title</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstate" id="state"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static state</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a234">234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a select list of states for filtering  By default the filter shows only published and unpublished items</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			state
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$filter_state</span> = <span class="var-default">'*'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$published</span> = <span class="var-default">'Published'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$unpublished</span> = <span class="var-default">'Unpublished'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$archived</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$trashed</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filter_state</span><span class="var-description">: The initial filter state</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$published</span><span class="var-description">: The JText string for published</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$unpublished</span><span class="var-description">: The JText string for Unpublished</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$archived</span><span class="var-description">: The JText string for Archived</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$trashed</span><span class="var-description">: The JText string for Trashed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_checkedOut" id="_checkedOut"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static _checkedOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_HTML_librariescmshtmlgrid.php.html#a287">287</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a checked out icon with optional overlib in a grid.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTMl for the icon and overlib</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			_checkedOut
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$row</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overlib</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$row</span><span class="var-description">: The row object</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overlib</span><span class="var-description">: True if an overlib with checkout information should be created.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:31:18 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page transcode_wrapper.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/libraries/idna_convert/transcode_wrapper.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">transcode wrapper functions</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Matthias Sommerfeld, &lt;<a href="mailto:mso@phlylabs.de">mso@phlylabs.de</a>&gt;</li>
+				<li><span class="field">version:</span> 0.1.0</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_IDNA_charset_librariesidna_converttranscode_wrapper.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functiondecode_utf8" id="functiondecode_utf8"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">decode_utf8</span> (line <span class="line-number"><a href="../../__filesource/fsource_IDNA_charset_librariesidna_converttranscode_wrapper.php.html#a55">55</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert a string from UTF-8 to any of various encodings</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded string or false on failure</li>
+				<li><span class="field">since:</span> 0.0.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			decode_utf8
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">&#039;iso-8859-1&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$safe_mode</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: String to decode [@param  string  Encoding; Default: ISO-8859-1] [@param  bool  Safe Mode: if set to TRUE, the original string is retunred on errors]</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$encoding</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$safe_mode</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionencode_utf8" id="functionencode_utf8"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">encode_utf8</span> (line <span class="line-number"><a href="../../__filesource/fsource_IDNA_charset_librariesidna_converttranscode_wrapper.php.html#a19">19</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert a string from any of various encodings to UTF-8</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The encoded string or false on failure</li>
+				<li><span class="field">since:</span> 0.0.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			encode_utf8
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">&#039;iso-8859-1&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$safe_mode</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: String to encode [@param  string  Encoding; Default: ISO-8859-1] [@param  bool  Safe Mode: if set to TRUE, the original string is retunred on errors]</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$encoding</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$safe_mode</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionmap_iso8859_1_w1252" id="functionmap_iso8859_1_w1252"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">map_iso8859_1_w1252</span> (line <span class="line-number"><a href="../../__filesource/fsource_IDNA_charset_librariesidna_converttranscode_wrapper.php.html#a117">117</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Special treatment for our guys in Redmond</p>
+<p class="description"><p>Windows-1252 is basically ISO-8859-1 -- with some exceptions, which get accounted for here</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0.8</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			map_iso8859_1_w1252
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span> = <span class="var-default">&#039;&#039;</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">1</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">1</span><span class="var-description">: The resulting Win1252 string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: Your input in ISO-8859-1</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionmap_w1252_iso8859_1" id="functionmap_w1252_iso8859_1"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">map_w1252_iso8859_1</span> (line <span class="line-number"><a href="../../__filesource/fsource_IDNA_charset_librariesidna_converttranscode_wrapper.php.html#a90">90</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Special treatment for our guys in Redmond</p>
+<p class="description"><p>Windows-1252 is basically ISO-8859-1 -- with some exceptions, which get accounted for here</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0.8</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			map_w1252_iso8859_1
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span> = <span class="var-default">&#039;&#039;</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">1</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">1</span><span class="var-description">: The resulting ISO-8859-1 string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: Your input in Win1252</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:40:31 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

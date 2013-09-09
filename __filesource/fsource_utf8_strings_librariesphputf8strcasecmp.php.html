@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for strcasecmp.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file strcasecmp.php</h1>
+<p>Documentation is available at <a href="../utf8/strings/_libraries---phputf8---strcasecmp.php.html">strcasecmp.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;$Id$</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//---------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">*&nbsp;UTF-8&nbsp;aware&nbsp;alternative&nbsp;to&nbsp;strcasecmp</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*&nbsp;A&nbsp;case&nbsp;insensivite&nbsp;string&nbsp;comparison</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*&nbsp;Note:&nbsp;requires&nbsp;utf8_strtolower</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">int&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;http://www.php.net/strcasecmp</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;utf8_strtolower</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---strcasecmp.php.html#functionutf8_strcasecmp">utf8_strcasecmp</a><span class="src-sym">(</span><span class="src-var">$strX</span><span class="src-sym">,&nbsp;</span><span class="src-var">$strY</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$strX&nbsp;</span>=&nbsp;<a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strtolower">utf8_strtolower</a><span class="src-sym">(</span><span class="src-var">$strX</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$strY&nbsp;</span>=&nbsp;<a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strtolower">utf8_strtolower</a><span class="src-sym">(</span><span class="src-var">$strY</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/strcmp">strcmp</a><span class="src-sym">(</span><span class="src-var">$strX</span><span class="src-sym">,&nbsp;</span><span class="src-var">$strY</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:36 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

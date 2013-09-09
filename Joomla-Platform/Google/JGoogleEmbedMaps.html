@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JGoogleEmbedMaps</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JGoogleEmbedMaps</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Google Maps embed class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---google---embed---maps.php.html">/libraries/joomla/google/embed/maps.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a>
+   |
+   --JGoogleEmbedMaps</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/HTTP/JHttp.html">JHttp</a></span>
+					<a href="#$http" title="details" class="var-name">$http</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JGoogleEmbedMaps</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/HTTP/JHttp.html">JHttp</a></span>&nbsp;<span class="var-name">$http</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#addMarker" title="details" class="method-name">addMarker</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#deleteMarker" title="details" class="method-name">deleteMarker</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#geocodeAddress" title="details" class="method-name">geocodeAddress</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$address</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAdditionalJavascript" title="details" class="method-name">getAdditionalJavascript</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAdditionalMapOptions" title="details" class="method-name">getAdditionalMapOptions</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAsyncCallback" title="details" class="method-name">getAsyncCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAutoload" title="details" class="method-name">getAutoload</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getBody" title="details" class="method-name">getBody</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getCenter" title="details" class="method-name">getCenter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getHeader" title="details" class="method-name">getHeader</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getKey" title="details" class="method-name">getKey</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMapClass" title="details" class="method-name">getMapClass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMapID" title="details" class="method-name">getMapID</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMapStyle" title="details" class="method-name">getMapStyle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMapType" title="details" class="method-name">getMapType</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#getZoom" title="details" class="method-name">getZoom</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hasSensor" title="details" class="method-name">hasSensor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isAsync" title="details" class="method-name">isAsync</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#listMarkers" title="details" class="method-name">listMarkers</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">JGoogleEmbedAMaps</span>
+										<a href="#noSensor" title="details" class="method-name">noSensor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setAdditionalJavascript" title="details" class="method-name">setAdditionalJavascript</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$script</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setAdditionalMapOptions" title="details" class="method-name">setAdditionalMapOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setAsyncCallback" title="details" class="method-name">setAsyncCallback</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">JGoogleEmbedAMaps</span>
+										<a href="#setAutoload" title="details" class="method-name">setAutoload</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'onload'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setCenter" title="details" class="method-name">setCenter</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">true</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$markeroptions</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setKey" title="details" class="method-name">setKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setMapClass" title="details" class="method-name">setMapClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setMapID" title="details" class="method-name">setMapID</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setMapStyle" title="details" class="method-name">setMapStyle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setMapType" title="details" class="method-name">setMapType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#setZoom" title="details" class="method-name">setZoom</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$zoom</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#useAsync" title="details" class="method-name">useAsync</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+										<a href="#useSensor" title="details" class="method-name">useSensor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">JGoogleEmbedAMaps</span>
+										<a href="#useSync" title="details" class="method-name">useSync</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$http" id="$http"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/HTTP/JHttp.html">JHttp</a></span>
+			<span class="var-name">$http</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The HTTP client object to use in sending HTTP requests.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#var$options">JGoogleEmbed::$options</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#var$uri">JGoogleEmbed::$uri</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a37">37</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGoogleEmbedMaps</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/HTTP/JHttp.html">JHttp</a></span>&nbsp;<span class="var-name">$http</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+				<span class="var-name">$options</span><span class="var-description">: Google options object</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Uri/JUri.html">JUri</a></span>
+				<span class="var-name">$uri</span><span class="var-description">: URL of the page being rendered</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/HTTP/JHttp.html">JHttp</a></span>
+				<span class="var-name">$http</span><span class="var-description">: Http client for geocoding requests</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#method__construct">JGoogleEmbed::__construct()</a></dt>
+						<dd>Constructor.</dd>
+					</dl>
+			
+	</div>
+<a name="methodaddMarker" id="addMarker"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addMarker</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a331">331</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a marker to the map</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The marker or false on failure</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			addMarker
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$location</span><span class="var-description">: A latitude longitude array or an address string</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$title</span><span class="var-description">: The hover-text for the marker</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for marker</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteMarker" id="deleteMarker"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteMarker</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a385">385</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a marker from the map</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The latitude/longitude of the deleted marker</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			deleteMarker
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$index</span><span class="var-description">: Index of marker to delete (defaults to last added marker)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgeocodeAddress" id="geocodeAddress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">geocodeAddress</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a675">675</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the location information back from an address</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array containing Google's geocode data</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			geocodeAddress
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$address</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$address</span><span class="var-description">: The address to geocode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAdditionalJavascript" id="getAdditionalJavascript"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAdditionalJavascript</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a218">218</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get additional map options</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The options</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAdditionalJavascript
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAdditionalMapOptions" id="getAdditionalMapOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAdditionalMapOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a190">190</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get additional map options</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The options</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAdditionalMapOptions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAsyncCallback" id="getAsyncCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAsyncCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a454">454</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get callback function for async javascript loading</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The ID</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAsyncCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAutoload" id="getAutoload"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAutoload</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a522">522</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks how the script should be loaded</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Autoload type (onload, jquery, mootools, or false)</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAutoload
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBody" id="getBody"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBody</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a643">643</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retrieve the div that the map is loaded into</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The body</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBody
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodgetBody">JGoogleEmbed::getBody()</a></dt>
+						<dd>Method to retrieve the body for the API</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetCenter" id="getCenter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCenter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a274">274</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the center of the map</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A latitude longitude array or an address string</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getCenter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHeader" id="getHeader"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHeader</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a550">550</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get code to load Google Maps javascript</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Javascript code</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHeader
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodgetHeader">JGoogleEmbed::getHeader()</a></dt>
+						<dd>Method to retrieve the header for the API</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetKey" id="getKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a50">50</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the API key</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The Google Maps API key</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getKey
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMapClass" id="getMapClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMapClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a106">106</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the class of the map div</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The class</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMapClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMapID" id="getMapID"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMapID</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the id of the map div</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The ID</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMapID
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMapStyle" id="getMapStyle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMapStyle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a134">134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the style of the map div</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The style</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMapStyle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMapType" id="getMapType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMapType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a162">162</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the map type setting</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The class</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMapType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetZoom" id="getZoom"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getZoom</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a246">246</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the zoom</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The zoom level</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getZoom
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhasSensor" id="hasSensor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hasSensor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a482">482</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a sensor is set to be required</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if asynchronous</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasSensor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisAsync" id="isAsync"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isAsync</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a414">414</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if the javascript is set to be asynchronous</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if asynchronous</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isAsync
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlistMarkers" id="listMarkers"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">listMarkers</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a371">371</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List the markers added to the map</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of markers</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			listMarkers
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodnoSensor" id="noSensor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">noSensor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a508">508</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Don't require access to sensor data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGoogleEmbedAMaps</span>
+		<span class="method-name">
+			noSensor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAdditionalJavascript" id="setAdditionalJavascript"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAdditionalJavascript</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a232">232</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add additional javascript</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setAdditionalJavascript
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$script</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$script</span><span class="var-description">: Additional javascript</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAdditionalMapOptions" id="setAdditionalMapOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAdditionalMapOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add additional map options</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setAdditionalMapOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Additional map options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAsyncCallback" id="setAsyncCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAsyncCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a468">468</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the callback function for async javascript loading</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setAsyncCallback
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callback</span><span class="var-description">: The callback function name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAutoload" id="setAutoload"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAutoload</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a536">536</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Automatically add the callback to the window</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGoogleEmbedAMaps</span>
+		<span class="method-name">
+			setAutoload
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'onload'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The method to add the callback (options are onload, jquery, mootools, and false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCenter" id="setCenter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCenter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a290">290</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the center of the map</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The latitude/longitude of the center or false on failure</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setCenter
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">true</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$markeroptions</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$location</span><span class="var-description">: A latitude/longitude array or an address string</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of marker or false for no marker</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$markeroptions</span><span class="var-description">: Options for marker</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetKey" id="setKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a64">64</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the API key</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The Google Maps API key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMapClass" id="setMapClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMapClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a120">120</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the map div class</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setMapClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: The class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMapID" id="setMapID"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMapID</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a92">92</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the map div id</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setMapID
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMapStyle" id="setMapStyle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMapStyle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a148">148</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the map div style</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setMapStyle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$style</span><span class="var-description">: The style</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMapType" id="setMapType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMapType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a176">176</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the map type ()</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setMapType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Valid types are ROADMAP, SATELLITE, HYBRID, and TERRAIN</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetZoom" id="setZoom"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setZoom</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a260">260</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the map zoom</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			setZoom
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$zoom</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$zoom</span><span class="var-description">: Zoom level (0 is whole world)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseAsync" id="useAsync"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">useAsync</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a426">426</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load javascript asynchronously</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			useAsync
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoduseSensor" id="useSensor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">useSensor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a494">494</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Require access to sensor data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbedMaps.html">JGoogleEmbedMaps</a></span>
+		<span class="method-name">
+			useSensor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoduseSync" id="useSync"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">useSync</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagoogleembedmaps.php.html#a440">440</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load javascript synchronously</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object for method chaining</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGoogleEmbedAMaps</span>
+		<span class="method-name">
+			useSync
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#method__construct">JGoogleEmbed::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodechoBody">JGoogleEmbed::echoBody()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodechoHeader">JGoogleEmbed::echoHeader()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodgetBody">JGoogleEmbed::getBody()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodgetHeader">JGoogleEmbed::getHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodgetOption">JGoogleEmbed::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodisSecure">JGoogleEmbed::isSecure()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html#methodsetOption">JGoogleEmbed::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:34:01 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

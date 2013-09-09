@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JKeychain</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JKeychain</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keychain Class</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---keychain---keychain.php.html">/libraries/joomla/keychain/keychain.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a>
+   |
+   --JKeychain</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$iv" title="details" class="var-name">$iv</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$method" title="details" class="var-name">$method</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#createPassphraseFile" title="details" class="method-name">createPassphraseFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$privateKeyFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$privateKeyPassphrase</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#deleteValue" title="details" class="method-name">deleteValue</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPassphraseFromFile" title="details" class="method-name">getPassphraseFromFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$publicKeyFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#loadKeychain" title="details" class="method-name">loadKeychain</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$keychainFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$publicKeyFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#saveKeychain" title="details" class="method-name">saveKeychain</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$keychainFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$publicKeyFile</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$iv" id="$iv"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$iv</span>
+			 = <span class="var-default"> &quot;1234567890123456&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Initialisation vector for encryption method.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$method" id="$method"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$method</span>
+			 = <span class="var-default"> 'aes-128-cbc'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Method to use for encryption.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#var$data">JRegistry::$data</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#var$instances">JRegistry::$instances</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreatePassphraseFile" id="createPassphraseFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createPassphraseFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a46">46</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a passphrase file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Result of writing the passphrase file to disk.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			createPassphraseFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$privateKeyFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$privateKeyPassphrase</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$passphrase</span><span class="var-description">: The passphrase to store in the passphrase file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$passphraseFile</span><span class="var-description">: Path to the passphrase file to create.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$privateKeyFile</span><span class="var-description">: Path to the private key file to encrypt the passphrase file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$privateKeyPassphrase</span><span class="var-description">: The passphrase for the private key.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteValue" id="deleteValue"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteValue</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a74">74</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a registry value (very simple method)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Value of old value or boolean false if operation failed</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			deleteValue
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Registry Path (e.g. joomla.content.showauthor)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPassphraseFromFile" id="getPassphraseFromFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPassphraseFromFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the passphrase for this keychain</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The passphrase in from passphraseFile</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPassphraseFromFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$publicKeyFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$passphraseFile</span><span class="var-description">: The file containing the passphrase to encrypt and decrypt.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$publicKeyFile</span><span class="var-description">: The file containing the public key to decrypt the passphrase file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadKeychain" id="loadKeychain"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadKeychain</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a116">116</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load a keychain file into this object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Result of loading the object.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			loadKeychain
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$keychainFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$publicKeyFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$keychainFile</span><span class="var-description">: Path to the keychain file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$passphraseFile</span><span class="var-description">: The path to the passphrase file to decript the keychain.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$publicKeyFile</span><span class="var-description">: The file containing the public key to decrypt the passphrase file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveKeychain" id="saveKeychain"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">saveKeychain</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Keychain_librariesjoomlakeychainkeychain.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save this keychain to a file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Result of storing the file.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			saveKeychain
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$keychainFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$passphraseFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$publicKeyFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$keychainFile</span><span class="var-description">: The path to the keychain file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$passphraseFile</span><span class="var-description">: The path to the passphrase file to encrypt the keychain.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$publicKeyFile</span><span class="var-description">: The file containing the public key to decrypt the passphrase file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#method__construct">JRegistry::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodasArray">JRegistry::asArray()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodbindData">JRegistry::bindData()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methoddef">JRegistry::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodexists">JRegistry::exists()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodget">JRegistry::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodgetInstance">JRegistry::getInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodjsonSerialize">JRegistry::jsonSerialize()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodloadArray">JRegistry::loadArray()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodloadFile">JRegistry::loadFile()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodloadObject">JRegistry::loadObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodloadString">JRegistry::loadString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodmerge">JRegistry::merge()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodset">JRegistry::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodtoArray">JRegistry::toArray()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodtoObject">JRegistry::toObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#methodtoString">JRegistry::toString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#method__clone">JRegistry::__clone()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Registry/JRegistry.html#method__toString">JRegistry::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

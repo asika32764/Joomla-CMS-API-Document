@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTableNested</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JTableNested</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Table class supporting modified pre-order tree traversal behavior.</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableNested">http://docs.joomla.org/JTableNested</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---table---nested.php.html">/libraries/joomla/table/nested.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Platform/Table/JTable.html">JTable</a>
+      |
+      --JTableNested</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html">TagsTableTag</a>
+					</td>
+					<td>
+											Tags table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Platform/Table/JTableAsset.html">JTableAsset</a>
+					</td>
+					<td>
+											Table class supporting modified pre-order tree traversal behavior.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Table/JTableCategory.html">JTableCategory</a>
+					</td>
+					<td>
+											Category table
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Table/JTableMenu.html">JTableMenu</a>
+					</td>
+					<td>
+											Menu table
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$alias" title="details" class="var-name">$alias</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$level" title="details" class="var-name">$level</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$lft" title="details" class="var-name">$lft</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$parent_id" title="details" class="var-name">$parent_id</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$rgt" title="details" class="var-name">$rgt</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_cache" title="details" class="var-name">$_cache</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$_debug" title="details" class="var-name">$_debug</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_location" title="details" class="var-name">$_location</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$_location_id" title="details" class="var-name">$_location_id</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#check" title="details" class="method-name">check</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#debug" title="details" class="method-name">debug</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$children</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getPath" title="details" class="method-name">getPath</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$diagnostic</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getRootId" title="details" class="method-name">getRootId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getTree" title="details" class="method-name">getTree</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$diagnostic</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isLeaf" title="details" class="method-name">isLeaf</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#move" title="details" class="method-name">move</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$delta</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#moveByReference" title="details" class="method-name">moveByReference</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$referenceId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">'after'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#orderDown" title="details" class="method-name">orderDown</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#orderUp" title="details" class="method-name">orderUp</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#publish" title="details" class="method-name">publish</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pks</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#rebuild" title="details" class="method-name">rebuild</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$parentId</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$leftId</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#rebuildPath" title="details" class="method-name">rebuildPath</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#saveorder" title="details" class="method-name">saveorder</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$idArray</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$lft_array</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setLocation" title="details" class="method-name">setLocation</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$referenceId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">'after'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#store" title="details" class="method-name">store</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#_getNode" title="details" class="method-name">_getNode</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#_getTreeRepositionData" title="details" class="method-name">_getTreeRepositionData</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$referenceNode</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nodeWidth</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">'before'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_logtable" title="details" class="method-name">_logtable</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$showData</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$showQuery</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_runQuery" title="details" class="method-name">_runQuery</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$errorMessage</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$alias" id="$alias"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$alias</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a64">64</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property holding the alias of this node used to constuct the  full text path, forward-slash delimited.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$level" id="$level"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$level</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property holding the depth level of the node in the tree.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$lft" id="$lft"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$lft</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property holding the left value of the node for managing its  placement in the nested sets tree.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$parent_id" id="$parent_id"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$parent_id</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property holding the primary key of the parent node.  Provides  adjacency list data for nodes.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$rgt" id="$rgt"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$rgt</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property holding the right value of the node for managing its  placement in the nested sets tree.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_cache" id="$_cache"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_cache</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a91">91</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array to cache values in recursive processes.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_debug" id="$_debug"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$_debug</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a99">99</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Debug level</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_location" id="$_location"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_location</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a73">73</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property to hold the location type to use when storing the row.</p>
+<p class="description"><p>Possible values are: ['before', 'after', 'first-child', 'last-child'].</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_location_id" id="$_location_id"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$_location_id</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a83">83</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object property to hold the primary key of the location reference node to  use when storing the row.  A combination of location type and reference  node describes where to store the current node in the tree.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_db">JTable::$_db</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_locked">JTable::$_locked</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_observers">JTable::$_observers</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_rules">JTable::$_rules</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_tbl">JTable::$_tbl</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_tbl_key">JTable::$_tbl_key</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Table/JTable.html#var$_trackAssets">JTable::$_trackAssets</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheck" id="check"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">check</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a646">646</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks that the object is valid and able to be stored.</p>
+<p class="description"><p>This method checks that the parent_id is non-zero and exists in the database.  Note that the root node (parent_id = 0) cannot be manipulated with this class.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if all checks pass.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			check
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Table/JTable.html#methodcheck">JTable::check()</a></dt>
+						<dd>Method to perform sanity checks on the JTable instance properties to ensure  they are safe to store in the database.  Child classes should override this  method to make sure the data they are storing in the database is safe and  as expected before storage.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methodcheck">TagsTableTag::check()</a>
+								: Overloaded check method to ensure data integrity.
+							</li>
+					<li>
+				<a href="../../Joomla-Platform/Table/JTableAsset.html#methodcheck">JTableAsset::check()</a>
+								: Assert that the nested set data is valid.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#methodcheck">JTableCategory::check()</a>
+								: Override check function
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenu.html#methodcheck">JTableMenu::check()</a>
+								: Overloaded check function
+							</li>
+				</ul>
+	</div>
+<a name="methoddebug" id="debug"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">debug</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a110">110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the debug level on or off</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debug
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: <ol><li>= off, 1 = on</li></ol></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a511">511</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a node and, optionally, its child nodes from the table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			delete
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$children</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: The primary key of the node to delete.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$children</span><span class="var-description">: True to delete child nodes, false to move them up a level.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Table/JTable.html#methoddelete">JTable::delete()</a></dt>
+						<dd>Deletes this row in database (or if provided, the row of key $pk)</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methoddelete">TagsTableTag::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesTableCategory.html#methoddelete">CategoriesTableCategory::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusTableMenu.html#methoddelete">MenusTableMenu::delete()</a>
+								: Method to delete a node and, optionally, its child nodes from the table.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetPath" id="getPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of nodes from a given node to its root.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of node objects including the start node.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getPath
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$diagnostic</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: Primary key of the node for which to get the path.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$diagnostic</span><span class="var-description">: Only select diagnostic data for the nested sets.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRootId" id="getRootId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRootId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1158">1158</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the ID of the root item in the tree</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The primary id of the root row, or false if not found and the internal error is set.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getRootId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTree" id="getTree"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTree</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a156">156</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a node and all its child nodes.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on failure or array of node objects on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getTree
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$diagnostic</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: Primary key of the node for which to get the tree.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$diagnostic</span><span class="var-description">: Only select diagnostic data for the nested sets.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisLeaf" id="isLeaf"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isLeaf</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a184">184</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine if a node is a leaf node in the tree (has no children).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if a leaf node, false if not or null if the node does not exist.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isLeaf
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: Primary key of the node to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmove" id="move"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">move</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a241">241</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a row in the ordering sequence of a group of rows defined by an SQL WHERE clause.</p>
+<p class="description"><p>Negative numbers move the row up in the sequence and positive numbers move it down.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean true on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/move">http://docs.joomla.org/JTable/move</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			move
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$delta</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$delta</span><span class="var-description">: The direction and magnitude to move the row in the ordering sequence.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: WHERE clause to use for limiting the selection of rows to compact the  ordering values.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Table/JTable.html#methodmove">JTable::move()</a></dt>
+						<dd>Method to move a row in the ordering sequence of a group of rows defined by an SQL WHERE clause.</dd>
+					</dl>
+			
+	</div>
+<a name="methodmoveByReference" id="moveByReference"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">moveByReference</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a294">294</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a node and its children to a new location in the tree.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableNested/moveByReference">http://docs.joomla.org/JTableNested/moveByReference</a></li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			moveByReference
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$referenceId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">'after'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$referenceId</span><span class="var-description">: The primary key of the node to reference new location by.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$position</span><span class="var-description">: Location type string. ['before', 'after', 'first-child', 'last-child']</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: The primary key of the node to move.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorderDown" id="orderDown"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">orderDown</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1079">1079</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a node one position to the right in the same level.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			orderDown
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: Primary key of the node to move.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorderUp" id="orderUp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">orderUp</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a999">999</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a node one position to the left in the same level.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			orderUp
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: Primary key of the node to move.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpublish" id="publish"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">publish</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a871">871</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the publishing state for a node or list of nodes in the database</p>
+<p class="description"><p>table.  The method respects rows checked out by other users and will attempt  to checkin rows that it can after adjustments are made. The method will not  allow you to set a publishing state higher than any ancestor node and will  not allow you to set a publishing state on a node with a checked out child.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableNested/publish">http://docs.joomla.org/JTableNested/publish</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			publish
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pks</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$userId</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pks</span><span class="var-description">: An optional array of primary key values to update.  If not                             set the instance property value is used.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$state</span><span class="var-description">: The publishing state. eg. [0 = unpublished, 1 = published]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userId</span><span class="var-description">: The user id of the user performing the operation.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Table/JTable.html#methodpublish">JTable::publish()</a></dt>
+						<dd>Method to set the publishing state for a row or list of rows in the database  table.  The method respects checked out rows by other users and will attempt  to checkin rows that it can after adjustments are made.</dd>
+					</dl>
+			
+	</div>
+<a name="methodrebuild" id="rebuild"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rebuild</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1227">1227</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to recursively rebuild the whole nested set tree.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 1 + value of root rgt on success, false on failure</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableNested/rebuild">http://docs.joomla.org/JTableNested/rebuild</a></li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			rebuild
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$parentId</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$leftId</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$parentId</span><span class="var-description">: The root of the tree to rebuild.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$leftId</span><span class="var-description">: The left id to start with in building the tree.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: The level to assign to the current nodes.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The path to the current nodes.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrebuildPath" id="rebuildPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rebuildPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1315">1315</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to rebuild the node's path field from the alias values of the  nodes from the current node to the root node of the tree.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableNested/rebuildPath">http://docs.joomla.org/JTableNested/rebuildPath</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			rebuildPath
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$pk</span><span class="var-description">: Primary key of the node for which to get the path.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveorder" id="saveorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">saveorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1373">1373</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to update order of table rows</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 1 + value of root rgt on success, false on failure.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			saveorder
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$idArray</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$lft_array</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$idArray</span><span class="var-description">: id numbers of rows to be reordered.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$lft_array</span><span class="var-description">: lft values of rows to be reordered.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLocation" id="setLocation"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLocation</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a215">215</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the location of a node in the tree object.  This method does not  save the new location to the database, but will set it in the object so  that when the node is stored it will be stored in the new location.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setLocation
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$referenceId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">'after'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$referenceId</span><span class="var-description">: The primary key of the node to reference new location by.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$position</span><span class="var-description">: Location type string. ['before', 'after', 'first-child', 'last-child']</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstore" id="store"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">store</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a697">697</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to store a node in the database table.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableNested/store">http://docs.joomla.org/JTableNested/store</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			store
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$updateNulls</span><span class="var-description">: True to update null values as well.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Table/JTable.html#methodstore">JTable::store()</a></dt>
+						<dd>Method to store a row in the database from the JTable instance properties.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_tags/TagsTableTag.html#methodstore">TagsTableTag::store()</a>
+								: Overriden JTable::store to set modified data and user id.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableCategory.html#methodstore">JTableCategory::store()</a>
+								: Overridden JTable::store to set created/modified and user id.
+							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableMenu.html#methodstore">JTableMenu::store()</a>
+								: Overloaded store function
+							</li>
+				</ul>
+	</div>
+<a name="method_getNode" id="_getNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1426">1426</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get nested set properties for a node in the tree.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on failure or node object on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_getNode
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Value to look up the node by.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: An optional key to look up the node by (parent | left | right).                          If omitted, the primary key of the table is used.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getTreeRepositionData" id="_getTreeRepositionData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getTreeRepositionData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1488">1488</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get various data necessary to make room in the tree at a location  for a node and its children.  The returned data object includes conditions  for SQL WHERE clauses for updating left and right id values to make room for  the node as well as the new left and right ids for the node.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on failure or data object on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_getTreeRepositionData
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$referenceNode</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nodeWidth</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">'before'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$referenceNode</span><span class="var-description">: A node object with at least a 'lft' and 'rgt' with                                    which to make room in the tree around for a new node.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nodeWidth</span><span class="var-description">: The width of the node for which to make room in the tree.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$position</span><span class="var-description">: The position relative to the reference node where the room  should be made.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_logtable" id="_logtable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_logtable</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1573">1573</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a log table in the buffer optionally showing the query and/or data.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_logtable
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$showData</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$showQuery</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$showData</span><span class="var-description">: True to show data</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$showQuery</span><span class="var-description">: True to show query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_runQuery" id="_runQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_runQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablenested.php.html#a1615">1615</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Runs a query and unlocks the database on an error.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> void</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException on database error.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_runQuery
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$errorMessage</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$query</span><span class="var-description">: A string or JDatabaseQuery object.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$errorMessage</span><span class="var-description">: Unused.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#method__construct">JTable::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodaddIncludePath">JTable::addIncludePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodattachObserver">JTable::attachObserver()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodbind">JTable::bind()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodcheck">JTable::check()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodcheckIn">JTable::checkIn()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodcheckOut">JTable::checkOut()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methoddelete">JTable::delete()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetDbo">JTable::getDbo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetFields">JTable::getFields()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetInstance">JTable::getInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetKeyName">JTable::getKeyName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetNextOrder">JTable::getNextOrder()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetObserverOfClass">JTable::getObserverOfClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetRules">JTable::getRules()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodgetTableName">JTable::getTableName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodhit">JTable::hit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodisCheckedOut">JTable::isCheckedOut()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodload">JTable::load()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodmove">JTable::move()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodpublish">JTable::publish()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodreorder">JTable::reorder()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodreset">JTable::reset()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodsave">JTable::save()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodsetDBO">JTable::setDBO()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodsetRules">JTable::setRules()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#methodstore">JTable::store()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#method_getAssetName">JTable::_getAssetName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#method_getAssetParentId">JTable::_getAssetParentId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#method_getAssetTitle">JTable::_getAssetTitle()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#method_lock">JTable::_lock()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Table/JTable.html#method_unlock">JTable::_unlock()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:35:25 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

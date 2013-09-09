@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JApplicationWebClient</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JApplicationWebClient</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class to model a Web Client.</p>
+	<ul class="tags">
+				<li><span class="field">property-read:</span> integer $platform: The detected platform on which the web client runs.</li>
+				<li><span class="field">property-read:</span> boolean $mobile: True if the web client is a mobile device.</li>
+				<li><span class="field">property-read:</span> integer $engine: The detected rendering engine used by the web client.</li>
+				<li><span class="field">property-read:</span> integer $browser: The detected browser used by the web client.</li>
+				<li><span class="field">property-read:</span> string $browserVersion: The detected browser version used by the web client.</li>
+				<li><span class="field">property-read:</span> array $languages: The priority order detected accepted languages for the client.</li>
+				<li><span class="field">property-read:</span> array $encodings: The priority order detected accepted encodings for the client.</li>
+				<li><span class="field">property-read:</span> string $userAgent: The web client's user agent string.</li>
+				<li><span class="field">property-read:</span> string $acceptEncoding: The web client's accepted encoding string.</li>
+				<li><span class="field">property-read:</span> string $acceptLanguage: The web client's accepted languages string.</li>
+				<li><span class="field">property-read:</span> array $detection: An array of flags determining whether or not a detection routine has been run.</li>
+				<li><span class="field">property-read:</span> boolean $robot: True if the web client is a robot</li>
+				<li><span class="field">since:</span> 12.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---application---web---client.php.html">/libraries/joomla/application/web/client.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a32">32</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Legacy/Application/JWebClient.html">JWebClient</a>
+					</td>
+					<td>
+											Deprecated class placeholder. You should use JApplicationWebClient instead.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#AMAYA" title="details" class="const-name">AMAYA</a> = 					<span class="var-type"> 16</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ANDROID" title="details" class="const-name">ANDROID</a> = 					<span class="var-type"> 9</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ANDROIDTABLET" title="details" class="const-name">ANDROIDTABLET</a> = 					<span class="var-type"> 22</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#BLACKBERRY" title="details" class="const-name">BLACKBERRY</a> = 					<span class="var-type"> 8</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#CHROME" title="details" class="const-name">CHROME</a> = 					<span class="var-type"> 19</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#FIREFOX" title="details" class="const-name">FIREFOX</a> = 					<span class="var-type"> 18</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#GECKO" title="details" class="const-name">GECKO</a> = 					<span class="var-type"> 13</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#IE" title="details" class="const-name">IE</a> = 					<span class="var-type"> 17</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#IPAD" title="details" class="const-name">IPAD</a> = 					<span class="var-type"> 5</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#IPHONE" title="details" class="const-name">IPHONE</a> = 					<span class="var-type"> 4</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#IPOD" title="details" class="const-name">IPOD</a> = 					<span class="var-type"> 6</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#KHTML" title="details" class="const-name">KHTML</a> = 					<span class="var-type"> 15</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LINUX" title="details" class="const-name">LINUX</a> = 					<span class="var-type"> 10</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#MAC" title="details" class="const-name">MAC</a> = 					<span class="var-type"> 7</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#OPERA" title="details" class="const-name">OPERA</a> = 					<span class="var-type"> 21</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#PRESTO" title="details" class="const-name">PRESTO</a> = 					<span class="var-type"> 14</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#SAFARI" title="details" class="const-name">SAFARI</a> = 					<span class="var-type"> 20</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#TRIDENT" title="details" class="const-name">TRIDENT</a> = 					<span class="var-type"> 11</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#WEBKIT" title="details" class="const-name">WEBKIT</a> = 					<span class="var-type"> 12</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#WINDOWS" title="details" class="const-name">WINDOWS</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#WINDOWS_CE" title="details" class="const-name">WINDOWS_CE</a> = 					<span class="var-type"> 3</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#WINDOWS_PHONE" title="details" class="const-name">WINDOWS_PHONE</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$acceptEncoding" title="details" class="var-name">$acceptEncoding</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$acceptLanguage" title="details" class="var-name">$acceptLanguage</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$browser" title="details" class="var-name">$browser</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$browserVersion" title="details" class="var-name">$browserVersion</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$detection" title="details" class="var-name">$detection</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$encodings" title="details" class="var-name">$encodings</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$engine" title="details" class="var-name">$engine</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$languages" title="details" class="var-name">$languages</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$mobile" title="details" class="var-name">$mobile</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$platform" title="details" class="var-name">$platform</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$robot" title="details" class="var-name">$robot</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$userAgent" title="details" class="var-name">$userAgent</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#detectBrowser" title="details" class="method-name">detectBrowser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#detectEncoding" title="details" class="method-name">detectEncoding</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$acceptEncoding</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#detectEngine" title="details" class="method-name">detectEngine</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#detectLanguage" title="details" class="method-name">detectLanguage</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$acceptLanguage</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#detectPlatform" title="details" class="method-name">detectPlatform</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#detectRobot" title="details" class="method-name">detectRobot</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JApplicationWebClient</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$acceptEncoding</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$acceptLanguage</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$acceptEncoding" id="$acceptEncoding"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$acceptEncoding</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a109">109</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The web client's accepted encoding string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$acceptLanguage" id="$acceptLanguage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$acceptLanguage</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a115">115</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The web client's accepted languages string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$browser" id="$browser"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$browser</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a79">79</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The detected browser used by the web client.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$browserVersion" id="$browserVersion"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$browserVersion</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a85">85</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The detected browser version used by the web client.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$detection" id="$detection"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$detection</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a127">127</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> An array of flags determining whether or not a detection routine has been run.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$encodings" id="$encodings"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$encodings</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a97">97</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The priority order detected accepted encodings for the client.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$engine" id="$engine"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$engine</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a73">73</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The detected rendering engine used by the web client.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$languages" id="$languages"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$languages</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a91">91</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The priority order detected accepted languages for the client.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mobile" id="$mobile"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$mobile</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> True if the web client is a mobile device.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$platform" id="$platform"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$platform</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The detected platform on which the web client runs.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$robot" id="$robot"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$robot</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a121">121</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> True if the web client is a robot.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$userAgent" id="$userAgent"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$userAgent</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a103">103</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The web client's user agent string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoddetectBrowser" id="detectBrowser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">detectBrowser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a245">245</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detects the client browser and version in a user agent string.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detectBrowser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The user-agent string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddetectEncoding" id="detectEncoding"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">detectEncoding</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a328">328</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to detect the accepted response encoding by the client.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detectEncoding
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$acceptEncoding</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$acceptEncoding</span><span class="var-description">: The client accept encoding string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddetectEngine" id="detectEngine"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">detectEngine</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a346">346</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detects the client rendering engine in a user agent string.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detectEngine
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The user-agent string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddetectLanguage" id="detectLanguage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">detectLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a392">392</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to detect the accepted languages by the client.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detectLanguage
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$acceptLanguage</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$acceptLanguage</span><span class="var-description">: The client accept language string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddetectPlatform" id="detectPlatform"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">detectPlatform</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a410">410</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Detects the client platform in a user agent string.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detectPlatform
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The user-agent string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddetectRobot" id="detectRobot"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">detectRobot</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a503">503</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if the browser is a robot or not.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detectRobot
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The user-agent string to parse.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a138">138</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JApplicationWebClient</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$userAgent</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$acceptEncoding</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$acceptLanguage</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userAgent</span><span class="var-description">: The optional user-agent string to parse.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$acceptEncoding</span><span class="var-description">: The optional client accept encoding string to parse.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$acceptLanguage</span><span class="var-description">: The optional client accept language string to parse.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Legacy/Application/JWebClient.html#method__construct">JWebClient::__construct()</a>
+								: Class constructor.
+							</li>
+				</ul>
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a180">180</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to get an object property's value by name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The requested value if it exists.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the property for which to return a value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constAMAYA" id="AMAYA"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">AMAYA</span>
+			 = <span class="const-default"> 16</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constANDROID" id="ANDROID"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ANDROID</span>
+			 = <span class="const-default"> 9</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constANDROIDTABLET" id="ANDROIDTABLET"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ANDROIDTABLET</span>
+			 = <span class="const-default"> 22</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constBLACKBERRY" id="BLACKBERRY"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">BLACKBERRY</span>
+			 = <span class="const-default"> 8</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constCHROME" id="CHROME"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CHROME</span>
+			 = <span class="const-default"> 19</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constFIREFOX" id="FIREFOX"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FIREFOX</span>
+			 = <span class="const-default"> 18</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constGECKO" id="GECKO"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">GECKO</span>
+			 = <span class="const-default"> 13</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constIE" id="IE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">IE</span>
+			 = <span class="const-default"> 17</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constIPAD" id="IPAD"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">IPAD</span>
+			 = <span class="const-default"> 5</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constIPHONE" id="IPHONE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">IPHONE</span>
+			 = <span class="const-default"> 4</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constIPOD" id="IPOD"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">IPOD</span>
+			 = <span class="const-default"> 6</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constKHTML" id="KHTML"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">KHTML</span>
+			 = <span class="const-default"> 15</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLINUX" id="LINUX"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LINUX</span>
+			 = <span class="const-default"> 10</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constMAC" id="MAC"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">MAC</span>
+			 = <span class="const-default"> 7</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constOPERA" id="OPERA"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">OPERA</span>
+			 = <span class="const-default"> 21</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constPRESTO" id="PRESTO"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PRESTO</span>
+			 = <span class="const-default"> 14</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constSAFARI" id="SAFARI"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SAFARI</span>
+			 = <span class="const-default"> 20</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constTRIDENT" id="TRIDENT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TRIDENT</span>
+			 = <span class="const-default"> 11</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constWEBKIT" id="WEBKIT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WEBKIT</span>
+			 = <span class="const-default"> 12</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constWINDOWS" id="WINDOWS"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WINDOWS</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constWINDOWS_CE" id="WINDOWS_CE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WINDOWS_CE</span>
+			 = <span class="const-default"> 3</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constWINDOWS_PHONE" id="WINDOWS_PHONE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WINDOWS_PHONE</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationwebclient.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:24:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for number.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file number.php</h1>
+<p>Documentation is available at <a href="../Joomla-Libraries/HTML/_libraries---cms---html---number.php.html">number.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Libraries</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;HTML</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'JPATH_PLATFORM'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;HTML&nbsp;helper&nbsp;class&nbsp;for&nbsp;rendering&nbsp;numbers.</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Libraries</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;HTML</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-key">abstract&nbsp;</span><span class="src-key">class&nbsp;</span><a href="../Joomla-Libraries/HTML/JHtmlNumber.html">JHtmlNumber</a></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Converts&nbsp;bytes&nbsp;to&nbsp;more&nbsp;distinguishable&nbsp;formats&nbsp;such&nbsp;as:</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;kilobytes,&nbsp;megabytes,&nbsp;etc.</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;By&nbsp;default,&nbsp;the&nbsp;proper&nbsp;format&nbsp;will&nbsp;automatically&nbsp;be&nbsp;chosen.</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;However,&nbsp;one&nbsp;of&nbsp;the&nbsp;allowed&nbsp;unit&nbsp;types&nbsp;may&nbsp;also&nbsp;be&nbsp;used&nbsp;instead.</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">$bytes&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;number&nbsp;of&nbsp;bytes.</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-var">$unit&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;type&nbsp;of&nbsp;unit&nbsp;to&nbsp;return.</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">$precision&nbsp;</span><span class="src-doc">&nbsp;The&nbsp;number&nbsp;of&nbsp;digits&nbsp;to&nbsp;be&nbsp;used&nbsp;after&nbsp;the&nbsp;decimal&nbsp;place.</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;The&nbsp;number&nbsp;of&nbsp;bytes&nbsp;in&nbsp;the&nbsp;proper&nbsp;units.</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;1.6</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">static&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Libraries/HTML/JHtmlNumber.html#methodbytes">bytes</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">,&nbsp;</span><span class="src-var">$unit&nbsp;</span>=&nbsp;<span class="src-str">'auto'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$precision&nbsp;</span>=&nbsp;<span class="src-num">2</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;No&nbsp;explicit&nbsp;casting&nbsp;$bytes&nbsp;to&nbsp;integer&nbsp;here,&nbsp;since&nbsp;it&nbsp;might&nbsp;overflow</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;on&nbsp;32-bit&nbsp;systems</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$precision&nbsp;</span>=&nbsp;(int)&nbsp;<span class="src-var">$precision</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$unitTypes&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'b'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'kb'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'MB'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'GB'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'TB'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'PB'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Default&nbsp;automatic&nbsp;method.</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$i&nbsp;</span>=&nbsp;<a href="http://www.php.net/floor">floor</a><span class="src-sym">(</span><a href="http://www.php.net/log">log</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">,&nbsp;</span><span class="src-num">1024</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;User&nbsp;supplied&nbsp;method:</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$unit&nbsp;</span>!==&nbsp;<span class="src-str">'auto'&nbsp;</span>&amp;&amp;&nbsp;<a href="http://www.php.net/in_array">in_array</a><span class="src-sym">(</span><span class="src-var">$unit</span><span class="src-sym">,&nbsp;</span><span class="src-var">$unitTypes</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$i&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_search">array_search</a><span class="src-sym">(</span><span class="src-var">$unit</span><span class="src-sym">,&nbsp;</span><span class="src-var">$unitTypes</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;TODO&nbsp;Allow&nbsp;conversion&nbsp;of&nbsp;units&nbsp;where&nbsp;$bytes&nbsp;=&nbsp;'32M'.</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/round">round</a><span class="src-sym">(</span><span class="src-var">$bytes&nbsp;</span>/&nbsp;<a href="http://www.php.net/pow">pow</a><span class="src-sym">(</span><span class="src-num">1024</span><span class="src-sym">,&nbsp;</span><span class="src-var">$i</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-var">$precision</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'&nbsp;'&nbsp;</span>.&nbsp;<span class="src-var">$unitTypes</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:35:41 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

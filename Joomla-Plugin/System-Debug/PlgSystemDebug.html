@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PlgSystemDebug</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PlgSystemDebug</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla! Debug plugin</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_plugins---system---debug---debug.php.html">/plugins/system/debug/debug.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a>
+      |
+      --<a href="../../Joomla-Platform/Plugin/JPlugin.html">JPlugin</a>
+         |
+         --PlgSystemDebug</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$linkFormat" title="details" class="var-name">$linkFormat</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PlgSystemDebug</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$subject</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$config</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Destructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#display" title="details" class="method-name">display</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$errors</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayErrors" title="details" class="method-name">displayErrors</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayLanguageFilesInError" title="details" class="method-name">displayLanguageFilesInError</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayLanguageFilesLoaded" title="details" class="method-name">displayLanguageFilesLoaded</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayLogs" title="details" class="method-name">displayLogs</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayMemoryUsage" title="details" class="method-name">displayMemoryUsage</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayProfileInformation" title="details" class="method-name">displayProfileInformation</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayQueries" title="details" class="method-name">displayQueries</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displaySession" title="details" class="method-name">displaySession</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$session</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#displayUntranslatedStrings" title="details" class="method-name">displayUntranslatedStrings</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#formatLink" title="details" class="method-name">formatLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$line</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#highlightQuery" title="details" class="method-name">highlightQuery</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#logger" title="details" class="method-name">logger</a>
+											(<span class="var-type">JLogEntry</span>&nbsp;<span class="var-name">$entry</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#mysqlDisconnectHandler" title="details" class="method-name">mysqlDisconnectHandler</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">&$db</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterDispatch" title="details" class="method-name">onAfterDispatch</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderBacktrace" title="details" class="method-name">renderBacktrace</a>
+											(<span class="var-type">Exception</span>&nbsp;<span class="var-name">$error</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderBars" title="details" class="method-name">renderBars</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$bars</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#tableToHtml" title="details" class="method-name">tableToHtml</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$hasWarnings</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$hasWarnings</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$linkFormat" id="$linkFormat"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$linkFormat</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a21">21</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Plugin/JPlugin.html">JPlugin</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$autoloadLanguage">JPlugin::$autoloadLanguage</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$params">JPlugin::$params</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$_name">JPlugin::$_name</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#var$_type">JPlugin::$_type</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Event/JEvent.html#var$_subject">JEvent::$_subject</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PlgSystemDebug</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$subject</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$config</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$subject</span><span class="var-description">: The object to observe</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: An array that holds the plugin configuration</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Plugin/JPlugin.html#method__construct">JPlugin::__construct()</a></dt>
+						<dd>Constructor</dd>
+					</dl>
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Destructor.png" />
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a150">150</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Show the debug info</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplay" id="display"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">display</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a303">303</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">General display method.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			display
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$errors</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$item</span><span class="var-description">: The item to display</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$errors</span><span class="var-description">: Errors occured during execution</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplayErrors" id="displayErrors"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayErrors</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a432">432</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display errors.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayErrors
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplayLanguageFilesInError" id="displayLanguageFilesInError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayLanguageFilesInError</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1362">1362</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Displays errors in language files.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayLanguageFilesInError
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplayLanguageFilesLoaded" id="displayLanguageFilesLoaded"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayLanguageFilesLoaded</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1392">1392</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display loaded language files.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayLanguageFilesLoaded
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplayLogs" id="displayLogs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayLogs</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1669">1669</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display log messages</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayLogs
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplayMemoryUsage" id="displayMemoryUsage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayMemoryUsage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a618">618</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display memory usage</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayMemoryUsage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplayProfileInformation" id="displayProfileInformation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayProfileInformation</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a468">468</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display profile information.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayProfileInformation
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplayQueries" id="displayQueries"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayQueries</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a633">633</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display logged queries.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayQueries
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplaySession" id="displaySession"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displaySession</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a352">352</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display session information.</p>
+<p class="description"><p>Called recursive.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displaySession
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$session</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: A session key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$session</span><span class="var-description">: The session array, initially null</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The id is used for JS toggling the div</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplayUntranslatedStrings" id="displayUntranslatedStrings"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">displayUntranslatedStrings</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1426">1426</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display untranslated language strings.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			displayUntranslatedStrings
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodformatLink" id="formatLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">formatLink</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1628">1628</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replaces the Joomla! root with &quot;JROOT&quot; to improve readability.</p>
+<p class="description"><p>Formats a link with a special value xdebug.file_link_format  from the php.ini file.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			formatLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$line</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The full path to the file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$line</span><span class="var-description">: The line number.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhighlightQuery" id="highlightQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">highlightQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1519">1519</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simple highlight for SQL queries.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			highlightQuery
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: The query to highlight</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlogger" id="logger"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">logger</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1657">1657</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Store log messages so they can be displayed later.</p>
+<p class="description"><p>This function is passed log entries by JLogLoggerCallback.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			logger
+		</span>
+					(<span class="var-type">JLogEntry</span>&nbsp;<span class="var-name">$entry</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Log/JLogEntry.html">JLogEntry</a></span>
+				<span class="var-name">$entry</span><span class="var-description">: A log entry.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmysqlDisconnectHandler" id="mysqlDisconnectHandler"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">mysqlDisconnectHandler</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1292">1292</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Disconnect-handler for database to collect profiling and explain information</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			mysqlDisconnectHandler
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">&$db</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">&$db</span><span class="var-description">: Database object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterDispatch" id="onAfterDispatch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterDispatch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add the CSS for debug. We can't do this in the constructor because  stuff breaks.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterDispatch
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodrenderBacktrace" id="renderBacktrace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">renderBacktrace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1561">1561</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Render the backtrace.</p>
+<p class="description"><p>Stolen from JError to prevent it's removal.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Contents of the backtrace</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderBacktrace
+		</span>
+					(<span class="var-type">Exception</span>&nbsp;<span class="var-name">$error</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Exception</span>
+				<span class="var-name">$error</span><span class="var-description">: The error</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenderBars" id="renderBars"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">renderBars</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1132">1132</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderBars
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$bars</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$bars</span><span class="var-description">: Array of bar data</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Optional class for items</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Id if the bar to highlight</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtableToHtml" id="tableToHtml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tableToHtml</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plugin_System-Debug_pluginssystemdebugdebug.php.html#a1172">1172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			tableToHtml
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$hasWarnings</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$hasWarnings</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$hasWarnings</span><span class="var-description">: Changes value to true if warnings are displayed, otherwise untouched</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$hasWarnings</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Plugin/JPlugin.html">JPlugin</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#method__construct">JPlugin::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Plugin/JPlugin.html#methodloadLanguage">JPlugin::loadLanguage()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#method__construct">JEvent::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#methodupdate">JEvent::update()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:25:52 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTwitterPlaces</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JTwitterPlaces</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Twitter API Places &amp; Geo class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---twitter---places.php.html">/libraries/joomla/twitter/places.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterplaces.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a>
+   |
+   --JTwitterPlaces</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createPlace" title="details" class="method-name">createPlace</a>
+											(<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$long</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$geo_token</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$within</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getGeocode" title="details" class="method-name">getGeocode</a>
+											(<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$long</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$accuracy</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$granularity</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_results</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getPlace" title="details" class="method-name">getPlace</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getSimilarPlaces" title="details" class="method-name">getSimilarPlaces</a>
+											(<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$long</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$within</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#search" title="details" class="method-name">search</a>
+											([<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$long</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$granularity</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accuracy</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_results</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$within</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$client">JTwitterObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$oauth">JTwitterObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#var$options">JTwitterObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreatePlace" id="createPlace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createPlace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterplaces.php.html#a262">262</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a new place object at the given latitude and longitude.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createPlace
+		</span>
+					(<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$long</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$geo_token</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$within</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$lat</span><span class="var-description">: The latitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$long</span><span class="var-description">: The longitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name a place is known as.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$geo_token</span><span class="var-description">: The token found in the response from geo/similar_places.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$within</span><span class="var-description">: This is the place_id which you would like to restrict the search results to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span><span class="var-description">: This parameter searches for places which have this given street address.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callback</span><span class="var-description">: If supplied, the response will use the JSONP format with a callback of the given name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetGeocode" id="getGeocode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getGeocode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterplaces.php.html#a58">58</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get up to 20 places that can be used as a place_id when updating a status.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getGeocode
+		</span>
+					(<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$long</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$accuracy</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$granularity</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_results</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$lat</span><span class="var-description">: The latitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$long</span><span class="var-description">: The longitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accuracy</span><span class="var-description">: A hint on the &quot;region&quot; in which to search. If a number, then this is a radius in meters,                                     but it can also take a string that is suffixed with ft to specify feet.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$granularity</span><span class="var-description">: This is the minimal granularity of place types to return and must be one of: poi, neighborhood,                                     city, admin or country.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_results</span><span class="var-description">: A hint as to the number of results to return.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callback</span><span class="var-description">: If supplied, the response will use the JSONP format with a callback of the given name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPlace" id="getPlace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPlace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterplaces.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get all the information about a known place.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPlace
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: A place in the world. These IDs can be retrieved using getGeocode.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSimilarPlaces" id="getSimilarPlaces"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSimilarPlaces</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterplaces.php.html#a213">213</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to locate places near the given coordinates which are similar in name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSimilarPlaces
+		</span>
+					(<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$long</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$within</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$lat</span><span class="var-description">: The latitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$long</span><span class="var-description">: The longitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name a place is known as.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$within</span><span class="var-description">: This is the place_id which you would like to restrict the search results to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span><span class="var-description">: This parameter searches for places which have this given street address.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callback</span><span class="var-description">: If supplied, the response will use the JSONP format with a callback of the given name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearch" id="search"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">search</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Twitter_librariesjoomlatwitterplaces.php.html#a120">120</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to search for places that can be attached to a statuses/update.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			search
+		</span>
+					([<span class="var-type">float</span>&nbsp;<span class="var-name">$lat</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$long</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$granularity</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$accuracy</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$max_results</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$within</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$lat</span><span class="var-description">: The latitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$long</span><span class="var-description">: The longitude to search around.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: Free-form text to match against while executing a geo-based query, best suited for finding nearby                                     locations by name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ip</span><span class="var-description">: An IP address.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$granularity</span><span class="var-description">: This is the minimal granularity of place types to return and must be one of: poi, neighborhood, city,                                     admin or country.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accuracy</span><span class="var-description">: A hint on the &quot;region&quot; in which to search. If a number, then this is a radius in meters, but it can                                     also take a string that is suffixed with ft to specify feet.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_results</span><span class="var-description">: A hint as to the number of results to return.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$within</span><span class="var-description">: This is the place_id which you would like to restrict the search results to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span><span class="var-description">: This parameter searches for places which have this given street address.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callback</span><span class="var-description">: If supplied, the response will use the JSONP format with a callback of the given name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html">JTwitterObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#method__construct">JTwitterObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodcheckRateLimit">JTwitterObject::checkRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodfetchUrl">JTwitterObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetOption">JTwitterObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodgetRateLimit">JTwitterObject::getRateLimit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsendRequest">JTwitterObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Twitter/JTwitterObject.html#methodsetOption">JTwitterObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:36:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

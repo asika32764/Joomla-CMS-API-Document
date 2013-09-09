@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JImage</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JImage</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class to manipulate an image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---image---image.php.html">/libraries/joomla/image/image.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#CROP" title="details" class="const-name">CROP</a> = 					<span class="var-type"> 4</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#CROP_RESIZE" title="details" class="const-name">CROP_RESIZE</a> = 					<span class="var-type"> 5</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#SCALE_FILL" title="details" class="const-name">SCALE_FILL</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#SCALE_INSIDE" title="details" class="const-name">SCALE_INSIDE</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#SCALE_OUTSIDE" title="details" class="const-name">SCALE_OUTSIDE</a> = 					<span class="var-type"> 3</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$formats" title="details" class="var-name">$formats</a>
+				</div>
+																																												<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">resource</span>
+					<a href="#$handle" title="details" class="var-name">$handle</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$path" title="details" class="var-name">$path</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stdClass</span>
+										<a href="#getImageFileProperties" title="details" class="method-name">getImageFileProperties</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																																																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JImage</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Destructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createThumbs" title="details" class="method-name">createThumbs</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$thumbSizes</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$creationMethod</span> = <span class="var-default">self::SCALE_INSIDE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$thumbsFolder</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+										<a href="#crop" title="details" class="method-name">crop</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$left</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$top</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">object JImage</a></span>
+										<a href="#cropResize" title="details" class="method-name">cropResize</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#destroy" title="details" class="method-name">destroy</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+										<a href="#filter" title="details" class="method-name">filter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#generateThumbs" title="details" class="method-name">generateThumbs</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$thumbSizes</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$creationMethod</span> = <span class="var-default">self::SCALE_INSIDE</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Image/JImageFilter.html">JImageFilter</a></span>
+										<a href="#getFilterInstance" title="details" class="method-name">getFilterInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getHeight" title="details" class="method-name">getHeight</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPath" title="details" class="method-name">getPath</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getWidth" title="details" class="method-name">getWidth</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#isLoaded" title="details" class="method-name">isLoaded</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#isTransparent" title="details" class="method-name">isTransparent</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#loadFile" title="details" class="method-name">loadFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">stdClass</span>
+										<a href="#prepareDimensions" title="details" class="method-name">prepareDimensions</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$scaleMethod</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+										<a href="#resize" title="details" class="method-name">resize</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$scaleMethod</span> = <span class="var-default">self::SCALE_INSIDE</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+										<a href="#rotate" title="details" class="method-name">rotate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$angle</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$background</span> = <span class="var-default">-1</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#sanitizeHeight" title="details" class="method-name">sanitizeHeight</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#sanitizeOffset" title="details" class="method-name">sanitizeOffset</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#sanitizeWidth" title="details" class="method-name">sanitizeWidth</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#toFile" title="details" class="method-name">toFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">IMAGETYPE_JPEG</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$formats" id="$formats"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$formats</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Whether or not different image formats are supported.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$handle" id="$handle"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">resource</span>
+			<span class="var-name">$handle</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The image resource handle.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$path" id="$path"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$path</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The source image path.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetImageFileProperties" id="getImageFileProperties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getImageFileProperties</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a123">123</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return a properties object for an image given a filesystem path.  The  result object has values for image width, height, type, attributes, mime type, bits,  and channels.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stdClass</span>
+		<span class="method-name">
+			getImageFileProperties
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The filesystem path to the image for which to get properties.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a77">77</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JImage</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$source</span><span class="var-description">: Either a file path for a source image or a GD resource handler for an image.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Destructor.png" />
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a1000">1000</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to call the destroy() method one last time  to free any memory when the object is unset</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Image/JImage.html#methoddestroy">JImage::destroy()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcreateThumbs" id="createThumbs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createThumbs</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a241">241</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create thumbnails from the current image and save them to disk. It allows creation by resizing  or croppping the original image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createThumbs
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$thumbSizes</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$creationMethod</span> = <span class="var-default">self::SCALE_INSIDE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$thumbsFolder</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$thumbSizes</span><span class="var-description">: string or array of strings. Example: $thumbSizes = array('150x75','250x150');</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$creationMethod</span><span class="var-description">: 1-3 resize $scaleMethod | 4 create croppping</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$thumbsFolder</span><span class="var-description">: destination thumbs folder. null generates a thumbs folder in the image folder</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcrop" id="crop"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">crop</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a309">309</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to crop the current image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+		<span class="method-name">
+			crop
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$left</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$top</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$width</span><span class="var-description">: The width of the image section to crop in pixels or a percentage.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$height</span><span class="var-description">: The height of the image section to crop in pixels or a percentage.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$left</span><span class="var-description">: The number of pixels from the left to start cropping.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$top</span><span class="var-description">: The number of pixels from the top to start cropping.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createNew</span><span class="var-description">: If true the current image will be cloned, cropped and returned; else                                the current image will be cropped and returned.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcropResize" id="cropResize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">cropResize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a701">701</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to crop an image after resizing it to maintain  proportions without having to do all the set up work.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Object for chaining.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">object JImage</a></span>
+		<span class="method-name">
+			cropResize
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: The desired width of the image in pixels or a percentage.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: The desired height of the image in pixels or a percentage.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$createNew</span><span class="var-description">: If true the current image will be cloned, resized, cropped and returned.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddestroy" id="destroy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">destroy</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a984">984</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to destroy an image handle and  free the memory associated with the handle</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false on failure or if no image is loaded</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			destroy
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfilter" id="filter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">filter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a398">398</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to apply a filter to the image by type.  Two examples are: grayscale and sketchy.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Image/JImageFilter.html">JImageFilter</a></li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+		<span class="method-name">
+			filter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The name of the image filter to apply.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An array of options for the filter.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerateThumbs" id="generateThumbs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">generateThumbs</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a170">170</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to generate thumbnails from the current image. It allows  creation by resizing or cropping the original image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			generateThumbs
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$thumbSizes</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$creationMethod</span> = <span class="var-default">self::SCALE_INSIDE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$thumbSizes</span><span class="var-description">: String or array of strings. Example: $thumbSizes = array('150x75','250x150');</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$creationMethod</span><span class="var-description">: 1-3 resize $scaleMethod | 4 create croppping | 5 resize then crop</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFilterInstance" id="getFilterInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFilterInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a824">824</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an image filter instance of a specified type.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Image/JImageFilter.html">JImageFilter</a></span>
+		<span class="method-name">
+			getFilterInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The image filter type to get.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetHeight" id="getHeight"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHeight</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a423">423</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the height of the image in pixels.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getHeight
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPath" id="getPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a460">460</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return the path</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPath
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetWidth" id="getWidth"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getWidth</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a442">442</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the width of the image in pixels.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getWidth
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisLoaded" id="isLoaded"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isLoaded</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a472">472</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine whether or not an image has been loaded into the object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isLoaded
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisTransparent" id="isTransparent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isTransparent</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a491">491</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine whether or not the image has transparency.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isTransparent
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadFile" id="loadFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a513">513</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load a file into the JImage object as the resource.</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The filesystem path to load as an image.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprepareDimensions" id="prepareDimensions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">prepareDimensions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a866">866</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the new dimensions for a resized image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException  If width, height or both given as zero</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			prepareDimensions
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$scaleMethod</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: The width of the resized image in pixels.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: The height of the resized image in pixels.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$scaleMethod</span><span class="var-description">: The method to use for scaling</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodresize" id="resize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">resize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a626">626</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to resize the current image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+		<span class="method-name">
+			resize
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$scaleMethod</span> = <span class="var-default">self::SCALE_INSIDE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$width</span><span class="var-description">: The width of the resized image in pixels or a percentage.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$height</span><span class="var-description">: The height of the resized image in pixels or a percentage.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createNew</span><span class="var-description">: If true the current image will be cloned, resized and returned; else                                  the current image will be resized and returned.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$scaleMethod</span><span class="var-description">: Which method to use for scaling</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrotate" id="rotate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rotate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a731">731</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to rotate the current image.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Image/JImage.html">JImage</a></span>
+		<span class="method-name">
+			rotate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$angle</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$background</span> = <span class="var-default">-1</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createNew</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$angle</span><span class="var-description">: The angle of rotation for the image</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$background</span><span class="var-description">: The background color to use when areas are added due to rotation</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createNew</span><span class="var-description">: If true the current image will be cloned, rotated and returned; else                                 the current image will be rotated and returned.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsanitizeHeight" id="sanitizeHeight"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sanitizeHeight</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a914">914</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to sanitize a height value.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			sanitizeHeight
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$height</span><span class="var-description">: The input height value to sanitize.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$width</span><span class="var-description">: The input width value for reference.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsanitizeOffset" id="sanitizeOffset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sanitizeOffset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a942">942</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to sanitize an offset value like left or top.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			sanitizeOffset
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$offset</span><span class="var-description">: An offset value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsanitizeWidth" id="sanitizeWidth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sanitizeWidth</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a957">957</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to sanitize a width value.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			sanitizeWidth
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$height</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$width</span><span class="var-description">: The input width value to sanitize.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$height</span><span class="var-description">: The input height value for reference.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoFile" id="toFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a790">790</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to write the current image out to a file.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/manual/image.constants.php">http://www.php.net/manual/image.constants.php</a></li>
+				<li><span class="field">throws:</span> LogicException</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			toFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">IMAGETYPE_JPEG</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The filesystem path to save the image.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$type</span><span class="var-description">: The image type to save the file as.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: The image type options to use in saving the file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constCROP" id="CROP"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CROP</span>
+			 = <span class="const-default"> 4</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+			</ul>
+	
+	
+</div>
+<a name="constCROP_RESIZE" id="CROP_RESIZE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CROP_RESIZE</span>
+			 = <span class="const-default"> 5</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+	
+	
+</div>
+<a name="constSCALE_FILL" id="SCALE_FILL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SCALE_FILL</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	
+	
+</div>
+<a name="constSCALE_INSIDE" id="SCALE_INSIDE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SCALE_INSIDE</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	
+	
+</div>
+<a name="constSCALE_OUTSIDE" id="SCALE_OUTSIDE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SCALE_OUTSIDE</span>
+			 = <span class="const-default"> 3</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Image_librariesjoomlaimageimage.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:32:12 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

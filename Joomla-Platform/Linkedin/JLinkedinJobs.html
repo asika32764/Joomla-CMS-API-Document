@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JLinkedinJobs</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JLinkedinJobs</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Linkedin API Jobs class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 13.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---linkedin---jobs.php.html">/libraries/joomla/linkedin/jobs.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html">JLinkedinObject</a>
+   |
+   --JLinkedinJobs</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#bookmark" title="details" class="method-name">bookmark</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#deleteBookmark" title="details" class="method-name">deleteBookmark</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getBookmarked" title="details" class="method-name">getBookmarked</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getJob" title="details" class="method-name">getJob</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getSuggested" title="details" class="method-name">getSuggested</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#search" title="details" class="method-name">search</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$keywords</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$company_name</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$job_title</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$country_code</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$postal_code</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$distance</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$facets</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$facet</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sort</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html">JLinkedinObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#var$client">JLinkedinObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#var$oauth">JLinkedinObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#var$options">JLinkedinObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodbookmark" id="bookmark"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">bookmark</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a109">109</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to bookmark a job to the current user's account.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			bookmark
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The unique identifier for a job.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteBookmark" id="deleteBookmark"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteBookmark</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a147">147</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a bookmark.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			deleteBookmark
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The unique identifier for a job.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBookmarked" id="getBookmarked"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBookmarked</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a list of bookmarked jobs for the current member.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getBookmarked
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fields</span><span class="var-description">: Request fields beyond the default ones.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetJob" id="getJob"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getJob</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a31">31</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retrieve detailed information about a job.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getJob
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The unique identifier for a job.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fields</span><span class="var-description">: Request fields beyond the default ones.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSuggested" id="getSuggested"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSuggested</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a182">182</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to retrieve job suggestions for the current user.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSuggested
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fields</span><span class="var-description">: Request fields beyond the default ones.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$start</span><span class="var-description">: Starting location within the result set for paginated returns.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: The number of results returned.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearch" id="search"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">search</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Linkedin_librariesjoomlalinkedinjobs.php.html#a247">247</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to search across LinkedIn's job postings.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The decoded JSON response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			search
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$fields</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$keywords</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$company_name</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$job_title</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$country_code</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$postal_code</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$distance</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$facets</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$facet</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sort</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fields</span><span class="var-description">: Request fields beyond the default ones.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$keywords</span><span class="var-description">: Members who have all the keywords anywhere in their profile.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$company_name</span><span class="var-description">: Jobs with a matching company name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$job_title</span><span class="var-description">: Matches jobs with the same job title.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$country_code</span><span class="var-description">: Matches members with a location in a specific country. Values are defined in by ISO 3166 standard.                                      Country codes must be in all lower case.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$postal_code</span><span class="var-description">: Matches members centered around a Postal Code. Must be combined with the country-code parameter.                                      Not supported for all countries.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$distance</span><span class="var-description">: Matches members within a distance from a central point. This is measured in miles.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$facets</span><span class="var-description">: Facet buckets to return, e.g. location.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$facet</span><span class="var-description">: Array of facet values to search over. Contains values for company, date-posted, location, job-function,                                      industry, and salary, in exactly this order, null must be specified for an element if no value.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$start</span><span class="var-description">: Starting location within the result set for paginated returns.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: The number of results returned.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sort</span><span class="var-description">: Controls the search result order. There are four options: R (relationship), DA (date-posted-asc),                                      DD (date-posted-desc).</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html">JLinkedinObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#method__construct">JLinkedinObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#methodbooleanToString">JLinkedinObject::booleanToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#methodgetOption">JLinkedinObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Linkedin/JLinkedinObject.html#methodsetOption">JLinkedinObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:32:53 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

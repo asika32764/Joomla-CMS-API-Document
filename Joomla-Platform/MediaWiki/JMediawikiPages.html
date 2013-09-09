@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JMediawikiPages</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JMediawikiPages</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">MediaWiki API Pages class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---mediawiki---pages.php.html">/libraries/joomla/mediawiki/pages.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a>
+   |
+   --JMediawikiPages</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#changeProtection" title="details" class="method-name">changeProtection</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$protections</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$expiry</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$cascade</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#deletePageByID" title="details" class="method-name">deletePageByID</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pageid</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$oldimage</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#deletePageByName" title="details" class="method-name">deletePageByName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$oldimage</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#editPage" title="details" class="method-name">editPage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sectiontitle</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$summary</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getBackLinks" title="details" class="method-name">getBackLinks</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$bltitle</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$blpageid</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$blcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$blnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$blfilterredirect</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$bllimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$blredirect</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getIWBackLinks" title="details" class="method-name">getIWBackLinks</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$iwbltitle</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwblprefix</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$iwblcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$iwbllimit</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$iwblprop</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getPageInfo" title="details" class="method-name">getPageInfo</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$inprop</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$intoken</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$incontinue</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getPageProperties" title="details" class="method-name">getPageProperties</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ppcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ppprop</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getPageTemplates" title="details" class="method-name">getPageTemplates</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tlnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tllimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$tlcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tltemplates</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tldir</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getRevisions" title="details" class="method-name">getRevisions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$rvprop</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$rvparse</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$rvlimit</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getToken" title="details" class="method-name">getToken</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$intoken</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#movePageByID" title="details" class="method-name">movePageByID</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$fromid</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movetalk</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movesubpages</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$noredirect</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ignorewarnings</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#movePageByName" title="details" class="method-name">movePageByName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$from</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movetalk</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movesubpages</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$noredirect</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ignorewarnings</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#rollback" title="details" class="method-name">rollback</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$summary</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$markbot</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#undeletePage" title="details" class="method-name">undeletePage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$timestamp</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#var$client">JMediawikiObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#var$options">JMediawikiObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodchangeProtection" id="changeProtection"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">changeProtection</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a302">302</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to change the protection level of a page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			changeProtection
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$protections</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$expiry</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$cascade</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the page you want to (un)protect.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$protections</span><span class="var-description">: Pipe-separated list of protection levels.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$expiry</span><span class="var-description">: Expiry timestamps.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for (un)protecting (optional).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cascade</span><span class="var-description">: Enable cascading protection.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlist.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeletePageByID" id="deletePageByID"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deletePageByID</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			deletePageByID
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pageid</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$oldimage</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pageid</span><span class="var-description">: Page ID of the page you want to delete.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for the deletion.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlis.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$oldimage</span><span class="var-description">: The name of the old image to delete.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeletePageByName" id="deletePageByName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deletePageByName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete a page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			deletePageByName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$oldimage</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the page you want to delete.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for the deletion.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlis.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$oldimage</span><span class="var-description">: The name of the old image to delete.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodeditPage" id="editPage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">editPage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a34">34</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to edit a page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			editPage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$sectiontitle</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$summary</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Page title.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$section</span><span class="var-description">: Section number.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sectiontitle</span><span class="var-description">: The title for a new section.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Page content.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$summary</span><span class="var-description">: Title of the page you want to delete.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBackLinks" id="getBackLinks"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBackLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a512">512</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get all pages that link to the given page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getBackLinks
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$bltitle</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$blpageid</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$blcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$blnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$blfilterredirect</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$bllimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$blredirect</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$bltitle</span><span class="var-description">: Title to search.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$blpageid</span><span class="var-description">: Pageid to search.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$blcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$blnamespace</span><span class="var-description">: The namespace to enumerate.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$blfilterredirect</span><span class="var-description">: How to filter for redirects..</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$bllimit</span><span class="var-description">: How many total pages to return.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$blredirect</span><span class="var-description">: If linking page is a redirect, find all pages that link to that redirect as well.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIWBackLinks" id="getIWBackLinks"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIWBackLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a572">572</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get all pages that link to the given interwiki link.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getIWBackLinks
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$iwbltitle</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$iwblprefix</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$iwblcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$iwbllimit</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$iwblprop</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$iwbltitle</span><span class="var-description">: Interwiki link to search for. Must be used with iwblprefix.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$iwblprefix</span><span class="var-description">: Prefix for the interwiki.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$iwblcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$iwbllimit</span><span class="var-description">: How many total pages to return.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$iwblprop</span><span class="var-description">: Which properties to get.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPageInfo" id="getPageInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPageInfo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a339">339</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get basic page information.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getPageInfo
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$inprop</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$intoken</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$incontinue</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve info.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$inprop</span><span class="var-description">: Which additional properties to get.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$intoken</span><span class="var-description">: Request a token to perform a data-modifying action on a page</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$incontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPageProperties" id="getPageProperties"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPageProperties</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a379">379</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get various properties defined in the page content.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getPageProperties
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ppcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ppprop</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve properties.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$ppcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ppprop</span><span class="var-description">: Page prop to look on the page for.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPageTemplates" id="getPageTemplates"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPageTemplates</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a458">458</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get all page templates from the given page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getPageTemplates
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tlnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$tllimit</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$tlcontinue</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tltemplates</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tldir</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve templates.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tlnamespace</span><span class="var-description">: Show templates in this namespace(s) only.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tllimit</span><span class="var-description">: How many templates to return.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$tlcontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tltemplates</span><span class="var-description">: Only list these templates.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tldir</span><span class="var-description">: The direction in which to list.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRevisions" id="getRevisions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRevisions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a415">415</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a list of revisions.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getRevisions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$titles</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$rvprop</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$rvparse</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$rvlimit</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$titles</span><span class="var-description">: Page titles to retrieve revisions.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rvprop</span><span class="var-description">: Which properties to get for each revision.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$rvparse</span><span class="var-description">: Parse revision content.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$rvlimit</span><span class="var-description">: Limit how many revisions will be returned.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetToken" id="getToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a618">618</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get access token.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getToken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$intoken</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The User to get token.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$intoken</span><span class="var-description">: The type of token.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmovePageByID" id="movePageByID"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">movePageByID</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a223">223</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			movePageByID
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$fromid</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movetalk</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movesubpages</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$noredirect</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ignorewarnings</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$fromid</span><span class="var-description">: Page ID of the page you want to move.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$to</span><span class="var-description">: Title you want to rename the page to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for the move (optional).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$movetalk</span><span class="var-description">: Move the talk page, if it exists.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$movesubpages</span><span class="var-description">: Move subpages, if applicable.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$noredirect</span><span class="var-description">: Don't create a redirect.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlist.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$ignorewarnings</span><span class="var-description">: Ignore any warnings.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmovePageByName" id="movePageByName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">movePageByName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a179">179</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to move a page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			movePageByName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$from</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movetalk</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$movesubpages</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$noredirect</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ignorewarnings</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$from</span><span class="var-description">: Title of the page you want to move.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$to</span><span class="var-description">: Title you want to rename the page to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for the move (optional).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$movetalk</span><span class="var-description">: Move the talk page, if it exists.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$movesubpages</span><span class="var-description">: Move subpages, if applicable.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$noredirect</span><span class="var-description">: Don't create a redirect.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlist.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$ignorewarnings</span><span class="var-description">: Ignore any warnings.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrollback" id="rollback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rollback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a264">264</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to undo the last edit to the page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			rollback
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$summary</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$markbot</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the page you want to rollback.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: Name of the user whose edits are to be rolled back.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$summary</span><span class="var-description">: Custom edit summary. If not set, default summary will be used.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$markbot</span><span class="var-description">: Mark the reverted edits and the revert as bot edits.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlist.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodundeletePage" id="undeletePage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">undeletePage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikipages.php.html#a140">140</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to restore certain revisions of a deleted page.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			undeletePage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$timestamp</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$watchlist</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of the page you want to restore.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for restoring (optional).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timestamp</span><span class="var-description">: Timestamps of the revisions to restore.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watchlist</span><span class="var-description">: Unconditionally add or remove the page from your watchlist.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#method__construct">JMediawikiObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodbuildParameter">JMediawikiObject::buildParameter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodfetchUrl">JMediawikiObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodvalidateResponse">JMediawikiObject::validateResponse()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:36:05 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

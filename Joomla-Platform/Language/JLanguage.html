@@ -1,0 +1,2508 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JLanguage</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JLanguage</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Languages/translation handler class</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---language---language.php.html">/libraries/joomla/language/language.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$languages" title="details" class="var-name">$languages</a>
+				</div>
+																																																																																																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$counter" title="details" class="var-name">$counter</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$debug" title="details" class="var-name">$debug</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$default" title="details" class="var-name">$default</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$errorfiles" title="details" class="var-name">$errorfiles</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$ignoredSearchWordsCallback" title="details" class="var-name">$ignoredSearchWordsCallback</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$lang" title="details" class="var-name">$lang</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array|boolean</span>
+					<a href="#$locale" title="details" class="var-name">$locale</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$lowerLimitSearchWordCallback" title="details" class="var-name">$lowerLimitSearchWordCallback</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$metadata" title="details" class="var-name">$metadata</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$orphans" title="details" class="var-name">$orphans</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$override" title="details" class="var-name">$override</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$paths" title="details" class="var-name">$paths</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$pluralSuffixesCallback" title="details" class="var-name">$pluralSuffixesCallback</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$searchDisplayedCharactersNumberCallback" title="details" class="var-name">$searchDisplayedCharactersNumberCallback</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$strings" title="details" class="var-name">$strings</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$transliterator" title="details" class="var-name">$transliterator</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$upperLimitSearchWordCallback" title="details" class="var-name">$upperLimitSearchWordCallback</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$used" title="details" class="var-name">$used</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#exists" title="details" class="method-name">exists</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>])
+									</div>
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Language/JLanguage.html">JLanguage</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getKnownLanguages" title="details" class="method-name">getKnownLanguages</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getLanguagePath" title="details" class="method-name">getLanguagePath</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$language</span> = <span class="var-default">null</span>])
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#getMetadata" title="details" class="method-name">getMetadata</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+									</div>
+																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#parseLanguageFiles" title="details" class="method-name">parseLanguageFiles</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#parseXMLLanguageFile" title="details" class="method-name">parseXMLLanguageFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JLanguage</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">false</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getCallerInfo" title="details" class="method-name">getCallerInfo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getDebug" title="details" class="method-name">getDebug</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getDefault" title="details" class="method-name">getDefault</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getErrorFiles" title="details" class="method-name">getErrorFiles</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getFirstDay" title="details" class="method-name">getFirstDay</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getIgnoredSearchWords" title="details" class="method-name">getIgnoredSearchWords</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#getIgnoredSearchWordsCallback" title="details" class="method-name">getIgnoredSearchWordsCallback</a>
+										()
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getLocale" title="details" class="method-name">getLocale</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getLowerLimitSearchWord" title="details" class="method-name">getLowerLimitSearchWord</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#getLowerLimitSearchWordCallback" title="details" class="method-name">getLowerLimitSearchWordCallback</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getOrphans" title="details" class="method-name">getOrphans</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getPaths" title="details" class="method-name">getPaths</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getPluralSuffixes" title="details" class="method-name">getPluralSuffixes</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#getPluralSuffixesCallback" title="details" class="method-name">getPluralSuffixesCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getSearchDisplayedCharactersNumber" title="details" class="method-name">getSearchDisplayedCharactersNumber</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#getSearchDisplayedCharactersNumberCallback" title="details" class="method-name">getSearchDisplayedCharactersNumberCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTag" title="details" class="method-name">getTag</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#getTransliterator" title="details" class="method-name">getTransliterator</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getUpperLimitSearchWord" title="details" class="method-name">getUpperLimitSearchWord</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#getUpperLimitSearchWordCallback" title="details" class="method-name">getUpperLimitSearchWordCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getUsed" title="details" class="method-name">getUsed</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hasKey" title="details" class="method-name">hasKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isRTL" title="details" class="method-name">isRTL</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#load" title="details" class="method-name">load</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">'joomla'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reload</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#loadLanguage" title="details" class="method-name">loadLanguage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">'unknown'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setDebug" title="details" class="method-name">setDebug</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#setDefault" title="details" class="method-name">setDefault</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#setIgnoredSearchWordsCallback" title="details" class="method-name">setIgnoredSearchWordsCallback</a>
+											(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#setLanguage" title="details" class="method-name">setLanguage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#setLowerLimitSearchWordCallback" title="details" class="method-name">setLowerLimitSearchWordCallback</a>
+											(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#setPluralSuffixesCallback" title="details" class="method-name">setPluralSuffixesCallback</a>
+											(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#setSearchDisplayedCharactersNumberCallback" title="details" class="method-name">setSearchDisplayedCharactersNumberCallback</a>
+											(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#setTransliterator" title="details" class="method-name">setTransliterator</a>
+											(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">callable</span>
+										<a href="#setUpperLimitSearchWordCallback" title="details" class="method-name">setUpperLimitSearchWordCallback</a>
+											(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#transliterate" title="details" class="method-name">transliterate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_" title="details" class="method-name">_</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$jsSafe</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$interpretBackSlashes</span> = <span class="var-default">true</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$languages" id="$languages"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$languages</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$counter" id="$counter"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$counter</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a103">103</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Counter for number of loads.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$debug" id="$debug"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$debug</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Debug language, If true, highlights if string isn't found.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$default" id="$default"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$default</span>
+			 = <span class="var-default"> 'en-GB'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default language, used when a language file in the requested language does not exist.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$errorfiles" id="$errorfiles"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$errorfiles</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a82">82</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of language files that are in error state</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$ignoredSearchWordsCallback" id="$ignoredSearchWordsCallback"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$ignoredSearchWordsCallback</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a131">131</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the ignoredSearchWordsCallback function for this language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$lang" id="$lang"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$lang</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a68">68</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The language to load.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$locale" id="$locale"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array|boolean</span>
+			<span class="var-name">$locale</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array holding the language locale or boolean null if none.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$lowerLimitSearchWordCallback" id="$lowerLimitSearchWordCallback"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$lowerLimitSearchWordCallback</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a138">138</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the lowerLimitSearchWordCallback function for this language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$metadata" id="$metadata"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$metadata</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array holding the language metadata.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$orphans" id="$orphans"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$orphans</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array of orphaned text.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$override" id="$override"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$override</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a110">110</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array used to store overrides.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$paths" id="$paths"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$paths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a75">75</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A nested array of language files that have been loaded</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pluralSuffixesCallback" id="$pluralSuffixesCallback"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$pluralSuffixesCallback</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a124">124</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the pluralSuffixesCallback function for this language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$searchDisplayedCharactersNumberCallback" id="$searchDisplayedCharactersNumberCallback"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$searchDisplayedCharactersNumberCallback</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a152">152</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the searchDisplayedCharactersNumberCallback function for this language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$strings" id="$strings"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$strings</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a89">89</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Translations</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$transliterator" id="$transliterator"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$transliterator</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a117">117</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the transliterator function for this language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$upperLimitSearchWordCallback" id="$upperLimitSearchWordCallback"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$upperLimitSearchWordCallback</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a145">145</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the uppperLimitSearchWordCallback function for this language</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$used" id="$used"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$used</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a96">96</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An array of used text, used during debugging.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodexists" id="exists"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static exists</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a660">660</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a language exists.</p>
+<p class="description"><p>This is a simple, quick check for the directory that should contain language files for the given user.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the language exists.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			exists
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: Language to check.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$basePath</span><span class="var-description">: Optional path to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a270">270</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a language object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The Language object.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Language/JLanguage.html">JLanguage</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The language to use.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$debug</span><span class="var-description">: The debug mode.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetKnownLanguages" id="getKnownLanguages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getKnownLanguages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1156">1156</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of known languages for an area</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> key/value pair with the language file and real name.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getKnownLanguages
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$basePath</span><span class="var-description">: The basepath to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLanguagePath" id="getLanguagePath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getLanguagePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1174">1174</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the path to a language</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> language related path or null.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getLanguagePath
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$language</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$basePath</span><span class="var-description">: The basepath to use.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$language</span><span class="var-description">: The language tag.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMetadata" id="getMetadata"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getMetadata</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1127">1127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a associative array holding the metadata.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> If $lang exists return key/value pair with the language metadata, otherwise return NULL.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			getMetadata
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The name of the language.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseLanguageFiles" id="parseLanguageFiles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static parseLanguageFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1253">1253</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Searches for language directories within a certain base dir.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array holding the found languages as filename =&gt; real name pairs.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			parseLanguageFiles
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dir</span><span class="var-description">: directory of files.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseXMLLanguageFile" id="parseXMLLanguageFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static parseXMLLanguageFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1297">1297</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse XML file for language information.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array holding the found metadata as a key =&gt; value pair.</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			parseXMLLanguageFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to the XML files.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a162">162</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor activating the default information of the language.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JLanguage</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The language</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$debug</span><span class="var-description">: Indicates if language debugging is enabled.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a891">891</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a metadata language property.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the property.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCallerInfo" id="getCallerInfo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCallerInfo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a908">908</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine who called JLanguage or JText.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Caller information.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCallerInfo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDebug" id="getDebug"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDebug</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1042">1042</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the Debug property.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True is in debug mode.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getDebug
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDefault" id="getDefault"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDefault</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1054">1054</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the default language code.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Language code.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getDefault
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetErrorFiles" id="getErrorFiles"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getErrorFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a989">989</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a list of language files that are in error state.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getErrorFiles
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFirstDay" id="getFirstDay"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFirstDay</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1239">1239</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the first day of the week for this language.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The first day of the week according to the language</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getFirstDay
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetIgnoredSearchWords" id="getIgnoredSearchWords"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIgnoredSearchWords</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a463">463</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array of ignored search words</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of ignored search words.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getIgnoredSearchWords
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetIgnoredSearchWordsCallback" id="getIgnoredSearchWordsCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIgnoredSearchWordsCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a482">482</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for ignoredSearchWordsCallback function.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Function name or the actual function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			getIgnoredSearchWordsCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLocale" id="getLocale"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLocale</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1213">1213</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the language locale based on current language.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The locale according to the language.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getLocale
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLowerLimitSearchWord" id="getLowerLimitSearchWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLowerLimitSearchWord</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a511">511</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a lower limit integer for length of search words</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The lower limit integer for length of search words (3 if no value was set for a specific language).</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getLowerLimitSearchWord
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLowerLimitSearchWordCallback" id="getLowerLimitSearchWordCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLowerLimitSearchWordCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a530">530</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for lowerLimitSearchWordCallback function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Function name or the actual function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			getLowerLimitSearchWordCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a951">951</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for Name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Official name element of the language.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetOrphans" id="getOrphans"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOrphans</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1083">1083</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the list of orphaned strings if being tracked.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Orphaned text.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getOrphans
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPaths" id="getPaths"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPaths</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a965">965</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a list of language files that have been loaded.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPaths
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span><span class="var-description">: An optional extension name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPluralSuffixes" id="getPluralSuffixes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPluralSuffixes</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a415">415</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array of suffixes for plural rules.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of suffixes.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPluralSuffixes
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: The count number the rule is for.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPluralSuffixesCallback" id="getPluralSuffixesCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPluralSuffixesCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a434">434</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for pluralSuffixesCallback function.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Function name or the actual function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			getPluralSuffixesCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSearchDisplayedCharactersNumber" id="getSearchDisplayedCharactersNumber"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSearchDisplayedCharactersNumber</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a607">607</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the number of characters displayed in search results.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of characters displayed (200 if no value was set for a specific language).</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getSearchDisplayedCharactersNumber
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSearchDisplayedCharactersNumberCallback" id="getSearchDisplayedCharactersNumberCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSearchDisplayedCharactersNumberCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a626">626</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for searchDisplayedCharactersNumberCallback function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Function name or the actual function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			getSearchDisplayedCharactersNumberCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTag" id="getTag"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTag</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1001">1001</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for the language tag (as defined in RFC 3066)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The language tag.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTag
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTransliterator" id="getTransliterator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTransliterator</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a384">384</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for transliteration function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The transliterator function</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			getTransliterator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUpperLimitSearchWord" id="getUpperLimitSearchWord"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUpperLimitSearchWord</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a559">559</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an upper limit integer for length of search words</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The upper limit integer for length of search words (20 if no value was set for a specific language).</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getUpperLimitSearchWord
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUpperLimitSearchWordCallback" id="getUpperLimitSearchWordCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUpperLimitSearchWordCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a578">578</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for upperLimitSearchWordCallback function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Function name or the actual function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			getUpperLimitSearchWordCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUsed" id="getUsed"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUsed</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1097">1097</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the list of used strings.</p>
+<p class="description"><p>Used strings are those strings requested and found either as a string or a constant.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Used strings.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getUsed
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhasKey" id="hasKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hasKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1111">1111</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines is a key exists.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True, if the key exists.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The key to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisRTL" id="isRTL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isRTL</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1013">1013</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the RTL property.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True is it an RTL language.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isRTL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">load</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a697">697</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads a single language file and appends the results to the existing strings</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the file has successfully loaded.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			load
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">'joomla'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_BASE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reload</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span><span class="var-description">: The extension for which a language file should be loaded.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$basePath</span><span class="var-description">: The basepath to use.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The language to load, default null for the current language.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$reload</span><span class="var-description">: Flag that will force a language to be reloaded if set to true.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$default</span><span class="var-description">: Flag that force the default language to be loaded if the current does not exist.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadLanguage" id="loadLanguage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a755">755</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads a language file.</p>
+<p class="description"><p>This method will not note the successful loading of a file - use load() instead.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if new strings have been added to the language</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Language/JLanguage.html#methodload">JLanguage::load()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			loadLanguage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">'unknown'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The name of the file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span><span class="var-description">: The name of the extension.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a804">804</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses a language file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of parsed strings.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			parse
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The name of the file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDebug" id="setDebug"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDebug</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1027">1027</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the Debug property.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Previous value.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setDebug
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$debug</span><span class="var-description">: The debug setting.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDefault" id="setDefault"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDefault</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1068">1068</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the default language code.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Previous value.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setDefault
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The language code.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIgnoredSearchWordsCallback" id="setIgnoredSearchWordsCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setIgnoredSearchWordsCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a496">496</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter for the ignoredSearchWordsCallback function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			setIgnoredSearchWordsCallback
+		</span>
+					(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$function</span><span class="var-description">: Function name or actual function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLanguage" id="setLanguage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a1197">1197</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the language attributes to the given language.</p>
+<p class="description"><p>Once called, the language still needs to be loaded using JLanguage::load().</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Previous value.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setLanguage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: Language code.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLowerLimitSearchWordCallback" id="setLowerLimitSearchWordCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLowerLimitSearchWordCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a544">544</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter for the lowerLimitSearchWordCallback function.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			setLowerLimitSearchWordCallback
+		</span>
+					(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$function</span><span class="var-description">: Function name or actual function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPluralSuffixesCallback" id="setPluralSuffixesCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPluralSuffixesCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a448">448</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the pluralSuffixes function.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			setPluralSuffixesCallback
+		</span>
+					(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$function</span><span class="var-description">: Function name or actual function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSearchDisplayedCharactersNumberCallback" id="setSearchDisplayedCharactersNumberCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setSearchDisplayedCharactersNumberCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a640">640</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter for the searchDisplayedCharactersNumberCallback function.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			setSearchDisplayedCharactersNumberCallback
+		</span>
+					(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$function</span><span class="var-description">: Function name or the actual function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTransliterator" id="setTransliterator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setTransliterator</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a398">398</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the transliteration function.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			setTransliterator
+		</span>
+					(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$function</span><span class="var-description">: Function name or the actual function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUpperLimitSearchWordCallback" id="setUpperLimitSearchWordCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setUpperLimitSearchWordCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a592">592</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter for the upperLimitSearchWordCallback function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous function.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">callable</span>
+		<span class="method-name">
+			setUpperLimitSearchWordCallback
+		</span>
+					(<span class="var-type">callable</span>&nbsp;<span class="var-name">$function</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$function</span><span class="var-description">: Function name or the actual function.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtransliterate" id="transliterate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">transliterate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a364">364</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Transliterate function</p>
+<p class="description"><p>This method processes a string and replaces all accented UTF-8 characters by unaccented  ASCII-7 &quot;equivalents&quot;.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The transliteration of the string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			transliterate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The string to transliterate.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_" id="_"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Language_librariesjoomlalanguagelanguage.php.html#a293">293</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Translate function, mimics the php gettext (alias _) function.</p>
+<p class="description"><p>The function checks if $jsSafe is true, then if $interpretBackslashes is true.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The translation of the string</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$jsSafe</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$interpretBackSlashes</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The string to translate</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$jsSafe</span><span class="var-description">: Make the result javascript safe</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$interpretBackSlashes</span><span class="var-description">: Interpret \t and \n</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

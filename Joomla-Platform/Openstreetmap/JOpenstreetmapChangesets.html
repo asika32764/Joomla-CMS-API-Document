@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JOpenstreetmapChangesets</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JOpenstreetmapChangesets</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Openstreetmap API Changesets class for the Joomla Platform</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 13.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---openstreetmap---changesets.php.html">/libraries/joomla/openstreetmap/changesets.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a>
+   |
+   --JOpenstreetmapChangesets</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#closeChangeset" title="details" class="method-name">closeChangeset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createChangeset" title="details" class="method-name">createChangeset</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$changesets</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#diffUploadChangeset" title="details" class="method-name">diffUploadChangeset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#downloadChangeset" title="details" class="method-name">downloadChangeset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#expandBBoxChangeset" title="details" class="method-name">expandBBoxChangeset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$nodes</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#queryChangeset" title="details" class="method-name">queryChangeset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$param</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#readChangeset" title="details" class="method-name">readChangeset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#updateChangeset" title="details" class="method-name">updateChangeset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$client">JOpenstreetmapObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$oauth">JOpenstreetmapObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$options">JOpenstreetmapObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcloseChangeset" id="closeChangeset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">closeChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a164">164</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to close a changeset</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			closeChangeset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: identifier of the changeset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateChangeset" id="createChangeset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a changeset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createChangeset
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$changesets</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$changesets</span><span class="var-description">: Array which contains changeset data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddiffUploadChangeset" id="diffUploadChangeset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">diffUploadChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a294">294</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to upload a diff to a changeset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response of result</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			diffUploadChangeset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: Diff data to upload</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Identifier of the changeset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddownloadChangeset" id="downloadChangeset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">downloadChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a194">194</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to download a changeset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response of requested changeset</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			downloadChangeset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Identifier of the changeset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexpandBBoxChangeset" id="expandBBoxChangeset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">expandBBoxChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a218">218</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to expand the bounding box of a changeset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response of changed changeset</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			expandBBoxChangeset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$nodes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Identifier of the changeset</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$nodes</span><span class="var-description">: List of lat lon about nodes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodqueryChangeset" id="queryChangeset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">queryChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a270">270</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to query on changesets</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			queryChangeset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$param</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$param</span><span class="var-description">: Parameters for query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadChangeset" id="readChangeset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">readChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a88">88</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to read a changeset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response about a changeset</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			readChangeset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: identifier of the changeset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdateChangeset" id="updateChangeset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">updateChangeset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapchangesets.php.html#a112">112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to update a changeset</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response of updated changeset</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			updateChangeset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Identifier of the changeset</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags to update</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#method__construct">JOpenstreetmapObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodgetOption">JOpenstreetmapObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodsendRequest">JOpenstreetmapObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodsetOption">JOpenstreetmapObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:24:10 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

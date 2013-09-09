@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page simplepie.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/libraries/simplepie/simplepie.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|									<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This file will be removed in Joomla! CMS version 3.2. Developers should either supply their own copy  in their installation packages or switch to JFeed.</p>
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|										<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie.html">SimplePie</a>
+					</td>
+					<td>
+											SimplePie
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_HTTP_Parser.html">SimplePie_HTTP_Parser</a>
+					</td>
+					<td>
+											HTTP Response Parser
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_gzdecode.html">SimplePie_gzdecode</a>
+					</td>
+					<td>
+											gzdecode
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_Decode_HTML_Entities.html">SimplePie_Decode_HTML_Entities</a>
+					</td>
+					<td>
+											Decode HTML Entities
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_IRI.html">SimplePie_IRI</a>
+					</td>
+					<td>
+											IRI parser/serialiser
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_Net_IPv6.html">SimplePie_Net_IPv6</a>
+					</td>
+					<td>
+											Class to validate and to work with IPv6 addresses.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_Parse_Date.html">SimplePie_Parse_Date</a>
+					</td>
+					<td>
+											Date Parser
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_Content_Type_Sniffer.html">SimplePie_Content_Type_Sniffer</a>
+					</td>
+					<td>
+											Content-type sniffing
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../SimplePie/SimplePie_XML_Declaration_Parser.html">SimplePie_XML_Declaration_Parser</a>
+					</td>
+					<td>
+											Parses the XML Declaration
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Item.html">SimplePie_Item</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Source.html">SimplePie_Source</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Author.html">SimplePie_Author</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Category.html">SimplePie_Category</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Enclosure.html">SimplePie_Enclosure</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Caption.html">SimplePie_Caption</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Credit.html">SimplePie_Credit</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Copyright.html">SimplePie_Copyright</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Rating.html">SimplePie_Rating</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Restriction.html">SimplePie_Restriction</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_File.html">SimplePie_File</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Cache.html">SimplePie_Cache</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Cache_File.html">SimplePie_Cache_File</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Cache_DB.html">SimplePie_Cache_DB</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Cache_MySQL.html">SimplePie_Cache_MySQL</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Misc.html">SimplePie_Misc</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Locator.html">SimplePie_Locator</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Parser.html">SimplePie_Parser</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../default/SimplePie_Sanitize.html">SimplePie_Sanitize</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|									<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="defineSIMPLEPIE_BUILD"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_BUILD</span> = '20090627192103'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a63">63</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimplePie Build</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_ALL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_ALL</span> = 63
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a246">246</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">All constructs</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_BASE64"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_BASE64</span> = 8
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a231">231</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">base64-encoded construct</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_HTML"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_HTML</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a221">221</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HTML construct</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_IRI"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_IRI</span> = 16
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a236">236</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">IRI construct</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_MAYBE_HTML"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_MAYBE_HTML</span> = 32
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a241">241</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A construct that might be HTML</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_NONE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_NONE</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a211">211</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">No construct</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_TEXT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_TEXT</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a216">216</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Text construct</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_CONSTRUCT_XHTML"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_CONSTRUCT_XHTML</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a226">226</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XHTML construct</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_FILE_SOURCE_CURL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_FILE_SOURCE_CURL</span> = 8
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a387">387</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">cURL file source</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_FILE_SOURCE_FILE_GET_CONTENTS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_FILE_SOURCE_FILE_GET_CONTENTS</span> = 16
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a392">392</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">file_get_contents() file source</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_FILE_SOURCE_FSOCKOPEN"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_FILE_SOURCE_FSOCKOPEN</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a382">382</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fsockopen() file source</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_FILE_SOURCE_LOCAL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_FILE_SOURCE_LOCAL</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a377">377</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Local file source</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_FILE_SOURCE_NONE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_FILE_SOURCE_NONE</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a367">367</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">No file source</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_FILE_SOURCE_REMOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_FILE_SOURCE_REMOTE</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a372">372</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remote file source</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_IANA_LINK_RELATIONS_REGISTRY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_IANA_LINK_RELATIONS_REGISTRY</span> = 'http://www.iana.org/assignments/relation/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a357">357</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">IANA Link Relations Registry</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LINKBACK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LINKBACK</span> = '&lt;a href=&quot;'.SIMPLEPIE_URL.'&quot; title=&quot;'.SIMPLEPIE_NAME.' '.SIMPLEPIE_VERSION.'&quot;&gt;'.SIMPLEPIE_NAME.'&lt;/a&gt;'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a79">79</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimplePie Linkback</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_ALL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_ALL</span> = 31
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a121">121</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">All Feed Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_AUTODISCOVERY"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_AUTODISCOVERY</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a91">91</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Feed Link Element Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_LOCAL_BODY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_LOCAL_BODY</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a103">103</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Local Feed Body Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_LOCAL_EXTENSION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_LOCAL_EXTENSION</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a97">97</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Local Feed Extension Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_NONE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_NONE</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a85">85</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">No Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_REMOTE_BODY"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_REMOTE_BODY</span> = 16
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a115">115</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remote Feed Body Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOCATOR_REMOTE_EXTENSION"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOCATOR_REMOTE_EXTENSION</span> = 8
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a109">109</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remote Feed Extension Autodiscovery</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_autodiscovery_level">SimplePie::set_autodiscovery_level()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_LOWERCASE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_LOWERCASE</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a256">256</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change to lowercase</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAME"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAME</span> = 'SimplePie'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a53">53</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimplePie Name</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_ATOM_03"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_ATOM_03</span> = 'http://purl.org/atom/ns#'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a286">286</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atom 0.3 Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_ATOM_10"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_ATOM_10</span> = 'http://www.w3.org/2005/Atom'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a281">281</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atom 1.0 Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_DC_10"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_DC_10</span> = 'http://purl.org/dc/elements/1.0/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a317">317</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DC 1.0 Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_DC_11"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_DC_11</span> = 'http://purl.org/dc/elements/1.1/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a322">322</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DC 1.1 Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_GEORSS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_GEORSS</span> = 'http://www.georss.org/georss'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a332">332</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GeoRSS Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_ITUNES"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_ITUNES</span> = 'http://www.itunes.com/dtds/podcast-1.0.dtd'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a347">347</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">iTunes RSS Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_MEDIARSS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_MEDIARSS</span> = 'http://search.yahoo.com/mrss/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a337">337</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Media RSS Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_MEDIARSS_WRONG"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_MEDIARSS_WRONG</span> = 'http://search.yahoo.com/mrss'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a342">342</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrong Media RSS Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_RDF"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_RDF</span> = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a291">291</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RDF Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_RSS_090"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_RSS_090</span> = 'http://my.netscape.com/rdf/simple/0.9/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a296">296</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.90 Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_RSS_10"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_RSS_10</span> = 'http://purl.org/rss/1.0/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a301">301</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 1.0 Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_RSS_10_MODULES_CONTENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_RSS_10_MODULES_CONTENT</span> = 'http://purl.org/rss/1.0/modules/content/'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a306">306</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 1.0 Content Module Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_RSS_20"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_RSS_20</span> = ''
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a312">312</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 2.0 Namespace</p>
+<p class="description"><p>(Stupid, I know, but I'm certain it will confuse people less with support.)</p></p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_W3C_BASIC_GEO"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_W3C_BASIC_GEO</span> = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a327">327</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">W3C Basic Geo (WGS84 lat/long) Vocabulary Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_XHTML"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_XHTML</span> = 'http://www.w3.org/1999/xhtml'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a352">352</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XHTML Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_NAMESPACE_XML"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_NAMESPACE_XML</span> = 'http://www.w3.org/XML/1998/namespace'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a276">276</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML Namespace</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_PCRE_HTML_ATTRIBUTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_PCRE_HTML_ATTRIBUTE</span> = '((?:[\x09\x0A\x0B\x0C\x0D\x20]+[^\x09\x0A\x0B\x0C\x0D\x20\x2F\x3E][^\x09\x0A\x0B\x0C\x0D\x20\x2F\x3D\x3E]*(?:[\x09\x0A\x0B\x0C\x0D\x20]*=[\x09\x0A\x0B\x0C\x0D\x20]*(?:&quot;(?:[^&quot;]*)&quot;|\'(?:[^\']*)\'|(?:[^\x09\x0A\x0B\x0C\x0D\x20\x22\x27\x3E][^\x09\x0A\x0B\x0C\x0D\x20\x3E]*)?))?)*)[\x09\x0A\x0B\x0C\x0D\x20]*'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a266">266</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PCRE for HTML attributes</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_PCRE_XML_ATTRIBUTE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_PCRE_XML_ATTRIBUTE</span> = '((?:\s+(?:(?:[^\s:]+:)?[^\s:]+)\s*=\s*(?:&quot;(?:[^&quot;]*)&quot;|\'(?:[^\']*)\'))*)\s*'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a271">271</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PCRE for XML attributes</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_PHP5"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_PHP5</span> = version_compare(PHP_VERSION,'5.0.0','&gt;=')
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a362">362</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Whether we're running on PHP5</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_SAME_CASE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_SAME_CASE</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a251">251</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Don't change case</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_ALL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_ALL</span> = 1023
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a206">206</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">All feed types</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_ATOM_03"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_ATOM_03</span> = 256
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a191">191</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atom 0.3</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_ATOM_10"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_ATOM_10</span> = 512
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a196">196</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Atom 1.0</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_ATOM_ALL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_ATOM_ALL</span> = 768
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a201">201</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">All Atom</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_NONE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_NONE</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a126">126</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">No known feed type</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_090"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_090</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a131">131</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.90</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_091"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_091</span> = 6
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a146">146</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.91 (both Netscape and Userland)</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_091_NETSCAPE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_091_NETSCAPE</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a136">136</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.91 (Netscape)</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_091_USERLAND"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_091_USERLAND</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a141">141</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.91 (Userland)</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_092"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_092</span> = 8
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a151">151</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.92</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_093"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_093</span> = 16
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a156">156</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.93</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_094"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_094</span> = 32
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a161">161</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 0.94</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_10"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_10</span> = 64
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a166">166</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 1.0</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_20"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_20</span> = 128
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a171">171</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RSS 2.0</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_ALL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_ALL</span> = 255
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a186">186</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">All RSS</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_RDF"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_RDF</span> = 65
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a176">176</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">RDF-based RSS</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_TYPE_RSS_SYNDICATION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_TYPE_RSS_SYNDICATION</span> = 190
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a181">181</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Non-RDF-based RSS (truly intended as syndication format)</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_UPPERCASE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_UPPERCASE</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a261">261</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change to uppercase</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_URL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_URL</span> = 'http://simplepie.org'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a68">68</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimplePie Website URL</p>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_USERAGENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_USERAGENT</span> = SIMPLEPIE_NAME.'/'.SIMPLEPIE_VERSION.' (Feed Parser; '.SIMPLEPIE_URL.'; Allow like Gecko) Build/'.SIMPLEPIE_BUILD
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a74">74</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimplePie Useragent</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../SimplePie/SimplePie.html#methodset_useragent">SimplePie::set_useragent()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineSIMPLEPIE_VERSION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../media/images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">SIMPLEPIE_VERSION</span> = '1.2'
+			(line <span class="line-number"><a href="../__filesource/fsource_SimplePie__librariessimplepiesimplepie.php.html#a58">58</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimplePie Version</p>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:38:23 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

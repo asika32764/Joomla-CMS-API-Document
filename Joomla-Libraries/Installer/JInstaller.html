@@ -1,0 +1,2069 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JInstaller</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JInstaller</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla base installer class</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---cms---installer---installer.php.html">/libraries/cms/installer/installer.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Platform/Base/JAdapter.html">JAdapter</a>
+      |
+      --JInstaller</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type"><a href="../../Joomla-Libraries/Installer/JInstaller.html">JInstaller</a></span>
+					<a href="#$instance" title="details" class="var-name">$instance</a>
+				</div>
+																																																																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Table/JTableExtension.html">JTableExtension</a></span>
+					<a href="#$extension" title="details" class="var-name">$extension</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$extension_message" title="details" class="var-name">$extension_message</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$manifest" title="details" class="var-name">$manifest</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$manifestClass" title="details" class="var-name">$manifestClass</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$message" title="details" class="var-name">$message</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$overwrite" title="details" class="var-name">$overwrite</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$paths" title="details" class="var-name">$paths</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$redirect_url" title="details" class="var-name">$redirect_url</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$stepStack" title="details" class="var-name">$stepStack</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$upgrade" title="details" class="var-name">$upgrade</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Libraries/Installer/JInstaller.html">JInstaller</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#parseXMLInstallFile" title="details" class="method-name">parseXMLInstallFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JInstaller</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#abort" title="details" class="method-name">abort</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object Result</span>
+										<a href="#cleanDiscoveredExtension" title="details" class="method-name">cleanDiscoveredExtension</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$folder</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#copyFiles" title="details" class="method-name">copyFiles</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$files</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#copyManifest" title="details" class="method-name">copyManifest</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">1</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#discover" title="details" class="method-name">discover</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#discover_install" title="details" class="method-name">discover_install</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#findDeletedFiles" title="details" class="method-name">findDeletedFiles</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$old_files</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$new_files</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#findManifest" title="details" class="method-name">findManifest</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#generateManifestCache" title="details" class="method-name">generateManifestCache</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object Manifest</span>
+										<a href="#getManifest" title="details" class="method-name">getManifest</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getParams" title="details" class="method-name">getParams</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPath" title="details" class="method-name">getPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getRedirectURL" title="details" class="method-name">getRedirectURL</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#install" title="details" class="method-name">install</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#isManifest" title="details" class="method-name">isManifest</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isOverwrite" title="details" class="method-name">isOverwrite</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isUpgrade" title="details" class="method-name">isUpgrade</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#loadMD5Sum" title="details" class="method-name">loadMD5Sum</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parseFiles" title="details" class="method-name">parseFiles</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$oldFiles</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$oldMD5</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parseLanguages" title="details" class="method-name">parseLanguages</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parseMedia" title="details" class="method-name">parseMedia</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#parseQueries" title="details" class="method-name">parseQueries</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parseSchemaUpdates" title="details" class="method-name">parseSchemaUpdates</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$schema</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#parseSQLFiles" title="details" class="method-name">parseSQLFiles</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$element</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#pushStep" title="details" class="method-name">pushStep</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$step</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#refreshManifestCache" title="details" class="method-name">refreshManifestCache</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#removeFiles" title="details" class="method-name">removeFiles</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setOverwrite" title="details" class="method-name">setOverwrite</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setPath" title="details" class="method-name">setPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRedirectURL" title="details" class="method-name">setRedirectURL</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$newurl</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setSchemaVersion" title="details" class="method-name">setSchemaVersion</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$schema</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setUpgrade" title="details" class="method-name">setUpgrade</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setupInstall" title="details" class="method-name">setupInstall</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#uninstall" title="details" class="method-name">uninstall</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$identifier</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#update" title="details" class="method-name">update</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instance" id="$instance"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type"><a href="../../Joomla-Libraries/Installer/JInstaller.html">JInstaller</a></span>
+			<span class="var-name">$instance</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a110">110</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> JInstaller instance container.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$extension" id="$extension"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Table/JTableExtension.html">JTableExtension</a></span>
+			<span class="var-name">$extension</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a72">72</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extension Table Entry</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$extension_message" id="$extension_message"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$extension_message</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a96">96</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The extension message that appears</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$manifest" id="$manifest"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$manifest</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The installation manifest XML object</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$manifestClass" id="$manifestClass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$manifestClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The manifest trigger class</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$message" id="$message"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$message</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a80">80</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The output from the install/uninstall scripts</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$overwrite" id="$overwrite"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$overwrite</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True if existing files can be overwritten</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$paths" id="$paths"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$paths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of paths needed by the installer</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$redirect_url" id="$redirect_url"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$redirect_url</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a104">104</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The redirect URL if this extension (can be null if no redirect)</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$stepStack" id="$stepStack"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$stepStack</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a64">64</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stack of installation steps <ul><li>Used for installation rollback</li></ul></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$upgrade" id="$upgrade"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$upgrade</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True if package is an upgrade</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Base/JAdapter.html">JAdapter</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Base/JAdapter.html#var$_adapterfolder">JAdapter::$_adapterfolder</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Base/JAdapter.html#var$_adapters">JAdapter::$_adapters</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Base/JAdapter.html#var$_basepath">JAdapter::$_basepath</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Base/JAdapter.html#var$_classprefix">JAdapter::$_classprefix</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Base/JAdapter.html#var$_db">JAdapter::$_db</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a133">133</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global Installer object, only creating it  if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An installer object</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Libraries/Installer/JInstaller.html">JInstaller</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseXMLInstallFile" id="parseXMLInstallFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static parseXMLInstallFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a2110">2110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse a XML install manifest file.</p>
+<p class="description"><p>XML Root tag should be 'install' except for languages which use meta file.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XML metadata.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			parseXMLInstallFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Full path to XML file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a117">117</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JInstaller</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Base/JAdapter.html#method__construct">JAdapter::__construct()</a></dt>
+						<dd>Constructor</dd>
+					</dl>
+			
+	</div>
+<a name="methodabort" id="abort"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">abort</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a314">314</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Installation abort method</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			abort
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: Abort message from the installer</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Package type if defined</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcleanDiscoveredExtension" id="cleanDiscoveredExtension"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">cleanDiscoveredExtension</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1944">1944</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cleans up discovered extensions if they're being installed some other way</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of query</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object Result</span>
+		<span class="method-name">
+			cleanDiscoveredExtension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$folder</span> = <span class="var-default">''</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$client</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The type of extension (component, etc)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: Unique element identifier (e.g. com_content)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$folder</span><span class="var-description">: The folder of the extension (plugins; e.g. system)</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$client</span><span class="var-description">: The client application (administrator or site)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcopyFiles" id="copyFiles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">copyFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1538">1538</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copyfiles</p>
+<p class="description"><p>Copy files from source directory to the target directory</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			copyFiles
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$files</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$files</span><span class="var-description">: Array with filenames</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overwrite</span><span class="var-description">: True if existing files can be replaced</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcopyManifest" id="copyManifest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">copyManifest</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1803">1803</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copies the installation manifest file to the extension folder in the given client</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, False on error</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			copyManifest
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cid</span><span class="var-description">: Where to copy the installfile [optional: defaults to 1 (admin)]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddiscover" id="discover"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">discover</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a575">575</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extension discover method  Asks each adapter to find extensions</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JExtension</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			discover
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddiscover_install" id="discover_install"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">discover_install</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a479">479</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Discovered package installation method</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			discover_install
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$eid</span><span class="var-description">: Extension ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindDeletedFiles" id="findDeletedFiles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findDeletedFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1969">1969</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compares two &quot;files&quot; entries to find deleted files/folders</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array with the delete files and folders in findDeletedFiles[files] and findDeletedFiles[folders] respectively</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			findDeletedFiles
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$old_files</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$new_files</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$old_files</span><span class="var-description">: An array of SimpleXMLElement objects that are the old files</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$new_files</span><span class="var-description">: An array of SimpleXMLElement objects that are the new files</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindManifest" id="findManifest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findManifest</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1831">1831</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tries to find the package manifest file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, False on error</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			findManifest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgenerateManifestCache" id="generateManifestCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">generateManifestCache</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1927">1927</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a manifest cache</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> serialised manifest data</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			generateManifestCache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetManifest" id="getManifest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getManifest</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a249">249</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the installation manifest object</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> object</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object Manifest</span>
+		<span class="method-name">
+			getManifest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetParams" id="getParams"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getParams</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1481">1481</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to parse the parameters of an extension, build the INI  string for its default parameters, and return the INI string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> INI string of parameter values</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getParams
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPath" id="getPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a269">269</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get an installer path by name</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Path</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Path name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: Default value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRedirectURL" id="getRedirectURL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRedirectURL</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a186">186</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the redirect location</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Redirect location (or null)</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRedirectURL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodinstall" id="install"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">install</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a410">410</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Package installation method</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			install
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to package source folder</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisManifest" id="isManifest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isManifest</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1900">1900</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is the XML file a valid Joomla installation manifest file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A SimpleXMLElement, or null if the file failed to parse</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			isManifest
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: An xmlfile path to check</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisOverwrite" id="isOverwrite"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isOverwrite</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a149">149</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the allow overwrite switch</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Allow overwrite switch</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isOverwrite
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisUpgrade" id="isUpgrade"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isUpgrade</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a212">212</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the upgrade switch</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isUpgrade
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadMD5Sum" id="loadMD5Sum"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadMD5Sum</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a2073">2073</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads an MD5SUMS file into an associative array</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Associative array with filenames as the index and the MD5 as the value</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			loadMD5Sum
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: Filename to load</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseFiles" id="parseFiles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1161">1161</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to parse through a files element of the installation manifest and take appropriate  action.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parseFiles
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$oldFiles</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$oldMD5</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML node to process</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cid</span><span class="var-description">: Application ID of application to install to</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$oldFiles</span><span class="var-description">: List of old files (SimpleXMLElement's)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$oldMD5</span><span class="var-description">: List of old MD5 sums (indexed by filename with value as MD5)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseLanguages" id="parseLanguages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseLanguages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1287">1287</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to parse through a languages element of the installation manifest and take appropriate  action.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parseLanguages
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML node to process</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cid</span><span class="var-description">: Application ID of application to install to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseMedia" id="parseMedia"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseMedia</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1403">1403</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to parse through a media element of the installation manifest and take appropriate  action.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parseMedia
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML node to process</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cid</span><span class="var-description">: Application ID of application to install to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseQueries" id="parseQueries"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseQueries</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a822">822</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Backward compatible method to parse through a queries element of the  installation manifest file and take appropriate action.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of queries processed or False on error</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			parseQueries
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML node to process</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseSchemaUpdates" id="parseSchemaUpdates"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseSchemaUpdates</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1028">1028</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to process the updates for an item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Result of the operations</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parseSchemaUpdates
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$schema</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$schema</span><span class="var-description">: The XML node to process</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$eid</span><span class="var-description">: Extension Identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseSQLFiles" id="parseSQLFiles"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseSQLFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a867">867</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to extract the name of a discreet installation sql file from the installation manifest file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of queries processed or False on error</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			parseSQLFiles
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$element</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML node to process</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpushStep" id="pushStep"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">pushStep</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a298">298</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pushes a step onto the installer stack for rolling back steps</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pushStep
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$step</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$step</span><span class="var-description">: Installer step</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrefreshManifestCache" id="refreshManifestCache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">refreshManifestCache</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a717">717</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Refreshes the manifest cache stored in #__extensions</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> void on success, false on error @todo missing return value ?</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			refreshManifestCache
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$eid</span><span class="var-description">: Extension ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveFiles" id="removeFiles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeFiles</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a1647">1647</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to parse through a files element of the installation manifest and remove  the files that were installed</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			removeFiles
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML node to process</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cid</span><span class="var-description">: Application ID of application to remove from</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOverwrite" id="setOverwrite"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setOverwrite</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a163">163</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the allow overwrite switch</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True it state is set, false if it is not</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setOverwrite
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$state</span><span class="var-description">: Overwrite switch state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPath" id="setPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a284">284</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets an installer path by name</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Path name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: Path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedirectURL" id="setRedirectURL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRedirectURL</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a200">200</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the redirect location</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedirectURL
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$newurl</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$newurl</span><span class="var-description">: New redirect location</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSchemaVersion" id="setSchemaVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setSchemaVersion</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a959">959</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the schema version for an extension by looking at its latest update</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSchemaVersion
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$schema</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$schema</span><span class="var-description">: Schema Tag</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$eid</span><span class="var-description">: Extension ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUpgrade" id="setUpgrade"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setUpgrade</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a226">226</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the upgrade switch</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if upgrade, false otherwise</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setUpgrade
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$state</span><span class="var-description">: Upgrade switch state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetupInstall" id="setupInstall"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setupInstall</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a789">789</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepare for installation: this method sets the installation directory, finds  and checks the installation file and verifies the installation type.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setupInstall
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoduninstall" id="uninstall"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">uninstall</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a674">674</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Package uninstallation method</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			uninstall
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$identifier</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cid</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Package type</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$identifier</span><span class="var-description">: Package identifier for adapter</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cid</span><span class="var-description">: Application ID; deprecated in 1.6</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate" id="update"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">update</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Installer_librariescmsinstallerinstaller.php.html#a608">608</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Package update method</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			update
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to package source folder</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Base/JAdapter.html">JAdapter</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Base/JAdapter.html#method__construct">JAdapter::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Base/JAdapter.html#methodgetAdapter">JAdapter::getAdapter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Base/JAdapter.html#methodgetDBO">JAdapter::getDBO()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Base/JAdapter.html#methodloadAllAdapters">JAdapter::loadAllAdapters()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Base/JAdapter.html#methodsetAdapter">JAdapter::setAdapter()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:32:38 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

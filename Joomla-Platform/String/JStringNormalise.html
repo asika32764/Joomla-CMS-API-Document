@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JStringNormalise</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JStringNormalise</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla Platform String Normalise Class</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---string---normalise.php.html">/libraries/joomla/string/normalise.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#fromCamelCase" title="details" class="method-name">fromCamelCase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$grouped</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toCamelCase" title="details" class="method-name">toCamelCase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toDashSeparated" title="details" class="method-name">toDashSeparated</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toKey" title="details" class="method-name">toKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toSpaceSeparated" title="details" class="method-name">toSpaceSeparated</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toUnderscoreSeparated" title="details" class="method-name">toUnderscoreSeparated</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toVariable" title="details" class="method-name">toVariable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodfromCamelCase" id="fromCamelCase"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static fromCamelCase</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a43">43</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string from camel case.</p>
+<p class="description"><p>This method offers two modes. Grouped allows for splitting on groups of uppercase characters as follows:</p><p>&quot;FooBarABCDef&quot;            becomes  array(&quot;Foo&quot;, &quot;Bar&quot;, &quot;ABC&quot;, &quot;Def&quot;)  &quot;JFooBar&quot;                 becomes  array(&quot;J&quot;, &quot;Foo&quot;, &quot;Bar&quot;)  &quot;J001FooBar002&quot;           becomes  array(&quot;J001&quot;, &quot;Foo&quot;, &quot;Bar002&quot;)  &quot;abcDef&quot;                  becomes  array(&quot;abc&quot;, &quot;Def&quot;)  &quot;abc_defGhi_Jkl&quot;          becomes  array(&quot;abc_def&quot;, &quot;Ghi_Jkl&quot;)  &quot;ThisIsA_NASAAstronaut&quot;   becomes  array(&quot;This&quot;, &quot;Is&quot;, &quot;A_NASA&quot;, &quot;Astronaut&quot;))  &quot;JohnFitzgerald_Kennedy&quot;  becomes  array(&quot;John&quot;, &quot;Fitzgerald_Kennedy&quot;))</p><p>Non-grouped will split strings at each uppercase character.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The space separated string.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			fromCamelCase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$grouped</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$grouped</span><span class="var-description">: Optionally allows splitting on groups of uppercase characters.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoCamelCase" id="toCamelCase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static toCamelCase</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a59">59</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string into camel case.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The camel case string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toCamelCase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoDashSeparated" id="toDashSeparated"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static toDashSeparated</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string into dash separated form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The dash separated string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toDashSeparated
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoKey" id="toKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static toKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string into key form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The key string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoSpaceSeparated" id="toSpaceSeparated"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static toSpaceSeparated</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a95">95</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string into space separated form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The space separated string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toSpaceSeparated
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoUnderscoreSeparated" id="toUnderscoreSeparated"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static toUnderscoreSeparated</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a112">112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string into underscore separated form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The underscore separated string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toUnderscoreSeparated
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoVariable" id="toVariable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static toVariable</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringnormalise.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to convert a string into variable form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The variable string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toVariable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$input</span><span class="var-description">: The string input (ASCII only).</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:35:37 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JGoogle</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JGoogle</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla Platform class for interacting with the Google APIs.</p>
+	<ul class="tags">
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/Google/JGoogleData.html">JGoogleData</a> $data: Google API object for data.</li>
+				<li><span class="field">property-read:</span> <a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a> $embed: Google API object for embed generation.</li>
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---google---google.php.html">/libraries/joomla/google/google.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a22">22</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">JAuth</span>
+					<a href="#$auth" title="details" class="var-name">$auth</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Google/JGoogleData.html">JGoogleData</a></span>
+					<a href="#$data" title="details" class="var-name">$data</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a></span>
+					<a href="#$embed" title="details" class="var-name">$embed</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+					<a href="#$options" title="details" class="var-name">$options</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JGoogle</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Google/JGoogleAuth.html">JGoogleAuth</a></span>&nbsp;<span class="var-name">$auth</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleData.html">JGoogleData</a></span>
+										<a href="#data" title="details" class="method-name">data</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type">JAuth</span>&nbsp;<span class="var-name">$auth</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a></span>
+										<a href="#embed" title="details" class="method-name">embed</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getOption" title="details" class="method-name">getOption</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogle.html">JGoogle</a></span>
+										<a href="#setOption" title="details" class="method-name">setOption</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$auth" id="$auth"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">JAuth</span>
+			<span class="var-name">$auth</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The authentication client object to use in sending authenticated HTTP requests.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$data" id="$data"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Google/JGoogleData.html">JGoogleData</a></span>
+			<span class="var-name">$data</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Google API object for data request.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$embed" id="$embed"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a></span>
+			<span class="var-name">$embed</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Google API object for embed generation.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$options" id="$options"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+			<span class="var-name">$options</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Options for the Google object.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JGoogle</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Google/JGoogleAuth.html">JGoogleAuth</a></span>&nbsp;<span class="var-name">$auth</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+				<span class="var-name">$options</span><span class="var-description">: Google options object.</span>			</li>
+					<li>
+				<span class="var-type">JAuth</span>
+				<span class="var-name">$auth</span><span class="var-description">: The authentication client object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddata" id="data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">data</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a73">73</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create JGoogleData objects</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Google data API object.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleData.html">JGoogleData</a></span>
+		<span class="method-name">
+			data
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type">JAuth</span>&nbsp;<span class="var-name">$auth</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of property to retrieve</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+				<span class="var-name">$options</span><span class="var-description">: Google options object.</span>			</li>
+					<li>
+				<span class="var-type">JAuth</span>
+				<span class="var-name">$auth</span><span class="var-description">: The authentication client object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodembed" id="embed"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">embed</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a112">112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create JGoogleEmbed objects</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Google embed API object.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogleEmbed.html">JGoogleEmbed</a></span>
+		<span class="method-name">
+			embed
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of property to retrieve</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+				<span class="var-name">$options</span><span class="var-description">: Google options object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetOption" id="getOption"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOption</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a140">140</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get an option from the JGoogle instance.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The option value.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getOption
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the option to get.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOption" id="setOption"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setOption</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Google_librariesjoomlagooglegoogle.php.html#a155">155</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set an option for the JGoogle instance.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> This object for method chaining.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Google/JGoogle.html">JGoogle</a></span>
+		<span class="method-name">
+			setOption
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the option to set.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The option value to set.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:31:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

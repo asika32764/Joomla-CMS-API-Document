@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JAdministrator</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JAdministrator</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla! Application class</p>
+<p class="description"><p>Provide many supporting API functions</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">final:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---includes---application.php.html">/administrator/includes/application.php</a> (line <span class="field"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre><a href="../Joomla-Platform/Application/JApplicationBase.html">JApplicationBase</a>
+   |
+   --<a href="../Joomla-Legacy/Application/JApplication.html">JApplication</a>
+      |
+      --JAdministrator</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../Joomla-Platform/Application/JRouter.html">JRouter</a></span>
+										<a href="#getRouter" title="details" class="method-name">getRouter</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#purgeMessages" title="details" class="method-name">purgeMessages</a>
+										()
+									</div>
+																																			
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JAdministrator</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#dispatch" title="details" class="method-name">dispatch</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span> = <span class="var-default">null</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTemplate" title="details" class="method-name">getTemplate</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#initialise" title="details" class="method-name">initialise</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#login" title="details" class="method-name">login</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$credentials</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#render" title="details" class="method-name">render</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#route" title="details" class="method-name">route</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../Joomla-Legacy/Application/JApplication.html">JApplication</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$client">JApplication::$client</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$instances">JApplication::$instances</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$requestTime">JApplication::$requestTime</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$scope">JApplication::$scope</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$startTime">JApplication::$startTime</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$_clientId">JApplication::$_clientId</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$_messageQueue">JApplication::$_messageQueue</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Legacy/Application/JApplication.html#var$_name">JApplication::$_name</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../Joomla-Platform/Application/JApplicationBase.html">JApplicationBase</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#var$dispatcher">JApplicationBase::$dispatcher</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#var$identity">JApplicationBase::$identity</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#var$input">JApplicationBase::$input</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetRouter" id="getRouter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getRouter</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return a reference to the JRouter object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../Joomla-Platform/Application/JRouter.html">JRouter</a></span>
+		<span class="method-name">
+			getRouter
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methodgetRouter">JApplication::getRouter()</a></dt>
+						<dd>Returns the application JRouter object.</dd>
+					</dl>
+			
+	</div>
+<a name="methodpurgeMessages" id="purgeMessages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static purgeMessages</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a314">314</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Purge the jos_messages table of old messages</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			purgeMessages
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JAdministrator</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: An optional associative array of configuration settings.                  Recognized key values include 'clientId' (this list is not meant to be comprehensive).</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#method__construct">JApplication::__construct()</a></dt>
+						<dd>Class constructor.</dd>
+					</dl>
+			
+	</div>
+<a name="methoddispatch" id="dispatch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">dispatch</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a142">142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dispatch the application</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			dispatch
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The component to dispatch.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methoddispatch">JApplication::dispatch()</a></dt>
+						<dd>Dispatch the application.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTemplate" id="getTemplate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTemplate</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a262">262</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the template</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The template name</li>
+				<li><span class="field">since:</span> 1.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTemplate
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methodgetTemplate">JApplication::getTemplate()</a></dt>
+						<dd>Gets the name of the current template.</dd>
+					</dl>
+			
+	</div>
+<a name="methodinitialise" id="initialise"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">initialise</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a47">47</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialise the application.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			initialise
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An optional associative array of configuration settings.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methodinitialise">JApplication::initialise()</a></dt>
+						<dd>Initialise the application.</dd>
+					</dl>
+			
+	</div>
+<a name="methodlogin" id="login"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">login</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a225">225</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Login authentication function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">see:</span> JApplication::login</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			login
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$credentials</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$credentials</span><span class="var-description">: Array('username' =&gt; string, 'password' =&gt; string)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array('remember' =&gt; boolean)</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methodlogin">JApplication::login()</a></dt>
+						<dd>Login authentication function.</dd>
+					</dl>
+			
+	</div>
+<a name="methodrender" id="render"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">render</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a179">179</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display the application.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			render
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methodrender">JApplication::render()</a></dt>
+						<dd>Render the application.</dd>
+					</dl>
+			
+	</div>
+<a name="methodroute" id="route"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">route</span> (line <span class="line-number"><a href="../__filesource/fsource_Joomla-Administrator__administratorincludesapplication.php.html#a106">106</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Route the application</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			route
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Legacy/Application/JApplication.html#methodroute">JApplication::route()</a></dt>
+						<dd>Route the application.</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Joomla-Legacy/Application/JApplication.html">JApplication</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#method__construct">JApplication::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodafterSessionStart">JApplication::afterSessionStart()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodcheckSession">JApplication::checkSession()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methoddispatch">JApplication::dispatch()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodenqueueMessage">JApplication::enqueueMessage()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetCfg">JApplication::getCfg()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetClientId">JApplication::getClientId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetHash">JApplication::getHash()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetInstance">JApplication::getInstance()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetMenu">JApplication::getMenu()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetMessageQueue">JApplication::getMessageQueue()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetName">JApplication::getName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetPathway">JApplication::getPathway()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetRouter">JApplication::getRouter()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetTemplate">JApplication::getTemplate()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetUserState">JApplication::getUserState()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodgetUserStateFromRequest">JApplication::getUserStateFromRequest()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodinitialise">JApplication::initialise()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodisAdmin">JApplication::isAdmin()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodisSite">JApplication::isSite()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodisSSLConnection">JApplication::isSSLConnection()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodisWinOS">JApplication::isWinOS()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodlogin">JApplication::login()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodlogout">JApplication::logout()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodredirect">JApplication::redirect()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodrender">JApplication::render()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodroute">JApplication::route()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodsetUserState">JApplication::setUserState()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#methodstringURLSafe">JApplication::stringURLSafe()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#method_createConfiguration">JApplication::_createConfiguration()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#method_createSession">JApplication::_createSession()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Legacy/Application/JApplication.html#method__toString">JApplication::__toString()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Joomla-Platform/Application/JApplicationBase.html">JApplicationBase</a></span></p>
+					<blockquote>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#methodclose">JApplicationBase::close()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#methodgetIdentity">JApplicationBase::getIdentity()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#methodloadDispatcher">JApplicationBase::loadDispatcher()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#methodloadIdentity">JApplicationBase::loadIdentity()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#methodregisterEvent">JApplicationBase::registerEvent()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Application/JApplicationBase.html#methodtriggerEvent">JApplicationBase::triggerEvent()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:22:39 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

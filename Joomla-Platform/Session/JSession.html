@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JSession</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JSession</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li>IteratorAggregate (internal interface)</li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class for managing HTTP sessions</p>
+<p class="description"><p>Provides access to session-state values as well as session-level  settings and lifetime management methods.  Based on the standard PHP session handling mechanism it provides  more advanced features such as expire timeouts.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---session---session.php.html">/libraries/joomla/session/session.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type"><a href="../../Joomla-Platform/Session/JSession.html">JSession</a></span>
+					<a href="#$instance" title="details" class="var-name">$instance</a>
+				</div>
+																																																																												<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$storeName" title="details" class="var-name">$storeName</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_expire" title="details" class="var-name">$_expire</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$_force_ssl" title="details" class="var-name">$_force_ssl</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_security" title="details" class="var-name">$_security</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_state" title="details" class="var-name">$_state</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Session/JSessionStorage.html">JSessionStorage</a></span>
+					<a href="#$_store" title="details" class="var-name">$_store</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#checkToken" title="details" class="method-name">checkToken</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'post'</span>])
+									</div>
+																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getFormToken" title="details" class="method-name">getFormToken</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$forceNew</span> = <span class="var-default">false</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Session/JSession.html">JSession</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$handler</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getStores" title="details" class="method-name">getStores</a>
+										()
+									</div>
+																																																																																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JSession</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$store</span> = <span class="var-default">'none'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#clear" title="details" class="method-name">clear</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#close" title="details" class="method-name">close</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#destroy" title="details" class="method-name">destroy</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#fork" title="details" class="method-name">fork</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getExpire" title="details" class="method-name">getExpire</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getId" title="details" class="method-name">getId</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">ArrayIterator</span>
+										<a href="#getIterator" title="details" class="method-name">getIterator</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getState" title="details" class="method-name">getState</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getToken" title="details" class="method-name">getToken</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$forceNew</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#has" title="details" class="method-name">has</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hasToken" title="details" class="method-name">hasToken</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tCheck</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$forceExpire</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void.</span>
+										<a href="#initialise" title="details" class="method-name">initialise</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Input/JInput.html">JInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type"><a href="../../Joomla-Platform/Event/JEventDispatcher.html">JEventDispatcher</a></span>&nbsp;<span class="var-name">$dispatcher</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isActive" title="details" class="method-name">isActive</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isNew" title="details" class="method-name">isNew</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#restart" title="details" class="method-name">restart</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#set" title="details" class="method-name">set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#start" title="details" class="method-name">start</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_createToken" title="details" class="method-name">_createToken</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">32</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_setCookieParams" title="details" class="method-name">_setCookieParams</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_setCounter" title="details" class="method-name">_setCounter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_setOptions" title="details" class="method-name">_setOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_setTimers" title="details" class="method-name">_setTimers</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_start" title="details" class="method-name">_start</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#_validate" title="details" class="method-name">_validate</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$restart</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instance" id="$instance"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type"><a href="../../Joomla-Platform/Session/JSession.html">JSession</a></span>
+			<span class="var-name">$instance</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a78">78</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> JSession instances container.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$storeName" id="$storeName"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$storeName</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a84">84</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_expire" id="$_expire"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_expire</span>
+			 = <span class="var-default"> 15</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maximum age of unused session in minutes</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_force_ssl" id="$_force_ssl"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$_force_ssl</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a72">72</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Force cookies to be SSL only  Default  false</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_security" id="$_security"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_security</span>
+			 = <span class="var-default">array('fix_browser')</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Security policy.</p>
+<p class="description"><p>List of checks that will be done.</p><p>Default values: <ul><li>fix_browser</li><li>fix_adress</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_state" id="$_state"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_state</span>
+			 = <span class="var-default"> 'inactive'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Internal state.</p>
+<p class="description"><p>One of 'inactive'|'active'|'expired'|'destroyed'|'error'</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Session/JSession.html#methodgetState">JSession::getState()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_store" id="$_store"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Session/JSessionStorage.html">JSessionStorage</a></span>
+			<span class="var-name">$_store</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The session store object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheckToken" id="checkToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static checkToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a312">312</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks for a form token in the request.</p>
+<p class="description"><p>Use in conjunction with JHtml::_('form.token') or JSession::getFormToken.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if found and valid, false otherwise.</li>
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			checkToken
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'post'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span><span class="var-description">: The request method in which to look for the token key.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFormToken" id="getFormToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getFormToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a271">271</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine a hash for anti-spoofing variable names</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Hashed var name</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getFormToken
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$forceNew</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$forceNew</span><span class="var-description">: If true, force a new token to be created</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global Session object, only creating it  if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The Session object.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Session/JSession.html">JSession</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$handler</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$handler</span><span class="var-description">: The type of session handler.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An array of configuration options.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStores" id="getStores"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getStores</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a378">378</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the session handlers</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of available session handlers</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getStores
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a110">110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JSession</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$store</span> = <span class="var-default">'none'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$store</span><span class="var-description">: The type of storage for the session.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Optional parameters</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclear" id="clear"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">clear</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a557">557</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unset data from the session store</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value from session or NULL if not set</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			clear
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of variable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$namespace</span><span class="var-description">: Namespace to use, default to 'default'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclose" id="close"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">close</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a783">783</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes session data and ends session</p>
+<p class="description"><p>Session data is usually stored after your script terminated without the need  to call JSession::close(), but as session data is locked to prevent concurrent  writes only one script may operate on a session at any time. When using  framesets together with sessions you will experience the frames loading one  by one due to this locking. You can reduce the time needed to load all the  frames by ending the session as soon as all changes to session variables are  done.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/session_write_close">session_write_close()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			close
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddestroy" id="destroy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">destroy</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a672">672</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Frees all session variables and destroys all data registered to a session</p>
+<p class="description"><p>This method resets the $_SESSION variable and destroys all of the data associated  with the current session in its storage (file or DB). It forces new session to be  started after this method is called. It does not unset the session cookie.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/session_destroy">session_destroy()</a></li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/session_unset">session_unset()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			destroy
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfork" id="fork"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fork</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a740">740</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a new session and copy variables from the old one</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			fork
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a468">468</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get data from the session store</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Value of a variable</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of a variable</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: Default value of a variable if not set</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$namespace</span><span class="var-description">: Namespace to use, default to 'default'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExpire" id="getExpire"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getExpire</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a201">201</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get expiration time in minutes</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The session expiration time in minutes</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getExpire
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetId" id="getId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a361">361</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get session id</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The session name</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetIterator" id="getIterator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIterator</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a296">296</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve an external iterator.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return an ArrayIterator of $_SESSION.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">ArrayIterator</span>
+		<span class="method-name">
+			getIterator
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>IteratorAggregate::getIterator</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a344">344</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get session name</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The session name</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetState" id="getState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getState</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a189">189</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get current state of session</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The session state</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getState
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetToken" id="getToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a219">219</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a session token, if a token isn't set yet one will be generated.</p>
+<p class="description"><p>Tokens are used to secure forms from spamming attacks. Once a token  has been generated the system will check the post request to see if  it is present, if not it will invalidate the session.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The session token</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getToken
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$forceNew</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$forceNew</span><span class="var-description">: If true, force a new token to be created</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhas" id="has"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">has</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a533">533</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check whether data exists in the session store</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the variable exists</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			has
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of variable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$namespace</span><span class="var-description">: Namespace to use, default to 'default'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhasToken" id="hasToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hasToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a244">244</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine if a token exists in the session. If not the  session will be set to expired</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasToken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tCheck</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$forceExpire</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tCheck</span><span class="var-description">: Hashed token to be verified</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$forceExpire</span><span class="var-description">: If true, expires the session</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinitialise" id="initialise"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">initialise</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a451">451</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check whether this session is currently created</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void.</span>
+		<span class="method-name">
+			initialise
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Input/JInput.html">JInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type"><a href="../../Joomla-Platform/Event/JEventDispatcher.html">JEventDispatcher</a></span>&nbsp;<span class="var-name">$dispatcher</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Input/JInput.html">JInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: JInput object for the session to use.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Event/JEventDispatcher.html">JEventDispatcher</a></span>
+				<span class="var-name">$dispatcher</span><span class="var-description">: Dispatcher object for the session to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisActive" id="isActive"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isActive</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a423">423</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Shorthand to check if the session is active</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isActive
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisNew" id="isNew"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isNew</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a435">435</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check whether this session is currently created</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isNew
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodrestart" id="restart"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">restart</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a708">708</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Restart an expired or locked session.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Session/JSession.html#methoddestroy">JSession::destroy()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			restart
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset" id="set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a498">498</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set data into the session store.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Old value of a variable.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">'default'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of a variable.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: Value of a variable.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$namespace</span><span class="var-description">: Namespace to use, default to 'default'.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstart" id="start"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">start</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a585">585</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start a session.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			start
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_createToken" id="_createToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_createToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a826">826</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a token-string</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Generated token</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_createToken
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">32</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Length of string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_setCookieParams" id="_setCookieParams"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_setCookieParams</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a795">795</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set session cookie parameters</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_setCookieParams
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_setCounter" id="_setCounter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_setCounter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a847">847</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set counter of session usage</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_setCounter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_setOptions" id="_setOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_setOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a889">889</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set additional session options</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_setOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: List of parameter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_setTimers" id="_setTimers"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_setTimers</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a863">863</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the session timers</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_setTimers
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_start" id="_start"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_start</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a618">618</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start a session.</p>
+<p class="description"><p>Creates a session (or resumes the current one based on the state of the session)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_start
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_validate" id="_validate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_validate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a942">942</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Do some checks for security reason</p>
+<p class="description"><p><ul><li>timeout check (expire)</li><li>ip-fixiation</li><li>browser-fixiation</li></ul>  If one check failed, session data has to be cleaned.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">see:</span> <a href="http://shiflett.org/articles/the-truth-about-sessions">http://shiflett.org/articles/the-truth-about-sessions</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			_validate
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$restart</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$restart</span><span class="var-description">: Reactivate session</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Session_librariesjoomlasessionsession.php.html#a147">147</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to get read-only access to properties.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the property</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of property to retrieve</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:38:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

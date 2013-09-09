@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page tag.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/libraries/cms/html/tag.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|													<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmltag.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> GNU</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|																<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"/>
+						<a href="../../Joomla-Libraries/HTML/JHtmlTag.html">JHtmlTag</a>
+					</td>
+					<td>
+											Utility class for tags
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionajaxfield" id="functionajaxfield"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">ajaxfield</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmltag.php.html#a162">162</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is just a proxy for the formbehavior.ajaxchosen method</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ajaxfield
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selector</span> = <span class="var-default">&#039;#jform_tags&#039;</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allowCustom</span> = <span class="var-default">true</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selector</span><span class="var-description">: DOM id of the tag field</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allowCustom</span><span class="var-description">: Flag to allow custom values</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontags" id="functiontags"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">tags</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_HTML_librariescmshtmltag.php.html#a111">111</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array of tags.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Tag data</li>
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			tags
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array(&#039;filter.published&#039; =&amp;gt; array(0, 1))</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: An array of configuration options. By default, only published and unpublished tags are returned.</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:40:01 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

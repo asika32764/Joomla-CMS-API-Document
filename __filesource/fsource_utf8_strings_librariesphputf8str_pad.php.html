@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for str_pad.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file str_pad.php</h1>
+<p>Documentation is available at <a href="../utf8/strings/_libraries---phputf8---str_pad.php.html">str_pad.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;$Id$</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//---------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">*&nbsp;Replacement&nbsp;for&nbsp;str_pad.&nbsp;$padStr&nbsp;may&nbsp;contain&nbsp;multi-byte&nbsp;characters.</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Oliver&nbsp;Saunders&nbsp;&lt;oliver&nbsp;(a)&nbsp;osinternetservices.com&gt;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$input&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">int&nbsp;</span><span class="src-doc-var">$length&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$padStr&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">int&nbsp;</span><span class="src-doc-var">$type&nbsp;</span><span class="src-doc">(&nbsp;same&nbsp;constants&nbsp;as&nbsp;str_pad&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;http://www.php.net/str_pad</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;utf8_substr</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---str_pad.php.html#functionutf8_str_pad">utf8_str_pad</a><span class="src-sym">(</span><span class="src-var">$input</span><span class="src-sym">,&nbsp;</span><span class="src-var">$length</span><span class="src-sym">,&nbsp;</span><span class="src-var">$padStr&nbsp;</span>=&nbsp;<span class="src-str">'&nbsp;'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$type&nbsp;</span>=&nbsp;<span class="src-id">STR_PAD_RIGHT</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$inputLen&nbsp;</span>=&nbsp;<a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strlen">utf8_strlen</a><span class="src-sym">(</span><span class="src-var">$input</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$length&nbsp;</span>&lt;=&nbsp;<span class="src-var">$inputLen</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$input</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$padStrLen&nbsp;</span>=&nbsp;<a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strlen">utf8_strlen</a><span class="src-sym">(</span><span class="src-var">$padStr</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$padLen&nbsp;</span>=&nbsp;<span class="src-var">$length&nbsp;</span>-&nbsp;<span class="src-var">$inputLen</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$type&nbsp;</span>==&nbsp;<span class="src-id">STR_PAD_RIGHT</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$repeatTimes&nbsp;</span>=&nbsp;<a href="http://www.php.net/ceil">ceil</a><span class="src-sym">(</span><span class="src-var">$padLen&nbsp;</span>/&nbsp;<span class="src-var">$padStrLen</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_substr">utf8_substr</a><span class="src-sym">(</span><span class="src-var">$input&nbsp;</span>.&nbsp;<a href="http://www.php.net/str_repeat">str_repeat</a><span class="src-sym">(</span><span class="src-var">$padStr</span><span class="src-sym">,&nbsp;</span><span class="src-var">$repeatTimes</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-var">$length</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$type&nbsp;</span>==&nbsp;<span class="src-id">STR_PAD_LEFT</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$repeatTimes&nbsp;</span>=&nbsp;<a href="http://www.php.net/ceil">ceil</a><span class="src-sym">(</span><span class="src-var">$padLen&nbsp;</span>/&nbsp;<span class="src-var">$padStrLen</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_substr">utf8_substr</a><span class="src-sym">(</span><a href="http://www.php.net/str_repeat">str_repeat</a><span class="src-sym">(</span><span class="src-var">$padStr</span><span class="src-sym">,&nbsp;</span><span class="src-var">$repeatTimes</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><a href="http://www.php.net/floor">floor</a><span class="src-sym">(</span><span class="src-var">$padLen</span><span class="src-sym">))&nbsp;</span>.&nbsp;<span class="src-var">$input</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$type&nbsp;</span>==&nbsp;<span class="src-id">STR_PAD_BOTH</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$padLen</span>/=&nbsp;<span class="src-num">2</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$padAmountLeft&nbsp;</span>=&nbsp;<a href="http://www.php.net/floor">floor</a><span class="src-sym">(</span><span class="src-var">$padLen</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$padAmountRight&nbsp;</span>=&nbsp;<a href="http://www.php.net/ceil">ceil</a><span class="src-sym">(</span><span class="src-var">$padLen</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$repeatTimesLeft&nbsp;</span>=&nbsp;<a href="http://www.php.net/ceil">ceil</a><span class="src-sym">(</span><span class="src-var">$padAmountLeft&nbsp;</span>/&nbsp;<span class="src-var">$padStrLen</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$repeatTimesRight&nbsp;</span>=&nbsp;<a href="http://www.php.net/ceil">ceil</a><span class="src-sym">(</span><span class="src-var">$padAmountRight&nbsp;</span>/&nbsp;<span class="src-var">$padStrLen</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$paddingLeft&nbsp;</span>=&nbsp;<a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_substr">utf8_substr</a><span class="src-sym">(</span><a href="http://www.php.net/str_repeat">str_repeat</a><span class="src-sym">(</span><span class="src-var">$padStr</span><span class="src-sym">,&nbsp;</span><span class="src-var">$repeatTimesLeft</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-var">$padAmountLeft</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$paddingRight&nbsp;</span>=&nbsp;<a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_substr">utf8_substr</a><span class="src-sym">(</span><a href="http://www.php.net/str_repeat">str_repeat</a><span class="src-sym">(</span><span class="src-var">$padStr</span><span class="src-sym">,&nbsp;</span><span class="src-var">$repeatTimesRight</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-var">$padAmountLeft</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$paddingLeft&nbsp;</span>.&nbsp;<span class="src-var">$input&nbsp;</span>.&nbsp;<span class="src-var">$paddingRight</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/trigger_error">trigger_error</a><span class="src-sym">(</span><span class="src-str">'utf8_str_pad:&nbsp;Unknown&nbsp;padding&nbsp;type&nbsp;('&nbsp;</span>.&nbsp;<span class="src-var">$type&nbsp;</span>.&nbsp;<span class="src-str">')'</span><span class="src-sym">,</span><span class="src-id">E_USER_ERROR</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:45 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class AKUnarchiverZIP</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> AKUnarchiverZIP</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ZIP archive extraction class</p>
+<p class="description"><p>Since the file data portion of ZIP and JPA are similarly structured (it's empty for dirs,  linked node name for symlinks, dumped binary data for no compressions and dumped gzipped  binary data for gzip compression) we just have to subclass AKUnarchiverJPA and change the  header reading bits. Reusable code ;)</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_joomlaupdate---restore.php.html">/administrator/components/com_joomlaupdate/restore.php</a> (line <span class="field"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a3203">3203</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a>
+   |
+   --<a href="../../akeebabackup/kickstart/AKAbstractPart.html">AKAbstractPart</a>
+      |
+      --<a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html">AKAbstractUnarchiver</a>
+         |
+         --<a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html">AKUnarchiverJPA</a>
+            |
+            --AKUnarchiverZIP</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$expectDataDescriptor" title="details" class="var-name">$expectDataDescriptor</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#readArchiveHeader" title="details" class="method-name">readArchiveHeader</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#readFileHeader" title="details" class="method-name">readFileHeader</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$expectDataDescriptor" id="$expectDataDescriptor"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$expectDataDescriptor</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a3205">3205</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html">AKAbstractUnarchiver</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$addPath">AKAbstractUnarchiver::$addPath</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$archiveList">AKAbstractUnarchiver::$archiveList</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$chunkSize">AKAbstractUnarchiver::$chunkSize</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$currentPartNumber">AKAbstractUnarchiver::$currentPartNumber</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$currentPartOffset">AKAbstractUnarchiver::$currentPartOffset</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$dataReadLength">AKAbstractUnarchiver::$dataReadLength</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$fileHeader">AKAbstractUnarchiver::$fileHeader</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$filename">AKAbstractUnarchiver::$filename</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$flagRestorePermissions">AKAbstractUnarchiver::$flagRestorePermissions</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$fp">AKAbstractUnarchiver::$fp</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$postProcEngine">AKAbstractUnarchiver::$postProcEngine</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$renameDirs">AKAbstractUnarchiver::$renameDirs</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$renameFiles">AKAbstractUnarchiver::$renameFiles</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$runState">AKAbstractUnarchiver::$runState</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$skipFiles">AKAbstractUnarchiver::$skipFiles</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#var$totalSize">AKAbstractUnarchiver::$totalSize</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractPart.html">AKAbstractPart</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$active_domain">AKAbstractPart::$active_domain</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$active_step">AKAbstractPart::$active_step</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$active_substep">AKAbstractPart::$active_substep</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$databaseRoot">AKAbstractPart::$databaseRoot</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$hasRan">AKAbstractPart::$hasRan</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$isFinished">AKAbstractPart::$isFinished</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$isPrepared">AKAbstractPart::$isPrepared</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$isRunning">AKAbstractPart::$isRunning</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$observers">AKAbstractPart::$observers</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#var$_parametersArray">AKAbstractPart::$_parametersArray</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#var$_errors_queue_size">AKAbstractObject::$_errors_queue_size</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#var$_warnings_queue_size">AKAbstractObject::$_warnings_queue_size</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodreadArchiveHeader" id="readArchiveHeader"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">readArchiveHeader</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a3207">3207</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			readArchiveHeader
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html#methodreadArchiveHeader">AKUnarchiverJPA::readArchiveHeader()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodreadFileHeader" id="readFileHeader"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">readFileHeader</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a3247">3247</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Concrete classes must use this method to read the file header</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if reading the file was successful, false if an error occured or we reached end of archive</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			readFileHeader
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html#methodreadFileHeader">AKUnarchiverJPA::readFileHeader()</a></dt>
+						<dd>Concrete classes must use this method to read the file header</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html">AKUnarchiverJPA</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html#methodcreateDirectory">AKUnarchiverJPA::createDirectory()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html#methodprocessFileData">AKUnarchiverJPA::processFileData()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html#methodreadArchiveHeader">AKUnarchiverJPA::readArchiveHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKUnarchiverJPA.html#methodreadFileHeader">AKUnarchiverJPA::readFileHeader()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html">AKAbstractUnarchiver</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#method__construct">AKAbstractUnarchiver::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodfread">AKAbstractUnarchiver::fread()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodisEOF">AKAbstractUnarchiver::isEOF()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodnextFile">AKAbstractUnarchiver::nextFile()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodprocessFileData">AKAbstractUnarchiver::processFileData()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodreadArchiveHeader">AKAbstractUnarchiver::readArchiveHeader()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodreadFileHeader">AKAbstractUnarchiver::readFileHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodsetCorrectPermissions">AKAbstractUnarchiver::setCorrectPermissions()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#methodshutdown">AKAbstractUnarchiver::shutdown()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#method_finalize">AKAbstractUnarchiver::_finalize()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#method_prepare">AKAbstractUnarchiver::_prepare()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#method_run">AKAbstractUnarchiver::_run()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractUnarchiver.html#method__wakeup">AKAbstractUnarchiver::__wakeup()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractPart.html">AKAbstractPart</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodattach">AKAbstractPart::attach()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methoddetach">AKAbstractPart::detach()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodgetDomain">AKAbstractPart::getDomain()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodgetState">AKAbstractPart::getState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodgetStatusArray">AKAbstractPart::getStatusArray()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodgetStep">AKAbstractPart::getStep()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodgetSubstep">AKAbstractPart::getSubstep()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodnotify">AKAbstractPart::notify()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodsetBreakFlag">AKAbstractPart::setBreakFlag()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodsetDomain">AKAbstractPart::setDomain()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodsetState">AKAbstractPart::setState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodsetStep">AKAbstractPart::setStep()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodsetSubstep">AKAbstractPart::setSubstep()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodsetup">AKAbstractPart::setup()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#methodtick">AKAbstractPart::tick()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#method_finalize">AKAbstractPart::_finalize()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#method_makeReturnTable">AKAbstractPart::_makeReturnTable()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#method_prepare">AKAbstractPart::_prepare()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPart.html#method_run">AKAbstractPart::_run()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#method__construct">AKAbstractObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetError">AKAbstractObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetErrors">AKAbstractObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetWarning">AKAbstractObject::getWarning()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetWarnings">AKAbstractObject::getWarnings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodpropagateFromObject">AKAbstractObject::propagateFromObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodpropagateToObject">AKAbstractObject::propagateToObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodresetErrors">AKAbstractObject::resetErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodresetWarnings">AKAbstractObject::resetWarnings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetError">AKAbstractObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetErrorsQueueSize">AKAbstractObject::setErrorsQueueSize()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetWarning">AKAbstractObject::setWarning()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetWarningsQueueSize">AKAbstractObject::setWarningsQueueSize()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:37:47 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

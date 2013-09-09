@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class AKPostprocFTP</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> AKPostprocFTP</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FTP file writer</p>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_joomlaupdate---restore.php.html">/administrator/components/com_joomlaupdate/restore.php</a> (line <span class="field"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2113">2113</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a>
+   |
+   --<a href="../../akeebabackup/kickstart/AKAbstractPostproc.html">AKAbstractPostproc</a>
+      |
+      --AKPostprocFTP</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$dir" title="details" class="var-name">$dir</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$host" title="details" class="var-name">$host</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$pass" title="details" class="var-name">$pass</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$passive" title="details" class="var-name">$passive</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$port" title="details" class="var-name">$port</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$user" title="details" class="var-name">$user</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$useSSL" title="details" class="var-name">$useSSL</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">AKPostprocFTP</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#chmod" title="details" class="method-name">chmod</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$perms</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#close" title="details" class="method-name">close</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#connect" title="details" class="method-name">connect</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#createDirRecursive" title="details" class="method-name">createDirRecursive</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dirName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$perms</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#process" title="details" class="method-name">process</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#processFilename" title="details" class="method-name">processFilename</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$perms</span> = <span class="var-default">0755</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#rename" title="details" class="method-name">rename</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$from</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$to</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#rmdir" title="details" class="method-name">rmdir</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#unlink" title="details" class="method-name">unlink</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__wakeup" title="details" class="method-name">__wakeup</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$dir" id="$dir"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$dir</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2128">2128</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> FTP initial directory</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$host" id="$host"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$host</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2120">2120</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> FTP host name</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pass" id="$pass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$pass</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2126">2126</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> FTP password</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$passive" id="$passive"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$passive</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2118">2118</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> use Passive mode?</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$port" id="$port"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$port</span>
+			 = <span class="var-default"> 21</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2122">2122</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> FTP port</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$user" id="$user"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$user</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2124">2124</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> FTP user name</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$useSSL" id="$useSSL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$useSSL</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2116">2116</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Should I use FTP over implicit SSL?</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html">AKAbstractPostproc</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#var$filename">AKAbstractPostproc::$filename</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#var$perms">AKAbstractPostproc::$perms</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#var$tempFilename">AKAbstractPostproc::$tempFilename</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#var$timestamp">AKAbstractPostproc::$timestamp</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#var$_errors_queue_size">AKAbstractObject::$_errors_queue_size</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#var$_warnings_queue_size">AKAbstractObject::$_warnings_queue_size</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2134">2134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">AKPostprocFTP</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractObject.html#method__construct">AKAbstractObject::__construct()</a></dt>
+						<dd>Public constructor, makes sure we are instanciated only by the factory class</dd>
+					</dl>
+			
+	</div>
+<a name="methodchmod" id="chmod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">chmod</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2535">2535</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			chmod
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$perms</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$perms</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodchmod">AKAbstractPostproc::chmod()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodclose" id="close"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">close</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2484">2484</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			close
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodconnect" id="connect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">connect</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2239">2239</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcreateDirRecursive" id="createDirRecursive"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createDirRecursive</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2422">2422</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createDirRecursive
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dirName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$perms</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dirName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$perms</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodcreateDirRecursive">AKAbstractPostproc::createDirRecursive()</a></dt>
+						<dd>Recursively creates a directory if it doesn't exist</dd>
+					</dl>
+			
+	</div>
+<a name="methodprocess" id="process"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">process</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2282">2282</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			process
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodprocess">AKAbstractPostproc::process()</a></dt>
+						<dd>Processes the current file, e.g. moves it from temp to final location by FTP</dd>
+					</dl>
+			
+	</div>
+<a name="methodprocessFilename" id="processFilename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">processFilename</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2363">2363</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			processFilename
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$perms</span> = <span class="var-default">0755</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$perms</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodprocessFilename">AKAbstractPostproc::processFilename()</a></dt>
+						<dd>The unarchiver tells us the path to the filename it wants to extract and we give it  a different path instead.</dd>
+					</dl>
+			
+	</div>
+<a name="methodrename" id="rename"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rename</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2579">2579</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rename
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$from</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$to</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$from</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$to</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodrename">AKAbstractPostproc::rename()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodrmdir" id="rmdir"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rmdir</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2562">2562</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rmdir
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodrmdir">AKAbstractPostproc::rmdir()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodunlink" id="unlink"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">unlink</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2545">2545</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			unlink
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodunlink">AKAbstractPostproc::unlink()</a></dt>
+					</dl>
+			
+	</div>
+<a name="method__wakeup" id="__wakeup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__wakeup</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a2234">2234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__wakeup
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html">AKAbstractPostproc</a></span></p>
+					<blockquote>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodchmod">AKAbstractPostproc::chmod()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodcreateDirRecursive">AKAbstractPostproc::createDirRecursive()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodprocess">AKAbstractPostproc::process()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodprocessFilename">AKAbstractPostproc::processFilename()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodrename">AKAbstractPostproc::rename()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodrmdir">AKAbstractPostproc::rmdir()</a></span><br>
+													<img src="../../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractPostproc.html#methodunlink">AKAbstractPostproc::unlink()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#method__construct">AKAbstractObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetError">AKAbstractObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetErrors">AKAbstractObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetWarning">AKAbstractObject::getWarning()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetWarnings">AKAbstractObject::getWarnings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodpropagateFromObject">AKAbstractObject::propagateFromObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodpropagateToObject">AKAbstractObject::propagateToObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodresetErrors">AKAbstractObject::resetErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodresetWarnings">AKAbstractObject::resetWarnings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetError">AKAbstractObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetErrorsQueueSize">AKAbstractObject::setErrorsQueueSize()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetWarning">AKAbstractObject::setWarning()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetWarningsQueueSize">AKAbstractObject::setWarningsQueueSize()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:37:47 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

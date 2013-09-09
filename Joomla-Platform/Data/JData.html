@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JData</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JData</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../../Joomla-Platform/Data/JDataDumpable.html">JDataDumpable</a></li><li>IteratorAggregate (internal interface)</li><li><a href="../../Joomla-Compat/JsonSerializable.html">JsonSerializable</a></li><li>Countable (internal interface)</li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JData is a class that is used to store data but allowing you to access the data  by mimicking the way PHP handles class properties.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---data---data.php.html">/libraries/joomla/data/data.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JData</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$properties</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+										<a href="#bind" title="details" class="method-name">bind</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$properties</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#count" title="details" class="method-name">count</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">stdClass</span>
+										<a href="#dump" title="details" class="method-name">dump</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$depth</span> = <span class="var-default">3</span>], [<span class="var-type">SplObjectStorage</span>&nbsp;<span class="var-name">$dumped</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#dumpProperty" title="details" class="method-name">dumpProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$depth</span>, <span class="var-type">SplObjectStorage</span>&nbsp;<span class="var-name">$dumped</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">ArrayIterator</span>
+										<a href="#getIterator" title="details" class="method-name">getIterator</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getProperty" title="details" class="method-name">getProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#jsonSerialize" title="details" class="method-name">jsonSerialize</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#setProperty" title="details" class="method-name">setProperty</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#__isset" title="details" class="method-name">__isset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__unset" title="details" class="method-name">__unset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a39">39</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The class constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JData</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$properties</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$properties</span><span class="var-description">: Either an associative array or another object                               by which to set the initial properties of the new object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbind" id="bind"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">bind</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Binds an array or object to this object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns itself to allow chaining.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+		<span class="method-name">
+			bind
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$properties</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$properties</span><span class="var-description">: An associative array of properties or an object.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$updateNulls</span><span class="var-description">: True to bind null values, false to ignore null values.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount" id="count"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a328">328</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Count the number of data properties.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of data properties.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			count
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Countable::count</dt>
+					</dl>
+			
+	</div>
+<a name="methoddump" id="dump"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dump</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a177">177</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dumps the data properties into a stdClass object, recursively if appropriate.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The data properties as a simple PHP stdClass object.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			dump
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$depth</span> = <span class="var-default">3</span>], [<span class="var-type">SplObjectStorage</span>&nbsp;<span class="var-name">$dumped</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$depth</span><span class="var-description">: The maximum depth of recursion (default = 3).                                      For example, a depth of 0 will return a stdClass with all the properties in native                                      form. A depth of 1 will recurse into the first level of properties only.</span>			</li>
+					<li>
+				<span class="var-type">SplObjectStorage</span>
+				<span class="var-name">$dumped</span><span class="var-description">: An array of already serialized objects that is used to avoid infinite loops.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Joomla-Platform/Data/JDataDumpable.html#methoddump">JDataDumpable::dump()</a></dt>
+						<dd>Dumps the object properties into a stdClass object, recursively if appropriate.</dd>
+					</dl>
+			
+	</div>
+<a name="methoddumpProperty" id="dumpProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dumpProperty</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a242">242</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dumps a data property.</p>
+<p class="description"><p>If recursion is set, this method will dump any object implementing JDumpable (like JData and JDataSet); it will  convert a JDate object to a string; and it will convert a JRegistry to an object.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the dumped property.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			dumpProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$depth</span>, <span class="var-type">SplObjectStorage</span>&nbsp;<span class="var-name">$dumped</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$depth</span><span class="var-description">: The current depth of recursion (a value of 0 will ignore recursion).</span>			</li>
+					<li>
+				<span class="var-type">SplObjectStorage</span>
+				<span class="var-name">$dumped</span><span class="var-description">: An array of already serialized objects that is used to avoid infinite loops.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIterator" id="getIterator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIterator</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a211">211</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets this object represented as an ArrayIterator.</p>
+<p class="description"><p>This allows the data properties to be access via a foreach statement.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> This object represented as an ArrayIterator.</li>
+				<li><span class="field">see:</span> IteratorAggregate::getIterator()</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">ArrayIterator</span>
+		<span class="method-name">
+			getIterator
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>IteratorAggregate::getIterator</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetProperty" id="getProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getProperty</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a283">283</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a data property.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the data property.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Data/JData.html#method__get">JData::__get()</a></li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodjsonSerialize" id="jsonSerialize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">jsonSerialize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a223">223</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the data properties in a form that can be serialised to JSON format.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An object that can be serialised by json_encode().</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			jsonSerialize
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>JsonSerializable::jsonSerialize</dt>
+					</dl>
+			
+	</div>
+<a name="methodsetProperty" id="setProperty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setProperty</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a304">304</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets a data property.</p>
+<p class="description"><p>If the name of the property starts with a null byte, this method will return null.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the data property.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Data/JData.html#method__set">JData::__set()</a></li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			setProperty
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to give the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a66">66</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic get method is used to get a data property.</p>
+<p class="description"><p>This method is a public proxy for the protected getProperty method.</p><p>Note: Magic __get does not allow recursive calls. This can be tricky because the error generated by recursing into  __get is &quot;Undefined property:  {CLASS}::{PROPERTY}&quot; which is misleading. This is relevant for this class because  requesting a non-visible property can trigger a call to a sub-function. If that references the property directly in  the object, it will cause a recursion into __get.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the data property, or null if the data property does not exist.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Data/JData.html#methodgetProperty">JData::getProperty()</a></li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__isset" id="__isset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__isset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a80">80</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic isset method is used to check the state of an object property.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if set, otherwise false is returned.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			__isset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a98">98</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic set method is used to set a data property.</p>
+<p class="description"><p>This is a public proxy for the protected setProperty method.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Data/JData.html#methodsetProperty">JData::setProperty()</a></li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to give the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__unset" id="__unset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__unset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladatadata.php.html#a112">112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic unset method is used to unset a data property.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__unset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:25:36 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

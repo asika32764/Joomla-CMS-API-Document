@@ -1,0 +1,1374 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JString</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JString</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">String handling class for utf-8 data  Wraps the phputf8 library  All functions assume the validity of utf-8 strings.</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---string---string.php.html">/libraries/joomla/string/string.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a47">47</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$incrementStyles" title="details" class="var-name">$incrementStyles</a>
+				</div>
+																							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#compliant" title="details" class="method-name">compliant</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#increment" title="details" class="method-name">increment</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">'default'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#ltrim" title="details" class="method-name">ltrim</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charlist</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#parse_url" title="details" class="method-name">parse_url</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#rtrim" title="details" class="method-name">rtrim</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charlist</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#splitCamelCase" title="details" class="method-name">splitCamelCase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#strcasecmp" title="details" class="method-name">strcasecmp</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$str2</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#strcmp" title="details" class="method-name">strcmp</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$str2</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#strcspn" title="details" class="method-name">strcspn</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mask</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#stristr" title="details" class="method-name">stristr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#strlen" title="details" class="method-name">strlen</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#strpos" title="details" class="method-name">strpos</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#strrev" title="details" class="method-name">strrev</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#strrpos" title="details" class="method-name">strrpos</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#strspn" title="details" class="method-name">strspn</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mask</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#strtolower" title="details" class="method-name">strtolower</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#strtoupper" title="details" class="method-name">strtoupper</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#str_ireplace" title="details" class="method-name">str_ireplace</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#str_split" title="details" class="method-name">str_split</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$split_len</span> = <span class="var-default">1</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#substr" title="details" class="method-name">substr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#substr_replace" title="details" class="method-name">substr_replace</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repl</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#transcode" title="details" class="method-name">transcode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$from_encoding</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to_encoding</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#trim" title="details" class="method-name">trim</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charlist</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#ucfirst" title="details" class="method-name">ucfirst</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$delimiter</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$newDelimiter</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#ucwords" title="details" class="method-name">ucwords</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#valid" title="details" class="method-name">valid</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																																																																																																																																																																																																																															</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$incrementStyles" id="$incrementStyles"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$incrementStyles</span>
+			 = <span class="var-default">array(<br />		'dash' =&gt; array(<br />			'#-(\d+)$#',<br />			'-%d'<br />		),'default'=&gt;array(array('#\((\d+)\)$#','#\(\d+\)$#'),array(' (%d)','(%d)'),),)</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Increment styles.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcompliant" id="compliant"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static compliant</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a918">918</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tests whether a string complies as UTF-8. This will be much</p>
+<p class="description"><p>faster than utf8_is_valid but will pass five and six octet  UTF-8 sequences, which are not supported by Unicode and  so cannot be displayed correctly in a browser. In other words  it is not as strict as utf8_is_valid but it's faster. If you use  it to validate user input, you place yourself at the risk that  attackers will be able to inject 5 and 6 byte sequences (which  may or may not be a significant risk, depending on what you are  are doing)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> TRUE if string is valid UTF-8</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/String/JString.html#methodvalid">JString::valid()</a></li>
+				<li><span class="field">see:</span> 54805</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			compliant
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: UTF-8 string to check</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodincrement" id="increment"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static increment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a107">107</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Increments a trailing number in a string.</p>
+<p class="description"><p>Used to easily create distinct labels when copying objects. The method has the following styles:</p><p>default: &quot;Label&quot; becomes &quot;Label (2)&quot;  dash:    &quot;Label&quot; becomes &quot;Label-2&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The incremented string.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			increment
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">'default'</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The source string.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$style</span><span class="var-description">: The the style (default|dash).</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: If supplied, this number is used for the copy, otherwise it is the 'next' number.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodltrim" id="ltrim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static ltrim</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a585">585</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware replacement for ltrim()</p>
+<p class="description"><p>Strip whitespace (or other characters) from the beginning of a string  You only need to use this if you are supplying the charlist  optional arg and it contains UTF-8 characters. Otherwise ltrim will  work normally on a UTF-8 string</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The trimmed string</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/ltrim">http://www.php.net/ltrim</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			ltrim
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charlist</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The string to be trimmed</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charlist</span><span class="var-description">: The optional charlist of additional characters to trim</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparse_url" id="parse_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static parse_url</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a944">944</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Does a UTF-8 safe version of PHP parse_url function</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Associative array or false if badly formed URL.</li>
+				<li><span class="field">see:</span> <a href="http://us3.php.net/manual/en/function.parse-url.php">http://us3.php.net/manual/en/function.parse-url.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			parse_url
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL to parse</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrtrim" id="rtrim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static rtrim</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a619">619</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware replacement for rtrim()</p>
+<p class="description"><p>Strip whitespace (or other characters) from the end of a string  You only need to use this if you are supplying the charlist  optional arg and it contains UTF-8 characters. Otherwise rtrim will  work normally on a UTF-8 string</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The trimmed string</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/rtrim">http://www.php.net/rtrim</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			rtrim
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charlist</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The string to be trimmed</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charlist</span><span class="var-description">: The optional charlist of additional characters to trim</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsplitCamelCase" id="splitCamelCase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static splitCamelCase</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a84">84</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Split a string in camel case format</p>
+<p class="description"><p>&quot;FooBarABCDef&quot;            becomes  array(&quot;Foo&quot;, &quot;Bar&quot;, &quot;ABC&quot;, &quot;Def&quot;);  &quot;JFooBar&quot;                 becomes  array(&quot;J&quot;, &quot;Foo&quot;, &quot;Bar&quot;);  &quot;J001FooBar002&quot;           becomes  array(&quot;J001&quot;, &quot;Foo&quot;, &quot;Bar002&quot;);  &quot;abcDef&quot;                  becomes  array(&quot;abc&quot;, &quot;Def&quot;);  &quot;abc_defGhi_Jkl&quot;          becomes  array(&quot;abc_def&quot;, &quot;Ghi_Jkl&quot;);  &quot;ThisIsA_NASAAstronaut&quot;   becomes  array(&quot;This&quot;, &quot;Is&quot;, &quot;A_NASA&quot;, &quot;Astronaut&quot;)),  &quot;JohnFitzgerald_Kennedy&quot;  becomes  array(&quot;John&quot;, &quot;Fitzgerald_Kennedy&quot;)),</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The splitted string.</li>
+				<li><span class="field">deprecated:</span> 12.3 (Platform) &amp; 4.0 (CMS) - Use JStringNormalise::fromCamelCase()</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			splitCamelCase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The source string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrcasecmp" id="strcasecmp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strcasecmp</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a337">337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8/LOCALE aware alternative to strcasecmp  A case insensitive string comparison</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> &lt; 0 if str1 is less than str2; &gt; 0 if str1 is greater than str2, and 0 if they are equal.</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strcasecmp">http://www.php.net/strcasecmp</a></li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/setlocale">http://www.php.net/setlocale</a></li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strcoll">http://www.php.net/strcoll</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			strcasecmp
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$str2</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str1</span><span class="var-description">: string 1 to compare</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str2</span><span class="var-description">: string 2 to compare</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$locale</span><span class="var-description">: The locale used by strcoll or false to use classical comparison</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrcmp" id="strcmp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strcmp</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a397">397</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8/LOCALE aware alternative to strcmp  A case sensitive string comparison</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> &lt; 0 if str1 is less than str2; &gt; 0 if str1 is greater than str2, and 0 if they are equal.</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strcmp">http://www.php.net/strcmp</a></li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/setlocale">http://www.php.net/setlocale</a></li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strcoll">http://www.php.net/strcoll</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			strcmp
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$str2</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str1</span><span class="var-description">: string 1 to compare</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str2</span><span class="var-description">: string 2 to compare</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$locale</span><span class="var-description">: The locale used by strcoll or false to use classical comparison</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrcspn" id="strcspn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strcspn</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a453">453</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strcspn  Find length of initial segment not matching mask</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The length of the initial segment of str1 which does not contain any of the characters in str2</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strcspn">http://www.php.net/strcspn</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			strcspn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mask</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The string to process</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mask</span><span class="var-description">: The mask</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$start</span><span class="var-description">: Optional starting character position (in characters)</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Optional length</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstristr" id="stristr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static stristr</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a485">485</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to stristr  Returns all of haystack from the first occurrence of needle to the end.</p>
+<p class="description"><p>needle and haystack are examined in a case-insensitive manner  Find first occurrence of a string using case insensitive comparison</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the sub string</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/stristr">http://www.php.net/stristr</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			stristr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The haystack</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search</span><span class="var-description">: The needle</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrlen" id="strlen"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strlen</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a270">270</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strlen.</p>
+<p class="description"><p>Returns the number of characters in the string (NOT THE NUMBER OF BYTES),</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of UTF-8 characters in string.</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strlen">http://www.php.net/strlen</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			strlen
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: UTF-8 string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrpos" id="strpos"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strpos</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a162">162</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strpos.</p>
+<p class="description"><p>Find position of first occurrence of a string.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of characters before the first match or FALSE on failure</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strpos">http://www.php.net/strpos</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			strpos
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String being examined</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search</span><span class="var-description">: String being searched for</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: Optional, specifies the position from which the search should be performed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrrev" id="strrev"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strrev</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a503">503</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strrev  Reverse a string</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The string in reverse character order</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strrev">http://www.php.net/strrev</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			strrev
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String to be reversed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrrpos" id="strrpos"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strrpos</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a187">187</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strrpos  Finds position of last occurrence of a string</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of characters before the last match or false on failure</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strrpos">http://www.php.net/strrpos</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			strrpos
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String being examined.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search</span><span class="var-description">: String being searched for.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: Offset from the left of the string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrspn" id="strspn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strspn</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a524">524</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strspn  Find length of initial segment matching mask</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/strspn">http://www.php.net/strspn</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			strspn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mask</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The haystack</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mask</span><span class="var-description">: The mask</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$start</span><span class="var-description">: Start optional</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Length optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrtolower" id="strtolower"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strtolower</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a233">233</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strtlower</p>
+<p class="description"><p>Make a string lowercase  Note: The concept of a characters &quot;case&quot; only exists is some alphabets  such as Latin, Greek, Cyrillic, Armenian and archaic Georgian - it does  not exist in the Chinese alphabet, for example. See Unicode Standard  Annex #21: Case Mappings</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either string in lowercase or FALSE is UTF-8 invalid</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strtolower">http://www.php.net/strtolower</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			strtolower
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String being processed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrtoupper" id="strtoupper"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static strtoupper</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a253">253</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to strtoupper</p>
+<p class="description"><p>Make a string uppercase  Note: The concept of a characters &quot;case&quot; only exists is some alphabets  such as Latin, Greek, Cyrillic, Armenian and archaic Georgian - it does  not exist in the Chinese alphabet, for example. See Unicode Standard  Annex #21: Case Mappings</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either string in uppercase or FALSE is UTF-8 invalid</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/strtoupper">http://www.php.net/strtoupper</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			strtoupper
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String being processed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstr_ireplace" id="str_ireplace"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static str_ireplace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a289">289</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to str_ireplace  Case-insensitive version of str_replace</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> UTF-8 String</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/str_ireplace">http://www.php.net/str_ireplace</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			str_ireplace
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$search</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$search</span><span class="var-description">: String to search</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replace</span><span class="var-description">: Existing string to replace</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: New string to replace with</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$count</span><span class="var-description">: Optional count value to be passed by referene</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstr_split" id="str_split"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static str_split</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a315">315</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to str_split  Convert a string to an array</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/str_split">http://www.php.net/str_split</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			str_split
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$split_len</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: UTF-8 encoded string to process</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$split_len</span><span class="var-description">: Number to characters to split string by</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsubstr" id="substr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static substr</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a205">205</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to substr  Return part of a string given character offset (and optionally length)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> string or FALSE if failure</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/substr">http://www.php.net/substr</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			substr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String being processed</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: Number of UTF-8 characters offset (from left)</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Optional length in UTF-8 characters from offset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsubstr_replace" id="substr_replace"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static substr_replace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a556">556</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware substr_replace  Replace text within a portion of a string</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/substr_replace">http://www.php.net/substr_replace</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			substr_replace
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$repl</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$start</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The haystack</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$repl</span><span class="var-description">: The replacement string</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$start</span><span class="var-description">: Start</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Length (optional)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtranscode" id="transcode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static transcode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a736">736</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Transcode a string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The transcoded string, or null if the source was not a string.</li>
+				<li><span class="field">link:</span> <a href="https://bugs.php.net/bug.php?id=48147">https://bugs.php.net/bug.php?id=48147</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			transcode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$from_encoding</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$to_encoding</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$source</span><span class="var-description">: The string to transcode.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$from_encoding</span><span class="var-description">: The source encoding.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$to_encoding</span><span class="var-description">: The target encoding.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtrim" id="trim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static trim</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a653">653</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware replacement for trim()</p>
+<p class="description"><p>Strip whitespace (or other characters) from the beginning and end of a string  Note: you only need to use this if you are supplying the charlist  optional arg and it contains UTF-8 characters. Otherwise trim will  work normally on a UTF-8 string</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The trimmed string</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/trim">http://www.php.net/trim</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			trim
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charlist</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The string to be trimmed</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charlist</span><span class="var-description">: The optional charlist of additional characters to trim</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoducfirst" id="ucfirst"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static ucfirst</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a687">687</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to ucfirst  Make a string's first character uppercase or all words' first character uppercase</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> If $delimiter is null, return the string with first character as upper case (if applicable)                   else consider the string of words separated by the delimiter, apply the ucfirst to each words                   and return the string with the new delimiter</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/ucfirst">http://www.php.net/ucfirst</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			ucfirst
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$delimiter</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$newDelimiter</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String to be processed</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$delimiter</span><span class="var-description">: The words delimiter (null means do not split the string)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$newDelimiter</span><span class="var-description">: The new words delimiter (null means equal to $delimiter)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoducwords" id="ucwords"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static ucwords</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a716">716</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 aware alternative to ucwords  Uppercase the first character of each word in a string</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> String with first char of each word uppercase</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/ucwords">http://www.php.net/ucwords</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			ucwords
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String to be processed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalid" id="valid"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_String_librariesjoomlastringstring.php.html#a767">767</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tests a string as to whether it's valid UTF-8 and supported by the Unicode standard.</p>
+<p class="description"><p>Note: this function has been modified to simple return true or false.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if valid</li>
+				<li><span class="field">author:</span> &lt;<a href="mailto:hsivonen@iki.fi">hsivonen@iki.fi</a>&gt;</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/String/JString.html#methodcompliant">JString::compliant()</a></li>
+				<li><span class="field">see:</span> <a href="http://hsivonen.iki.fi/php-utf8/">http://hsivonen.iki.fi/php-utf8/</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			valid
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: UTF-8 encoded string.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:43 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

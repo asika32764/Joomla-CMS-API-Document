@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for syslog.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file syslog.php</h1>
+<p>Documentation is available at <a href="../Joomla-Platform/Log/_libraries---joomla---log---logger---syslog.php.html">syslog.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Platform</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;Log</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'JPATH_PLATFORM'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;Joomla!&nbsp;Syslog&nbsp;Log&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;This&nbsp;class&nbsp;is&nbsp;designed&nbsp;to&nbsp;call&nbsp;the&nbsp;PHP&nbsp;Syslog&nbsp;function&nbsp;call&nbsp;which&nbsp;is&nbsp;then&nbsp;sent&nbsp;to&nbsp;the</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;system&nbsp;wide&nbsp;log&nbsp;system.&nbsp;For&nbsp;Linux/Unix&nbsp;based&nbsp;systems&nbsp;this&nbsp;is&nbsp;the&nbsp;syslog&nbsp;subsystem,&nbsp;for</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;the&nbsp;Windows&nbsp;based&nbsp;implementations&nbsp;this&nbsp;can&nbsp;be&nbsp;found&nbsp;in&nbsp;the&nbsp;Event&nbsp;Log.&nbsp;For&nbsp;Windows,</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;permissions&nbsp;may&nbsp;prevent&nbsp;PHP&nbsp;from&nbsp;properly&nbsp;outputting&nbsp;messages.</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Platform</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;Log</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.1</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-key">class&nbsp;</span><a href="../Joomla-Platform/Log/JLogLoggerSyslog.html">JLogLoggerSyslog</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../Joomla-Platform/Log/JLogLogger.html">JLogLogger</a></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc">Translation&nbsp;array&nbsp;for&nbsp;JLogEntry&nbsp;priorities&nbsp;to&nbsp;SysLog&nbsp;priority&nbsp;names.</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;11.1</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><a href="../Joomla-Platform/Log/JLogLoggerSyslog.html#var$priorities">$priorities</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">EMERGENCY&nbsp;</span>=&gt;&nbsp;<span class="src-str">'EMERG'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">ALERT&nbsp;</span>=&gt;&nbsp;<span class="src-str">'ALERT'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">CRITICAL&nbsp;</span>=&gt;&nbsp;<span class="src-str">'CRIT'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">ERROR&nbsp;</span>=&gt;&nbsp;<span class="src-str">'ERR'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">WARNING&nbsp;</span>=&gt;&nbsp;<span class="src-str">'WARNING'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">NOTICE&nbsp;</span>=&gt;&nbsp;<span class="src-str">'NOTICE'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">INFO&nbsp;</span>=&gt;&nbsp;<span class="src-str">'INFO'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">JLog</span><span class="src-sym">::</span><span class="src-id">DEBUG&nbsp;</span>=&gt;&nbsp;<span class="src-str">'DEBUG'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Constructor.</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">&amp;$options&nbsp;</span><span class="src-doc">&nbsp;Log&nbsp;object&nbsp;options.</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;11.1</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Platform/Log/JLogLoggerSyslog.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-key">array&nbsp;</span><span class="src-sym">&amp;</span><span class="src-var">$options</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Call&nbsp;the&nbsp;parent&nbsp;constructor.</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><span class="src-id">__construct</span><span class="src-sym">(</span><span class="src-var">$options</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Ensure&nbsp;that&nbsp;we&nbsp;have&nbsp;an&nbsp;identity&nbsp;string&nbsp;for&nbsp;the&nbsp;Syslog&nbsp;entries.</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a><span class="src-sym">[</span><span class="src-str">'sys_ident'</span><span class="src-sym">]</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a><span class="src-sym">[</span><span class="src-str">'sys_ident'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'Joomla&nbsp;Platform'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;If&nbsp;the&nbsp;option&nbsp;to&nbsp;add&nbsp;the&nbsp;process&nbsp;id&nbsp;to&nbsp;Syslog&nbsp;entries&nbsp;is&nbsp;set&nbsp;use&nbsp;it,&nbsp;otherwise&nbsp;default&nbsp;to&nbsp;true.</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_add_pid'</span><span class="src-sym">]</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_add_pid'</span><span class="src-sym">]&nbsp;</span>=&nbsp;(bool)&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_add_pid'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_add_pid'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">true</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;If&nbsp;the&nbsp;option&nbsp;to&nbsp;also&nbsp;send&nbsp;Syslog&nbsp;entries&nbsp;to&nbsp;STDERR&nbsp;is&nbsp;set&nbsp;use&nbsp;it,&nbsp;otherwise&nbsp;default&nbsp;to&nbsp;false.</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_use_stderr'</span><span class="src-sym">]</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_use_stderr'</span><span class="src-sym">]&nbsp;</span>=&nbsp;(bool)&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_use_stderr'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_use_stderr'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Build&nbsp;the&nbsp;Syslog&nbsp;options&nbsp;from&nbsp;our&nbsp;log&nbsp;object&nbsp;options.</span></div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$sysOptions&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_add_pid'</span><span class="src-sym">]</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$sysOptions&nbsp;</span>=&nbsp;<span class="src-var">$sysOptions&nbsp;</span>|&nbsp;<span class="src-id">LOG_PID</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_use_stderr'</span><span class="src-sym">]</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$sysOptions&nbsp;</span>=&nbsp;<span class="src-var">$sysOptions&nbsp;</span>|&nbsp;<span class="src-id">LOG_PERROR</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a88"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a89"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a90"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Default&nbsp;logging&nbsp;facility&nbsp;is&nbsp;LOG_USER&nbsp;for&nbsp;Windows&nbsp;compatibility.</span></div></li>
+<li><div class="src-line"><a name="a91"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$sysFacility&nbsp;</span>=&nbsp;<span class="src-id">LOG_USER</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;If&nbsp;we&nbsp;have&nbsp;a&nbsp;facility&nbsp;passed&nbsp;in&nbsp;and&nbsp;we're&nbsp;not&nbsp;on&nbsp;Windows,&nbsp;reset&nbsp;it.</span></div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_facility'</span><span class="src-sym">]</span><span class="src-sym">)&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">!</span><span class="src-id"><a href="../Joomla-Platform/_libraries---import.legacy.php.html#defineIS_WIN">IS_WIN</a></span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$sysFacility&nbsp;</span>=&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_facility'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a98"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Open&nbsp;the&nbsp;Syslog&nbsp;connection.</span></div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/openlog">openlog</a><span class="src-sym">(</span>(string)&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLogger.html#var$options">options</a></span><span class="src-sym">[</span><span class="src-str">'sys_ident'</span><span class="src-sym">]</span><span class="src-sym">,&nbsp;</span><span class="src-var">$sysOptions</span><span class="src-sym">,&nbsp;</span><span class="src-var">$sysFacility</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a104"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Destructor.</span></div></li>
+<li><div class="src-line"><a name="a105"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a106"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;11.1</span></div></li>
+<li><div class="src-line"><a name="a107"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Platform/Log/JLogLoggerSyslog.html#method__destruct">__destruct</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/closelog">closelog</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a114"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Method&nbsp;to&nbsp;add&nbsp;an&nbsp;entry&nbsp;to&nbsp;the&nbsp;log.</span></div></li>
+<li><div class="src-line"><a name="a115"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a116"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;</span><span class="src-doc-type">JLogEntry&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-var">$entry&nbsp;</span><span class="src-doc">&nbsp;The&nbsp;log&nbsp;entry&nbsp;object&nbsp;to&nbsp;add&nbsp;to&nbsp;the&nbsp;log.</span></div></li>
+<li><div class="src-line"><a name="a117"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a118"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">void&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a119"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;11.1</span></div></li>
+<li><div class="src-line"><a name="a121"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a122"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Platform/Log/JLogLoggerSyslog.html#methodaddEntry">addEntry</a><span class="src-sym">(</span><span class="src-id">JLogEntry&nbsp;</span><span class="src-var">$entry</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a124"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Generate&nbsp;the&nbsp;value&nbsp;for&nbsp;the&nbsp;priority&nbsp;based&nbsp;on&nbsp;predefined&nbsp;constants.</span></div></li>
+<li><div class="src-line"><a name="a125"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$priority&nbsp;</span>=&nbsp;<a href="http://www.php.net/constant">constant</a><span class="src-sym">(</span><a href="http://www.php.net/strtoupper">strtoupper</a><span class="src-sym">(</span><span class="src-str">'LOG_'&nbsp;</span>.&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../Joomla-Platform/Log/JLogLoggerSyslog.html#var$priorities">priorities</a></span><span class="src-sym">[</span><span class="src-var">$entry</span><span class="src-sym">-&gt;</span><span class="src-id">priority</span><span class="src-sym">]</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a126"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Send&nbsp;the&nbsp;entry&nbsp;to&nbsp;Syslog.</span></div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/syslog">syslog</a><span class="src-sym">(</span><span class="src-var">$priority</span><span class="src-sym">,&nbsp;</span><span class="src-str">'['&nbsp;</span>.&nbsp;<span class="src-var">$entry</span><span class="src-sym">-&gt;</span><span class="src-id">category&nbsp;</span>.&nbsp;<span class="src-str">']&nbsp;'&nbsp;</span>.&nbsp;<span class="src-var">$entry</span><span class="src-sym">-&gt;</span><span class="src-id">message</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a129"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:39:54 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

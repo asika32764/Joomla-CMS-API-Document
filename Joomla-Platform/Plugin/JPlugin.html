@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JPlugin</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JPlugin</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JPlugin Class</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---plugin---plugin.php.html">/libraries/joomla/plugin/plugin.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a>
+      |
+      --JPlugin</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderIndexerAdapter.html">FinderIndexerAdapter</a>
+					</td>
+					<td>
+											Prototype adapter class for the Finder indexer package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Authentication-gmail/PlgAuthenticationGMail.html">PlgAuthenticationGMail</a>
+					</td>
+					<td>
+											GMail Authentication Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Authentication-joomla/PlgAuthenticationJoomla.html">PlgAuthenticationJoomla</a>
+					</td>
+					<td>
+											Joomla Authentication plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Authentication-ldap/PlgAuthenticationLdap.html">PlgAuthenticationLdap</a>
+					</td>
+					<td>
+											LDAP Authentication Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Captcha/PlgCaptchaRecaptcha.html">PlgCaptchaRecaptcha</a>
+					</td>
+					<td>
+											Recaptcha Plugin.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-emailcloak/PlgContentEmailcloak.html">PlgContentEmailcloak</a>
+					</td>
+					<td>
+											Email cloack plugin class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-finder/PlgContentFinder.html">PlgContentFinder</a>
+					</td>
+					<td>
+											Finder Content Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-joomla/PlgContentJoomla.html">PlgContentJoomla</a>
+					</td>
+					<td>
+											Example Content Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-loadmodule/PlgContentLoadmodule.html">PlgContentLoadmodule</a>
+					</td>
+					<td>
+											Plug-in to enable loading modules into content (e.g. articles)  This uses the {loadmodule} syntax
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-pagebreak/PlgContentPagebreak.html">PlgContentPagebreak</a>
+					</td>
+					<td>
+											Page break plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-pagenavigation/PlgContentPagenavigation.html">PlgContentPagenavigation</a>
+					</td>
+					<td>
+											Pagenavigation plugin class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-vote/PlgContentVote.html">PlgContentVote</a>
+					</td>
+					<td>
+											Vote plugin.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-xtd-article/PlgButtonArticle.html">PlgButtonArticle</a>
+					</td>
+					<td>
+											Editor Article buton
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-xtd-image/PlgButtonImage.html">PlgButtonImage</a>
+					</td>
+					<td>
+											Editor Image buton
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-xtd-pagebreak/PlgButtonPagebreak.html">PlgButtonPagebreak</a>
+					</td>
+					<td>
+											Editor Pagebreak buton
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-xtd-readmore/PlgButtonReadmore.html">PlgButtonReadmore</a>
+					</td>
+					<td>
+											Editor Readmore buton
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-codemirror/PlgEditorCodemirror.html">PlgEditorCodemirror</a>
+					</td>
+					<td>
+											CodeMirror Editor Plugin.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-none/PlgEditorNone.html">PlgEditorNone</a>
+					</td>
+					<td>
+											Plain Textarea Editor Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Editors-tinymce/PlgEditorTinymce.html">PlgEditorTinymce</a>
+					</td>
+					<td>
+											TinyMCE Editor Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Extension-Joomla/PlgExtensionJoomla.html">PlgExtensionJoomla</a>
+					</td>
+					<td>
+											Joomla! master extension plugin.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Quickicon-Extensionupdate/PlgQuickiconExtensionupdate.html">PlgQuickiconExtensionupdate</a>
+					</td>
+					<td>
+											Joomla! udpate notification plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Quickicon-Joomlaupdate/PlgQuickiconJoomlaupdate.html">PlgQuickiconJoomlaupdate</a>
+					</td>
+					<td>
+											Joomla! udpate notification plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Search-categories/PlgSearchCategories.html">PlgSearchCategories</a>
+					</td>
+					<td>
+											Categories Search plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Search-contacts/PlgSearchContacts.html">PlgSearchContacts</a>
+					</td>
+					<td>
+											Contacts Search plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Search-content/PlgSearchContent.html">PlgSearchContent</a>
+					</td>
+					<td>
+											Content Search plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Search-newsfeeds/PlgSearchNewsfeeds.html">PlgSearchNewsfeeds</a>
+					</td>
+					<td>
+											Newsfeeds Search plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Search-weblinks/PlgSearchWeblinks.html">PlgSearchWeblinks</a>
+					</td>
+					<td>
+											Weblinks Search plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-cache/PlgSystemCache.html">PlgSystemCache</a>
+					</td>
+					<td>
+											Joomla! Page Cache Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-Debug/PlgSystemDebug.html">PlgSystemDebug</a>
+					</td>
+					<td>
+											Joomla! Debug plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-Highlight/PlgSystemHighlight.html">PlgSystemHighlight</a>
+					</td>
+					<td>
+											System plugin to highlight terms.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/Content-languagecode/PlgSystemLanguagecode.html">PlgSystemLanguagecode</a>
+					</td>
+					<td>
+											Language Code plugin class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-languagefilter/PlgSystemLanguageFilter.html">PlgSystemLanguageFilter</a>
+					</td>
+					<td>
+											Joomla! Language Filter Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-log/PlgSystemLog.html">PlgSystemLog</a>
+					</td>
+					<td>
+											Joomla! System Logging Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-logout/PlgSystemLogout.html">PlgSystemLogout</a>
+					</td>
+					<td>
+											Plugin class for logout redirect handling.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-p3p/PlgSystemP3p.html">PlgSystemP3p</a>
+					</td>
+					<td>
+											Joomla! P3P Header Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-redirect/PlgSystemRedirect.html">PlgSystemRedirect</a>
+					</td>
+					<td>
+											Plugin class for redirect handling.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-remember/PlgSystemRemember.html">PlgSystemRemember</a>
+					</td>
+					<td>
+											Joomla! System Remember Me Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/System-sef/PlgSystemSef.html">PlgSystemSef</a>
+					</td>
+					<td>
+											Joomla! SEF Plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/User-contactcreator/PlgUserContactCreator.html">PlgUserContactCreator</a>
+					</td>
+					<td>
+											Class for Contact Creator
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/User-joomla/PlgUserJoomla.html">PlgUserJoomla</a>
+					</td>
+					<td>
+											Joomla User plugin
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Plugin/User-profile/PlgUserProfile.html">PlgUserProfile</a>
+					</td>
+					<td>
+											An example custom profile plugin.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$autoloadLanguage" title="details" class="var-name">$autoloadLanguage</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+					<a href="#$params" title="details" class="var-name">$params</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_name" title="details" class="var-name">$_name</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_type" title="details" class="var-name">$_type</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JPlugin</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$subject</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#loadLanguage" title="details" class="method-name">loadLanguage</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_ADMINISTRATOR</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$autoloadLanguage" id="$autoloadLanguage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$autoloadLanguage</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Affects constructor behavior. If true, language files will be loaded automatically.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Plugin/Finder-Categories/PlgFinderCategories.html#var$autoloadLanguage">PlgFinderCategories::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Finder-Contacts/PlgFinderContacts.html#var$autoloadLanguage">PlgFinderContacts::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Finder-Content/PlgFinderContent.html#var$autoloadLanguage">PlgFinderContent::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Finder-Newsfeeds/PlgFinderNewsfeeds.html#var$autoloadLanguage">PlgFinderNewsfeeds::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Finder-Tags/PlgFinderTags.html#var$autoloadLanguage">PlgFinderTags::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Finder-Weblinks/PlgFinderWeblinks.html#var$autoloadLanguage">PlgFinderWeblinks::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Captcha/PlgCaptchaRecaptcha.html#var$autoloadLanguage">PlgCaptchaRecaptcha::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Content-pagebreak/PlgContentPagebreak.html#var$autoloadLanguage">PlgContentPagebreak::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Content-vote/PlgContentVote.html#var$autoloadLanguage">PlgContentVote::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Editors-xtd-article/PlgButtonArticle.html#var$autoloadLanguage">PlgButtonArticle::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Editors-xtd-image/PlgButtonImage.html#var$autoloadLanguage">PlgButtonImage::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Editors-xtd-pagebreak/PlgButtonPagebreak.html#var$autoloadLanguage">PlgButtonPagebreak::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Editors-xtd-readmore/PlgButtonReadmore.html#var$autoloadLanguage">PlgButtonReadmore::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Editors-tinymce/PlgEditorTinymce.html#var$autoloadLanguage">PlgEditorTinymce::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Extension-Joomla/PlgExtensionJoomla.html#var$autoloadLanguage">PlgExtensionJoomla::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Quickicon-Extensionupdate/PlgQuickiconExtensionupdate.html#var$autoloadLanguage">PlgQuickiconExtensionupdate::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Quickicon-Joomlaupdate/PlgQuickiconJoomlaupdate.html#var$autoloadLanguage">PlgQuickiconJoomlaupdate::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Search-categories/PlgSearchCategories.html#var$autoloadLanguage">PlgSearchCategories::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Search-contacts/PlgSearchContacts.html#var$autoloadLanguage">PlgSearchContacts::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Search-newsfeeds/PlgSearchNewsfeeds.html#var$autoloadLanguage">PlgSearchNewsfeeds::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/Search-weblinks/PlgSearchWeblinks.html#var$autoloadLanguage">PlgSearchWeblinks::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/System-logout/PlgSystemLogout.html#var$autoloadLanguage">PlgSystemLogout::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/User-contactcreator/PlgUserContactCreator.html#var$autoloadLanguage">PlgUserContactCreator::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/User-profile/PlgUserProfile.html#var$autoloadLanguage">PlgUserProfile::$autoloadLanguage</a>
+								: Load the language file on instantiation.
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$params" id="$params"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+			<span class="var-name">$params</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A JRegistry object holding the parameters for the plugin</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_name" id="$_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_name</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the plugin</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_type" id="$_type"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_type</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The plugin type</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Event/JEvent.html#var$_subject">JEvent::$_subject</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a63">63</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JPlugin</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$subject</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$subject</span><span class="var-description">: The object to observe</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: An optional associative array of configuration settings.                              Recognized key values include 'name', 'group', 'params', 'language'                              (this list is not meant to be comprehensive).</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Event/JEvent.html#method__construct">JEvent::__construct()</a></dt>
+						<dd>Constructor</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderIndexerAdapter.html#method__construct">FinderIndexerAdapter::__construct()</a>
+								: Method to instantiate the indexer adapter.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/System-cache/PlgSystemCache.html#method__construct">PlgSystemCache::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/System-Debug/PlgSystemDebug.html#method__construct">PlgSystemDebug::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/System-languagefilter/PlgSystemLanguageFilter.html#method__construct">PlgSystemLanguageFilter::__construct()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/System-logout/PlgSystemLogout.html#method__construct">PlgSystemLogout::__construct()</a>
+								: Object Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/System-redirect/PlgSystemRedirect.html#method__construct">PlgSystemRedirect::__construct()</a>
+								: Object Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Plugin/User-profile/PlgUserProfile.html#method__construct">PlgUserProfile::__construct()</a>
+								: Constructor
+							</li>
+				</ul>
+	</div>
+<a name="methodloadLanguage" id="loadLanguage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Plugin_librariesjoomlapluginplugin.php.html#a132">132</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads the plugin language file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True, if the file has successfully loaded.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			loadLanguage
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">JPATH_ADMINISTRATOR</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span><span class="var-description">: The extension for which a language file should be loaded</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$basePath</span><span class="var-description">: The basepath to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#method__construct">JEvent::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#methodupdate">JEvent::update()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:36:34 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

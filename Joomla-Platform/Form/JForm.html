@@ -1,0 +1,2136 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JForm</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JForm</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Form Class for the Joomla Platform.</p>
+<p class="description"><p>This class implements a robust API for constructing, populating, filtering, and validating forms.  It uses XML definitions to construct form fields and a variety of field and rule classes to  render and validate the form.</p></p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/html4/interact/forms.html">http://www.w3.org/TR/html4/interact/forms.html</a></li>
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/html5/forms.html">http://www.w3.org/TR/html5/forms.html</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---form---form.php.html">/libraries/joomla/form/form.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a28">28</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$forms" title="details" class="var-name">$forms</a>
+				</div>
+																																												<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$data" title="details" class="var-name">$data</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$errors" title="details" class="var-name">$errors</a>
+				</div>
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$name" title="details" class="var-name">$name</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$options" title="details" class="var-name">$options</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">SimpleXMLElement</span>
+					<a href="#$xml" title="details" class="var-name">$xml</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addFieldPath" title="details" class="method-name">addFieldPath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addFormPath" title="details" class="method-name">addFormPath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#addNode" title="details" class="method-name">addNode</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$new</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addRulePath" title="details" class="method-name">addRulePath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Form/JForm.html">object JForm</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+									</div>
+																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#mergeNode" title="details" class="method-name">mergeNode</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$new</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#mergeNodes" title="details" class="method-name">mergeNodes</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$new</span>)
+									</div>
+																																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JForm</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#bind" title="details" class="method-name">bind</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#bindLevel" title="details" class="method-name">bindLevel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#filter" title="details" class="method-name">filter</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#filterField" title="details" class="method-name">filterField</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findField" title="details" class="method-name">findField</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findFieldsByFieldset" title="details" class="method-name">&amp;findFieldsByFieldset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findFieldsByGroup" title="details" class="method-name">&amp;findFieldsByGroup</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nested</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findGroup" title="details" class="method-name">&amp;findGroup</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getErrors" title="details" class="method-name">getErrors</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getField" title="details" class="method-name">getField</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getFieldAttribute" title="details" class="method-name">getFieldAttribute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getFieldset" title="details" class="method-name">getFieldset</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getFieldsets" title="details" class="method-name">getFieldsets</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getFormControl" title="details" class="method-name">getFormControl</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getGroup" title="details" class="method-name">getGroup</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nested</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getInput" title="details" class="method-name">getInput</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLabel" title="details" class="method-name">getLabel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getValue" title="details" class="method-name">getValue</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#load" title="details" class="method-name">load</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadField" title="details" class="method-name">loadField</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadFieldType" title="details" class="method-name">loadFieldType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#loadFile" title="details" class="method-name">loadFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reset</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadRuleType" title="details" class="method-name">loadRuleType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#removeField" title="details" class="method-name">removeField</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#removeGroup" title="details" class="method-name">removeGroup</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#reset" title="details" class="method-name">reset</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$xml</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setField" title="details" class="method-name">setField</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setFieldAttribute" title="details" class="method-name">setFieldAttribute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setFields" title="details" class="method-name">setFields</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$elements</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setValue" title="details" class="method-name">setValue</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#syncPaths" title="details" class="method-name">syncPaths</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#validate" title="details" class="method-name">validate</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#validateField" title="details" class="method-name">validateField</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$input</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$forms" id="$forms"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$forms</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Form instances.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$data" id="$data"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$data</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The JRegistry data store for form fields during display.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$errors" id="$errors"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$errors</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The form object errors array.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$name" id="$name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$name</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the form instance.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$options" id="$options"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$options</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The form object options for use in rendering and validation.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$xml" id="$xml"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">SimpleXMLElement</span>
+			<span class="var-name">$xml</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The form XML definition.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddFieldPath" id="addFieldPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addFieldPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1894">1894</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for <a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddFieldPath">JFormHelper::addFieldPath()</a>.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addFieldPath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddFormPath" id="addFormPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addFormPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1909">1909</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for JFormHelper::addFormPath().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddFormPath">JFormHelper::addFormPath()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addFormPath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddNode" id="addNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1993">1993</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new child SimpleXMLElement node to the source.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			addNode
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$new</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$source</span><span class="var-description">: The source element on which to append.</span>			</li>
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$new</span><span class="var-description">: The new element to append.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddRulePath" id="addRulePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addRulePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1924">1924</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for JFormHelper::addRulePath().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddRulePath">JFormHelper::addRulePath()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addRulePath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1945">1945</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an instance of a form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> InvalidArgumentException if no data provided.</li>
+				<li><span class="field">throws:</span> RuntimeException if the form could not be loaded.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Form/JForm.html">object JForm</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: The name of an XML file or string to load as the form definition.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An array of form options.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replace</span><span class="var-description">: Flag to toggle whether form fields should be replaced if a field                             already exists with the same group/name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmergeNode" id="mergeNode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static mergeNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a2021">2021</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update the attributes of a child node</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			mergeNode
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$new</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$source</span><span class="var-description">: The source element on which to append the attributes</span>			</li>
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$new</span><span class="var-description">: The new element to append</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmergeNodes" id="mergeNodes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static mergeNodes</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a2047">2047</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Merges new elements into a source &lt;fields&gt; element.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			mergeNodes
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$new</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$source</span><span class="var-description">: The source element.</span>			</li>
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$new</span><span class="var-description">: The new element to merge.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a80">80</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to instantiate the form object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JForm</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An array of form options.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbind" id="bind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">bind</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a101">101</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to bind data to the form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			bind
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: An array or object of data to bind to the form.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbindLevel" id="bindLevel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">bindLevel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a164">164</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to bind data to the form for the group level.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			bindLevel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The dot-separated form group path on which to bind the data.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: An array or object of data to bind to the form for the group level.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfilter" id="filter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">filter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to filter the form data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array or false.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			filter
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: An array of field values to filter.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The dot-separated form group path on which to filter the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfilterField" id="filterField"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">filterField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1128">1128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to apply an input filter to a value based on field data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The filtered value.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			filterField
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML element object representation of the form field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to filter for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindField" id="findField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1376">1376</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a form field represented as an XML element object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML element object for the field or boolean false on error.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			findField
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindFieldsByFieldset" id="findFieldsByFieldset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findFieldsByFieldset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1467">1467</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of &lt;field /&gt; elements from the form XML document which are  in a specified fieldset by name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on error or array of SimpleXMLElement objects.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			&amp;findFieldsByFieldset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the fieldset.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindFieldsByGroup" id="findFieldsByGroup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findFieldsByGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1500">1500</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of &lt;field /&gt; elements from the form XML document which are  in a control group by name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on error or array of SimpleXMLElement objects.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			&amp;findFieldsByGroup
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nested</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the fields.                             Null will return all fields. False will return fields not in a group.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$nested</span><span class="var-description">: True to also include fields in nested groups that are inside of the                             group for which to find fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindGroup" id="findGroup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1574">1574</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a form field group represented as an XML element object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of XML element objects for the group or boolean false on error.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			&amp;findGroup
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The dot-separated form group path on which to find the group.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetErrors" id="getErrors"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getErrors</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a254">254</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return all errors, if any.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of error messages or RuntimeException objects.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getErrors
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetField" id="getField"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a270">270</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a form field represented as a JFormField object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The JFormField object for the field or boolean false on error.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getField
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The optional value to use as the default for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFieldAttribute" id="getFieldAttribute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFieldAttribute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a304">304</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an attribute value from a field XML element.  If the attribute doesn't exist or  is null then the optional default value will be used.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The attribute value for the field.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getFieldAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field for which to get the attribute value.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span><span class="var-description">: The name of the attribute for which to get a value.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: The optional default value to use if no attribute value exists.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFieldset" id="getFieldset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFieldset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a337">337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of JFormField objects in a given fieldset by name.  If no name is  given then all fields are returned.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of JFormField objects in the fieldset.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFieldset
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$set</span><span class="var-description">: The optional name of the fieldset.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFieldsets" id="getFieldsets"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFieldsets</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a385">385</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of fieldset objects optionally filtered over a given field group.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of fieldset objects.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getFieldsets
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The dot-separated form group path on which to filter the fieldsets.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFormControl" id="getFormControl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFormControl</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a491">491</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the form control. This string serves as a container for all form fields. For</p>
+<p class="description"><p>example, if there is a field named 'foo' and a field named 'bar' and the form control is  empty the fields will be rendered like: &lt;input name=&quot;foo&quot; /&gt; and &lt;input name=&quot;bar&quot; /&gt;.  If  the form control is set to 'joomla' however, the fields would be rendered like:  &lt;input name=&quot;joomla[foo]&quot; /&gt; and &lt;input name=&quot;joomla[bar]&quot; /&gt;.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The form control string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getFormControl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetGroup" id="getGroup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a507">507</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of JFormField objects in a given field group by name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of JFormField objects in the field group.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getGroup
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nested</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The dot-separated form group path for which to get the form fields.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$nested</span><span class="var-description">: True to also include fields in nested groups that are inside of the                             group for which to find fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInput" id="getInput"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getInput</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a549">549</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a form field markup for the field input.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The form field markup.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getInput
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The optional value to use as the default for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLabel" id="getLabel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a570">570</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the label for a field input.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The form field label.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLabel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a588">588</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the form name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The name of the form.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetValue" id="getValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getValue</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a604">604</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the value of a field.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the field or the default value if empty.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getValue
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the field for which to get the value.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to get the value.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: The optional default value of the field value is empty.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">load</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a637">637</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load the form description from an XML string or object.</p>
+<p class="description"><p>The replace option works per field.  If a field being loaded already exists in the current  form definition then the behavior or load will vary depending upon the replace flag.  If it  is set to true, then the existing field will be replaced in its exact location by the new  field being loaded.  If it is false, then the new field being loaded will be ignored and the  method will move on to the next field to load.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			load
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: The name of an XML string or object.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replace</span><span class="var-description">: Flag to toggle whether form fields should be replaced if a field                             already exists with the same group/name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadField" id="loadField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1658">1658</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load, setup and return a JFormField object based on field data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The JFormField object for the field or boolean false on error.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadField
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML element object representation of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The optional value to use as the default for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadFieldType" id="loadFieldType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadFieldType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1727">1727</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for <a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadFieldType">JFormHelper::loadFieldType()</a>.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JFormField object on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadFieldType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The field type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadFile" id="loadFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a759">759</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load the form description from an XML file.</p>
+<p class="description"><p>The reset option works on a group basis. If the XML file references  groups that have already been created they will be replaced with the  fields in the new XML file unless the $reset parameter has been set  to false.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			loadFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reset</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The filesystem path of an XML file.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reset</span><span class="var-description">: Flag to toggle whether form fields should be replaced if a field                           already exists with the same group/name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadRuleType" id="loadRuleType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadRuleType</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1743">1743</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for JFormHelper::loadRuleType().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JFormRule object on success, false otherwise.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadRuleType">JFormHelper::loadRuleType()</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadRuleType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The rule type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveField" id="removeField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a791">791</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove a field from the form definition.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			removeField
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field for which remove.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveGroup" id="removeGroup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a822">822</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove a group from the form definition.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			removeGroup
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The dot-separated form group path for the group to remove.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreset" id="reset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">reset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a850">850</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to reset the form data store and optionally the form XML definition.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			reset
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$xml</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$xml</span><span class="var-description">: True to also reset the XML form definition.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetField" id="setField"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a878">878</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set a field XML element to the form definition.  If the replace flag is set then  the field will be set whether it already exists or not.  If it isn't set, then the field  will not be replaced if it already exists.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setField
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML element object representation of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to set the field.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$replace</span><span class="var-description">: True to replace an existing field if one already exists.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFieldAttribute" id="setFieldAttribute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setFieldAttribute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a940">940</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set an attribute value for a field XML element.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setFieldAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field for which to set the attribute value.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span><span class="var-description">: The name of the attribute for which to set a value.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to set for the attribute.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFields" id="setFields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setFields</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a982">982</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set some field XML elements to the form definition.  If the replace flag is set then  the fields will be set whether they already exists or not.  If it isn't set, then the fields  will not be replaced if they already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setFields
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$elements</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$elements</span><span class="var-description">: The array of XML element object representations of the form fields.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to set the fields.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$replace</span><span class="var-description">: True to replace existing fields if they already exist.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetValue" id="setValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setValue</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1027">1027</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the value of a field. If the field does not exist in the form then the method  will return false.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setValue
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the field for which to set the value.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to set for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsyncPaths" id="syncPaths"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">syncPaths</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1756">1756</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to synchronize any field, form or rule paths contained in the XML document.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">todo:</span> Maybe we should receive all addXXXpaths attributes at once?</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			syncPaths
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodvalidate" id="validate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">validate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1062">1062</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to validate form data.</p>
+<p class="description"><p>Validation warnings will be pushed into JForm::errors and should be  retrieved with JForm::getErrors() when validate returns boolean false.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on sucess.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			validate
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: An array of field values to validate.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to filter the                           fields to be validated.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateField" id="validateField"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">validateField</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Form_librariesjoomlaformform.php.html#a1815">1815</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to validate a JFormField object based on field data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean true if field value is valid, Exception on failure.</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			validateField
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>&nbsp;<span class="var-name">$input</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML element object representation of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The optional value to use as the default for the field.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+				<span class="var-name">$input</span><span class="var-description">: An optional JRegistry object with the entire data set to validate                                       against the entire form.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:30:56 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

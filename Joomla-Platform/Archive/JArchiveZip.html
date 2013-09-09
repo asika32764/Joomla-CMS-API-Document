@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JArchiveZip</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JArchiveZip</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../../Joomla-Platform/Archive/JArchiveExtractable.html">JArchiveExtractable</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ZIP format adapter for the JArchive class</p>
+<p class="description"><p>The ZIP compression code is partially based on code from:  Eric Mueller &lt;eric@themepark.com&gt;  http://www.zend.com/codex.php?id=535&amp;single=1</p><p>Deins125 &lt;webmaster@atlant.ru&gt;  http://www.zend.com/codex.php?id=470&amp;single=1</p><p>The ZIP compression date code is partially based on code from  Peter Listiak &lt;mlady@users.sourceforge.net&gt;</p><p>This class is inspired from and draws heavily in code and concept from the Compress package of  The Horde Project &lt;http://www.horde.org&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---archive---zip.php.html">/libraries/joomla/archive/zip.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a38">38</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#hasNativeSupport" title="details" class="method-name">hasNativeSupport</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isSupported" title="details" class="method-name">isSupported</a>
+										()
+									</div>
+																											
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#checkZipData" title="details" class="method-name">checkZipData</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">&$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#create" title="details" class="method-name">create</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$files</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#extract" title="details" class="method-name">extract</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#extractCustom" title="details" class="method-name">extractCustom</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$destination</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#extractNative" title="details" class="method-name">extractNative</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$destination</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#_unix2DOSTime" title="details" class="method-name">_unix2DOSTime</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$unixtime</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodhasNativeSupport" id="hasNativeSupport"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static hasNativeSupport</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine if the server has native zip support for faster handling</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if php has native ZIP support</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			hasNativeSupport
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisSupported" id="isSupported"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isSupported</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tests whether this adapter can unpack files on this computer.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if supported</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isSupported
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Joomla-Platform/Archive/JArchiveExtractable.html#methodisSupported">JArchiveExtractable::isSupported()</a></dt>
+						<dd>Tests whether this adapter can unpack files on this computer.</dd>
+					</dl>
+			
+	</div>
+<a name="methodcheckZipData" id="checkZipData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">checkZipData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks to see if the data is a valid ZIP file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid, false if invalid.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkZipData
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">&$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$data</span><span class="var-description">: ZIP archive data buffer.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreate" id="create"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">create</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a101">101</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a ZIP compressed file from an array of file data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful.</li>
+				<li><span class="field">todo:</span> Finish Implementation</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			create
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$files</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$archive</span><span class="var-description">: Path to save archive.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$files</span><span class="var-description">: Array of files to add to archive.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodextract" id="extract"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">extract</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extract a ZIP compressed file to a given path</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			extract
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$archive</span><span class="var-description">: Path to ZIP archive to extract</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$destination</span><span class="var-description">: Path to extract archive into</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Extraction options [unused]</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Joomla-Platform/Archive/JArchiveExtractable.html#methodextract">JArchiveExtractable::extract()</a></dt>
+						<dd>Extract a compressed file to a given path</dd>
+					</dl>
+			
+	</div>
+<a name="methodextractCustom" id="extractCustom"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">extractCustom</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a206">206</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extract a ZIP compressed file to a given path using a php based algorithm that only requires zlib support</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			extractCustom
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$destination</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$archive</span><span class="var-description">: Path to ZIP archive to extract.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$destination</span><span class="var-description">: Path to extract archive into.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodextractNative" id="extractNative"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">extractNative</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a299">299</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extract a ZIP compressed file to a given path using native php api calls for speed</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			extractNative
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$archive</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$destination</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$archive</span><span class="var-description">: Path to ZIP archive to extract</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$destination</span><span class="var-description">: Path to extract archive into</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_unix2DOSTime" id="_unix2DOSTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_unix2DOSTime</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Archive_librariesjoomlaarchivezip.php.html#a554">554</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a UNIX timestamp to a 4-byte DOS date and time format  (date in high 2-bytes, time in low 2-bytes allowing magnitude  comparison).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current date in a 4-byte DOS format.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_unix2DOSTime
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$unixtime</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unixtime</span><span class="var-description">: The current UNIX timestamp.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:42:51 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JFeedEntry</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JFeedEntry</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class to encapsulate a feed entry for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">property:</span> <a href="../../Joomla-Platform/Feed/JFeedPerson.html">JFeedPerson</a> $author: Person responsible for feed entry content.</li>
+				<li><span class="field">property:</span> array $categories: Categories to which the feed entry belongs.</li>
+				<li><span class="field">property:</span> string $content: The content of the feed entry.</li>
+				<li><span class="field">property:</span> array $contributors: People who contributed to the feed entry content.</li>
+				<li><span class="field">property:</span> string $copyright: Information about rights, e.g. copyrights, held in and over the feed entry.</li>
+				<li><span class="field">property:</span> array $links: Links associated with the feed entry.</li>
+				<li><span class="field">property:</span> <a href="../../Joomla-Platform/Date/JDate.html">JDate</a> $publishedDate: The publication date for the feed entry.</li>
+				<li><span class="field">property:</span> <a href="../../Joomla-Platform/Feed/JFeed.html">JFeed</a> $source: The feed from which the entry is sourced.</li>
+				<li><span class="field">property:</span> string $title: A human readable title for the feed entry.</li>
+				<li><span class="field">property:</span> <a href="../../Joomla-Platform/Date/JDate.html">JDate</a> $updatedDate: The last time the content of the feed entry changed.</li>
+				<li><span class="field">property:</span> string $uri: Universal, permanent identifier for the feed entry.</li>
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---feed---entry.php.html">/libraries/joomla/feed/entry.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a31">31</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$properties" title="details" class="var-name">$properties</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#addCategory" title="details" class="method-name">addCategory</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#addContributor" title="details" class="method-name">addContributor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#addLink" title="details" class="method-name">addLink</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedLink.html">JFeedLink</a></span>&nbsp;<span class="var-name">$link</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#removeCategory" title="details" class="method-name">removeCategory</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#removeContributor" title="details" class="method-name">removeContributor</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedPerson.html">JFeedPerson</a></span>&nbsp;<span class="var-name">$contributor</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#removeLink" title="details" class="method-name">removeLink</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedLink.html">JFeedLink</a></span>&nbsp;<span class="var-name">$link</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+										<a href="#setAuthor" title="details" class="method-name">setAuthor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$properties" id="$properties"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$properties</span>
+			 = <span class="var-default">array(<br />		'uri'  =&gt; '',<br />		'title' =&gt; '',<br />		'updatedDate' =&gt; '',<br />		'content' =&gt; '',<br />		'categories' =&gt; array(),'contributors'=&gt;array(),'links'=&gt;array())</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The entry properties.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddCategory" id="addCategory"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addCategory</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a110">110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a category to the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			addCategory
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the category to add.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: The optional URI for the category to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddContributor" id="addContributor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addContributor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a contributor to the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			addContributor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The full name of the person to add.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$email</span><span class="var-description">: The email address of the person to add.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: The optional URI for the person to add.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The optional type of person to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddLink" id="addLink"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addLink</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a157">157</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a link to the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			addLink
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedLink.html">JFeedLink</a></span>&nbsp;<span class="var-name">$link</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedLink.html">JFeedLink</a></span>
+				<span class="var-name">$link</span><span class="var-description">: The link object to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveCategory" id="removeCategory"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeCategory</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove a category from the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			removeCategory
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the category to remove.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveContributor" id="removeContributor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeContributor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a199">199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove a contributor from the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			removeContributor
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedPerson.html">JFeedPerson</a></span>&nbsp;<span class="var-name">$contributor</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedPerson.html">JFeedPerson</a></span>
+				<span class="var-name">$contributor</span><span class="var-description">: The person object to remove.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveLink" id="removeLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeLink</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a225">225</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove a link from the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			removeLink
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedLink.html">JFeedLink</a></span>&nbsp;<span class="var-name">$link</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Feed/JFeedLink.html">JFeedLink</a></span>
+				<span class="var-name">$link</span><span class="var-description">: The link object to remove.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAuthor" id="setAuthor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAuthor</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a254">254</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Shortcut method to set the author for the feed entry object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Feed/JFeedEntry.html">JFeedEntry</a></span>
+		<span class="method-name">
+			setAuthor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The full name of the person to set.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$email</span><span class="var-description">: The email address of the person to set.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: The optional URI for the person to set.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The optional type of person to set.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to return values for feed entry properties.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Feed_librariesjoomlafeedentry.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to set values for feed properties.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to set for the property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:30:01 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

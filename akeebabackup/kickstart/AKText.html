@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class AKText</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> AKText</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A simple INI-based i18n engine</p>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_joomlaupdate---restore.php.html">/administrator/components/com_joomlaupdate/restore.php</a> (line <span class="field"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4368">4368</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a>
+   |
+   --AKText</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Language</span>
+										<a href="#getInstance" title="details" class="method-name">&amp;getInstance</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#parse_ini_file" title="details" class="method-name">parse_ini_file</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$process_sections</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$raw_data</span> = <span class="var-default">false</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#sprintf" title="details" class="method-name">sprintf</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#_" title="details" class="method-name">_</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">AKText</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#asJavascript" title="details" class="method-name">asJavascript</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#dumpLanguage" title="details" class="method-name">dumpLanguage</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getBrowserLanguage" title="details" class="method-name">getBrowserLanguage</a>
+										()
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#resetTranslation" title="details" class="method-name">resetTranslation</a>
+										()
+									</div>
+																											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#var$_errors_queue_size">AKAbstractObject::$_errors_queue_size</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#var$_warnings_queue_size">AKAbstractObject::$_warnings_queue_size</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4486">4486</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Singleton pattern for Language</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The global Language instance</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Language</span>
+		<span class="method-name">
+			&amp;getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparse_ini_file" id="parse_ini_file"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static parse_ini_file</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4682">4682</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A PHP based INI file parser.</p>
+<p class="description"><p>Thanks to asohn ~at~ aircanopy ~dot~ net for posting this handy function on  the parse_ini_file page on http://gr.php.net/parse_ini_file</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An associative array of sections, keys and values</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			parse_ini_file
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$process_sections</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$raw_data</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Filename to process</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$process_sections</span><span class="var-description">: True to also process INI sections</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$raw_data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsprintf" id="sprintf"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static sprintf</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4520">4520</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			sprintf
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_" id="_"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static _</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4498">4498</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			_
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4468">4468</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">AKText</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../akeebabackup/kickstart/AKAbstractObject.html#method__construct">AKAbstractObject::__construct()</a></dt>
+						<dd>Public constructor, makes sure we are instanciated only by the factory class</dd>
+					</dl>
+			
+	</div>
+<a name="methodasJavascript" id="asJavascript"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">asJavascript</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4541">4541</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			asJavascript
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddumpLanguage" id="dumpLanguage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dumpLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4531">4531</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			dumpLanguage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBrowserLanguage" id="getBrowserLanguage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getBrowserLanguage</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4559">4559</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getBrowserLanguage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodresetTranslation" id="resetTranslation"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">resetTranslation</span> (line <span class="line-number"><a href="../../__filesource/fsource_akeebabackup_kickstart_administratorcomponentscom_joomlaupdaterestore.php.html#a4554">4554</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			resetTranslation
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../akeebabackup/kickstart/AKAbstractObject.html">AKAbstractObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#method__construct">AKAbstractObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetError">AKAbstractObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetErrors">AKAbstractObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetWarning">AKAbstractObject::getWarning()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodgetWarnings">AKAbstractObject::getWarnings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodpropagateFromObject">AKAbstractObject::propagateFromObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodpropagateToObject">AKAbstractObject::propagateToObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodresetErrors">AKAbstractObject::resetErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodresetWarnings">AKAbstractObject::resetWarnings()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetError">AKAbstractObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetErrorsQueueSize">AKAbstractObject::setErrorsQueueSize()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetWarning">AKAbstractObject::setWarning()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../akeebabackup/kickstart/AKAbstractObject.html#methodsetWarningsQueueSize">AKAbstractObject::setWarningsQueueSize()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:37:47 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JDataSet</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JDataSet</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../../Joomla-Platform/Data/JDataDumpable.html">JDataDumpable</a></li><li>ArrayAccess (internal interface)</li><li>Countable (internal interface)</li><li>Iterator (internal interface)</li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JDataSet is a collection class that allows the developer to operate on a set of JData objects as if they were in a  typical PHP array.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---data---set.php.html">/libraries/joomla/data/set.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JDataSet</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$objects</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Data/JDataSet.html">JDataSet</a></span>
+										<a href="#clear" title="details" class="method-name">clear</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#count" title="details" class="method-name">count</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+										<a href="#current" title="details" class="method-name">current</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#dump" title="details" class="method-name">dump</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$depth</span> = <span class="var-default">3</span>], [<span class="var-type">SplObjectStorage</span>&nbsp;<span class="var-name">$dumped</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#jsonSerialize" title="details" class="method-name">jsonSerialize</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$serialized</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">scalar</span>
+										<a href="#key" title="details" class="method-name">key</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#keys" title="details" class="method-name">keys</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#next" title="details" class="method-name">next</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#offsetExists" title="details" class="method-name">offsetExists</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+										<a href="#offsetGet" title="details" class="method-name">offsetGet</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#offsetSet" title="details" class="method-name">offsetSet</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#offsetUnset" title="details" class="method-name">offsetUnset</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#rewind" title="details" class="method-name">rewind</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#valid" title="details" class="method-name">valid</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$arguments</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#__isset" title="details" class="method-name">__isset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__unset" title="details" class="method-name">__unset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a46">46</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The class constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException if an object is not an instance of JData.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JDataSet</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$objects</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$objects</span><span class="var-description">: An array of JData objects to bind to the data set.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclear" id="clear"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">clear</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a211">211</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears the objects in the data set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns itself to allow chaining.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Data/JDataSet.html">JDataSet</a></span>
+		<span class="method-name">
+			clear
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcount" id="count"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">count</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a199">199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the number of data objects in the set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of objects.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			count
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Countable::count</dt>
+					</dl>
+			
+	</div>
+<a name="methodcurrent" id="current"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">current</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a226">226</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the current data object in the set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current object, or false if the array is empty or the pointer is beyond the end of the elements.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+		<span class="method-name">
+			current
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::current</dt>
+					</dl>
+			
+	</div>
+<a name="methoddump" id="dump"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dump</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a244">244</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dumps the data object in the set, recursively if appropriate.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An associative array of the date objects in the set, dumped as a simple PHP stdClass object.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Data/JData.html#methoddump">JData::dump()</a></li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			dump
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$depth</span> = <span class="var-default">3</span>], [<span class="var-type">SplObjectStorage</span>&nbsp;<span class="var-name">$dumped</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$depth</span><span class="var-description">: The maximum depth of recursion (default = 3).                                      For example, a depth of 0 will return a stdClass with all the properties in native                                      form. A depth of 1 will recurse into the first level of properties only.</span>			</li>
+					<li>
+				<span class="var-type">SplObjectStorage</span>
+				<span class="var-name">$dumped</span><span class="var-description">: An array of already serialized objects that is used to avoid infinite loops.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Joomla-Platform/Data/JDataDumpable.html#methoddump">JDataDumpable::dump()</a></dt>
+						<dd>Dumps the object properties into a stdClass object, recursively if appropriate.</dd>
+					</dl>
+			
+	</div>
+<a name="methodjsonSerialize" id="jsonSerialize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">jsonSerialize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a283">283</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the data set in a form that can be serialised to JSON format.</p>
+<p class="description"><p>Note that this method will not return an associative array, otherwise it would be encoded into an object.  JSON decoders do not consistently maintain the order of associative keys, whereas they do maintain the order of arrays.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array that can be serialised by json_encode().</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			jsonSerialize
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$serialized</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$serialized</span><span class="var-description">: An array of objects that have already been serialized that is used to infinite loops                               (null on first call).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodkey" id="key"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">key</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a312">312</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the key of the current object in the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object key on success; null on failure.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">scalar</span>
+		<span class="method-name">
+			key
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::key</dt>
+					</dl>
+			
+	</div>
+<a name="methodkeys" id="keys"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">keys</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a324">324</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the array of keys for all the objects in the iterator (emulates array_keys).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of keys</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			keys
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodnext" id="next"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">next</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a336">336</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Advances the iterator to the next object in the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			next
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::next</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetExists" id="offsetExists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">offsetExists</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a375">375</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks whether an offset exists in the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the object exists, false otherwise.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			offsetExists
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$offset</span><span class="var-description">: The object offset.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetExists</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetGet" id="offsetGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">offsetGet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a389">389</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets an offset in the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The object if it exists, null otherwise.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+		<span class="method-name">
+			offsetGet
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$offset</span><span class="var-description">: The object offset.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetGet</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetSet" id="offsetSet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">offsetSet</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a405">405</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets an offset in the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">throws:</span> InvalidArgumentException if an object is not an instance of JData.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			offsetSet
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$offset</span><span class="var-description">: The object offset.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Data/JData.html">JData</a></span>
+				<span class="var-name">$object</span><span class="var-description">: The object object.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetSet</dt>
+					</dl>
+			
+	</div>
+<a name="methodoffsetUnset" id="offsetUnset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">offsetUnset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a426">426</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unsets an offset in the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			offsetUnset
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$offset</span><span class="var-description">: The object offset.</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>ArrayAccess::offsetUnset</dt>
+					</dl>
+			
+	</div>
+<a name="methodrewind" id="rewind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">rewind</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a464">464</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rewinds the iterator to the first object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rewind
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::rewind</dt>
+					</dl>
+			
+	</div>
+<a name="methodvalid" id="valid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">valid</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a485">485</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validates the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if valid, false otherwise.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			valid
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::valid</dt>
+					</dl>
+			
+	</div>
+<a name="method__call" id="__call"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__call</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a69">69</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic call method is used to call object methods using the iterator.</p>
+<p class="description"><p>Example: $array = $objectList-&gt;foo('bar');</p><p>The object list will iterate over its objects and see if each object has a callable 'foo' method.  If so, it will pass the argument list and assemble any return values. If an object does not have  a callable method no return value is recorded.  The keys of the objects and the result array are maintained.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of values returned by the methods called on the objects in the data set.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$arguments</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span><span class="var-description">: The name of the method called.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$arguments</span><span class="var-description">: The arguments of the method called.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a106">106</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic get method is used to get a list of properties from the objects in the data set.</p>
+<p class="description"><p>Example: $array = $dataSet-&gt;foo;</p><p>This will return a column of the values of the 'foo' property in all the objects  (or values determined by custom property setters in the individual JData's).  The result array will contain an entry for each object in the list (compared to __call which may not).  The keys of the objects and the result array are maintained.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An associative array of the values.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__isset" id="__isset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__isset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a131">131</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic isset method is used to check the state of an object property using the iterator.</p>
+<p class="description"><p>Example: $array = isset($objectList-&gt;foo);</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the property is set in any of the objects in the data set.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			__isset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a160">160</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic set method is used to set an object property using the iterator.</p>
+<p class="description"><p>Example: $objectList-&gt;foo = 'bar';</p><p>This will set the 'foo' property to 'bar' in all of the objects  (or a value determined by custom property setters in the JData).</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to give the data property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__unset" id="__unset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__unset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Data_librariesjoomladataset.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The magic unset method is used to unset an object property using the iterator.</p>
+<p class="description"><p>Example: unset($objectList-&gt;foo);</p><p>This will unset all of the 'foo' properties in the list of JData's.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__unset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:38:19 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

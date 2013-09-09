@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JTableObserverTags</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JTableObserverTags</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Table class supporting modified pre-order tree traversal behavior.</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTableObserver">http://docs.joomla.org/JTableObserver</a></li>
+				<li><span class="field">since:</span> 3.1.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---table---observer---tags.php.html">/libraries/joomla/table/observer/tags.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a>
+   |
+   --JTableObserverTags</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type"><a href="../../Joomla/Table/JTableObserverTags.html">JTableObserverTags</a></span>
+					<a href="#$_myTableForPregreplaceOnly" title="details" class="var-name">$_myTableForPregreplaceOnly</a>
+				</div>
+																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$newTags" title="details" class="var-name">$newTags</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$replaceTags" title="details" class="var-name">$replaceTags</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Libraries/Helper/JHelperTags.html">JHelperTags</a></span>
+					<a href="#$tagsHelper" title="details" class="var-name">$tagsHelper</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$typeAliasPattern" title="details" class="var-name">$typeAliasPattern</a>
+				</div>
+																			</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla/Observer/JObserverInterface.html">JObserverInterface</a>|<a href="../../Joomla/Table/JTableObserverTags.html">JTableObserverTags</a></span>
+										<a href="#createObserver" title="details" class="method-name">createObserver</a>
+											(<span class="var-type"><a href="../../Joomla/Observer/JObservableInterface.html">JObservableInterface</a></span>&nbsp;<span class="var-name">$observableObject</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterStore" title="details" class="method-name">onAfterStore</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">&$result</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeDelete" title="details" class="method-name">onBeforeDelete</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableKey</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeStore" title="details" class="method-name">onBeforeStore</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableKey</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#parseTypeAlias" title="details" class="method-name">parseTypeAlias</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setNewTags" title="details" class="method-name">setNewTags</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$newTags</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$replaceTags</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_myTableForPregreplaceOnly" id="$_myTableForPregreplaceOnly"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type"><a href="../../Joomla/Table/JTableObserverTags.html">JTableObserverTags</a></span>
+			<span class="var-name">$_myTableForPregreplaceOnly</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Not public, so marking private and deprecated, but needed internally in parseTypeAlias for  PHP &lt; 5.4.0 as it's not passing context $this to closure function.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> Never use this</li>
+				<li><span class="field">private:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$newTags" id="$newTags"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$newTags</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Override for postStoreProcess param newTags, Set by setNewTagsToAdd, used by onAfterStore</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$replaceTags" id="$replaceTags"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$replaceTags</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Override for postStoreProcess param replaceTags. Set by setNewTagsToAdd, used by onAfterStore</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$tagsHelper" id="$tagsHelper"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Libraries/Helper/JHelperTags.html">JHelperTags</a></span>
+			<span class="var-name">$tagsHelper</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Helper object for storing and deleting tag information associated with this table observer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$typeAliasPattern" id="$typeAliasPattern"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$typeAliasPattern</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The pattern for this tag's TypeAlias</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla/Table/JTableObserver.html#var$table">JTableObserver::$table</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateObserver" id="createObserver"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static createObserver</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a69">69</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates the associated observer instance and attaches it to the $observableObject  Creates the associated tags helper class instance  $typeAlias can be of the form &quot;{variableName}.type&quot;, automatically replacing {variableName} with table-instance variables variableName</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla/Observer/JObserverInterface.html">JObserverInterface</a>|<a href="../../Joomla/Table/JTableObserverTags.html">JTableObserverTags</a></span>
+		<span class="method-name">
+			createObserver
+		</span>
+					(<span class="var-type"><a href="../../Joomla/Observer/JObservableInterface.html">JObservableInterface</a></span>&nbsp;<span class="var-name">$observableObject</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla/Observer/JObservableInterface.html">JObservableInterface</a>|<a href="../../Joomla-Platform/Table/JTable.html">JTable</a></span>
+				<span class="var-name">$observableObject</span><span class="var-description">: The subject object to be observed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: ( 'typeAlias' =&gt; $typeAlias )</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterStore" id="onAfterStore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterStore</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a103">103</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Post-processor for $table-&gt;store($updateNulls)  You can change optional params newTags and replaceTags of tagsHelper with method setNewTagsToAdd</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterStore
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">&$result</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">&$result</span><span class="var-description">: The result of the load</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla/Table/JTableObserver.html#methodonAfterStore">JTableObserver::onAfterStore()</a></dt>
+						<dd>Post-processor for $table-&gt;store($updateNulls)</dd>
+					</dl>
+			
+	</div>
+<a name="methodonBeforeDelete" id="onBeforeDelete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeDelete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a125">125</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pre-processor for $table-&gt;delete($pk)</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeDelete
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pk</span><span class="var-description">: An optional primary key value to delete.  If not set the instance property value is used.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableKey</span><span class="var-description">: The normal key of the table</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla/Table/JTableObserver.html#methodonBeforeDelete">JTableObserver::onBeforeDelete()</a></dt>
+						<dd>Pre-processor for $table-&gt;delete($pk)</dd>
+					</dl>
+			
+	</div>
+<a name="methodonBeforeStore" id="onBeforeStore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeStore</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a89">89</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pre-processor for $table-&gt;store($updateNulls)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeStore
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$updateNulls</span><span class="var-description">: The result of the load</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableKey</span><span class="var-description">: The key of the table</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla/Table/JTableObserver.html#methodonBeforeStore">JTableObserver::onBeforeStore()</a></dt>
+						<dd>Pre-processor for $table-&gt;store($updateNulls)</dd>
+					</dl>
+			
+	</div>
+<a name="methodparseTypeAlias" id="parseTypeAlias"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">parseTypeAlias</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a153">153</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Internal method  Parses a TypeAlias of the form &quot;{variableName}.type&quot;, replacing {variableName} with table-instance variables variableName  Storing result into $this-&gt;tagsHelper-&gt;typeAlias</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseTypeAlias
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetNewTags" id="setNewTags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setNewTags</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatableobservertags.php.html#a139">139</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the new tags to be added/replaced to the table row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setNewTags
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$newTags</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$replaceTags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$newTags</span><span class="var-description">: New tags to be added or replaced</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$replaceTags</span><span class="var-description">: Replace tags (true) or add them (false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#method__construct">JTableObserver::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#methodonAfterDelete">JTableObserver::onAfterDelete()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#methodonAfterLoad">JTableObserver::onAfterLoad()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#methodonAfterStore">JTableObserver::onAfterStore()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#methodonBeforeDelete">JTableObserver::onBeforeDelete()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#methodonBeforeLoad">JTableObserver::onBeforeLoad()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla/Table/JTableObserver.html#methodonBeforeStore">JTableObserver::onBeforeStore()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:40:05 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

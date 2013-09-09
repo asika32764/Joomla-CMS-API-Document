@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for core.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file core.php</h1>
+<p>Documentation is available at <a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html">core.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;$Id$</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">*&nbsp;Define&nbsp;UTF8_CORE&nbsp;as&nbsp;required</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'UTF8_CORE'</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'UTF8_CORE'</span><span class="src-sym">,</span><span class="src-id">TRUE</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">//--------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">*&nbsp;Wrapper&nbsp;round&nbsp;mb_strlen</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">*&nbsp;Assumes&nbsp;you&nbsp;have&nbsp;mb_internal_encoding&nbsp;to&nbsp;UTF-8&nbsp;already</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">*&nbsp;Note:&nbsp;this&nbsp;function&nbsp;does&nbsp;not&nbsp;count&nbsp;bad&nbsp;bytes&nbsp;in&nbsp;the&nbsp;string&nbsp;-&nbsp;these</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">*&nbsp;are&nbsp;simply&nbsp;ignored</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">UTF-8&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">int&nbsp;</span><span class="src-doc">number&nbsp;of&nbsp;UTF-8&nbsp;characters&nbsp;in&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strlen">utf8_strlen</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_strlen">mb_strlen</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-comm">//--------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">*&nbsp;Assumes&nbsp;mbstring&nbsp;internal&nbsp;encoding&nbsp;is&nbsp;set&nbsp;to&nbsp;UTF-8</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">*&nbsp;Wrapper&nbsp;around&nbsp;mb_strpos</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">*&nbsp;Find&nbsp;position&nbsp;of&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;a&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">haystack</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">needle&nbsp;(you&nbsp;should&nbsp;validate&nbsp;this&nbsp;with&nbsp;utf8_is_valid)</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">offset&nbsp;in&nbsp;characters&nbsp;(from&nbsp;left)</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">integer&nbsp;position&nbsp;or&nbsp;FALSE&nbsp;on&nbsp;failure</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strpos">utf8_strpos</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$search</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-var">$offset&nbsp;</span>===&nbsp;<span class="src-id">FALSE&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_strpos">mb_strpos</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$search</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}&nbsp;</span><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_strpos">mb_strpos</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$search</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-comm">//--------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">*&nbsp;Assumes&nbsp;mbstring&nbsp;internal&nbsp;encoding&nbsp;is&nbsp;set&nbsp;to&nbsp;UTF-8</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">*&nbsp;Wrapper&nbsp;around&nbsp;mb_strrpos</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-doc">*&nbsp;Find&nbsp;position&nbsp;of&nbsp;last&nbsp;occurrence&nbsp;of&nbsp;a&nbsp;char&nbsp;in&nbsp;a&nbsp;string</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">haystack</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">needle&nbsp;(you&nbsp;should&nbsp;validate&nbsp;this&nbsp;with&nbsp;utf8_is_valid)</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">(optional)&nbsp;offset&nbsp;(from&nbsp;left)</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">integer&nbsp;position&nbsp;or&nbsp;FALSE&nbsp;on&nbsp;failure</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strrpos">utf8_strrpos</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$search</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-var">$offset&nbsp;</span>===&nbsp;<span class="src-id">FALSE&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">#&nbsp;Emulate&nbsp;behaviour&nbsp;of&nbsp;strrpos&nbsp;rather&nbsp;than&nbsp;raising&nbsp;warning</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_strrpos">mb_strrpos</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$search</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}&nbsp;</span><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><a href="http://www.php.net/is_int">is_int</a><span class="src-sym">(</span><span class="src-var">$offset</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/trigger_error">trigger_error</a><span class="src-sym">(</span><span class="src-str">'utf8_strrpos&nbsp;expects&nbsp;parameter&nbsp;3&nbsp;to&nbsp;be&nbsp;long'</span><span class="src-sym">,</span><span class="src-id">E_USER_WARNING</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$str&nbsp;</span>=&nbsp;<a href="http://www.php.net/mb_substr">mb_substr</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-id">FALSE&nbsp;</span>!==&nbsp;<span class="src-sym">(&nbsp;</span><span class="src-var">$pos&nbsp;</span>=&nbsp;<a href="http://www.php.net/mb_strrpos">mb_strrpos</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$search</span><span class="src-sym">)&nbsp;)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$pos&nbsp;</span>+&nbsp;<span class="src-var">$offset</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a86"></a><span class="src-comm">//--------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a87"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-doc">*&nbsp;Assumes&nbsp;mbstring&nbsp;internal&nbsp;encoding&nbsp;is&nbsp;set&nbsp;to&nbsp;UTF-8</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-doc">*&nbsp;Wrapper&nbsp;around&nbsp;mb_substr</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-doc">*&nbsp;Return&nbsp;part&nbsp;of&nbsp;a&nbsp;string&nbsp;given&nbsp;character&nbsp;offset&nbsp;(and&nbsp;optionally&nbsp;length)</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">number&nbsp;of&nbsp;UTF-8&nbsp;characters&nbsp;offset&nbsp;(from&nbsp;left)</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">integer&nbsp;</span><span class="src-doc">(optional)&nbsp;length&nbsp;in&nbsp;UTF-8&nbsp;characters&nbsp;from&nbsp;offset</span></div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">string&nbsp;or&nbsp;FALSE&nbsp;if&nbsp;failure</span></div></li>
+<li><div class="src-line"><a name="a95"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a96"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a97"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_substr">utf8_substr</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset</span><span class="src-sym">,&nbsp;</span><span class="src-var">$length&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-var">$length&nbsp;</span>===&nbsp;<span class="src-id">FALSE&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_substr">mb_substr</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}&nbsp;</span><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_substr">mb_substr</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">,&nbsp;</span><span class="src-var">$offset</span><span class="src-sym">,&nbsp;</span><span class="src-var">$length</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a104"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a106"></a><span class="src-comm">//--------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a107"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a108"></a><span class="src-doc">*&nbsp;Assumes&nbsp;mbstring&nbsp;internal&nbsp;encoding&nbsp;is&nbsp;set&nbsp;to&nbsp;UTF-8</span></div></li>
+<li><div class="src-line"><a name="a109"></a><span class="src-doc">*&nbsp;Wrapper&nbsp;around&nbsp;mb_strtolower</span></div></li>
+<li><div class="src-line"><a name="a110"></a><span class="src-doc">*&nbsp;Make&nbsp;a&nbsp;string&nbsp;lowercase</span></div></li>
+<li><div class="src-line"><a name="a111"></a><span class="src-doc">*&nbsp;Note:&nbsp;The&nbsp;concept&nbsp;of&nbsp;a&nbsp;characters&nbsp;&quot;case&quot;&nbsp;only&nbsp;exists&nbsp;is&nbsp;some&nbsp;alphabets</span></div></li>
+<li><div class="src-line"><a name="a112"></a><span class="src-doc">*&nbsp;such&nbsp;as&nbsp;Latin,&nbsp;Greek,&nbsp;Cyrillic,&nbsp;Armenian&nbsp;and&nbsp;archaic&nbsp;Georgian&nbsp;-&nbsp;it&nbsp;does</span></div></li>
+<li><div class="src-line"><a name="a113"></a><span class="src-doc">*&nbsp;not&nbsp;exist&nbsp;in&nbsp;the&nbsp;Chinese&nbsp;alphabet,&nbsp;for&nbsp;example.&nbsp;See&nbsp;Unicode&nbsp;Standard</span></div></li>
+<li><div class="src-line"><a name="a114"></a><span class="src-doc">*&nbsp;Annex&nbsp;#21:&nbsp;Case&nbsp;Mappings</span></div></li>
+<li><div class="src-line"><a name="a115"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a116"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">either&nbsp;string&nbsp;in&nbsp;lowercase&nbsp;or&nbsp;FALSE&nbsp;is&nbsp;UTF-8&nbsp;invalid</span></div></li>
+<li><div class="src-line"><a name="a117"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a118"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a119"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strtolower">utf8_strtolower</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a121"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_strtolower">mb_strtolower</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a122"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a124"></a><span class="src-comm">//--------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a126"></a><span class="src-doc">*&nbsp;Assumes&nbsp;mbstring&nbsp;internal&nbsp;encoding&nbsp;is&nbsp;set&nbsp;to&nbsp;UTF-8</span></div></li>
+<li><div class="src-line"><a name="a127"></a><span class="src-doc">*&nbsp;Wrapper&nbsp;around&nbsp;mb_strtoupper</span></div></li>
+<li><div class="src-line"><a name="a128"></a><span class="src-doc">*&nbsp;Make&nbsp;a&nbsp;string&nbsp;uppercase</span></div></li>
+<li><div class="src-line"><a name="a129"></a><span class="src-doc">*&nbsp;Note:&nbsp;The&nbsp;concept&nbsp;of&nbsp;a&nbsp;characters&nbsp;&quot;case&quot;&nbsp;only&nbsp;exists&nbsp;is&nbsp;some&nbsp;alphabets</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-doc">*&nbsp;such&nbsp;as&nbsp;Latin,&nbsp;Greek,&nbsp;Cyrillic,&nbsp;Armenian&nbsp;and&nbsp;archaic&nbsp;Georgian&nbsp;-&nbsp;it&nbsp;does</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-doc">*&nbsp;not&nbsp;exist&nbsp;in&nbsp;the&nbsp;Chinese&nbsp;alphabet,&nbsp;for&nbsp;example.&nbsp;See&nbsp;Unicode&nbsp;Standard</span></div></li>
+<li><div class="src-line"><a name="a132"></a><span class="src-doc">*&nbsp;Annex&nbsp;#21:&nbsp;Case&nbsp;Mappings</span></div></li>
+<li><div class="src-line"><a name="a133"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a134"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">either&nbsp;string&nbsp;in&nbsp;lowercase&nbsp;or&nbsp;FALSE&nbsp;is&nbsp;UTF-8&nbsp;invalid</span></div></li>
+<li><div class="src-line"><a name="a135"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;utf8</span></div></li>
+<li><div class="src-line"><a name="a136"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;strings</span></div></li>
+<li><div class="src-line"><a name="a137"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a138"></a><span class="src-key">function&nbsp;</span><a href="../utf8/strings/_libraries---phputf8---mbstring---core.php.html#functionutf8_strtoupper">utf8_strtoupper</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/mb_strtoupper">mb_strtoupper</a><span class="src-sym">(</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a140"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:25:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

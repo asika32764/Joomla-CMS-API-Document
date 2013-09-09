@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class InstallationModelSetup</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> InstallationModelSetup</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setup model for the Joomla Core Installer.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_installation---model---setup.php.html">/installation/model/setup.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Model/JModelBase.html">JModelBase</a>
+   |
+   --InstallationModelSetup</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#checkForm" title="details" class="method-name">checkForm</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">'site'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getForm" title="details" class="method-name">getForm</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getIniParserAvailability" title="details" class="method-name">getIniParserAvailability</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getLanguages" title="details" class="method-name">getLanguages</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getOptions" title="details" class="method-name">getOptions</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getPhpOptions" title="details" class="method-name">getPhpOptions</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getPhpOptionsSufficient" title="details" class="method-name">getPhpOptionsSufficient</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getPhpSettings" title="details" class="method-name">getPhpSettings</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#storeOptions" title="details" class="method-name">storeOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#validate" title="details" class="method-name">validate</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Model/JModelBase.html">JModelBase</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Model/JModelBase.html#var$state">JModelBase::$state</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheckForm" id="checkForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">checkForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to check the form data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Validated form data</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			checkForm
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">'site'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$page</span><span class="var-description">: The view being checked</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetForm" id="getForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a73">73</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JForm object on success, false on failure.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getForm
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The view being processed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIniParserAvailability" id="getIniParserAvailability"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIniParserAvailability</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a198">198</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks the availability of the parse_ini_file and parse_ini_string functions.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the method exists</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getIniParserAvailability
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLanguages" id="getLanguages"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLanguages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a159">159</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a panel of language choices for the user to select their language</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getLanguages
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetOptions" id="getOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a28">28</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the current setup options from the session.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of options from the session</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getOptions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPhpOptions" id="getPhpOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPhpOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a231">231</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets PHP options.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of PHP config options</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPhpOptions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPhpOptionsSufficient" id="getPhpOptionsSufficient"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPhpOptionsSufficient</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a329">329</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if all of the mandatory PHP options are met</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getPhpOptionsSufficient
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPhpSettings" id="getPhpSettings"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPhpSettings</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a352">352</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets PHP Settings.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPhpSettings
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodstoreOptions" id="storeOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">storeOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a45">45</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Store the current setup options in the session.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of options from the session</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			storeOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: The installation options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidate" id="validate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">validate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Installation_Model_installationmodelsetup.php.html#a418">418</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to validate the form data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of filtered data if valid, false otherwise.</li>
+				<li><span class="field">since:</span> 3.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			validate
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: The form data.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The view.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Model/JModelBase.html">JModelBase</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Model/JModelBase.html#method__construct">JModelBase::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Model/JModelBase.html#methodgetState">JModelBase::getState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Model/JModelBase.html#methodloadState">JModelBase::loadState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Model/JModelBase.html#methodsetState">JModelBase::setState()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:38:21 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

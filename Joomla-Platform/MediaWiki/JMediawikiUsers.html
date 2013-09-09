@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JMediawikiUsers</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JMediawikiUsers</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">MediaWiki API Users class for the Joomla Platform.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---mediawiki---users.php.html">/libraries/joomla/mediawiki/users.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a>
+   |
+   --JMediawikiUsers</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#assignGroup" title="details" class="method-name">assignGroup</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$add</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$remove</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#blockUser" title="details" class="method-name">blockUser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$expiry</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$anononly</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nocreate</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$autoblock</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$noemail</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hidename</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allowusertalk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reblock</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$watchuser</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#emailUser" title="details" class="method-name">emailUser</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$target</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ccme</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getCurrentUserInfo" title="details" class="method-name">getCurrentUserInfo</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$uiprop</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getToken" title="details" class="method-name">getToken</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$intoken</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getUserContribs" title="details" class="method-name">getUserContribs</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$ucuser</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucuserprefix</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$uclimit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucstart</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucend</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$uccontinue</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucdir</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$ucnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$ucprop</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$ucshow</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$uctag</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$uctoponly</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getUserInfo" title="details" class="method-name">getUserInfo</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$ususers</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$usprop</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#login" title="details" class="method-name">login</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lgname</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$lgpassword</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$lgdomain</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#logout" title="details" class="method-name">logout</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#unBlockUserByID" title="details" class="method-name">unBlockUserByID</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#unBlockUserByName" title="details" class="method-name">unBlockUserByName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#var$client">JMediawikiObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#var$options">JMediawikiObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodassignGroup" id="assignGroup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">assignGroup</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a364">364</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to assign a user to a group.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			assignGroup
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$add</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$remove</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: User name.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$add</span><span class="var-description">: Add the user to these groups.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$remove</span><span class="var-description">: Remove the user from these groups.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for the change.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodblockUser" id="blockUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">blockUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a258">258</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to block a user.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			blockUser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$expiry</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$anononly</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nocreate</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$autoblock</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$noemail</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hidename</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allowusertalk</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reblock</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$watchuser</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: Username, IP address or IP range you want to block.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$expiry</span><span class="var-description">: Relative expiry time, Default: never.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for block (optional).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$anononly</span><span class="var-description">: Block anonymous users only.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$nocreate</span><span class="var-description">: Prevent account creation.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$autoblock</span><span class="var-description">: Automatically block the last used IP address, and any subsequent IP addresses they try to login from.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$noemail</span><span class="var-description">: Prevent user from sending e-mail through the wiki.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$hidename</span><span class="var-description">: Hide the username from the block log.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allowusertalk</span><span class="var-description">: Allow the user to edit their own talk page.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$reblock</span><span class="var-description">: If the user is already blocked, overwrite the existing block.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$watchuser</span><span class="var-description">: Watch the user/IP's user and talk pages.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodemailUser" id="emailUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">emailUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a399">399</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to email a user.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			emailUser
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$target</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$ccme</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$target</span><span class="var-description">: User to send email to.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subject</span><span class="var-description">: Subject header.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Mail body.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$ccme</span><span class="var-description">: Send a copy of this mail to me.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCurrentUserInfo" id="getCurrentUserInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCurrentUserInfo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a131">131</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get current user information.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getCurrentUserInfo
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$uiprop</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$uiprop</span><span class="var-description">: What pieces of information to include.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetToken" id="getToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getToken</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a432">432</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get access token.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getToken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$intoken</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: The User to get token.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$intoken</span><span class="var-description">: The type of token.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUserContribs" id="getUserContribs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUserContribs</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a167">167</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get user contributions.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getUserContribs
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$ucuser</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucuserprefix</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$uclimit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucstart</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucend</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$uccontinue</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ucdir</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$ucnamespace</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$ucprop</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$ucshow</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$uctag</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$uctoponly</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ucuser</span><span class="var-description">: The users to retrieve contributions for.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ucuserprefix</span><span class="var-description">: Retrieve contibutions for all users whose names begin with this value.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$uclimit</span><span class="var-description">: The users to retrieve contributions for.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ucstart</span><span class="var-description">: The start timestamp to return from.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ucend</span><span class="var-description">: The end timestamp to return to.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$uccontinue</span><span class="var-description">: When more results are available, use this to continue.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ucdir</span><span class="var-description">: In which direction to enumerate.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ucnamespace</span><span class="var-description">: Only list contributions in these namespaces.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ucprop</span><span class="var-description">: Include additional pieces of information.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ucshow</span><span class="var-description">: Show only items that meet this criteria.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uctag</span><span class="var-description">: Only list revisions tagged with this tag.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uctoponly</span><span class="var-description">: Only list changes which are the latest revision</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUserInfo" id="getUserInfo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUserInfo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a103">103</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get user information.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getUserInfo
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$ususers</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$usprop</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ususers</span><span class="var-description">: A list of users to obtain the same information for.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$usprop</span><span class="var-description">: What pieces of information to include.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlogin" id="login"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">login</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a32">32</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to login and get authentication tokens.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			login
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lgname</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$lgpassword</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$lgdomain</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lgname</span><span class="var-description">: User Name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lgpassword</span><span class="var-description">: Password.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lgdomain</span><span class="var-description">: Domain (optional).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlogout" id="logout"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">logout</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a80">80</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to logout and clear session data.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			logout
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodunBlockUserByID" id="unBlockUserByID"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">unBlockUserByID</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a330">330</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to unblock a user.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			unBlockUserByID
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span><span class="var-description">: Username, IP address or IP range you want to unblock.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for unblock (optional).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunBlockUserByName" id="unBlockUserByName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">unBlockUserByName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_MediaWiki_librariesjoomlamediawikiusers.php.html#a299">299</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to unblock a user.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			unBlockUserByName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$reason</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: Username, IP address or IP range you want to unblock.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$reason</span><span class="var-description">: Reason for unblock (optional).</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html">JMediawikiObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#method__construct">JMediawikiObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodbuildParameter">JMediawikiObject::buildParameter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodfetchUrl">JMediawikiObject::fetchUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Mediawiki/JMediawikiObject.html#methodvalidateResponse">JMediawikiObject::validateResponse()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:41:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

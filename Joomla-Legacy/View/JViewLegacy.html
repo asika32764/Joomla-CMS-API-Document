@@ -1,0 +1,3134 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JViewLegacy</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JViewLegacy</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Base class for a Joomla View</p>
+<p class="description"><p>Class holding methods for displaying presentation data.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---legacy---view---legacy.php.html">/libraries/legacy/view/legacy.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --JViewLegacy</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_admin/AdminViewHelp.html">AdminViewHelp</a>
+					</td>
+					<td>
+											HTML View class for the Admin component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_admin/AdminViewProfile.html">AdminViewProfile</a>
+					</td>
+					<td>
+											View class to allow users edit their own profile.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_admin/AdminViewSysinfo.html">AdminViewSysinfo</a>
+					</td>
+					<td>
+											Sysinfo View class for the Admin component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersViewBanner.html">BannersViewBanner</a>
+					</td>
+					<td>
+											View to edit a banner.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersViewBanners.html">BannersViewBanners</a>
+					</td>
+					<td>
+											View class for a list of banners.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersViewClient.html">BannersViewClient</a>
+					</td>
+					<td>
+											View to edit a client.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersViewClients.html">BannersViewClients</a>
+					</td>
+					<td>
+											View class for a list of clients.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersViewDownload.html">BannersViewDownload</a>
+					</td>
+					<td>
+											View class for download a list of tracks.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											View class for a list of tracks.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_cache/CacheViewCache.html">CacheViewCache</a>
+					</td>
+					<td>
+											HTML View class for the Cache component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_cache/CacheViewPurge.html">CacheViewPurge</a>
+					</td>
+					<td>
+											HTML View class for the Cache component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_categories/CategoriesViewCategories.html">CategoriesViewCategories</a>
+					</td>
+					<td>
+											Categories view class for the Category package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_categories/CategoriesViewCategory.html">CategoriesViewCategory</a>
+					</td>
+					<td>
+											HTML View class for the Categories component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_checkin/CheckinViewCheckin.html">CheckinViewCheckin</a>
+					</td>
+					<td>
+											HTML View class for the Checkin component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_config/ConfigViewApplication.html">ConfigViewApplication</a>
+					</td>
+					<td>
+											View for the global configuration
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_config/ConfigViewClose.html">ConfigViewClose</a>
+					</td>
+					<td>
+											This view is displayed after successfull saving of config data.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_config/ConfigViewComponent.html">ConfigViewComponent</a>
+					</td>
+					<td>
+											View for the component configuration
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_contact/ContactViewContacts.html">ContactViewContacts</a>
+					</td>
+					<td>
+											View class for a list of contacts.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentViewArticle.html">ContentViewArticle</a>
+					</td>
+					<td>
+											HTML Article View class for the Content component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_content/ContentViewArticles.html">ContentViewArticles</a>
+					</td>
+					<td>
+											View class for a list of articles.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											Frontpage View class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_cpanel/CpanelViewCpanel.html">CpanelViewCpanel</a>
+					</td>
+					<td>
+											HTML View class for the Cpanel component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderViewFilter.html">FinderViewFilter</a>
+					</td>
+					<td>
+											Filter view class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderViewFilters.html">FinderViewFilters</a>
+					</td>
+					<td>
+											Filters view class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderViewIndex.html">FinderViewIndex</a>
+					</td>
+					<td>
+											Index view class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderViewIndexer.html">FinderViewIndexer</a>
+					</td>
+					<td>
+											Indexer view class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderViewMaps.html">FinderViewMaps</a>
+					</td>
+					<td>
+											Groups view class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderViewStatistics.html">FinderViewStatistics</a>
+					</td>
+					<td>
+											Statistics view class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/InstallerViewDefault.html">InstallerViewDefault</a>
+					</td>
+					<td>
+											Extension Manager Default View
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/JoomlaupdateViewDefault.html">JoomlaupdateViewDefault</a>
+					</td>
+					<td>
+											Joomla! Update's Default View
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/JoomlaupdateViewUpdate.html">JoomlaupdateViewUpdate</a>
+					</td>
+					<td>
+											Joomla! Update's Update View
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesViewInstalled.html">LanguagesViewInstalled</a>
+					</td>
+					<td>
+											Displays a list of the installed languages.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesViewLanguage.html">LanguagesViewLanguage</a>
+					</td>
+					<td>
+											HTML View class for the Languages component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesViewLanguages.html">LanguagesViewLanguages</a>
+					</td>
+					<td>
+											HTML Languages View class for the Languages component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesViewMultilangstatus.html">LanguagesViewMultilangstatus</a>
+					</td>
+					<td>
+											Displays the multilang status.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesViewOverride.html">LanguagesViewOverride</a>
+					</td>
+					<td>
+											View to edit an language override
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesViewOverrides.html">LanguagesViewOverrides</a>
+					</td>
+					<td>
+											View for language overrides list
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_login/LoginViewLogin.html">LoginViewLogin</a>
+					</td>
+					<td>
+											HTML View class for the Login component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_media/MediaViewImages.html">MediaViewImages</a>
+					</td>
+					<td>
+											HTML View class for the Media component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_media/MediaViewImagesList.html">MediaViewImagesList</a>
+					</td>
+					<td>
+											HTML View class for the Media component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_media/MediaViewMedia.html">MediaViewMedia</a>
+					</td>
+					<td>
+											HTML View class for the Media component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_media/MediaViewMediaList.html">MediaViewMediaList</a>
+					</td>
+					<td>
+											HTML View class for the Media component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusViewItem.html">MenusViewItem</a>
+					</td>
+					<td>
+											The HTML Menus Menu Item View.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusViewItems.html">MenusViewItems</a>
+					</td>
+					<td>
+											The HTML Menus Menu Items View.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusViewMenu.html">MenusViewMenu</a>
+					</td>
+					<td>
+											The HTML Menus Menu Item View.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusViewMenus.html">MenusViewMenus</a>
+					</td>
+					<td>
+											The HTML Menus Menu Menus View.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusViewMenutypes.html">MenusViewMenutypes</a>
+					</td>
+					<td>
+											The HTML Menus Menu Item TYpes View.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_messages/MessagesViewConfig.html">MessagesViewConfig</a>
+					</td>
+					<td>
+											View to edit messages user configuration.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_messages/MessagesViewMessage.html">MessagesViewMessage</a>
+					</td>
+					<td>
+											HTML View class for the Messages component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_messages/MessagesViewMessages.html">MessagesViewMessages</a>
+					</td>
+					<td>
+											View class for a list of messages.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesViewModule.html">ModulesViewModule</a>
+					</td>
+					<td>
+											View to edit a module.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesViewModules.html">ModulesViewModules</a>
+					</td>
+					<td>
+											View class for a list of modules.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesViewPositions.html">ModulesViewPositions</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesViewPreview.html">ModulesViewPreview</a>
+					</td>
+					<td>
+											HTML View class for the Modules component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesViewSelect.html">ModulesViewSelect</a>
+					</td>
+					<td>
+											HTML View class for the Modules component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsViewNewsfeed.html">NewsfeedsViewNewsfeed</a>
+					</td>
+					<td>
+											HTML View class for the Newsfeeds component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsViewNewsfeeds.html">NewsfeedsViewNewsfeeds</a>
+					</td>
+					<td>
+											View class for a list of newsfeeds.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_plugins/PluginsViewPlugin.html">PluginsViewPlugin</a>
+					</td>
+					<td>
+											View to edit a plugin.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_plugins/PluginsViewPlugins.html">PluginsViewPlugins</a>
+					</td>
+					<td>
+											View class for a list of plugins.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_redirect/RedirectViewLink.html">RedirectViewLink</a>
+					</td>
+					<td>
+											View to edit a redirect link.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_redirect/RedirectViewLinks.html">RedirectViewLinks</a>
+					</td>
+					<td>
+											View class for a list of redirection links.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_search/SearchViewSearches.html">SearchViewSearches</a>
+					</td>
+					<td>
+											View class for a list of search terms.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											HTML View class for the Tags component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											HTML View class for the Tags component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesViewSource.html">TemplatesViewSource</a>
+					</td>
+					<td>
+											View to edit a template style.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesViewStyle.html">TemplatesViewStyle</a>
+					</td>
+					<td>
+											View to edit a template style.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesViewStyles.html">TemplatesViewStyles</a>
+					</td>
+					<td>
+											View class for a list of template styles.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesViewTemplate.html">TemplatesViewTemplate</a>
+					</td>
+					<td>
+											View to edit a template style.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesViewTemplates.html">TemplatesViewTemplates</a>
+					</td>
+					<td>
+											View class for a list of template styles.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewDebuggroup.html">UsersViewDebuggroup</a>
+					</td>
+					<td>
+											View class for a list of users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewDebuguser.html">UsersViewDebuguser</a>
+					</td>
+					<td>
+											View class for a list of users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewGroup.html">UsersViewGroup</a>
+					</td>
+					<td>
+											View to edit a user group.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewGroups.html">UsersViewGroups</a>
+					</td>
+					<td>
+											View class for a list of user groups.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewLevel.html">UsersViewLevel</a>
+					</td>
+					<td>
+											View to edit a user view level.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewLevels.html">UsersViewLevels</a>
+					</td>
+					<td>
+											The HTML Users access levels view.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewMail.html">UsersViewMail</a>
+					</td>
+					<td>
+											Users mail view.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewNote.html">UsersViewNote</a>
+					</td>
+					<td>
+											User note edit view
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewNotes.html">UsersViewNotes</a>
+					</td>
+					<td>
+											User notes list view
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewUser.html">UsersViewUser</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersViewUsers.html">UsersViewUsers</a>
+					</td>
+					<td>
+											View class for a list of users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_weblinks/WeblinksViewWeblink.html">WeblinksViewWeblink</a>
+					</td>
+					<td>
+											HTML View class for the WebLinks component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_weblinks/WeblinksViewWeblinks.html">WeblinksViewWeblinks</a>
+					</td>
+					<td>
+											View class for a list of weblinks.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_contact/ContactViewCategories.html">ContactViewCategories</a>
+					</td>
+					<td>
+											Content categories view.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											HTML View class for the Contacts component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_contact/ContactViewFeatured.html">ContactViewFeatured</a>
+					</td>
+					<td>
+											Frontpage View class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentViewArchive.html">ContentViewArchive</a>
+					</td>
+					<td>
+											HTML View class for the Content component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentViewCategories.html">ContentViewCategories</a>
+					</td>
+					<td>
+											Content categories view.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											HTML View class for the Content component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentViewForm.html">ContentViewForm</a>
+					</td>
+					<td>
+											HTML Article View class for the Content component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											OpenSearch View class for Finder
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_mailto/MailtoViewMailto.html">MailtoViewMailto</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_mailto/MailtoViewSent.html">MailtoViewSent</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsViewCategories.html">NewsfeedsViewCategories</a>
+					</td>
+					<td>
+											Content categories view.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsViewCategory.html">NewsfeedsViewCategory</a>
+					</td>
+					<td>
+											HTML View class for the Newsfeeds component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											OpenSearch View class for the Search component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_users/UsersViewLogin.html">UsersViewLogin</a>
+					</td>
+					<td>
+											Login view class for Users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_users/UsersViewProfile.html">UsersViewProfile</a>
+					</td>
+					<td>
+											Profile view class for Users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_users/UsersViewRegistration.html">UsersViewRegistration</a>
+					</td>
+					<td>
+											Registration view class for Users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_users/UsersViewRemind.html">UsersViewRemind</a>
+					</td>
+					<td>
+											Registration view class for Users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_users/UsersViewReset.html">UsersViewReset</a>
+					</td>
+					<td>
+											Reset view class for Users.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_weblinks/WeblinksViewCategories.html">WeblinksViewCategories</a>
+					</td>
+					<td>
+											Content categories view.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						
+					</td>
+					<td>
+											HTML View class for the WebLinks component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_weblinks/WeblinksViewForm.html">WeblinksViewForm</a>
+					</td>
+					<td>
+											HTML Article View class for the Weblinks component
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_wrapper/WrapperViewWrapper.html">WrapperViewWrapper</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_basePath" title="details" class="var-name">$_basePath</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_charset" title="details" class="var-name">$_charset</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_defaultModel" title="details" class="var-name">$_defaultModel</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_escape" title="details" class="var-name">$_escape</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_layout" title="details" class="var-name">$_layout</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_layoutExt" title="details" class="var-name">$_layoutExt</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_layoutTemplate" title="details" class="var-name">$_layoutTemplate</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_models" title="details" class="var-name">$_models</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_name" title="details" class="var-name">$_name</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_output" title="details" class="var-name">$_output</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_path" title="details" class="var-name">$_path</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_template" title="details" class="var-name">$_template</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JViewLegacy</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addHelperPath" title="details" class="method-name">addHelperPath</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addTemplatePath" title="details" class="method-name">addTemplatePath</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#assign" title="details" class="method-name">assign</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#assignRef" title="details" class="method-name">assignRef</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">&$val</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#display" title="details" class="method-name">display</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$tpl</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#escape" title="details" class="method-name">escape</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$var</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLayout" title="details" class="method-name">getLayout</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLayoutTemplate" title="details" class="method-name">getLayoutTemplate</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getModel" title="details" class="method-name">getModel</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#loadHelper" title="details" class="method-name">loadHelper</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$hlp</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#loadTemplate" title="details" class="method-name">loadTemplate</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$tpl</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setEscape" title="details" class="method-name">setEscape</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$spec</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#setLayout" title="details" class="method-name">setLayout</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$layout</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#setLayoutExt" title="details" class="method-name">setLayoutExt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object The</span>
+										<a href="#setModel" title="details" class="method-name">setModel</a>
+											(<span class="var-type"><a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a></span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_addPath" title="details" class="method-name">_addPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_createFileName" title="details" class="method-name">_createFileName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$parts</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_setPath" title="details" class="method-name">_setPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_basePath" id="$_basePath"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_basePath</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The base path of the view</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_charset" id="$_charset"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_charset</span>
+			 = <span class="var-default"> 'UTF-8'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a106">106</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Charset to use in escaping mechanisms; defaults to urf8 (UTF-8)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_defaultModel" id="$_defaultModel"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_defaultModel</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_escape" id="$_escape"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_escape</span>
+			 = <span class="var-default"> 'htmlspecialchars'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a99">99</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Callback for escaping.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 13.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_layout" id="$_layout"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_layout</span>
+			 = <span class="var-default"> 'default'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Layout name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_layoutExt" id="$_layoutExt"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_layoutExt</span>
+			 = <span class="var-default"> 'php'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Layout extension</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_layoutTemplate" id="$_layoutTemplate"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_layoutTemplate</span>
+			 = <span class="var-default"> '_'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Layout template</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_models" id="$_models"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_models</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Registered models</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_name" id="$_name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_name</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the view</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_output" id="$_output"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_output</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a91">91</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The output of the template script.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_path" id="$_path"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_path</span>
+			 = <span class="var-default">array('template' =&gt; array(),'helper'=&gt;array())</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a77">77</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The set of search directories for resources (templates)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_template" id="$_template"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_template</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a84">84</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the default template source file.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a122">122</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JViewLegacy</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: A named configuration array for object construction.<br />                           name: the name (optional) of the view (defaults to the view class name suffix).<br />                           charset: the character set to use for display<br />                           escape: the name (optional) of the function to use for escaping strings<br />                           base_path: the parent path (optional) of the views directory (defaults to the component folder)<br />                           template_plath: the path (optional) of the layout directory (defaults to base_path + /views/ + view name<br />                           helper_path: the path (optional) of the helper files (defaults to base_path + /helpers/)<br />                           layout: the layout (optional) to use to display the view<br /></span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></dt>
+						<dd>Class constructor, overridden in descendant classes.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewDefault.html#method__construct">InstallerViewDefault::__construct()</a>
+								: Constructor
+							</li>
+				</ul>
+	</div>
+<a name="methodaddHelperPath" id="addHelperPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addHelperPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a592">592</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds to the stack of helper script paths in LIFO order.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addHelperPath
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: A directory path or an array of paths.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddTemplatePath" id="addTemplatePath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addTemplatePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a578">578</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds to the stack of view script paths in LIFO order.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addTemplatePath
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: A directory path or an array of paths.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodassign" id="assign"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">assign</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a257">257</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Assigns variables to the view script via differing strategies.</p>
+<p class="description"><p>This method is overloaded; you can assign all the properties of  an object, an associative array, or a single value by name.</p><p>You are not allowed to set variables that begin with an underscore;  these are either private properties for JView or private variables  within the template script itself.</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$view&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../../Joomla-Platform/View/JView.html">JView</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;directly</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><span class="src-id">var1&nbsp;</span>=&nbsp;<span class="src-str">'something'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><span class="src-id">var2&nbsp;</span>=&nbsp;<span class="src-str">'else'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;by&nbsp;name&nbsp;and&nbsp;value</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><a href="../../Joomla-Legacy/View/JViewLegacy.html#methodassign">assign</a><span class="src-sym">(</span><span class="src-str">'var1'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'something'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><a href="../../Joomla-Legacy/View/JViewLegacy.html#methodassign">assign</a><span class="src-sym">(</span><span class="src-str">'var2'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'else'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;by&nbsp;assoc-array</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$ary&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'var1'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'something'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'var2'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'else'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><a href="../../Joomla-Legacy/View/JViewLegacy.html#methodassign">assign</a><span class="src-sym">(</span><span class="src-var">$obj</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;by&nbsp;object</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$obj&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">stdClass</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$obj</span><span class="src-sym">-&gt;</span><span class="src-id">var1&nbsp;</span>=&nbsp;<span class="src-str">'something'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$obj</span><span class="src-sym">-&gt;</span><span class="src-id">var2&nbsp;</span>=&nbsp;<span class="src-str">'else'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><a href="../../Joomla-Legacy/View/JViewLegacy.html#methodassign">assign</a><span class="src-sym">(</span><span class="src-var">$obj</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false on failure.</li>
+				<li><span class="field">deprecated:</span> 13.3 Use native PHP syntax.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			assign
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodassignRef" id="assignRef"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">assignRef</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a331">331</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Assign variable for the view (by reference).</p>
+<p class="description"><p>You are not allowed to set variables that begin with an underscore;  these are either private properties for JView or private variables  within the template script itself.</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$view&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../../Joomla-Platform/View/JView.html">JView</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;by&nbsp;name&nbsp;and&nbsp;value</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><a href="../../Joomla-Legacy/View/JViewLegacy.html#methodassignRef">assignRef</a><span class="src-sym">(</span><span class="src-str">'var1'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$ref</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;directly</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$view</span><span class="src-sym">-&gt;</span><span class="src-id">ref&nbsp;</span>=&nbsp;<span class="src-sym">&amp;</span><span class="src-var">$var1</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false on failure.</li>
+				<li><span class="field">deprecated:</span> 13.3  Use native PHP syntax.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			assignRef
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">&$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name for the reference in the view.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">&$val</span><span class="var-description">: The referenced variable.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplay" id="display"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">display</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a209">209</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute and display a template script.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A string if successful, otherwise a Error object.</li>
+				<li><span class="field">see:</span> fetch()</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			display
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$tpl</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tpl</span><span class="var-description">: The name of the template file to parse; automatically searches through the template paths.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_admin/AdminViewHelp.html#methoddisplay">AdminViewHelp::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_admin/AdminViewProfile.html#methoddisplay">AdminViewProfile::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_admin/AdminViewSysinfo.html#methoddisplay">AdminViewSysinfo::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersViewBanner.html#methoddisplay">BannersViewBanner::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersViewBanners.html#methoddisplay">BannersViewBanners::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersViewClient.html#methoddisplay">BannersViewClient::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersViewClients.html#methoddisplay">BannersViewClients::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersViewDownload.html#methoddisplay">BannersViewDownload::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersViewTracks.html#methoddisplay">BannersViewTracks::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_cache/CacheViewCache.html#methoddisplay">CacheViewCache::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_cache/CacheViewPurge.html#methoddisplay">CacheViewPurge::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesViewCategories.html#methoddisplay">CategoriesViewCategories::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesViewCategory.html#methoddisplay">CategoriesViewCategory::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_checkin/CheckinViewCheckin.html#methoddisplay">CheckinViewCheckin::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_config/ConfigViewApplication.html#methoddisplay">ConfigViewApplication::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_config/ConfigViewClose.html#methoddisplay">ConfigViewClose::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_config/ConfigViewComponent.html#methoddisplay">ConfigViewComponent::display()</a>
+								: Execute and display a template script.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactViewContact.html#methoddisplay">ContactViewContact::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactViewContacts.html#methoddisplay">ContactViewContacts::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentViewArticle.html#methoddisplay">ContentViewArticle::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_content/ContentViewArticles.html#methoddisplay">ContentViewArticles::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentViewFeatured.html#methoddisplay">ContentViewFeatured::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_cpanel/CpanelViewCpanel.html#methoddisplay">CpanelViewCpanel::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderViewFilter.html#methoddisplay">FinderViewFilter::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderViewFilters.html#methoddisplay">FinderViewFilters::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderViewIndex.html#methoddisplay">FinderViewIndex::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderViewIndexer.html#methoddisplay">FinderViewIndexer::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderViewMaps.html#methoddisplay">FinderViewMaps::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderViewStatistics.html#methoddisplay">FinderViewStatistics::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewDefault.html#methoddisplay">InstallerViewDefault::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewDatabase.html#methoddisplay">InstallerViewDatabase::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewDiscover.html#methoddisplay">InstallerViewDiscover::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewInstall.html#methoddisplay">InstallerViewInstall::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewLanguages.html#methoddisplay">InstallerViewLanguages::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewManage.html#methoddisplay">InstallerViewManage::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewUpdate.html#methoddisplay">InstallerViewUpdate::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerViewWarnings.html#methoddisplay">InstallerViewWarnings::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/JoomlaupdateViewDefault.html#methoddisplay">JoomlaupdateViewDefault::display()</a>
+								: Renders the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/JoomlaupdateViewUpdate.html#methoddisplay">JoomlaupdateViewUpdate::display()</a>
+								: Renders the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesViewInstalled.html#methoddisplay">LanguagesViewInstalled::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesViewLanguage.html#methoddisplay">LanguagesViewLanguage::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesViewLanguages.html#methoddisplay">LanguagesViewLanguages::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesViewMultilangstatus.html#methoddisplay">LanguagesViewMultilangstatus::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesViewOverride.html#methoddisplay">LanguagesViewOverride::display()</a>
+								: Displays the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesViewOverrides.html#methoddisplay">LanguagesViewOverrides::display()</a>
+								: Displays the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_media/MediaViewImages.html#methoddisplay">MediaViewImages::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_media/MediaViewImagesList.html#methoddisplay">MediaViewImagesList::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_media/MediaViewMedia.html#methoddisplay">MediaViewMedia::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_media/MediaViewMediaList.html#methoddisplay">MediaViewMediaList::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusViewItem.html#methoddisplay">MenusViewItem::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusViewItems.html#methoddisplay">MenusViewItems::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusViewMenu.html#methoddisplay">MenusViewMenu::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusViewMenus.html#methoddisplay">MenusViewMenus::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusViewMenutypes.html#methoddisplay">MenusViewMenutypes::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesViewConfig.html#methoddisplay">MessagesViewConfig::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesViewMessage.html#methoddisplay">MessagesViewMessage::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesViewMessages.html#methoddisplay">MessagesViewMessages::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesViewModule.html#methoddisplay">ModulesViewModule::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesViewModules.html#methoddisplay">ModulesViewModules::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesViewPositions.html#methoddisplay">ModulesViewPositions::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesViewPreview.html#methoddisplay">ModulesViewPreview::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesViewSelect.html#methoddisplay">ModulesViewSelect::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsViewNewsfeed.html#methoddisplay">NewsfeedsViewNewsfeed::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsViewNewsfeeds.html#methoddisplay">NewsfeedsViewNewsfeeds::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_plugins/PluginsViewPlugin.html#methoddisplay">PluginsViewPlugin::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_plugins/PluginsViewPlugins.html#methoddisplay">PluginsViewPlugins::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectViewLink.html#methoddisplay">RedirectViewLink::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectViewLinks.html#methoddisplay">RedirectViewLinks::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_search/SearchViewSearches.html#methoddisplay">SearchViewSearches::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsViewTag.html#methoddisplay">TagsViewTag::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsViewTags.html#methoddisplay">TagsViewTags::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesViewSource.html#methoddisplay">TemplatesViewSource::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesViewStyle.html#methoddisplay">TemplatesViewStyle::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesViewStyles.html#methoddisplay">TemplatesViewStyles::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesViewTemplate.html#methoddisplay">TemplatesViewTemplate::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesViewTemplates.html#methoddisplay">TemplatesViewTemplates::display()</a>
+								: Display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewDebuggroup.html#methoddisplay">UsersViewDebuggroup::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewDebuguser.html#methoddisplay">UsersViewDebuguser::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewGroup.html#methoddisplay">UsersViewGroup::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewGroups.html#methoddisplay">UsersViewGroups::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewLevel.html#methoddisplay">UsersViewLevel::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewLevels.html#methoddisplay">UsersViewLevels::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewMail.html#methoddisplay">UsersViewMail::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewNote.html#methoddisplay">UsersViewNote::display()</a>
+								: Override the display method for the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewNotes.html#methoddisplay">UsersViewNotes::display()</a>
+								: Override the display method for the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewUser.html#methoddisplay">UsersViewUser::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersViewUsers.html#methoddisplay">UsersViewUsers::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksViewWeblink.html#methoddisplay">WeblinksViewWeblink::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksViewWeblinks.html#methoddisplay">WeblinksViewWeblinks::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactViewCategories.html#methoddisplay">ContactViewCategories::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactViewCategory.html#methoddisplay">ContactViewCategory::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactViewFeatured.html#methoddisplay">ContactViewFeatured::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentViewArchive.html#methoddisplay">ContentViewArchive::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentViewCategories.html#methoddisplay">ContentViewCategories::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentViewCategory.html#methoddisplay">ContentViewCategory::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentViewForm.html#methoddisplay">ContentViewForm::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderViewSearch.html#methoddisplay">FinderViewSearch::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_mailto/MailtoViewMailto.html#methoddisplay">MailtoViewMailto::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_mailto/MailtoViewSent.html#methoddisplay">MailtoViewSent::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsViewCategories.html#methoddisplay">NewsfeedsViewCategories::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsViewCategory.html#methoddisplay">NewsfeedsViewCategory::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_search/SearchViewSearch.html#methoddisplay">SearchViewSearch::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_users/UsersViewLogin.html#methoddisplay">UsersViewLogin::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_users/UsersViewProfile.html#methoddisplay">UsersViewProfile::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_users/UsersViewRegistration.html#methoddisplay">UsersViewRegistration::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_users/UsersViewRemind.html#methoddisplay">UsersViewRemind::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_users/UsersViewReset.html#methoddisplay">UsersViewReset::display()</a>
+								: Method to display the view.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksViewCategories.html#methoddisplay">WeblinksViewCategories::display()</a>
+								: Display the view
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksViewCategory.html#methoddisplay">WeblinksViewCategory::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksViewForm.html#methoddisplay">WeblinksViewForm::display()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_wrapper/WrapperViewWrapper.html#methoddisplay">WrapperViewWrapper::display()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodescape" id="escape"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">escape</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a356">356</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escapes a value for output in a view script.</p>
+<p class="description"><p>If escaping mechanism is either htmlspecialchars or htmlentities, uses  $_encoding setting.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The escaped value.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			escape
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$var</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$var</span><span class="var-description">: The output to escape.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a376">376</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get data from a registered model or a property of the view</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The return value of the method</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the method to call on the model or the property to get</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: The name of the model to reference or the default value [optional]</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></dt>
+						<dd>Returns a property of the object or the default value if the property is not set.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetLayout" id="getLayout"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLayout</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a433">433</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the layout.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The layout name</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLayout
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLayoutTemplate" id="getLayoutTemplate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLayoutTemplate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a443">443</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the layout template.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The layout template name</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLayoutTemplate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetModel" id="getModel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getModel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a419">419</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the model object</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JModelLegacy object</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getModel
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the model (optional)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a459">459</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the view name</p>
+<p class="description"><p>The model name by default parsed using the classname, or it can be set  by passing a $config['name'] in the class constructor</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The name of the model</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadHelper" id="loadHelper"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadHelper</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a689">689</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load a helper file</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadHelper
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$hlp</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hlp</span><span class="var-description">: The name of the helper source file automatically searches the helper paths and compiles as needed.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadTemplate" id="loadTemplate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadTemplate</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a607">607</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load a template file -- first look in the templates folder for an override</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The output of the the template script.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			loadTemplate
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$tpl</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tpl</span><span class="var-description">: The name of the template source file; automatically searches the template paths and compiles as needed.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetEscape" id="setEscape"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setEscape</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a562">562</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the _escape() callback.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 13.3  Override JViewLegacy::escape() instead.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setEscape
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$spec</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$spec</span><span class="var-description">: The callback for _escape() to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLayout" id="setLayout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLayout</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a512">512</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the layout name to use</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Previous value.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setLayout
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$layout</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$layout</span><span class="var-description">: The layout name or a string in format &lt;template&gt;:&lt;layout file&gt;</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLayoutExt" id="setLayoutExt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLayoutExt</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a541">541</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Allows a different extension for the layout files to be used</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Previous value</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			setLayoutExt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The extension.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetModel" id="setModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setModel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a491">491</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a model to the view.  We support a multiple model single</p>
+<p class="description"><p>view system by which models are referenced by classname.  A caveat to the  classname referencing is that any classname prepended by JModel will be  referenced by the name without JModel, eg. JModelCategory is just  Category.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> added model.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object The</span>
+		<span class="method-name">
+			setModel
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a></span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a></span>
+				<span class="var-name">$model</span><span class="var-description">: The model to add to the view.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$default</span><span class="var-description">: Is this the default model?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_addPath" id="_addPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_addPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a751">751</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds to the search path for templates and resources.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_addPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The type of path to add.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: The directory or stream, or an array of either, to search.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_createFileName" id="_createFileName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_createFileName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a784">784</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create the filename for a resource</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The filename</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_createFileName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$parts</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The resource type to create the filename for</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$parts</span><span class="var-description">: An associative array of filename information</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_setPath" id="_setPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_setPath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_View_librarieslegacyviewlegacy.php.html#a715">715</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets an entire array of search paths for templates or resources.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_setPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The type of path to set, typically 'template'.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: The new search path, or an array of search paths.  If null or false, resets to the current directory only.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:22 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

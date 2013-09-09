@@ -1,0 +1,2281 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JModelList</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JModelList</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Model class for handling lists of items.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---legacy---model---list.php.html">/libraries/legacy/model/list.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a>
+      |
+      --JModelList</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_banners/BannersModelBanners.html">BannersModelBanners</a>
+					</td>
+					<td>
+											Banners model for the Joomla Banners component.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersModelClients.html">BannersModelClients</a>
+					</td>
+					<td>
+											Methods supporting a list of banner records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_banners/BannersModelTracks.html">BannersModelTracks</a>
+					</td>
+					<td>
+											Methods supporting a list of tracks.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_cache/CacheModelCache.html">CacheModelCache</a>
+					</td>
+					<td>
+											Cache Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_categories/CategoriesModelCategories.html">CategoriesModelCategories</a>
+					</td>
+					<td>
+											Categories Component Categories Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_checkin/CheckinModelCheckin.html">CheckinModelCheckin</a>
+					</td>
+					<td>
+											Checkin Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_contact/ContactModelContacts.html">ContactModelContacts</a>
+					</td>
+					<td>
+											Methods supporting a list of contact records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentModelArticles.html">ContentModelArticles</a>
+					</td>
+					<td>
+											This models supports retrieving lists of articles.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html">FinderModelFilters</a>
+					</td>
+					<td>
+											Filters model class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderModelIndex.html">FinderModelIndex</a>
+					</td>
+					<td>
+											Index model class for Finder.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderModelMaps.html">FinderModelMaps</a>
+					</td>
+					<td>
+											Maps model for the Finder package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/InstallerModel.html">InstallerModel</a>
+					</td>
+					<td>
+											Extension Manager Abstract Extension Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/InstallerModelLanguages.html">InstallerModelLanguages</a>
+					</td>
+					<td>
+											Languages Installer Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/InstallerModelUpdate.html">InstallerModelUpdate</a>
+					</td>
+					<td>
+											Installer Update Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_installer/InstallerModelWarnings.html">InstallerModelWarnings</a>
+					</td>
+					<td>
+											Extension Manager Templates Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesModelInstalled.html">LanguagesModelInstalled</a>
+					</td>
+					<td>
+											Languages Component Languages Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesModelLanguages.html">LanguagesModelLanguages</a>
+					</td>
+					<td>
+											Languages Model Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_languages/LanguagesModelOverrides.html">LanguagesModelOverrides</a>
+					</td>
+					<td>
+											Languages Overrides Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusModelItems.html">MenusModelItems</a>
+					</td>
+					<td>
+											Menu Item List Model for Menus.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_menus/MenusModelMenus.html">MenusModelMenus</a>
+					</td>
+					<td>
+											Menu List Model for Menus.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_messages/MessagesModelMessages.html">MessagesModelMessages</a>
+					</td>
+					<td>
+											Messages Component Messages Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesModelModules.html">ModulesModelModules</a>
+					</td>
+					<td>
+											Modules Component Module Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesModelPositions.html">ModulesModelPositions</a>
+					</td>
+					<td>
+											Modules Component Positions Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_modules/ModulesModelSelect.html">ModulesModelSelect</a>
+					</td>
+					<td>
+											Module model.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsModelNewsfeeds.html">NewsfeedsModelNewsfeeds</a>
+					</td>
+					<td>
+											Methods supporting a list of newsfeed records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_plugins/PluginsModelPlugins.html">PluginsModelPlugins</a>
+					</td>
+					<td>
+											Methods supporting a list of plugin records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_redirect/RedirectModelLinks.html">RedirectModelLinks</a>
+					</td>
+					<td>
+											Methods supporting a list of redirect links.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_search/SearchModelSearches.html">SearchModelSearches</a>
+					</td>
+					<td>
+											Methods supporting a list of search terms.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_tags/TagsModelTags.html">TagsModelTags</a>
+					</td>
+					<td>
+											This models supports retrieving a list of tags.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesModelStyles.html">TemplatesModelStyles</a>
+					</td>
+					<td>
+											Methods supporting a list of template style records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_templates/TemplatesModelTemplates.html">TemplatesModelTemplates</a>
+					</td>
+					<td>
+											Methods supporting a list of template extension records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersModelDebuggroup.html">UsersModelDebuggroup</a>
+					</td>
+					<td>
+											Methods supporting a list of user records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersModelDebugUser.html">UsersModelDebugUser</a>
+					</td>
+					<td>
+											Methods supporting a list of user records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersModelGroups.html">UsersModelGroups</a>
+					</td>
+					<td>
+											Methods supporting a list of user group records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersModelLevels.html">UsersModelLevels</a>
+					</td>
+					<td>
+											Methods supporting a list of user access level records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersModelNotes.html">UsersModelNotes</a>
+					</td>
+					<td>
+											User notes model class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_users/UsersModelUsers.html">UsersModelUsers</a>
+					</td>
+					<td>
+											Methods supporting a list of user records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_weblinks/WeblinksModelWeblinks.html">WeblinksModelWeblinks</a>
+					</td>
+					<td>
+											Methods supporting a list of weblink records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_contact/ContactModelCategories.html">ContactModelCategories</a>
+					</td>
+					<td>
+											This models supports retrieving lists of contact categories.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_contact/ContactModelCategory.html">ContactModelCategory</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_contact/ContactModelFeatured.html">ContactModelFeatured</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentModelCategories.html">ContentModelCategories</a>
+					</td>
+					<td>
+											This models supports retrieving lists of article categories.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_content/ContentModelCategory.html">ContentModelCategory</a>
+					</td>
+					<td>
+											This models supports retrieving a category, the articles associated with the category,  sibling, child and parent categories.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_finder/FinderModelSearch.html">FinderModelSearch</a>
+					</td>
+					<td>
+											Search model class for the Finder package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_finder/FinderModelSuggestions.html">FinderModelSuggestions</a>
+					</td>
+					<td>
+											Suggestions model class for the Finder package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategories.html">NewsfeedsModelCategories</a>
+					</td>
+					<td>
+											This models supports retrieving lists of newsfeed categories.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategory.html">NewsfeedsModelCategory</a>
+					</td>
+					<td>
+											Newsfeeds Component Category Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_tags/TagsModelTag.html">TagsModelTag</a>
+					</td>
+					<td>
+											Tags Component Tag Model
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategories.html">WeblinksModelCategories</a>
+					</td>
+					<td>
+											This models supports retrieving lists of article categories.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategory.html">WeblinksModelCategory</a>
+					</td>
+					<td>
+											Weblinks Component Weblink Model
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$cache" title="details" class="var-name">$cache</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$context" title="details" class="var-name">$context</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$filter_fields" title="details" class="var-name">$filter_fields</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+					<a href="#$query" title="details" class="var-name">$query</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JModelList</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getItems" title="details" class="method-name">getItems</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#getListQuery" title="details" class="method-name">getListQuery</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Libraries/Pagination/JPagination.html">JPagination</a></span>
+										<a href="#getPagination" title="details" class="method-name">getPagination</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getStart" title="details" class="method-name">getStart</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getStoreId" title="details" class="method-name">getStoreId</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getTotal" title="details" class="method-name">getTotal</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#getUserStateFromRequest" title="details" class="method-name">getUserStateFromRequest</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'none'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$resetPage</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#populateState" title="details" class="method-name">populateState</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$ordering</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#_getListQuery" title="details" class="method-name">_getListQuery</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$cache" id="$cache"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$cache</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Internal memory based cache array of data.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$context" id="$context"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$context</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Context string for the model type.  This is used to handle uniqueness  when dealing with the getStoreId() method and caching data structures.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSearch.html#var$context">FinderModelSearch::$context</a>
+								: Context string for the model type
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSuggestions.html#var$context">FinderModelSuggestions::$context</a>
+								: Context string for the model type.
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$filter_fields" id="$filter_fields"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$filter_fields</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Valid filter fields or ordering.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$query" id="$query"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+			<span class="var-name">$query</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An internal cache for the last query used.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSearch.html#var$query">FinderModelSearch::$query</a>
+								: The query object is an instance of FinderIndexerQuery which contains and  models the entire search query including the text input; static and  dynamic taxonomy filters; date filters; etc.
+							</li>
+				</ul>
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#var$event_clean_cache">JModelLegacy::$event_clean_cache</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#var$name">JModelLegacy::$name</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#var$option">JModelLegacy::$option</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#var$state">JModelLegacy::$state</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#var$_db">JModelLegacy::$_db</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#var$__state_set">JModelLegacy::$__state_set</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a62">62</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a></li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JModelList</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: An optional associative array of configuration settings.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Legacy/Model/JModelLegacy.html#method__construct">JModelLegacy::__construct()</a></dt>
+						<dd>Constructor</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelClients.html#method__construct">BannersModelClients::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelTracks.html#method__construct">BannersModelTracks::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesModelCategories.html#method__construct">CategoriesModelCategories::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactModelContacts.html#method__construct">ContactModelContacts::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#method__construct">ContentModelArticles::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html#method__construct">FinderModelFilters::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelIndex.html#method__construct">FinderModelIndex::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelMaps.html#method__construct">FinderModelMaps::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModel.html#method__construct">InstallerModel::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelManage.html#method__construct">InstallerModelManage::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelLanguages.html#method__construct">InstallerModelLanguages::__construct()</a>
+								: Constructor override, defines a white list of column filters.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelUpdate.html#method__construct">InstallerModelUpdate::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelLanguages.html#method__construct">LanguagesModelLanguages::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelOverrides.html#method__construct">LanguagesModelOverrides::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelItems.html#method__construct">MenusModelItems::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelMenus.html#method__construct">MenusModelMenus::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesModelMessages.html#method__construct">MessagesModelMessages::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelModules.html#method__construct">ModulesModelModules::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelPositions.html#method__construct">ModulesModelPositions::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsModelNewsfeeds.html#method__construct">NewsfeedsModelNewsfeeds::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_plugins/PluginsModelPlugins.html#method__construct">PluginsModelPlugins::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectModelLinks.html#method__construct">RedirectModelLinks::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_search/SearchModelSearches.html#method__construct">SearchModelSearches::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelStyles.html#method__construct">TemplatesModelStyles::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelTemplates.html#method__construct">TemplatesModelTemplates::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelGroups.html#method__construct">UsersModelGroups::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelLevels.html#method__construct">UsersModelLevels::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelNotes.html#method__construct">UsersModelNotes::__construct()</a>
+								: Class constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelUsers.html#method__construct">UsersModelUsers::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksModelWeblinks.html#method__construct">WeblinksModelWeblinks::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategory.html#method__construct">ContactModelCategory::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelFeatured.html#method__construct">ContactModelFeatured::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategory.html#method__construct">ContentModelCategory::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategory.html#method__construct">NewsfeedsModelCategory::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTag.html#method__construct">TagsModelTag::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategory.html#method__construct">WeblinksModelCategory::__construct()</a>
+								: Constructor.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetItems" id="getItems"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getItems</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a113">113</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of data items.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of data items on success, false on failure.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getItems
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Site/com_banners/BannersModelBanners.html#methodgetItems">BannersModelBanners::getItems()</a>
+								: Get a list of banners.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_checkin/CheckinModelCheckin.html#methodgetItems">CheckinModelCheckin::getItems()</a>
+								: Get tables
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#methodgetItems">ContentModelArticles::getItems()</a>
+								: Method to get a list of articles.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelFeatured.html#methodgetItems">ContentModelFeatured::getItems()</a>
+								: Method to get a list of articles.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelDatabase.html#methodgetItems">InstallerModelDatabase::getItems()</a>
+								: Gets the changeset object
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelWarnings.html#methodgetItems">InstallerModelWarnings::getItems()</a>
+								: Load the data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelMenus.html#methodgetItems">MenusModelMenus::getItems()</a>
+								: Overrides the getItems method to attach additional metrics to the list.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelPositions.html#methodgetItems">ModulesModelPositions::getItems()</a>
+								: Method to get an array of data items.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelSelect.html#methodgetItems">ModulesModelSelect::getItems()</a>
+								: Method to get a list of items.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_search/SearchModelSearches.html#methodgetItems">SearchModelSearches::getItems()</a>
+								: Override the parnet getItems to inject optional data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTags.html#methodgetItems">TagsModelTags::getItems()</a>
+								: Redefine the function and add some properties to make the styling more easy
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelTemplates.html#methodgetItems">TemplatesModelTemplates::getItems()</a>
+								: Override parent getItems to add extra XML metadata.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebuggroup.html#methodgetItems">UsersModelDebuggroup::getItems()</a>
+								: Override getItems method.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebugUser.html#methodgetItems">UsersModelDebugUser::getItems()</a>
+								: Override getItems method.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelGroups.html#methodgetItems">UsersModelGroups::getItems()</a>
+								: Gets the list of groups and adds expensive joins to the result set.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelUsers.html#methodgetItems">UsersModelUsers::getItems()</a>
+								: Gets the list of users and adds expensive joins to the result set.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategories.html#methodgetItems">ContactModelCategories::getItems()</a>
+								: redefine the function an add some properties to make the styling more easy
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategory.html#methodgetItems">ContactModelCategory::getItems()</a>
+								: Method to get a list of items.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelFeatured.html#methodgetItems">ContactModelFeatured::getItems()</a>
+								: Method to get a list of items.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategories.html#methodgetItems">ContentModelCategories::getItems()</a>
+								: Redefine the function an add some properties to make the styling more easy
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategory.html#methodgetItems">ContentModelCategory::getItems()</a>
+								: Get the articles in the category
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSuggestions.html#methodgetItems">FinderModelSuggestions::getItems()</a>
+								: Method to get an array of data items.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategories.html#methodgetItems">NewsfeedsModelCategories::getItems()</a>
+								: redefine the function an add some properties to make the styling more easy
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategory.html#methodgetItems">NewsfeedsModelCategory::getItems()</a>
+								: Method to get a list of items.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTag.html#methodgetItems">TagsModelTag::getItems()</a>
+								: Method to get a list of items for a list of tags.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategories.html#methodgetItems">WeblinksModelCategories::getItems()</a>
+								: redefine the function an add some properties to make the styling more easy
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategory.html#methodgetItems">WeblinksModelCategory::getItems()</a>
+								: Method to get a list of items.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetListQuery" id="getListQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getListQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a150">150</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a JDatabaseQuery object for retrieving the data set from a database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JDatabaseQuery object to retrieve the data set.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			getListQuery
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Site/com_banners/BannersModelBanners.html#methodgetListQuery">BannersModelBanners::getListQuery()</a>
+								: Gets a list of banners
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelClients.html#methodgetListQuery">BannersModelClients::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelTracks.html#methodgetListQuery">BannersModelTracks::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesModelCategories.html#methodgetListQuery">CategoriesModelCategories::getListQuery()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactModelContacts.html#methodgetListQuery">ContactModelContacts::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#methodgetListQuery">ContentModelArticles::getListQuery()</a>
+								: Get the master query for retrieving a list of articles subject to the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArchive.html#methodgetListQuery">ContentModelArchive::getListQuery()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelFeatured.html#methodgetListQuery">ContentModelFeatured::getListQuery()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html#methodgetListQuery">FinderModelFilters::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelIndex.html#methodgetListQuery">FinderModelIndex::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelMaps.html#methodgetListQuery">FinderModelMaps::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelDiscover.html#methodgetListQuery">InstallerModelDiscover::getListQuery()</a>
+								: Method to get the database query.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelManage.html#methodgetListQuery">InstallerModelManage::getListQuery()</a>
+								: Method to get the database query
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelUpdate.html#methodgetListQuery">InstallerModelUpdate::getListQuery()</a>
+								: Method to get the database query
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelLanguages.html#methodgetListQuery">LanguagesModelLanguages::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelItems.html#methodgetListQuery">MenusModelItems::getListQuery()</a>
+								: Builds an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelMenus.html#methodgetListQuery">MenusModelMenus::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesModelMessages.html#methodgetListQuery">MessagesModelMessages::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelModules.html#methodgetListQuery">ModulesModelModules::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelSelect.html#methodgetListQuery">ModulesModelSelect::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsModelNewsfeeds.html#methodgetListQuery">NewsfeedsModelNewsfeeds::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_plugins/PluginsModelPlugins.html#methodgetListQuery">PluginsModelPlugins::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectModelLinks.html#methodgetListQuery">RedirectModelLinks::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_search/SearchModelSearches.html#methodgetListQuery">SearchModelSearches::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTags.html#methodgetListQuery">TagsModelTags::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelStyles.html#methodgetListQuery">TemplatesModelStyles::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelTemplates.html#methodgetListQuery">TemplatesModelTemplates::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebuggroup.html#methodgetListQuery">UsersModelDebuggroup::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebugUser.html#methodgetListQuery">UsersModelDebugUser::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelGroups.html#methodgetListQuery">UsersModelGroups::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelLevels.html#methodgetListQuery">UsersModelLevels::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelNotes.html#methodgetListQuery">UsersModelNotes::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelUsers.html#methodgetListQuery">UsersModelUsers::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksModelWeblinks.html#methodgetListQuery">WeblinksModelWeblinks::getListQuery()</a>
+								: Build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategory.html#methodgetListQuery">ContactModelCategory::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelFeatured.html#methodgetListQuery">ContactModelFeatured::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSearch.html#methodgetListQuery">FinderModelSearch::getListQuery()</a>
+								: Method to build a database query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSuggestions.html#methodgetListQuery">FinderModelSuggestions::getListQuery()</a>
+								: Method to build a database query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategory.html#methodgetListQuery">NewsfeedsModelCategory::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTag.html#methodgetListQuery">TagsModelTag::getListQuery()</a>
+								: Method to build an SQL query to load the list data of all items with a given tag.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategory.html#methodgetListQuery">WeblinksModelCategory::getListQuery()</a>
+								: Method to build an SQL query to load the list data.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetPagination" id="getPagination"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPagination</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a165">165</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a JPagination object for the data set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JPagination object for the data set.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Libraries/Pagination/JPagination.html">JPagination</a></span>
+		<span class="method-name">
+			getPagination
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_cache/CacheModelCache.html#methodgetPagination">CacheModelCache::getPagination()</a>
+								: Method to get a pagination object for the cache
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelDatabase.html#methodgetPagination">InstallerModelDatabase::getPagination()</a>
+								: Method to get a JPagination object for the data set.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategory.html#methodgetPagination">ContentModelCategory::getPagination()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodgetStart" id="getStart"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getStart</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a253">253</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the starting number of items for the data set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The starting number of items available in the data set.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getStart
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#methodgetStart">ContentModelArticles::getStart()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodgetStoreId" id="getStoreId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getStoreId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a199">199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a store id based on the model configuration state.</p>
+<p class="description"><p>This is necessary because the model is used by the component and  different modules that might need different sets of data or different  ordering requirements.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A store id.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getStoreId
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: An identifier string to generate the store id.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Site/com_banners/BannersModelBanners.html#methodgetStoreId">BannersModelBanners::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelClients.html#methodgetStoreId">BannersModelClients::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesModelCategories.html#methodgetStoreId">CategoriesModelCategories::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactModelContacts.html#methodgetStoreId">ContactModelContacts::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#methodgetStoreId">ContentModelArticles::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelFeatured.html#methodgetStoreId">ContentModelFeatured::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html#methodgetStoreId">FinderModelFilters::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelIndex.html#methodgetStoreId">FinderModelIndex::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelMaps.html#methodgetStoreId">FinderModelMaps::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelLanguages.html#methodgetStoreId">InstallerModelLanguages::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelInstalled.html#methodgetStoreId">LanguagesModelInstalled::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelLanguages.html#methodgetStoreId">LanguagesModelLanguages::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelItems.html#methodgetStoreId">MenusModelItems::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesModelMessages.html#methodgetStoreId">MessagesModelMessages::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelModules.html#methodgetStoreId">ModulesModelModules::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelSelect.html#methodgetStoreId">ModulesModelSelect::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsModelNewsfeeds.html#methodgetStoreId">NewsfeedsModelNewsfeeds::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_plugins/PluginsModelPlugins.html#methodgetStoreId">PluginsModelPlugins::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectModelLinks.html#methodgetStoreId">RedirectModelLinks::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_search/SearchModelSearches.html#methodgetStoreId">SearchModelSearches::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelStyles.html#methodgetStoreId">TemplatesModelStyles::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelTemplates.html#methodgetStoreId">TemplatesModelTemplates::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebuggroup.html#methodgetStoreId">UsersModelDebuggroup::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebugUser.html#methodgetStoreId">UsersModelDebugUser::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelGroups.html#methodgetStoreId">UsersModelGroups::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelLevels.html#methodgetStoreId">UsersModelLevels::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelNotes.html#methodgetStoreId">UsersModelNotes::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelUsers.html#methodgetStoreId">UsersModelUsers::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksModelWeblinks.html#methodgetStoreId">WeblinksModelWeblinks::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategories.html#methodgetStoreId">ContactModelCategories::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategories.html#methodgetStoreId">ContentModelCategories::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSearch.html#methodgetStoreId">FinderModelSearch::getStoreId()</a>
+								: Method to get a store id based on model the configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSuggestions.html#methodgetStoreId">FinderModelSuggestions::getStoreId()</a>
+								: Method to get a store id based on model the configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategories.html#methodgetStoreId">NewsfeedsModelCategories::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategories.html#methodgetStoreId">WeblinksModelCategories::getStoreId()</a>
+								: Method to get a store id based on model configuration state.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetTotal" id="getTotal"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTotal</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a217">217</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the total number of items for the data set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The total number of items available in the data set.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getTotal
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_cache/CacheModelCache.html#methodgetTotal">CacheModelCache::getTotal()</a>
+								: Get the number of current Cache Groups
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_checkin/CheckinModelCheckin.html#methodgetTotal">CheckinModelCheckin::getTotal()</a>
+								: Get total of tables
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelInstalled.html#methodgetTotal">LanguagesModelInstalled::getTotal()</a>
+								: Method to get the total number of Languages items
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelOverrides.html#methodgetTotal">LanguagesModelOverrides::getTotal()</a>
+								: Method to get the total number of overrides
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelPositions.html#methodgetTotal">ModulesModelPositions::getTotal()</a>
+								: Method to get the total number of items.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSearch.html#methodgetTotal">FinderModelSearch::getTotal()</a>
+								: Method to get the total number of results.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetUserStateFromRequest" id="getUserStateFromRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUserStateFromRequest</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a349">349</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the value of a user state variable and sets it in the session</p>
+<p class="description"><p>This is the same as the method in JApplication except that this also can optionally  force you back to the first page when a filter has changed</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> request user state.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			getUserStateFromRequest
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'none'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$resetPage</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The key of the user state variable.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$request</span><span class="var-description">: The name of the variable passed in a request.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value for the variable if not found. Optional.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Filter for the variable, for valid values see <a href="../../Joomla-Platform/Filter/JFilterInput.html#methodclean">JFilterInput::clean()</a>. Optional.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$resetPage</span><span class="var-description">: If true, the limitstart in request is set to zero</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopulateState" id="populateState"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">populateState</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a293">293</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to auto-populate the model state.</p>
+<p class="description"><p>This method should only be called once per instantiation and is designed  to be called on the first call to the getState() method unless the model  configuration flag to ignore the request is set.</p><p>Note. Calling getState in this method will result in recursion.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			populateState
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$ordering</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ordering</span><span class="var-description">: An optional ordering field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direction</span><span class="var-description">: An optional direction (asc|desc).</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodpopulateState">JModelLegacy::populateState()</a></dt>
+						<dd>Method to auto-populate the model state.</dd>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelClients.html#methodpopulateState">BannersModelClients::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_banners/BannersModelTracks.html#methodpopulateState">BannersModelTracks::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_cache/CacheModelCache.html#methodpopulateState">CacheModelCache::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_categories/CategoriesModelCategories.html#methodpopulateState">CategoriesModelCategories::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_checkin/CheckinModelCheckin.html#methodpopulateState">CheckinModelCheckin::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contact/ContactModelContacts.html#methodpopulateState">ContactModelContacts::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#methodpopulateState">ContentModelArticles::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelArchive.html#methodpopulateState">ContentModelArchive::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelFeatured.html#methodpopulateState">ContentModelFeatured::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html#methodpopulateState">FinderModelFilters::populateState()</a>
+								: Method to auto-populate the model state.  Calling getState in this method will result in recursion.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelIndex.html#methodpopulateState">FinderModelIndex::populateState()</a>
+								: Method to auto-populate the model state.  Calling getState in this method will result in recursion.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderModelMaps.html#methodpopulateState">FinderModelMaps::populateState()</a>
+								: Method to auto-populate the model state.  Calling getState in this method will result in recursion.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelDatabase.html#methodpopulateState">InstallerModelDatabase::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelDiscover.html#methodpopulateState">InstallerModelDiscover::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelManage.html#methodpopulateState">InstallerModelManage::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelLanguages.html#methodpopulateState">InstallerModelLanguages::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelUpdate.html#methodpopulateState">InstallerModelUpdate::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelInstalled.html#methodpopulateState">LanguagesModelInstalled::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelLanguages.html#methodpopulateState">LanguagesModelLanguages::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_languages/LanguagesModelOverrides.html#methodpopulateState">LanguagesModelOverrides::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelItems.html#methodpopulateState">MenusModelItems::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_menus/MenusModelMenus.html#methodpopulateState">MenusModelMenus::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_messages/MessagesModelMessages.html#methodpopulateState">MessagesModelMessages::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelModules.html#methodpopulateState">ModulesModelModules::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelPositions.html#methodpopulateState">ModulesModelPositions::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_modules/ModulesModelSelect.html#methodpopulateState">ModulesModelSelect::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_newsfeeds/NewsfeedsModelNewsfeeds.html#methodpopulateState">NewsfeedsModelNewsfeeds::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_plugins/PluginsModelPlugins.html#methodpopulateState">PluginsModelPlugins::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_redirect/RedirectModelLinks.html#methodpopulateState">RedirectModelLinks::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_search/SearchModelSearches.html#methodpopulateState">SearchModelSearches::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTags.html#methodpopulateState">TagsModelTags::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelStyles.html#methodpopulateState">TemplatesModelStyles::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_templates/TemplatesModelTemplates.html#methodpopulateState">TemplatesModelTemplates::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebuggroup.html#methodpopulateState">UsersModelDebuggroup::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelDebugUser.html#methodpopulateState">UsersModelDebugUser::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelGroups.html#methodpopulateState">UsersModelGroups::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelLevels.html#methodpopulateState">UsersModelLevels::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelNotes.html#methodpopulateState">UsersModelNotes::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_users/UsersModelUsers.html#methodpopulateState">UsersModelUsers::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_weblinks/WeblinksModelWeblinks.html#methodpopulateState">WeblinksModelWeblinks::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategories.html#methodpopulateState">ContactModelCategories::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelCategory.html#methodpopulateState">ContactModelCategory::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_contact/ContactModelFeatured.html#methodpopulateState">ContactModelFeatured::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategories.html#methodpopulateState">ContentModelCategories::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_content/ContentModelCategory.html#methodpopulateState">ContentModelCategory::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSearch.html#methodpopulateState">FinderModelSearch::populateState()</a>
+								: Method to auto-populate the model state.  Calling getState in this method will result in recursion.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_finder/FinderModelSuggestions.html#methodpopulateState">FinderModelSuggestions::populateState()</a>
+								: Method to auto-populate the model state.  Calling getState in this method will result in recursion.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategories.html#methodpopulateState">NewsfeedsModelCategories::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_newsfeeds/NewsfeedsModelCategory.html#methodpopulateState">NewsfeedsModelCategory::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_tags/TagsModelTag.html#methodpopulateState">TagsModelTag::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategories.html#methodpopulateState">WeblinksModelCategories::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Site/com_weblinks/WeblinksModelCategory.html#methodpopulateState">WeblinksModelCategory::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+				</ul>
+	</div>
+<a name="method_getListQuery" id="_getListQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getListQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a88">88</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to cache the last query constructed.</p>
+<p class="description"><p>This method ensures that the query is constructed only once for a given state of the model.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JDatabaseQuery object</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			_getListQuery
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelLanguages.html#method_getListQuery">InstallerModelLanguages::_getListQuery()</a>
+								: Method to get the available languages database query.
+							</li>
+				</ul>
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Legacy/Model/JModelLegacy.html">JModelLegacy</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#method__construct">JModelLegacy::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodaddIncludePath">JModelLegacy::addIncludePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodaddTablePath">JModelLegacy::addTablePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodcleanCache">JModelLegacy::cleanCache()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodgetDbo">JModelLegacy::getDbo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodgetInstance">JModelLegacy::getInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodgetName">JModelLegacy::getName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodgetState">JModelLegacy::getState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodgetTable">JModelLegacy::getTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodpopulateState">JModelLegacy::populateState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodsetDbo">JModelLegacy::setDbo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodsetState">JModelLegacy::setState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#method_createFileName">JModelLegacy::_createFileName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#method_createTable">JModelLegacy::_createTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#method_getList">JModelLegacy::_getList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#method_getListCount">JModelLegacy::_getListCount()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:40 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

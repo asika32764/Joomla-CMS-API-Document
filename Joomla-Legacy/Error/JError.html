@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JError</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JError</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error Handling Class</p>
+<p class="description"><p>This class is inspired in design and concept by patErrorManager &lt;http://www.php-tools.net&gt;</p><p>patErrorManager contributors include: <ul><li>gERD Schaufelberger	&lt;gerd@php-tools.net&gt;</li><li>Sebastian Mordziol	&lt;argh@php-tools.net&gt;</li><li>Stephan Schmidt		&lt;scst@php-tools.net&gt;</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 12.1 (Platform) &amp; 4.0 (CMS) - Use PHP Exception</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---legacy---error---error.php.html">/libraries/legacy/error/error.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a36">36</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$handlers" title="details" class="var-name">$handlers</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">boolean</span>
+					<a href="#$legacy" title="details" class="var-name">$legacy</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$levels" title="details" class="var-name">$levels</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$stack" title="details" class="var-name">$stack</a>
+				</div>
+																																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#addToStack" title="details" class="method-name">addToStack</a>
+											(<span class="var-type"><a href="../../Joomla-Legacy/Exception/JException.html">JException</a></span>&nbsp;<span class="var-name">&$e</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#attachHandler" title="details" class="method-name">attachHandler</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#customErrorHandler" title="details" class="method-name">customErrorHandler</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#customErrorPage" title="details" class="method-name">customErrorPage</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#detachHandler" title="details" class="method-name">detachHandler</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#getError" title="details" class="method-name">getError</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$unset</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getErrorHandling" title="details" class="method-name">getErrorHandling</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getErrors" title="details" class="method-name">getErrors</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleCallback" title="details" class="method-name">handleCallback</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleDie" title="details" class="method-name">handleDie</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleEcho" title="details" class="method-name">handleEcho</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleIgnore" title="details" class="method-name">handleIgnore</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleLog" title="details" class="method-name">handleLog</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleMessage" title="details" class="method-name">handleMessage</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#handleVerbose" title="details" class="method-name">handleVerbose</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isError" title="details" class="method-name">isError</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#raise" title="details" class="method-name">raise</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$backtrace</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object</span>
+										<a href="#raiseError" title="details" class="method-name">raiseError</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#raiseNotice" title="details" class="method-name">raiseNotice</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#raiseWarning" title="details" class="method-name">raiseWarning</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#registerErrorLevel" title="details" class="method-name">registerErrorLevel</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$handler</span> = <span class="var-default">'ignore'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#renderBacktrace" title="details" class="method-name">renderBacktrace</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$error</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#setErrorHandling" title="details" class="method-name">setErrorHandling</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">reference</span>
+										<a href="#throwError" title="details" class="method-name">throwError</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">&$exception</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#translateErrorLevel" title="details" class="method-name">translateErrorLevel</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>)
+									</div>
+																																																																																																																																																																																																																							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$handlers" id="$handlers"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$handlers</span>
+			 = <span class="var-default">array(<br />		E_NOTICE =&gt; array('mode' =&gt; 'ignore'),E_WARNING=&gt;array('mode'=&gt;'ignore'),E_ERROR=&gt;array('mode'=&gt;'ignore'))</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$legacy" id="$legacy"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">boolean</span>
+			<span class="var-name">$legacy</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Legacy error handling marker</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> True to enable legacy error handling using JError, false to use exception handling.  This flag                   is present to allow an easy transition into exception handling for code written against the                   existing JError API in Joomla.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$levels" id="$levels"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$levels</span>
+			 = <span class="var-default">array(E_NOTICE =&gt; 'Notice', E_WARNING =&gt; 'Warning', E_ERROR =&gt; 'Error')</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of message levels</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$stack" id="$stack"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$stack</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddToStack" id="addToStack"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addToStack</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a136">136</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add non-JError thrown JExceptions to the JError stack for debugging purposes</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			addToStack
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Legacy/Exception/JException.html">JException</a></span>&nbsp;<span class="var-name">&$e</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Legacy/Exception/JException.html">JException</a></span>
+				<span class="var-name">&$e</span><span class="var-description">: Add an exception to the stack.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodattachHandler" id="attachHandler"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static attachHandler</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a407">407</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that attaches the error handler to JError</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/set_error_handler">set_error_handler</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			attachHandler
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcustomErrorHandler" id="customErrorHandler"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static customErrorHandler</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a813">813</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display a message to the user</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			customErrorHandler
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: The error level - use any of PHP's own error levels                    for this: E_ERROR, E_WARNING, E_NOTICE, E_USER_ERROR,                    E_USER_WARNING, E_USER_NOTICE.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: Error message, shown to user if need be.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcustomErrorPage" id="customErrorPage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static customErrorPage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a757">757</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display a custom error page and exit gracefully</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			customErrorPage
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddetachHandler" id="detachHandler"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static detachHandler</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a423">423</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that detaches the error handler from JError</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.php.net/restore_error_handler">restore_error_handler</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			detachHandler
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetError" id="getError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getError</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a91">91</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method for retrieving the last exception object in the error stack</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Last exception object in the error stack or boolean false if none exist</li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			getError
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$unset</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$unset</span><span class="var-description">: True to remove the error from the stack.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetErrorHandling" id="getErrorHandling"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getErrorHandling</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a303">303</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the current error handler settings for a specified error level.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> All error handling details</li>
+				<li><span class="field">deprecated:</span> 12.1  Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getErrorHandling
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: The error level to retrieve. This can be any of PHP's                            own error levels, e.g. E_ALL, E_NOTICE...</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetErrors" id="getErrors"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getErrors</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method for retrieving the exception stack</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Chronological array of errors that have been stored during script execution</li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getErrors
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhandleCallback" id="handleCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a740">740</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Callback error handler <ul><li>Send the error object to a callback method for error handling</li></ul></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleCallback
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhandleDie" id="handleDie"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleDie</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a638">638</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Die error handler <ul><li>Echos the error message to output and then dies</li></ul></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleDie
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhandleEcho" id="handleEcho"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleEcho</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a519">519</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Echo error handler <ul><li>Echos the error message to output</li></ul></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleEcho
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhandleIgnore" id="handleIgnore"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleIgnore</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a499">499</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ignore error handler <ul><li>Ignores the error</li></ul></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleIgnore
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhandleLog" id="handleLog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleLog</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a703">703</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Log error handler  Logs the error message to a system log file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleLog
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhandleMessage" id="handleMessage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleMessage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a679">679</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Message error handler  Enqueues the error message into the system queue</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleMessage
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhandleVerbose" id="handleVerbose"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static handleVerbose</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a592">592</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verbose error handler <ul><li>Echos the error message to output as well as related info</li></ul></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> exception object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			handleVerbose
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$error</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$error</span><span class="var-description">: Exception object to handle</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Handler options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisError" id="isError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isError</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a74">74</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to determine if a value is an exception object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if argument is an exception, false otherwise.</li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isError
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$object</span><span class="var-description">: Object to check.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodraise" id="raise"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static raise</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a162">162</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a new JException object given the passed arguments</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The JException object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Exception/JException.html">JException</a></li>
+				<li><span class="field">deprecated:</span> 12.1  Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			raise
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$backtrace</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: The error level - use any of PHP's own error levels for                                this: E_ERROR, E_WARNING, E_NOTICE, E_USER_ERROR,                                E_USER_WARNING, E_USER_NOTICE.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span><span class="var-description">: The application-internal error code for this error</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: The error message, which may also be shown the user if need be.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$info</span><span class="var-description">: Optional: Additional error information (usually only                                developer-relevant information that the user should never see,                                like a database DSN).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$backtrace</span><span class="var-description">: Add a stack backtrace to the exception.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodraiseError" id="raiseError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static raiseError</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a238">238</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper method for the raise() method with predefined error level of E_ERROR and backtrace set to true.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The configured JError object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1       Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object</span>
+		<span class="method-name">
+			raiseError
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span><span class="var-description">: The application-internal error code for this error</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: The error message, which may also be shown the user if need be.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$info</span><span class="var-description">: Optional: Additional error information (usually only                          developer-relevant information that the user should                          never see, like a database DSN).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodraiseNotice" id="raiseNotice"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static raiseNotice</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a285">285</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper method for the raise() method with predefined error  level of E_NOTICE and backtrace set to false.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> configured JError object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1   Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			raiseNotice
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span><span class="var-description">: The application-internal error code for this error</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: The error message, which may also be shown the user if need be.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$info</span><span class="var-description">: Optional: Additional error information (usually only                          developer-relevant information that the user                          should never see, like a database DSN).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodraiseWarning" id="raiseWarning"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static raiseWarning</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a262">262</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper method for the raise() method with predefined error level of E_WARNING and  backtrace set to false.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> configured JError object</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html">JError</a></li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Error/JError.html#methodraise">JError::raise()</a></li>
+				<li><span class="field">deprecated:</span> 12.1  Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			raiseWarning
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$code</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$info</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$code</span><span class="var-description">: The application-internal error code for this error</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: The error message, which may also be shown the user if need be.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$info</span><span class="var-description">: Optional: Additional error information (usually only                          developer-relevant information that                          the user should never see, like a database DSN).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodregisterErrorLevel" id="registerErrorLevel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static registerErrorLevel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a447">447</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to register a new error level for handling errors</p>
+<p class="description"><p>This allows you to add custom error levels to the built-in <ul><li>E_NOTICE</li><li>E_WARNING</li><li>E_NOTICE</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success; false if the level already has been registered</li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			registerErrorLevel
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$handler</span> = <span class="var-default">'ignore'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: Error level to register</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Human readable name for the error level</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$handler</span><span class="var-description">: Error handler to set for the new error level [optional]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenderBacktrace" id="renderBacktrace"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static renderBacktrace</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a830">830</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Render the backtrace</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Contents of the backtrace</li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			renderBacktrace
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$error</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$error</span><span class="var-description">: The error</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetErrorHandling" id="setErrorHandling"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static setErrorHandling</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a337">337</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the way the JError will handle different error levels. Use this if you want to override the default settings.</p>
+<p class="description"><p>Error handling modes: <ul><li>ignore</li><li>echo</li><li>verbose</li><li>die</li><li>message</li><li>log</li><li>callback</li></ul>  You may also set the error handling for several modes at once using PHP's bit operations.  Examples: <ul><li>E_ALL = Set the handling for all levels</li><li>E_ERROR | E_WARNING = Set the handling for errors and warnings</li><li>E_ALL ^ E_ERROR = Set the handling for all levels except errors</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success or a JException object if failed.</li>
+				<li><span class="field">deprecated:</span> 12.1  Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			setErrorHandling
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: The error level for which to set the error handling</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mode</span><span class="var-description">: The mode to use for the error handling.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$options</span><span class="var-description">: Optional: Any options needed for the given mode.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodthrowError" id="throwError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static throwError</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a182">182</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Throw an error</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Legacy/Exception/JException.html">JException</a></li>
+				<li><span class="field">deprecated:</span> 12.1  Use PHP Exception</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">reference</span>
+		<span class="method-name">
+			throwError
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">&$exception</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">&$exception</span><span class="var-description">: An exception to throw.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtranslateErrorLevel" id="translateErrorLevel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static translateErrorLevel</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Error_librarieslegacyerrorerror.php.html#a474">474</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Translate an error level integer to a human readable string  e.g. E_ERROR will be translated to 'Error'</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Human readable error level name or boolean false if it doesn't exist</li>
+				<li><span class="field">deprecated:</span> 12.1</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			translateErrorLevel
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$level</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$level</span><span class="var-description">: Error level to translate</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:30:05 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

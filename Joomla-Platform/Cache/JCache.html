@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JCache</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JCache</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla! Cache base object</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---cache---cache.php.html">/libraries/joomla/cache/cache.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">object Storage</span>
+					<a href="#$_handler" title="details" class="var-name">$_handler</a>
+				</div>
+																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_options" title="details" class="var-name">$_options</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addIncludePath" title="details" class="method-name">addIncludePath</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+									</div>
+																																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Cache/JCache.html">JCache</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'output'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getStores" title="details" class="method-name">getStores</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getWorkarounds" title="details" class="method-name">getWorkarounds</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#makeId" title="details" class="method-name">makeId</a>
+										()
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#setWorkarounds" title="details" class="method-name">setWorkarounds</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JCache</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#clean" title="details" class="method-name">clean</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">'group'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#gc" title="details" class="method-name">gc</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getAll" title="details" class="method-name">getAll</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getCaching" title="details" class="method-name">getCaching</a>
+										()
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object Properties</span>
+										<a href="#lock" title="details" class="method-name">lock</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$locktime</span> = <span class="var-default">null</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#remove" title="details" class="method-name">remove</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setCaching" title="details" class="method-name">setCaching</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setLifeTime" title="details" class="method-name">setLifeTime</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$lt</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#store" title="details" class="method-name">store</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#unlock" title="details" class="method-name">unlock</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Cache/JCacheStorage.html">JCacheStorage</a></span>
+										<a href="#_getStorage" title="details" class="method-name">&amp;_getStorage</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_handler" id="$_handler"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">object Storage</span>
+			<span class="var-name">$_handler</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> handler</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$_options" id="$_options"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_options</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Options</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddIncludePath" id="addIncludePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addIncludePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a711">711</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a directory where JCache should search for handlers. You may  either pass a string or an array of directories.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array with directory elements</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addIncludePath
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: A path to search.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a80">80</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a reference to a cache adapter object, always creating it</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JCache object</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Cache/JCache.html">JCache</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'output'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The cache object type to instantiate</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: The array of options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStores" id="getStores"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getStores</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a92">92</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the storage handlers</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of available storage handlers</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getStores
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetWorkarounds" id="getWorkarounds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getWorkarounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a463">463</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Perform workarounds on retrieved cached data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Body of cached data</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getWorkarounds
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: Cached data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array of options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeId" id="makeId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static makeId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a673">673</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create safe id for cached data from url parameters set by plugins and framework</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> md5 encoded cacheid</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			makeId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetWorkarounds" id="setWorkarounds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static setWorkarounds</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a533">533</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create workarounded data to be cached</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Data to be cached</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			setWorkarounds
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: Cached data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Array of options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a40">40</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JCache</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclean" id="clean"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">clean</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a277">277</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clean cache for a group given a mode.</p>
+<p class="description"><p>group mode       : cleans all cache in the group  notgroup mode    : cleans all cache not in the group</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			clean
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">'group'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache data group</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mode</span><span class="var-description">: The mode for cleaning cache [group|notgroup]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgc" id="gc"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">gc</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a298">298</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Garbage collect expired cache data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			gc
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a182">182</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get cached data by id and group</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> boolean  False on failure or a cached data string</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The cache data id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache data group</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAll" id="getAll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAll</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a203">203</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a list of all cached data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on failure or an object with a list of cache groups and data</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getAll
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCaching" id="getCaching"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCaching</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a153">153</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get caching state</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Caching state</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getCaching
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlock" id="lock"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">lock</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a320">320</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set lock flag on cached item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> are lock and locklooped</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object Properties</span>
+		<span class="method-name">
+			lock
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$locktime</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The cache data id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache data group</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$locktime</span><span class="var-description">: The default locktime for locking the cache.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremove" id="remove"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">remove</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a250">250</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove a cached data entry by id and group</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			remove
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The cache data id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache data group</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCaching" id="setCaching"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCaching</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a141">141</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set caching enabled state</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCaching
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$enabled</span><span class="var-description">: True to enable caching</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLifeTime" id="setLifeTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLifeTime</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a167">167</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set cache lifetime</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setLifeTime
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$lt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$lt</span><span class="var-description">: Cache lifetime</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstore" id="store"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">store</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a225">225</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Store the cached data by id and group</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if cache stored</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			store
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: The data to store</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The cache data id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache data group</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunlock" id="unlock"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">unlock</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a406">406</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unset lock flag on cached item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			unlock
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The cache data id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache data group</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getStorage" id="_getStorage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getStorage</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Cache_librariesjoomlacachecache.php.html#a440">440</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the cache storage handler</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A JCacheStorage object</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Cache/JCacheStorage.html">JCacheStorage</a></span>
+		<span class="method-name">
+			&amp;_getStorage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:23:33 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page daemon.php</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name"><img src="../../media/images/Page_logo.png" alt="File" style="vertical-align: middle">/libraries/joomla/application/daemon.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|													<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.</li>
+				<li><span class="field">filesource:</span> <a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> GNU</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|																<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"/>
+						<a href="../../Joomla-Platform/Application/JApplicationDaemon.html">JApplicationDaemon</a>
+					</td>
+					<td>
+											Base class for a Joomla! command line application.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionchangeIdentity" id="functionchangeIdentity"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">changeIdentity</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a439">439</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to change the identity of the daemon process and resources.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if identity successfully changed</li>
+				<li><span class="field">see:</span> posix_setuid()</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			changeIdentity
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiondaemonize" id="functiondaemonize"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">daemonize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a503">503</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to put the application into the background.</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			daemonize
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiondetach" id="functiondetach"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">detach</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a602">602</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is truly where the magic happens.  This is where we fork the process and kill the parent  process, which is essentially what turns the application into a daemon.</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 12.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			detach
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionexecute" id="functionexecute"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">execute</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a363">363</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the daemon.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			execute
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionfork" id="functionfork"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">fork</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a636">636</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to fork the process.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The child process id to the parent process, zero to the child process.</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			fork
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiongc" id="functiongc"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">gc</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a673">673</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to perform basic garbage collection and memory management in the sense of clearing the  stat cache.  We will probably call this method pretty regularly in our main loop.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			gc
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionisActive" id="functionisActive"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">isActive</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a220">220</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check to see if the daemon is active.  This does not assume that $this daemon is active, but  only if an instance of the application is active as a daemon.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if daemon is active.</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isActive
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionloadConfiguration" id="functionloadConfiguration"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">loadConfiguration</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a265">265</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an object or array into the application configuration object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Instance of $this to allow chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Application/JCli.html">JCli</a></span>
+		<span class="method-name">
+			loadConfiguration
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: Either an array or object to be loaded into the configuration object.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpcntlChildExitStatus" id="functionpcntlChildExitStatus"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">pcntlChildExitStatus</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a855">855</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return the exit code of a terminated child process.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The child process exit code.</li>
+				<li><span class="field">see:</span> pcntl_wexitstatus()</li>
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			pcntlChildExitStatus
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$status</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$status</span><span class="var-description">: The status parameter is the status parameter supplied to a successful call to pcntl_waitpid().</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpcntlFork" id="functionpcntlFork"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">pcntlFork</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a872">872</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to return the exit code of a terminated child process.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> On success, the PID of the child process is returned in the parent's thread                    of execution, and a 0 is returned in the child's thread of execution. On                    failure, a -1 will be returned in the parent's context, no child process                    will be created, and a PHP error is raised.</li>
+				<li><span class="field">see:</span> pcntl_fork()</li>
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			pcntlFork
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionpcntlSignal" id="functionpcntlSignal"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">pcntlSignal</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a892">892</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to install a signal handler.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">see:</span> pcntl_signal()</li>
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			pcntlSignal
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$signal</span>, <span class="var-type">callable</span>&nbsp;<span class="var-name">$handler</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$restart</span> = <span class="var-default">true</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$signal</span><span class="var-description">: The signal number.</span>			</li>
+					<li>
+				<span class="var-type">callable</span>
+				<span class="var-name">$handler</span><span class="var-description">: The signal handler which may be the name of a user created function,                               or method, or either of the two global constants SIG_IGN or SIG_DFL.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$restart</span><span class="var-description">: Specifies whether system call restarting should be used when this                               signal arrives.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpcntlWait" id="functionpcntlWait"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">pcntlWait</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a911">911</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to wait on or return the status of a forked child.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The process ID of the child which exited, -1 on error or zero if WNOHANG                    was provided as an option (on wait3-available systems) and no child was available.</li>
+				<li><span class="field">see:</span> pcntl_wait()</li>
+				<li><span class="field">since:</span> 11.3</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			pcntlWait
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">&$status</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">&$status</span><span class="var-description">: Status information.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$options</span><span class="var-description">: If wait3 is available on your system (mostly BSD-style systems),                              you can provide the optional options parameter.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpostFork" id="functionpostFork"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">postFork</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a838">838</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to handle post-fork triggering of the onFork event.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			postFork
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionrestart" id="functionrestart"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">restart</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a411">411</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Restart daemon process.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			restart
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionsetupSignalHandlers" id="functionsetupSignalHandlers"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">setupSignalHandlers</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a692">692</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to attach the JApplicationDaemon signal handler to the known signals.  Applications  can override these handlers by using the pcntl_signal() function and attaching a different  callback method.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> pcntl_signal()</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setupSignalHandlers
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshutdown" id="functionshutdown"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">shutdown</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a729">729</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to shut down the daemon and optionally restart it.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			shutdown
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$restart</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$restart</span><span class="var-description">: True to restart the daemon on exit.</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionstop" id="functionstop"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">stop</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a425">425</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stop daemon process.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			stop
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionwriteProcessIdFile" id="functionwriteProcessIdFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="../../media/images/Function.png" />
+		<span class="method-title">writeProcessIdFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Application_librariesjoomlaapplicationdaemon.php.html#a782">782</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to write the process id file out to disk.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			writeProcessIdFile
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:25:32 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

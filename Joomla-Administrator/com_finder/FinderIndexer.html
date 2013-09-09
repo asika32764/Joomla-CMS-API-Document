@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FinderIndexer</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> FinderIndexer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main indexer class for the Finder indexer package.</p>
+<p class="description"><p>The indexer class provides the core functionality of the Finder  search engine. It is responsible for adding and updating the  content links table; extracting and scoring tokens; and maintaining  all referential information for the content.</p><p>Note: All exceptions thrown from within this class should be caught  by the controller.</p></p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_finder---helpers---indexer---indexer.php.html">/administrator/components/com_finder/helpers/indexer/indexer.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a35">35</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderIndexerDriverMysql.html">FinderIndexerDriverMysql</a>
+					</td>
+					<td>
+											Indexer class supporting MySQL(i) for the Finder indexer package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderIndexerDriverPostgresql.html">FinderIndexerDriverPostgresql</a>
+					</td>
+					<td>
+											Indexer class supporting PostgreSQL for the Finder indexer package.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_finder/FinderIndexerDriverSqlsrv.html">FinderIndexerDriverSqlsrv</a>
+					</td>
+					<td>
+											Indexer class supporting SQL Server for the Finder indexer package.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#META_CONTEXT" title="details" class="const-name">META_CONTEXT</a> = 					<span class="var-type"> 3</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#MISC_CONTEXT" title="details" class="const-name">MISC_CONTEXT</a> = 					<span class="var-type"> 5</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#PATH_CONTEXT" title="details" class="const-name">PATH_CONTEXT</a> = 					<span class="var-type"> 4</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#TEXT_CONTEXT" title="details" class="const-name">TEXT_CONTEXT</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#TITLE_CONTEXT" title="details" class="const-name">TITLE_CONTEXT</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">object</span>
+					<a href="#$profiler" title="details" class="var-name">$profiler</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">object</span>
+					<a href="#$state" title="details" class="var-name">$state</a>
+				</div>
+																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Administrator/com_finder/FinderIndexer.html">FinderIndexer</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getSignature" title="details" class="method-name">getSignature</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#getState" title="details" class="method-name">getState</a>
+										()
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#resetState" title="details" class="method-name">resetState</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#setState" title="details" class="method-name">setState</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																																			
+				<div class="method-definition">
+					<img src="../../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#addTokensToDB" title="details" class="method-name">addTokensToDB</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tokens</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">''</span>])
+									</div>
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#index" title="details" class="method-name">index</a>
+											(<span class="var-type"><a href="../../Joomla-Administrator/com_finder/FinderIndexerResult.html">FinderIndexerResult</a></span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">'html'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#optimize" title="details" class="method-name">optimize</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#remove" title="details" class="method-name">remove</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$linkId</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#toggleTables" title="details" class="method-name">toggleTables</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$memory</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#tokenizeToDB" title="details" class="method-name">tokenizeToDB</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$input</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$context</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$profiler" id="$profiler"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">object</span>
+			<span class="var-name">$profiler</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a91">91</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The indexer profiler object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$state" id="$state"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">object</span>
+			<span class="var-name">$state</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a83">83</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The indexer state object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a101">101</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a reference to the FinderIndexer object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance based on the database driver</li>
+				<li><span class="field">throws:</span> RuntimeException if driver class for indexer not present.</li>
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Administrator/com_finder/FinderIndexer.html">FinderIndexer</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSignature" id="getSignature"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getSignature</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a284">284</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a content item's signature.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The content item's signature.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getSignature
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$item</span><span class="var-description">: The content item to index.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetState" id="getState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getState</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a138">138</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the indexer state.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> indexer state object.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			getState
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodresetState" id="resetState"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static resetState</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a229">229</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to reset the indexer state.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			resetState
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetState" id="setState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static setState</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set the indexer state.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false on failure.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			setState
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$data</span><span class="var-description">: A new indexer state object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddTokensToDB" id="addTokensToDB"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/AbstractMethod.png" />
+		<span class="method-title">addTokensToDB</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a470">470</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a set of tokens to the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of tokens inserted into the database.</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			addTokensToDB
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tokens</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$tokens</span><span class="var-description">: An array or single FinderIndexerToken object.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$context</span><span class="var-description">: The context of the tokens. See context constants. [optional]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodindex" id="index"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/AbstractMethod.png" />
+		<span class="method-title">index</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a250">250</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to index a content item.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The ID of the record in the links table.</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			index
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Administrator/com_finder/FinderIndexerResult.html">FinderIndexerResult</a></span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">'html'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Administrator/com_finder/FinderIndexerResult.html">FinderIndexerResult</a></span>
+				<span class="var-name">$item</span><span class="var-description">: The content item to index.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: The format of the content. [optional]</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderIndexerDriverMysql.html#methodindex">FinderIndexerDriverMysql::index()</a>
+								: Method to index a content item.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderIndexerDriverPostgresql.html#methodindex">FinderIndexerDriverPostgresql::index()</a>
+								: Method to index a content item.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_finder/FinderIndexerDriverSqlsrv.html#methodindex">FinderIndexerDriverSqlsrv::index()</a>
+								: Method to index a content item.
+							</li>
+				</ul>
+	</div>
+<a name="methodoptimize" id="optimize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/AbstractMethod.png" />
+		<span class="method-title">optimize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a273">273</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to optimize the index. We use this method to remove unused terms  and any other optimizations that might be necessary.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			optimize
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodremove" id="remove"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/AbstractMethod.png" />
+		<span class="method-title">remove</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a262">262</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to remove a link from the index.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			remove
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$linkId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$linkId</span><span class="var-description">: The id of the link.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoggleTables" id="toggleTables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/AbstractMethod.png" />
+		<span class="method-title">toggleTables</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a483">483</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to switch the token tables from Memory tables to MyISAM tables  when they are close to running out of memory.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success.</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">throws:</span> Exception on database error.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			toggleTables
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$memory</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$memory</span><span class="var-description">: Flag to control how they should be toggled.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtokenizeToDB" id="tokenizeToDB"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tokenizeToDB</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a313">313</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to parse input, tokenize it, and then add it to the database.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The number of tokens extracted from the input.</li>
+				<li><span class="field">since:</span> 2.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			tokenizeToDB
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$input</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$context</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$input</span><span class="var-description">: String or resource to use as input. A resource                              input will automatically be chunked to conserve                              memory. Strings will be chunked if longer than                              2K in size.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$context</span><span class="var-description">: The context of the input. See context constants.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span><span class="var-description">: The language of the input.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: The format of the input.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constMETA_CONTEXT" id="META_CONTEXT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">META_CONTEXT</span>
+			 = <span class="const-default"> 3</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The meta context identifier.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+	
+	
+</div>
+<a name="constMISC_CONTEXT" id="MISC_CONTEXT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">MISC_CONTEXT</span>
+			 = <span class="const-default"> 5</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a75">75</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The misc context identifier.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+	
+	
+</div>
+<a name="constPATH_CONTEXT" id="PATH_CONTEXT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PATH_CONTEXT</span>
+			 = <span class="const-default"> 4</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The path context identifier.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+	
+	
+</div>
+<a name="constTEXT_CONTEXT" id="TEXT_CONTEXT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TEXT_CONTEXT</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The text context identifier.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+	
+	
+</div>
+<a name="constTITLE_CONTEXT" id="TITLE_CONTEXT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TITLE_CONTEXT</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_finder_administratorcomponentscom_finderhelpersindexerindexer.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The title context identifier.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.5</li>
+			</ul>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:32:24 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JMail</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JMail</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Email Class.  Provides a common interface to send email from the Joomla! Platform</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---mail---mail.php.html">/libraries/joomla/mail/mail.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PHPMailer/PHPMailer.html">PHPMailer</a>
+   |
+   --JMail</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-consts">Constants</a>
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																				<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$instances" title="details" class="var-name">$instances</a>
+				</div>
+																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$CharSet" title="details" class="var-name">$CharSet</a>
+				</div>
+																			</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">'Joomla'</span>])
+									</div>
+																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JMail</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#add" title="details" class="method-name">add</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$recipient</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'AddAddress'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#addAttachment" title="details" class="method-name">addAttachment</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$attachment</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">'base64'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'application/octet-stream'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#addBCC" title="details" class="method-name">addBCC</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$bcc</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#addCC" title="details" class="method-name">addCC</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cc</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#addRecipient" title="details" class="method-name">addRecipient</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$recipient</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#addReplyTo" title="details" class="method-name">addReplyTo</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$replyto</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#Send" title="details" class="method-name">Send</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#sendAdminMail" title="details" class="method-name">sendAdminMail</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$adminName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$adminEmail</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$author</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#sendMail" title="details" class="method-name">sendMail</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$from</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$fromName</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$recipient</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">false</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cc</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$bcc</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$attachment</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$replyTo</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$replyToName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#setBody" title="details" class="method-name">setBody</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#setSender" title="details" class="method-name">setSender</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$from</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+										<a href="#setSubject" title="details" class="method-name">setSubject</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#useSendmail" title="details" class="method-name">useSendmail</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$sendmail</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#useSMTP" title="details" class="method-name">useSMTP</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$auth</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$secure</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$port</span> = <span class="var-default">25</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instances" id="$instances"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$instances</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> JMail instances container.</li>
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$CharSet" id="$CharSet"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$CharSet</span>
+			 = <span class="var-default"> 'utf-8'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Charset of the message.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PHPMailer/PHPMailer.html#var$CharSet">PHPMailer::$CharSet</a></dt>
+						<dd>Sets the CharSet of the message.</dd>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PHPMailer/PHPMailer.html">PHPMailer</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$action_function">PHPMailer::$action_function</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$AllowEmpty">PHPMailer::$AllowEmpty</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$all_recipients">PHPMailer::$all_recipients</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$AltBody">PHPMailer::$AltBody</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$attachment">PHPMailer::$attachment</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$AuthType">PHPMailer::$AuthType</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$bcc">PHPMailer::$bcc</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Body">PHPMailer::$Body</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$boundary">PHPMailer::$boundary</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$cc">PHPMailer::$cc</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$ConfirmReadingTo">PHPMailer::$ConfirmReadingTo</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$ContentType">PHPMailer::$ContentType</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$CustomHeader">PHPMailer::$CustomHeader</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Debugoutput">PHPMailer::$Debugoutput</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$DKIM_domain">PHPMailer::$DKIM_domain</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$DKIM_identity">PHPMailer::$DKIM_identity</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$DKIM_passphrase">PHPMailer::$DKIM_passphrase</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$DKIM_private">PHPMailer::$DKIM_private</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$DKIM_selector">PHPMailer::$DKIM_selector</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$do_verp">PHPMailer::$do_verp</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Encoding">PHPMailer::$Encoding</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$ErrorInfo">PHPMailer::$ErrorInfo</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$error_count">PHPMailer::$error_count</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$exceptions">PHPMailer::$exceptions</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$From">PHPMailer::$From</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$FromName">PHPMailer::$FromName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Helo">PHPMailer::$Helo</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Host">PHPMailer::$Host</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Hostname">PHPMailer::$Hostname</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Ical">PHPMailer::$Ical</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$language">PHPMailer::$language</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$LE">PHPMailer::$LE</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Mailer">PHPMailer::$Mailer</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$mailHeader">PHPMailer::$mailHeader</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$MessageDate">PHPMailer::$MessageDate</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$MessageID">PHPMailer::$MessageID</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$message_type">PHPMailer::$message_type</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$MIMEBody">PHPMailer::$MIMEBody</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$MIMEHeader">PHPMailer::$MIMEHeader</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Password">PHPMailer::$Password</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$PluginDir">PHPMailer::$PluginDir</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Port">PHPMailer::$Port</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Priority">PHPMailer::$Priority</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Realm">PHPMailer::$Realm</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$ReplyTo">PHPMailer::$ReplyTo</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$ReturnPath">PHPMailer::$ReturnPath</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Sender">PHPMailer::$Sender</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Sendmail">PHPMailer::$Sendmail</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$sign_cert_file">PHPMailer::$sign_cert_file</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$sign_key_file">PHPMailer::$sign_key_file</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$sign_key_pass">PHPMailer::$sign_key_pass</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$SingleTo">PHPMailer::$SingleTo</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$SingleToArray">PHPMailer::$SingleToArray</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$smtp">PHPMailer::$smtp</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$SMTPAuth">PHPMailer::$SMTPAuth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$SMTPDebug">PHPMailer::$SMTPDebug</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$SMTPKeepAlive">PHPMailer::$SMTPKeepAlive</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$SMTPSecure">PHPMailer::$SMTPSecure</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Subject">PHPMailer::$Subject</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Timeout">PHPMailer::$Timeout</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$to">PHPMailer::$to</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Username">PHPMailer::$Username</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$UseSendmailOptions">PHPMailer::$UseSendmailOptions</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Version">PHPMailer::$Version</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$WordWrap">PHPMailer::$WordWrap</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$Workstation">PHPMailer::$Workstation</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PHPMailer/PHPMailer.html#var$XMailer">PHPMailer::$XMailer</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a57">57</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the global email object, only creating it  if it doesn't already exist.</p>
+<p class="description"><p>NOTE: If you need an instance to use that does not have the global configuration  values, use an id string that is not 'Joomla'.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The global JMail object</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">'Joomla'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The id string for the JMail instance [optional]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a38">38</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JMail</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PHPMailer/PHPMailer.html#method__construct">PHPMailer::__construct()</a></dt>
+						<dd>Constructor</dd>
+					</dl>
+			
+	</div>
+<a name="methodadd" id="add"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">add</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a192">192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add recipients to the email.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$recipient</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'AddAddress'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$recipient</span><span class="var-description">: Either a string or array of strings [email address(es)]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$name</span><span class="var-description">: Either a string or array of strings [name(s)]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span><span class="var-description">: The parent method's name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddAttachment" id="addAttachment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addAttachment</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a303">303</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add file attachments to the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			addAttachment
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$attachment</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">'base64'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'application/octet-stream'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$attachment</span><span class="var-description">: Either a string or array of strings [filenames]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$name</span><span class="var-description">: Either a string or array of strings [names]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$encoding</span><span class="var-description">: The encoding of the attachment</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$type</span><span class="var-description">: The mime type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddBCC" id="addBCC"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addBCC</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a279">279</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add blind carbon copy recipients to the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			addBCC
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$bcc</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$bcc</span><span class="var-description">: Either a string or array of strings [email address(es)]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$name</span><span class="var-description">: Either a string or array of strings [name(s)]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddCC" id="addCC"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addCC</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a258">258</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add carbon copy recipients to the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			addCC
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cc</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$cc</span><span class="var-description">: Either a string or array of strings [email address(es)]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$name</span><span class="var-description">: Either a string or array of strings [name(s)]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddRecipient" id="addRecipient"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addRecipient</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a242">242</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add recipients to the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			addRecipient
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$recipient</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$recipient</span><span class="var-description">: Either a string or array of strings [email address(es)]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$name</span><span class="var-description">: Either a string or array of strings [name(s)]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddReplyTo" id="addReplyTo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addReplyTo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a346">346</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add Reply to email address(es) to the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			addReplyTo
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$replyto</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$replyto</span><span class="var-description">: Either a string or array of strings [email address(es)]</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$name</span><span class="var-description">: Either a string or array of strings [name(s)]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodSend" id="Send"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">Send</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a75">75</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Send the mail</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if successful; JError if using legacy tree (no exception thrown in that case).</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">throws:</span> RuntimeException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			Send
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PHPMailer/PHPMailer.html#methodSend">PHPMailer::Send()</a></dt>
+						<dd>Creates message and assigns Mailer. If the message is  not sent successfully then it returns false.  Use the ErrorInfo  variable to view description of the error.</dd>
+					</dl>
+			
+	</div>
+<a name="methodsendAdminMail" id="sendAdminMail"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sendAdminMail</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a494">494</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sends mail to administrator for approval of a user submission</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			sendAdminMail
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$adminName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$adminEmail</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$author</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$adminName</span><span class="var-description">: Name of administrator</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$adminEmail</span><span class="var-description">: Email address of administrator</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$email</span><span class="var-description">: [NOT USED TODO: Deprecate?]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type of item to approve</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: Title of item to approve</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$author</span><span class="var-description">: Author of item to approve</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: A URL to included in the mail</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsendMail" id="sendMail"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sendMail</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a440">440</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to send an email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			sendMail
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$from</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$fromName</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$recipient</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">false</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$cc</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$bcc</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$attachment</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$replyTo</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$replyToName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$from</span><span class="var-description">: From email address</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fromName</span><span class="var-description">: From name</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$recipient</span><span class="var-description">: Recipient email address(es)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subject</span><span class="var-description">: email subject</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$body</span><span class="var-description">: Message body</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$mode</span><span class="var-description">: false = plain text, true = HTML</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$cc</span><span class="var-description">: CC email address(es)</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$bcc</span><span class="var-description">: BCC email address(es)</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$attachment</span><span class="var-description">: Attachment file name(s)</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$replyTo</span><span class="var-description">: Reply to email address(es)</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$replyToName</span><span class="var-description">: Reply to name(s)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBody" id="setBody"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setBody</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a170">170</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the email body</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			setBody
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: Body of the email</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSender" id="setSender"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setSender</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a116">116</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the email sender</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			setSender
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$from</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$from</span><span class="var-description">: email address and Name of sender                         <div class="src-code"><ol><li><div class="src-line"><span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]&nbsp;</span>=&gt;&nbsp;<span class="src-id">email&nbsp;Address&nbsp;</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]&nbsp;</span>=&gt;&nbsp;<span class="src-id">Name</span><span class="src-sym">)</span></div></li>
+</ol></div></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSubject" id="setSubject"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setSubject</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a154">154</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the email subject</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns this object for chaining.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Mail/JMail.html">JMail</a></span>
+		<span class="method-name">
+			setSubject
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subject</span><span class="var-description">: Subject of the email</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseSendmail" id="useSendmail"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">useSendmail</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a361">361</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use sendmail for sending the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			useSendmail
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$sendmail</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sendmail</span><span class="var-description">: Path to sendmail [optional]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseSMTP" id="useSMTP"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">useSMTP</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Mail_librariesjoomlamailmail.php.html#a393">393</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use SMTP for sending the email</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			useSMTP
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$auth</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$user</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$secure</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$port</span> = <span class="var-default">25</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$auth</span><span class="var-description">: SMTP Authentication [optional]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$host</span><span class="var-description">: SMTP Host [optional]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$user</span><span class="var-description">: SMTP Username [optional]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pass</span><span class="var-description">: SMTP Password [optional]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$secure</span><span class="var-description">: Use secure methods</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$port</span><span class="var-description">: The SMTP port</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PHPMailer/PHPMailer.html">PHPMailer</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#method__construct">PHPMailer::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddAddress">PHPMailer::AddAddress()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddAnAddress">PHPMailer::AddAnAddress()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddAttachment">PHPMailer::AddAttachment()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddBCC">PHPMailer::AddBCC()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddCC">PHPMailer::AddCC()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddCustomHeader">PHPMailer::AddCustomHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddEmbeddedImage">PHPMailer::AddEmbeddedImage()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddrAppend">PHPMailer::AddrAppend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddReplyTo">PHPMailer::AddReplyTo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddrFormat">PHPMailer::AddrFormat()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddStringAttachment">PHPMailer::AddStringAttachment()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAddStringEmbeddedImage">PHPMailer::AddStringEmbeddedImage()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAlternativeExists">PHPMailer::AlternativeExists()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAttachAll">PHPMailer::AttachAll()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodAttachmentExists">PHPMailer::AttachmentExists()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodBase64EncodeWrapMB">PHPMailer::Base64EncodeWrapMB()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearAddresses">PHPMailer::ClearAddresses()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearAllRecipients">PHPMailer::ClearAllRecipients()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearAttachments">PHPMailer::ClearAttachments()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearBCCs">PHPMailer::ClearBCCs()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearCCs">PHPMailer::ClearCCs()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearCustomHeaders">PHPMailer::ClearCustomHeaders()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodClearReplyTos">PHPMailer::ClearReplyTos()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodCreateBody">PHPMailer::CreateBody()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodCreateHeader">PHPMailer::CreateHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodDKIM_Add">PHPMailer::DKIM_Add()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodDKIM_BodyC">PHPMailer::DKIM_BodyC()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodDKIM_HeaderC">PHPMailer::DKIM_HeaderC()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodDKIM_QP">PHPMailer::DKIM_QP()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodDKIM_Sign">PHPMailer::DKIM_Sign()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methoddoCallback">PHPMailer::doCallback()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodedebug">PHPMailer::edebug()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEncodeFile">PHPMailer::EncodeFile()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEncodeHeader">PHPMailer::EncodeHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEncodeQ">PHPMailer::EncodeQ()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEncodeQP">PHPMailer::EncodeQP()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEncodeQPphp">PHPMailer::EncodeQPphp()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEncodeString">PHPMailer::EncodeString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodEndBoundary">PHPMailer::EndBoundary()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodfilenameToType">PHPMailer::filenameToType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodFixEOL">PHPMailer::FixEOL()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodGetAttachments">PHPMailer::GetAttachments()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodGetBoundary">PHPMailer::GetBoundary()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodGetMailMIME">PHPMailer::GetMailMIME()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodGetSentMIMEMessage">PHPMailer::GetSentMIMEMessage()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodGetTranslations">PHPMailer::GetTranslations()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodHasMultiBytes">PHPMailer::HasMultiBytes()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodHeaderLine">PHPMailer::HeaderLine()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodhtml2text">PHPMailer::html2text()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodInlineImageExists">PHPMailer::InlineImageExists()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodIsError">PHPMailer::IsError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodIsHTML">PHPMailer::IsHTML()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodIsMail">PHPMailer::IsMail()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodIsQmail">PHPMailer::IsQmail()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodIsSendmail">PHPMailer::IsSendmail()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodIsSMTP">PHPMailer::IsSMTP()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodLang">PHPMailer::Lang()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodMailSend">PHPMailer::MailSend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodmb_pathinfo">PHPMailer::mb_pathinfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodMsgHTML">PHPMailer::MsgHTML()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodNormalizeBreaks">PHPMailer::NormalizeBreaks()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodPostSend">PHPMailer::PostSend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodPreSend">PHPMailer::PreSend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodRFCDate">PHPMailer::RFCDate()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSecureHeader">PHPMailer::SecureHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSend">PHPMailer::Send()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSendmailSend">PHPMailer::SendmailSend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodServerHostname">PHPMailer::ServerHostname()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodset">PHPMailer::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSetError">PHPMailer::SetError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSetFrom">PHPMailer::SetFrom()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSetLanguage">PHPMailer::SetLanguage()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSetMessageType">PHPMailer::SetMessageType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSetWordWrap">PHPMailer::SetWordWrap()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSign">PHPMailer::Sign()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSmtpClose">PHPMailer::SmtpClose()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSmtpConnect">PHPMailer::SmtpConnect()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodSmtpSend">PHPMailer::SmtpSend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodTextLine">PHPMailer::TextLine()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodUTF8CharBoundary">PHPMailer::UTF8CharBoundary()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodValidateAddress">PHPMailer::ValidateAddress()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#methodWrapText">PHPMailer::WrapText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#method_mime_types">PHPMailer::_mime_types()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PHPMailer/PHPMailer.html#method__destruct">PHPMailer::__destruct()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PHPMailer/PHPMailer.html">PHPMailer</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PHPMailer/PHPMailer.html#constCRLF">PHPMailer::CRLF</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PHPMailer/PHPMailer.html#constSTOP_CONTINUE">PHPMailer::STOP_CONTINUE</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PHPMailer/PHPMailer.html#constSTOP_CRITICAL">PHPMailer::STOP_CRITICAL</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PHPMailer/PHPMailer.html#constSTOP_MESSAGE">PHPMailer::STOP_MESSAGE</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:33:51 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

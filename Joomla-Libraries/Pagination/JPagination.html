@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JPagination</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JPagination</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pagination Class. Provides a common interface for content pagination for the  Joomla! CMS.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---cms---pagination---pagination.php.html">/libraries/cms/pagination/pagination.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$additionalUrlParams" title="details" class="var-name">$additionalUrlParams</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$limit" title="details" class="var-name">$limit</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$limitstart" title="details" class="var-name">$limitstart</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$pagesCurrent" title="details" class="var-name">$pagesCurrent</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$pagesStart" title="details" class="var-name">$pagesStart</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$pagesStop" title="details" class="var-name">$pagesStop</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$pagesTotal" title="details" class="var-name">$pagesTotal</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$prefix" title="details" class="var-name">$prefix</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$total" title="details" class="var-name">$total</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$viewall" title="details" class="var-name">$viewall</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JPagination</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$total</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$limitstart</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getAdditionalUrlParam" title="details" class="method-name">getAdditionalUrlParam</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object Pagination</span>
+										<a href="#getData" title="details" class="method-name">getData</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLimitBox" title="details" class="method-name">getLimitBox</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getListFooter" title="details" class="method-name">getListFooter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPagesCounter" title="details" class="method-name">getPagesCounter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getPagesLinks" title="details" class="method-name">getPagesLinks</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getResultsCounter" title="details" class="method-name">getResultsCounter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getRowOffset" title="details" class="method-name">getRowOffset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#orderDownIcon" title="details" class="method-name">orderDownIcon</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$condition</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">'orderdown'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alt</span> = <span class="var-default">'JLIB_HTML_MOVE_DOWN'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$checkbox</span> = <span class="var-default">'cb'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#orderUpIcon" title="details" class="method-name">orderUpIcon</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$condition</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">'orderup'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alt</span> = <span class="var-default">'JLIB_HTML_MOVE_UP'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$checkbox</span> = <span class="var-default">'cb'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set" title="details" class="method-name">set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#setAdditionalUrlParam" title="details" class="method-name">setAdditionalUrlParam</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object Pagination</span>
+										<a href="#_buildDataObject" title="details" class="method-name">_buildDataObject</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_item_active" title="details" class="method-name">_item_active</a>
+											(<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPaginationObject.html">JPaginationObject</a></span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_item_inactive" title="details" class="method-name">_item_inactive</a>
+											(<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPaginationObject.html">JPaginationObject</a></span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_list_footer" title="details" class="method-name">_list_footer</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_list_render" title="details" class="method-name">_list_render</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$additionalUrlParams" id="$additionalUrlParams"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$additionalUrlParams</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a83">83</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Additional URL parameters to be added to the pagination URLs generated by the class.  These  may be useful for filters and extra values when dealing with lists and GET requests.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$limit" id="$limit"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$limit</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Number of rows to display per page.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$limitstart" id="$limitstart"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$limitstart</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The record number to start displaying from.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pagesCurrent" id="$pagesCurrent"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$pagesCurrent</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pagesStart" id="$pagesStart"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$pagesStart</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pagesStop" id="$pagesStop"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$pagesStop</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pagesTotal" id="$pagesTotal"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$pagesTotal</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a68">68</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$prefix" id="$prefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$prefix</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Prefix used for request variables.</li>
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$total" id="$total"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$total</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Total number of rows.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$viewall" id="$viewall"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$viewall</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a74">74</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> View all flag</li>
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a95">95</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JPagination</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$total</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$limitstart</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$total</span><span class="var-description">: The total number of items.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limitstart</span><span class="var-description">: The offset of the item to start at.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span><span class="var-description">: The number of items to display per page.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: The prefix used for request variables.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a784">784</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a property of the object or the default value if the property is not set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the property.</li>
+				<li><span class="field">deprecated:</span> 4.0  Access the properties directly.</li>
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAdditionalUrlParam" id="getAdditionalUrlParam"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAdditionalUrlParam</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a202">202</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an additional URL parameter (if it exists) to be added to  all pagination class generated links.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value if it exists or null if it does not.</li>
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getAdditionalUrlParam
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the URL parameter for which to get the value.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetData" id="getData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a230">230</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the pagination data object, only creating it if it doesn't already exist.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> data object.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object Pagination</span>
+		<span class="method-name">
+			getData
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLimitBox" id="getLimitBox"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLimitBox</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a459">459</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a dropdown box for selecting how many records to show per page.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML for the limit # input box.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLimitBox
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetListFooter" id="getListFooter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getListFooter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a424">424</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the pagination footer.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Pagination footer.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getListFooter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPagesCounter" id="getPagesCounter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPagesCounter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a249">249</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create and return the pagination pages counter string, ie. Page 2 of 4.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Pagination pages counter string.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPagesCounter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPagesLinks" id="getPagesLinks"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPagesLinks</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a304">304</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create and return the pagination page list string, ie. Previous, Next, 1 2 3 ... x.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Pagination page list string.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPagesLinks
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResultsCounter" id="getResultsCounter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getResultsCounter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a268">268</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create and return the pagination result set counter string, e.g. Results 1-10 of 42</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Pagination result set counter string.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getResultsCounter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRowOffset" id="getRowOffset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRowOffset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a218">218</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the rationalised offset for a row with a given index.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Rationalised offset for a row with a given index.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getRowOffset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$index</span><span class="var-description">: The row index</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorderDownIcon" id="orderDownIcon"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">orderDownIcon</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a546">546</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the icon to move an item DOWN.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either the icon to move an item down or a space.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			orderDownIcon
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$condition</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">'orderdown'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alt</span> = <span class="var-default">'JLIB_HTML_MOVE_DOWN'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$checkbox</span> = <span class="var-default">'cb'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$i</span><span class="var-description">: The row index.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: The number of items in the list.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$condition</span><span class="var-description">: True to show the icon.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$task</span><span class="var-description">: The task to fire.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alt</span><span class="var-description">: The image alternative text string.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$enabled</span><span class="var-description">: An optional setting for access control on the action.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$checkbox</span><span class="var-description">: An optional prefix for checkboxes.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorderUpIcon" id="orderUpIcon"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">orderUpIcon</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a519">519</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the icon to move an item UP.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Either the icon to move an item up or a space.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			orderUpIcon
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$condition</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$task</span> = <span class="var-default">'orderup'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alt</span> = <span class="var-default">'JLIB_HTML_MOVE_UP'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enabled</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$checkbox</span> = <span class="var-default">'cb'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$i</span><span class="var-description">: The row index.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$condition</span><span class="var-description">: True to show the icon.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$task</span><span class="var-description">: The task to fire.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alt</span><span class="var-description">: The image alternative text string.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$enabled</span><span class="var-description">: An optional setting for access control on the action.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$checkbox</span><span class="var-description">: An optional prefix for checkboxes.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset" id="set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">set</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a759">759</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Modifies a property of the object, creating it if it does not already exist.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 4.0  Access the properties directly.</li>
+				<li><span class="field">since:</span> 3.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value of the property to set.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAdditionalUrlParam" id="setAdditionalUrlParam"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAdditionalUrlParam</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a174">174</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to set an additional URL parameter to be added to all pagination class generated  links.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The old value for the parameter.</li>
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			setAdditionalUrlParam
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the URL parameter for which to set a value.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to set for the URL parameter.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_buildDataObject" id="_buildDataObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_buildDataObject</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a670">670</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create and return the pagination data object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> data object.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object Pagination</span>
+		<span class="method-name">
+			_buildDataObject
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_item_active" id="_item_active"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_item_active</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a618">618</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create an active pagination link to the item</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML link</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_item_active
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPaginationObject.html">JPaginationObject</a></span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPaginationObject.html">JPaginationObject</a></span>
+				<span class="var-name">$item</span><span class="var-description">: The object with which to make an active link.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_item_inactive" id="_item_inactive"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_item_inactive</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a649">649</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create an inactive pagination string</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_item_inactive
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPaginationObject.html">JPaginationObject</a></span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPaginationObject.html">JPaginationObject</a></span>
+				<span class="var-name">$item</span><span class="var-description">: The item to be processed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_list_footer" id="_list_footer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_list_footer</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a567">567</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create the HTML for a list footer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for a list footer</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_list_footer
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$list</span><span class="var-description">: Pagination list data structure.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_list_render" id="_list_render"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_list_render</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Pagination_librariescmspaginationpagination.php.html#a590">590</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create the html for a list footer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTML for a list start, previous, next,end</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_list_render
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$list</span><span class="var-description">: Pagination list data structure.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:36:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

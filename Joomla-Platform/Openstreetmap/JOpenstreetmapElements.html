@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JOpenstreetmapElements</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JOpenstreetmapElements</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Openstreetmap API Elements class for the Joomla Platform</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 13.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---openstreetmap---elements.php.html">/libraries/joomla/openstreetmap/elements.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a>
+   |
+   --JOpenstreetmapElements</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createNode" title="details" class="method-name">createNode</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$latitude</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$longitude</span>, <span class="var-type">arary</span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createRelation" title="details" class="method-name">createRelation</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$members</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#createWay" title="details" class="method-name">createWay</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$nds</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#deleteElement" title="details" class="method-name">deleteElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$version</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, [<span class="var-type">float</span>&nbsp;<span class="var-name">$latitude</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$longitude</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#fullElement" title="details" class="method-name">fullElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#historyOfElement" title="details" class="method-name">historyOfElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#multiFetchElements" title="details" class="method-name">multiFetchElements</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#readElement" title="details" class="method-name">readElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#redaction" title="details" class="method-name">redaction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$version</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$redaction_id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#relationsForElement" title="details" class="method-name">relationsForElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#updateElement" title="details" class="method-name">updateElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#versionOfElement" title="details" class="method-name">versionOfElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$version</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#waysForNode" title="details" class="method-name">waysForNode</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$client">JOpenstreetmapObject::$client</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$oauth">JOpenstreetmapObject::$oauth</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#var$options">JOpenstreetmapObject::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateNode" id="createNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a33">33</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a node</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createNode
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$latitude</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$longitude</span>, <span class="var-type">arary</span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$changeset</span><span class="var-description">: Changeset id</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$latitude</span><span class="var-description">: Latitude of the node</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$longitude</span><span class="var-description">: Longitude of the node</span>			</li>
+					<li>
+				<span class="var-type">arary</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags for a node</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateRelation" id="createRelation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createRelation</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a149">149</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a relation</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createRelation
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$members</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$changeset</span><span class="var-description">: Changeset id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags for a relation</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$members</span><span class="var-description">: Array of members for a relation                                eg: $members = array(array(&quot;type&quot;=&gt;&quot;node&quot;, &quot;role&quot;=&gt;&quot;stop&quot;, &quot;ref&quot;=&gt;&quot;123&quot;), array(&quot;type&quot;=&gt;&quot;way&quot;, &quot;ref&quot;=&gt;&quot;123&quot;))</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateWay" id="createWay"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">createWay</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a85">85</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to create a way</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createWay
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$tags</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$nds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$changeset</span><span class="var-description">: Changeset id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$tags</span><span class="var-description">: Array of tags for a way</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$nds</span><span class="var-description">: Node ids to refer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteElement" id="deleteElement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a294">294</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to delete an element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			deleteElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$version</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$changeset</span>, [<span class="var-type">float</span>&nbsp;<span class="var-name">$latitude</span> = <span class="var-default">null</span>], [<span class="var-type">float</span>&nbsp;<span class="var-name">$longitude</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$version</span><span class="var-description">: Element version</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$changeset</span><span class="var-description">: Changeset identifier</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$latitude</span><span class="var-description">: Latitude of the element</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$longitude</span><span class="var-description">: Longitude of the element</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfullElement" id="fullElement"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">fullElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a492">492</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get full information about an element [way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			fullElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhistoryOfElement" id="historyOfElement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">historyOfElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a345">345</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get history of an element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			historyOfElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmultiFetchElements" id="multiFetchElements"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">multiFetchElements</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a406">406</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get data about multiple ids of an element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			multiFetchElements
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [nodes|ways|relations] - use plural word</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$params</span><span class="var-description">: Comma separated list of ids belonging to type $element</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadElement" id="readElement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">readElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a220">220</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to read an element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			readElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodredaction" id="redaction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">redaction</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a524">524</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method used by the DWG to hide old versions of elements containing data privacy or copyright infringements</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The xml response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			redaction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$version</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$redaction_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$version</span><span class="var-description">: Element version</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$redaction_id</span><span class="var-description">: Redaction id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrelationsForElement" id="relationsForElement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">relationsForElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a439">439</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get relations for an Element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			relationsForElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdateElement" id="updateElement"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">updateElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a251">251</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to update an Element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The xml response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			updateElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: Full reperentation of the element with a version number</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodversionOfElement" id="versionOfElement"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">versionOfElement</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a376">376</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get details about a version of an element [node|way|relation]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">throws:</span> DomainException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			versionOfElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: [node|way|relation]</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Element identifier</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$version</span><span class="var-description">: Element version</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwaysForNode" id="waysForNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">waysForNode</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Openstreetmap_librariesjoomlaopenstreetmapelements.php.html#a467">467</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get ways for a Node element</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML response</li>
+				<li><span class="field">since:</span> 13.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			waysForNode
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Node identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html">JOpenstreetmapObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#method__construct">JOpenstreetmapObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodgetOption">JOpenstreetmapObject::getOption()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodsendRequest">JOpenstreetmapObject::sendRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Openstreetmap/JOpenstreetmapObject.html#methodsetOption">JOpenstreetmapObject::setOption()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:29:57 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

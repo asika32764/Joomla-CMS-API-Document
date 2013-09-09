@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JDate</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JDate</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">JDate is a class that stores a date and provides logic to manipulate  and render that date in a variety of formats.</p>
+	<ul class="tags">
+				<li><span class="field">property-read:</span> string $daysinmonth: t - Number of days in the given month.</li>
+				<li><span class="field">property-read:</span> string $dayofweek: N - ISO-8601 numeric representation of the day of the week.</li>
+				<li><span class="field">property-read:</span> string $dayofyear: z - The day of the year (starting from 0).</li>
+				<li><span class="field">property-read:</span> boolean $isleapyear: L - Whether it's a leap year.</li>
+				<li><span class="field">property-read:</span> string $day: d - Day of the month, 2 digits with leading zeros.</li>
+				<li><span class="field">property-read:</span> string $hour: H - 24-hour format of an hour with leading zeros.</li>
+				<li><span class="field">property-read:</span> string $minute: i - Minutes with leading zeros.</li>
+				<li><span class="field">property-read:</span> string $second: s - Seconds with leading zeros.</li>
+				<li><span class="field">property-read:</span> string $month: m - Numeric representation of a month, with leading zeros.</li>
+				<li><span class="field">property-read:</span> string $ordinal: S - English ordinal suffix for the day of the month, 2 characters.</li>
+				<li><span class="field">property-read:</span> string $week: W - Numeric representation of the day of the week.</li>
+				<li><span class="field">property-read:</span> string $year: Y - A full numeric representation of a year, 4 digits.</li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---date---date.php.html">/libraries/joomla/date/date.php</a> (line <span class="field"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a33">33</a></span>)
+		</p>
+		
+				
+		<pre>DateTime
+   |
+   --JDate</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#DAY_ABBR" title="details" class="const-name">DAY_ABBR</a> = 					<span class="var-type"> &quot;\x021\x03&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#DAY_NAME" title="details" class="const-name">DAY_NAME</a> = 					<span class="var-type"> &quot;\x022\x03&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#MONTH_ABBR" title="details" class="const-name">MONTH_ABBR</a> = 					<span class="var-type"> &quot;\x023\x03&quot;</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#MONTH_NAME" title="details" class="const-name">MONTH_NAME</a> = 					<span class="var-type"> &quot;\x024\x03&quot;</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">string</span>
+					<a href="#$format" title="details" class="var-name">$format</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">object</span>
+					<a href="#$gmt" title="details" class="var-name">$gmt</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">object</span>
+					<a href="#$stz" title="details" class="var-name">$stz</a>
+				</div>
+																																																				<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">DateTimeZone</span>
+					<a href="#$tz" title="details" class="var-name">$tz</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">'now'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tz</span> = <span class="var-default">null</span>])
+									</div>
+																																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#calendar" title="details" class="method-name">calendar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$translate</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#dayToString" title="details" class="method-name">dayToString</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$day</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$abbr</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JDate</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">'now'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tz</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#format" title="details" class="method-name">format</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$translate</span> = <span class="var-default">true</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">float</span>
+										<a href="#getOffsetFromGMT" title="details" class="method-name">getOffsetFromGMT</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hours</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#monthToString" title="details" class="method-name">monthToString</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$month</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$abbr</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>
+										<a href="#setTimezone" title="details" class="method-name">setTimezone</a>
+											(<span class="var-type">DateTimeZone</span>&nbsp;<span class="var-name">$tz</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toISO8601" title="details" class="method-name">toISO8601</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toRFC822" title="details" class="method-name">toRFC822</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toSql" title="details" class="method-name">toSql</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>], [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#toUnix" title="details" class="method-name">toUnix</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$format" id="$format"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">string</span>
+			<span class="var-name">$format</span>
+			 = <span class="var-default"> 'Y-m-d H:i:s'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The format string to be applied when using the __toString() magic method.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$gmt" id="$gmt"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">object</span>
+			<span class="var-name">$gmt</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Placeholder for a DateTimeZone object with GMT as the time zone.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$stz" id="$stz"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">object</span>
+			<span class="var-name">$stz</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Placeholder for a DateTimeZone object with the default server  time zone as the time zone.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$tz" id="$tz"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">DateTimeZone</span>
+			<span class="var-name">$tz</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a71">71</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The DateTimeZone object for usage in rending dates as strings.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a214">214</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for new JDate().</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">'now'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tz</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: String in a format accepted by strtotime(), defaults to &quot;now&quot;.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$tz</span><span class="var-description">: Time zone to be used for the date.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcalendar" id="calendar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">calendar</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a261">261</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the date as a formatted string in a local calendar.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date string in the specified format format.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			calendar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$translate</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: The date format specification string (see <a href="http://www.php.net/date">http://www.php.net/date</a>)</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$local</span><span class="var-description">: True to return the date string in the local time zone, false to return it in GMT.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$translate</span><span class="var-description">: True to translate localised strings</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddayToString" id="dayToString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dayToString</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a229">229</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Translates day of week number to a string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The day of the week.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			dayToString
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$day</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$abbr</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$day</span><span class="var-description">: The numeric day of the week.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$abbr</span><span class="var-description">: Return the abbreviated day string?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a81">81</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JDate</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">'now'</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tz</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: String in a format accepted by strtotime(), defaults to &quot;now&quot;.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$tz</span><span class="var-description">: Time zone to be used for the date. Might be a string or a DateTimeZone object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>DateTime::constructor __construct ( [$time = ], [$object = ] )</dt>
+					</dl>
+			
+	</div>
+<a name="methodformat" id="format"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">format</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a277">277</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the date as a formatted string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date string in the specified format format.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			format
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$translate</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: The date format specification string (see <a href="http://www.php.net/date">http://www.php.net/date</a>)</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$local</span><span class="var-description">: True to return the date string in the local time zone, false to return it in GMT.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$translate</span><span class="var-description">: True to translate localised strings</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>DateTime::format ( $format )</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetOffsetFromGMT" id="getOffsetFromGMT"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOffsetFromGMT</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a338">338</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the time offset from GMT in hours or seconds.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The time offset from GMT either in hours or in seconds.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			getOffsetFromGMT
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$hours</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$hours</span><span class="var-description">: True to return the value in hours.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmonthToString" id="monthToString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">monthToString</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a353">353</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Translates month number to a string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The month of the year.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			monthToString
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$month</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$abbr</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$month</span><span class="var-description">: The numeric month of the year.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$abbr</span><span class="var-description">: If true, return the abbreviated month string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTimezone" id="setTimezone"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setTimezone</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a394">394</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to wrap the setTimezone() function and set the internal time zone object.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Date/JDate.html">JDate</a></span>
+		<span class="method-name">
+			setTimezone
+		</span>
+					(<span class="var-type">DateTimeZone</span>&nbsp;<span class="var-name">$tz</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">DateTimeZone</span>
+				<span class="var-name">$tz</span><span class="var-description">: The new DateTimeZone object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>DateTime::setTimezone ( $timezone )</dt>
+					</dl>
+			
+	</div>
+<a name="methodtoISO8601" id="toISO8601"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toISO8601</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a412">412</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the date as an ISO 8601 string.  IETF RFC 3339 defines the ISO 8601 format  and it can be found at the IETF Web site.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date string in ISO 8601 format.</li>
+				<li><span class="field">link:</span> <a href="http://www.ietf.org/rfc/rfc3339.txt">http://www.ietf.org/rfc/rfc3339.txt</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toISO8601
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$local</span><span class="var-description">: True to return the date string in the local time zone, false to return it in GMT.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoRFC822" id="toRFC822"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toRFC822</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a449">449</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the date as an RFC 822 string.  IETF RFC 2822 supercedes RFC 822 and its definition  can be found at the IETF Web site.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date string in RFC 822 format.</li>
+				<li><span class="field">link:</span> <a href="http://www.ietf.org/rfc/rfc2822.txt">http://www.ietf.org/rfc/rfc2822.txt</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toRFC822
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$local</span><span class="var-description">: True to return the date string in the local time zone, false to return it in GMT.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoSql" id="toSql"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toSql</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a428">428</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the date as an SQL datetime string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date string in SQL datetime format.</li>
+				<li><span class="field">link:</span> <a href="http://dev.mysql.com/doc/refman/5.0/en/datetime.html">http://dev.mysql.com/doc/refman/5.0/en/datetime.html</a></li>
+				<li><span class="field">since:</span> 11.4</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toSql
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$local</span> = <span class="var-default">false</span>], [<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$local</span><span class="var-description">: True to return the date string in the local time zone, false to return it in GMT.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: The database driver or null to use JFactory::getDbo()</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoUnix" id="toUnix"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toUnix</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a461">461</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the date as UNIX time stamp.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date as a UNIX timestamp.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			toUnix
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to access properties of the date given by class to the format method.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A value if the property name is valid, null otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the property.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__toString</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a199">199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method to render the date object in the format specified in the public  static member JDate::$format.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The date as a formatted string.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname">DateTime (Internal Class)</span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name">constructor __construct ( [$time = ], [$object = ] )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">add ( $interval )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">createFromFormat ( $format, $time, [$object = ] )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">diff ( $object, [$absolute = ] )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">format ( $format )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">getLastErrors (  )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">getOffset (  )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">getTimestamp (  )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">getTimezone (  )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">modify ( $modify )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">setDate ( $year, $month, $day )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">setISODate ( $year, $week, [$day = ] )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">setTime ( $hour, $minute, [$second = ] )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">setTimestamp ( $unixtimestamp )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">setTimezone ( $timezone )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">sub ( $interval )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">__set_state (  )</span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name">__wakeup (  )</span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constDAY_ABBR" id="DAY_ABBR"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DAY_ABBR</span>
+			 = <span class="const-default"> &quot;\x021\x03&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constDAY_NAME" id="DAY_NAME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DAY_NAME</span>
+			 = <span class="const-default"> &quot;\x022\x03&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constMONTH_ABBR" id="MONTH_ABBR"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">MONTH_ABBR</span>
+			 = <span class="const-default"> &quot;\x023\x03&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constMONTH_NAME" id="MONTH_NAME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">MONTH_NAME</span>
+			 = <span class="const-default"> &quot;\x024\x03&quot;</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Date_librariesjoomladatedate.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+							<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname">DateTime (Internal Class)</span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">ATOM = 'Y-m-d\\TH:i:sP'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">COOKIE = 'l, d-M-y H:i:s T'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">ISO8601 = 'Y-m-d\\TH:i:sO'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RFC822 = 'D, d M y H:i:s O'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RFC850 = 'l, d-M-y H:i:s T'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RFC1036 = 'D, d M y H:i:s O'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RFC1123 = 'D, d M Y H:i:s O'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RFC2822 = 'D, d M Y H:i:s O'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RFC3339 = 'Y-m-d\\TH:i:sP'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">RSS = 'D, d M Y H:i:s O'</span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">W3C = 'Y-m-d\\TH:i:sP'</span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 08 Sep 2013 12:25:45 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

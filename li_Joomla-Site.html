@@ -1,0 +1,3494 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+						<script src="media/lib/classTree.js"></script>
+									<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+									<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "media/images/plus.png";
+				imgMinus.src = "media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body><select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
+	  <option value="li_default.html">default</option>
+	  <option value="li_akeebabackup.html">akeebabackup</option>
+	  <option value="li_IDNA.html">IDNA</option>
+	  <option value="li_Joomla.html">Joomla</option>
+	  <option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
+	  <option value="li_Joomla-Cli.html">Joomla-Cli</option>
+	  <option value="li_Joomla-CLI.html">Joomla-CLI</option>
+	  <option value="li_Joomla-CMS.html">Joomla-CMS</option>
+	  <option value="li_Joomla-Compat.html">Joomla-Compat</option>
+	  <option value="li_Joomla-Installation.html">Joomla-Installation</option>
+	  <option value="li_Joomla-Language.html">Joomla-Language</option>
+	  <option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
+	  <option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
+	  <option value="li_Joomla-Platform.html">Joomla-Platform</option>
+	  <option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
+	  <option selected value="li_Joomla-Site.html">Joomla-Site</option>
+	  <option value="li_phlyMail.html">phlyMail</option>
+	  <option value="li_PHPMailer.html">PHPMailer</option>
+	  <option value="li_SimplePie.html">SimplePie</option>
+	  <option value="li_utf8.html">utf8</option>
+</select>
+						<h3 class="package-title">Joomla-Site</h3>
+<div class="tree">
+<script language="Javascript">
+if (document.getElementById) {
+			var tree = new WebFXTree('<span class="package">Joomla-Site</span>');
+		tree.setBehavior('classic');
+		tree.openIcon = 'media/images/package.png';
+		tree.icon = 'media/images/package.png';
+	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			todos.openIcon = 'media/images/Index.png';
+			todos.icon = 'media/images/Index.png';
+			tree.add(todos);
+		
+		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Joomla-Site.html');
+		class_trees.openIcon = 'media/images/Index.png';
+		class_trees.icon = 'media/images/Index.png';
+		tree.add(class_trees);
+
+		var elements = new WebFXTreeItem('Index of elements', 'elementindex_Joomla-Site.html');
+		elements.openIcon = 'media/images/Index.png';
+		elements.icon = 'media/images/Index.png';
+		tree.add(elements);
+
+		var parent_node;
+
+		
+					var tree_classe = new WebFXTreeItem('Interface(s)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+				
+			tree.add(tree_classe);
+		
+					var tree_classe = new WebFXTreeItem('Class(es)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+				
+			tree.add(tree_classe);
+		
+			
+					var tree_file = new WebFXTreeItem('File(s)', '');
+			tree_file.openIcon = 'media/images/folder.png';
+			tree_file.icon = 'media/images/folder.png';
+	
+							var file = new WebFXTreeItem('application.php', 'Joomla-Site/_includes---application.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('defines.php', 'Joomla-Site/_includes---defines.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('framework.php', 'Joomla-Site/_includes---framework.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'Joomla-Site/_index.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+				
+			tree.add(tree_file);
+		
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_banners</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('BannerHelper', 'Joomla-Site/com_banners/BannerHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('BannersCategories', 'Joomla-Site/com_banners/BannersCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('BannersController', 'Joomla-Site/com_banners/BannersController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('BannersModelBanner', 'Joomla-Site/com_banners/BannersModelBanner.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('BannersModelBanners', 'Joomla-Site/com_banners/BannersModelBanners.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('BannersBuildRoute', 'Joomla-Site/com_banners/_components---com_banners---router.php.html#functionBannersBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('BannersParseRoute', 'Joomla-Site/com_banners/_components---com_banners---router.php.html#functionBannersParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('banner.php', 'Joomla-Site/com_banners/_components---com_banners---models---banner.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('banner.php', 'Joomla-Site/com_banners/_components---com_banners---helpers---banner.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('banners.php', 'Joomla-Site/com_banners/_components---com_banners---models---banners.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('banners.php', 'Joomla-Site/com_banners/_components---com_banners---banners.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_banners/_components---com_banners---helpers---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_banners/_components---com_banners---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_banners/_components---com_banners---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_categories</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('CategoryHelperAssociation', 'Joomla-Site/com_categories/CategoryHelperAssociation.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('association.php', 'Joomla-Site/com_categories/_administrator---components---com_categories---helpers---association.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_contact</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ContactCategories', 'Joomla-Site/com_contact/ContactCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactController', 'Joomla-Site/com_contact/ContactController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactControllerContact', 'Joomla-Site/com_contact/ContactControllerContact.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactHelperAssociation', 'Joomla-Site/com_contact/ContactHelperAssociation.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactHelperRoute', 'Joomla-Site/com_contact/ContactHelperRoute.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactModelCategories', 'Joomla-Site/com_contact/ContactModelCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactModelCategory', 'Joomla-Site/com_contact/ContactModelCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactModelContact', 'Joomla-Site/com_contact/ContactModelContact.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactModelFeatured', 'Joomla-Site/com_contact/ContactModelFeatured.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactViewCategories', 'Joomla-Site/com_contact/ContactViewCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactViewCategory', 'Joomla-Site/com_contact/ContactViewCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactViewContact', 'Joomla-Site/com_contact/ContactViewContact.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContactViewFeatured', 'Joomla-Site/com_contact/ContactViewFeatured.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('JFormRuleContactEmail', 'Joomla-Site/com_contact/JFormRuleContactEmail.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('JFormRuleContactEmailMessage', 'Joomla-Site/com_contact/JFormRuleContactEmailMessage.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('JFormRuleContactEmailSubject', 'Joomla-Site/com_contact/JFormRuleContactEmailSubject.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsHelperAssociation', 'Joomla-Site/com_contact/NewsfeedsHelperAssociation.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('ContactBuildRoute', 'Joomla-Site/com_contact/_components---com_contact---router.php.html#functionContactBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('ContactParseRoute', 'Joomla-Site/com_contact/_components---com_contact---router.php.html#functionContactParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('association.php', 'Joomla-Site/com_contact/_components---com_contact---helpers---association.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('categories.php', 'Joomla-Site/com_contact/_components---com_contact---models---categories.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_contact/_components---com_contact---helpers---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_contact/_components---com_contact---models---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('contact.php', 'Joomla-Site/com_contact/_components---com_contact---controllers---contact.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('contact.php', 'Joomla-Site/com_contact/_components---com_contact---contact.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('contact.php', 'Joomla-Site/com_contact/_components---com_contact---models---contact.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('contactemail.php', 'Joomla-Site/com_contact/_components---com_contact---models---rules---contactemail.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('contactemailmessage.php', 'Joomla-Site/com_contact/_components---com_contact---models---rules---contactemailmessage.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('contactemailsubject.php', 'Joomla-Site/com_contact/_components---com_contact---models---rules---contactemailsubject.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_contact/_components---com_contact---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---categories---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---contact---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---category---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_components---com_contact---views---categories---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_components---com_contact---views---category---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_contact/_components---com_contact---views---featured---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_address.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---tmpl---default_address.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_address.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---contact---default_address.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_articles.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---tmpl---default_articles.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_articles.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---contact---default_articles.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_contact/_components---com_contact---views---category---tmpl---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---category---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_form.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---contact---default_form.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_form.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---tmpl---default_form.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_contact/_components---com_contact---views---category---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_contact/_components---com_contact---views---categories---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---category---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---categories---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_contact/_components---com_contact---views---featured---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_links.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---contact---default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_links.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---tmpl---default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_profile.php', 'Joomla-Site/com_contact/_templates---beez3---html---com_contact---contact---default_profile.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_profile.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---tmpl---default_profile.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('featured.php', 'Joomla-Site/com_contact/_components---com_contact---models---featured.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('icon.php', 'Joomla-Site/com_contact/_components---com_contact---helpers---icon.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_contact/_components---com_contact---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_contact/_components---com_contact---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_contact/_components---com_contact---views---category---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_contact/_components---com_contact---views---categories---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_contact/_components---com_contact---views---category---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_contact/_components---com_contact---views---featured---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.vcf.php', 'Joomla-Site/com_contact/_components---com_contact---views---contact---view.vcf.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_content</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ContentCategories', 'Joomla-Site/com_content/ContentCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentController', 'Joomla-Site/com_content/ContentController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentControllerArticle', 'Joomla-Site/com_content/ContentControllerArticle.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentHelperAssociation', 'Joomla-Site/com_content/ContentHelperAssociation.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentHelperQuery', 'Joomla-Site/com_content/ContentHelperQuery.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentHelperRoute', 'Joomla-Site/com_content/ContentHelperRoute.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelArchive', 'Joomla-Site/com_content/ContentModelArchive.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelArticle', 'Joomla-Site/com_content/ContentModelArticle.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelArticles', 'Joomla-Site/com_content/ContentModelArticles.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelCategories', 'Joomla-Site/com_content/ContentModelCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelCategory', 'Joomla-Site/com_content/ContentModelCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelFeatured', 'Joomla-Site/com_content/ContentModelFeatured.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentModelForm', 'Joomla-Site/com_content/ContentModelForm.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentViewArchive', 'Joomla-Site/com_content/ContentViewArchive.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentViewArticle', 'Joomla-Site/com_content/ContentViewArticle.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentViewCategories', 'Joomla-Site/com_content/ContentViewCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentViewCategory', 'Joomla-Site/com_content/ContentViewCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentViewFeatured', 'Joomla-Site/com_content/ContentViewFeatured.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ContentViewForm', 'Joomla-Site/com_content/ContentViewForm.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('JHtmlIcon', 'Joomla-Site/com_content/JHtmlIcon.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('ContentBuildRoute', 'Joomla-Site/com_content/_components---com_content---router.php.html#functionContentBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('ContentParseRoute', 'Joomla-Site/com_content/_components---com_content---router.php.html#functionContentParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('archive.php', 'Joomla-Site/com_content/_components---com_content---models---archive.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('article.php', 'Joomla-Site/com_content/_components---com_content---models---article.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('article.php', 'Joomla-Site/com_content/_components---com_content---controllers---article.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('articles.php', 'Joomla-Site/com_content/_components---com_content---models---articles.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('association.php', 'Joomla-Site/com_content/_components---com_content---helpers---association.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog.php', 'Joomla-Site/com_content/_components---com_content---views---category---tmpl---blog.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_children.php', 'Joomla-Site/com_content/_components---com_content---views---category---tmpl---blog_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_links.php', 'Joomla-Site/com_content/_components---com_content---views---category---tmpl---blog_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('categories.php', 'Joomla-Site/com_content/_components---com_content---models---categories.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('categories_default_items.php', 'Joomla-Site/com_content/_layouts---joomla---content---categories_default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_content/_components---com_content---helpers---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_content/_components---com_content---models---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('content.php', 'Joomla-Site/com_content/_components---com_content---content.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_content/_components---com_content---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_content/_components---com_content---views---featured---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_content/_components---com_content---views---category---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_content/_components---com_content---views---article---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_content/_components---com_content---views---archive---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_content/_components---com_content---views---categories---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_articles.php', 'Joomla-Site/com_content/_components---com_content---views---category---tmpl---default_articles.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_content/_components---com_content---views---category---tmpl---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_item.php', 'Joomla-Site/com_content/_components---com_content---views---featured---tmpl---default_item.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_content/_components---com_content---views---categories---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_content/_components---com_content---views---archive---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_content/_templates---beez3---html---com_content---categories---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_links.php', 'Joomla-Site/com_content/_components---com_content---views---featured---tmpl---default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_links.php', 'Joomla-Site/com_content/_components---com_content---views---article---tmpl---default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('edit.php', 'Joomla-Site/com_content/_components---com_content---views---form---tmpl---edit.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('featured.php', 'Joomla-Site/com_content/_components---com_content---models---featured.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('form.php', 'Joomla-Site/com_content/_components---com_content---models---form.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('icon.php', 'Joomla-Site/com_content/_components---com_content---helpers---icon.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('query.php', 'Joomla-Site/com_content/_components---com_content---helpers---query.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_content/_components---com_content---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_content/_components---com_content---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_content/_components---com_content---views---featured---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_content/_components---com_content---views---category---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_content/_components---com_content---views---category---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_content/_components---com_content---views---featured---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_content/_components---com_content---views---categories---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_content/_components---com_content---views---archive---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_content/_components---com_content---views---article---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_content/_components---com_content---views---form---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_finder</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('FinderController', 'Joomla-Site/com_finder/FinderController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('FinderControllerSuggestions', 'Joomla-Site/com_finder/FinderControllerSuggestions.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('FinderHelperRoute', 'Joomla-Site/com_finder/FinderHelperRoute.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('FinderModelSearch', 'Joomla-Site/com_finder/FinderModelSearch.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('FinderModelSuggestions', 'Joomla-Site/com_finder/FinderModelSuggestions.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('FinderViewSearch', 'Joomla-Site/com_finder/FinderViewSearch.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('JHtmlFilter', 'Joomla-Site/com_finder/JHtmlFilter.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('JHtmlQuery', 'Joomla-Site/com_finder/JHtmlQuery.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('FinderBuildRoute', 'Joomla-Site/com_finder/_components---com_finder---router.php.html#functionFinderBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('FinderParseRoute', 'Joomla-Site/com_finder/_components---com_finder---router.php.html#functionFinderParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_finder/_components---com_finder---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_form.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---tmpl---default_form.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_result.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---tmpl---default_result.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_results.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---tmpl---default_results.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('filter.php', 'Joomla-Site/com_finder/_components---com_finder---helpers---html---filter.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('finder.php', 'Joomla-Site/com_finder/_components---com_finder---finder.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('query.php', 'Joomla-Site/com_finder/_components---com_finder---helpers---html---query.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_finder/_components---com_finder---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_finder/_components---com_finder---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('search.php', 'Joomla-Site/com_finder/_components---com_finder---models---search.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('suggestions.json.php', 'Joomla-Site/com_finder/_components---com_finder---controllers---suggestions.json.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('suggestions.php', 'Joomla-Site/com_finder/_components---com_finder---models---suggestions.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.opensearch.php', 'Joomla-Site/com_finder/_components---com_finder---views---search---view.opensearch.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_mailto</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('MailtoController', 'Joomla-Site/com_mailto/MailtoController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('MailtoHelper', 'Joomla-Site/com_mailto/MailtoHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('MailtoViewMailto', 'Joomla-Site/com_mailto/MailtoViewMailto.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('MailtoViewSent', 'Joomla-Site/com_mailto/MailtoViewSent.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_mailto/_components---com_mailto---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_mailto/_components---com_mailto---views---sent---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_mailto/_components---com_mailto---views---mailto---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mailto.php', 'Joomla-Site/com_mailto/_components---com_mailto---mailto.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mailto.php', 'Joomla-Site/com_mailto/_components---com_mailto---helpers---mailto.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_mailto/_components---com_mailto---views---sent---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_mailto/_components---com_mailto---views---mailto---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_media</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('media.php', 'Joomla-Site/com_media/_components---com_media---media.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_newsfeeds</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('NewsfeedsCategories', 'Joomla-Site/com_newsfeeds/NewsfeedsCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsController', 'Joomla-Site/com_newsfeeds/NewsfeedsController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsHelperRoute', 'Joomla-Site/com_newsfeeds/NewsfeedsHelperRoute.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsModelCategories', 'Joomla-Site/com_newsfeeds/NewsfeedsModelCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsModelCategory', 'Joomla-Site/com_newsfeeds/NewsfeedsModelCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsModelNewsfeed', 'Joomla-Site/com_newsfeeds/NewsfeedsModelNewsfeed.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsViewCategories', 'Joomla-Site/com_newsfeeds/NewsfeedsViewCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsViewCategory', 'Joomla-Site/com_newsfeeds/NewsfeedsViewCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('NewsfeedsViewNewsfeed', 'Joomla-Site/com_newsfeeds/NewsfeedsViewNewsfeed.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('NewsfeedsBuildRoute', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---router.php.html#functionNewsfeedsBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('NewsfeedsParseRoute', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---router.php.html#functionNewsfeedsParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('association.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---helpers---association.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('categories.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---models---categories.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---models---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---helpers---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_newsfeeds/_templates---beez3---html---com_newsfeeds---category---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_newsfeeds/_templates---beez3---html---com_newsfeeds---categories---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---newsfeed---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---categories---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---category---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---category---tmpl---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_newsfeeds/_templates---beez3---html---com_newsfeeds---category---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_newsfeeds/_templates---beez3---html---com_newsfeeds---category---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_newsfeeds/_templates---beez3---html---com_newsfeeds---categories---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---categories---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---category---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('newsfeed.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---models---newsfeed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('newsfeeds.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---newsfeeds.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---newsfeed---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---category---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_newsfeeds/_components---com_newsfeeds---views---categories---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_search</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('SearchController', 'Joomla-Site/com_search/SearchController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('SearchModelSearch', 'Joomla-Site/com_search/SearchModelSearch.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('SearchViewSearch', 'Joomla-Site/com_search/SearchViewSearch.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('SearchBuildRoute', 'Joomla-Site/com_search/_components---com_search---router.php.html#functionSearchBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('SearchParseRoute', 'Joomla-Site/com_search/_components---com_search---router.php.html#functionSearchParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_search/_components---com_search---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_search/_components---com_search---views---search---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_error.php', 'Joomla-Site/com_search/_components---com_search---views---search---tmpl---default_error.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_form.php', 'Joomla-Site/com_search/_components---com_search---views---search---tmpl---default_form.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_results.php', 'Joomla-Site/com_search/_components---com_search---views---search---tmpl---default_results.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_search/_components---com_search---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('search.php', 'Joomla-Site/com_search/_components---com_search---models---search.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('search.php', 'Joomla-Site/com_search/_components---com_search---search.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_search/_components---com_search---views---search---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.opensearch.php', 'Joomla-Site/com_search/_components---com_search---views---search---view.opensearch.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_tags</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('TagsController', 'Joomla-Site/com_tags/TagsController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('TagsControllerTags', 'Joomla-Site/com_tags/TagsControllerTags.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('TagsHelperRoute', 'Joomla-Site/com_tags/TagsHelperRoute.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('TagsModelTag', 'Joomla-Site/com_tags/TagsModelTag.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('TagsModelTags', 'Joomla-Site/com_tags/TagsModelTags.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('TagsViewTag', 'Joomla-Site/com_tags/TagsViewTag.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('TagsViewTags', 'Joomla-Site/com_tags/TagsViewTags.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('TagsBuildRoute', 'Joomla-Site/com_tags/_components---com_tags---router.php.html#functionTagsBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('TagsParseRoute', 'Joomla-Site/com_tags/_components---com_tags---router.php.html#functionTagsParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_tags/_components---com_tags---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_tags/_components---com_tags---views---tag---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_tags/_components---com_tags---views---tags---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_tags/_components---com_tags---views---tag---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_tags/_components---com_tags---views---tags---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('list.php', 'Joomla-Site/com_tags/_components---com_tags---views---tag---tmpl---list.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('list_items.php', 'Joomla-Site/com_tags/_components---com_tags---views---tag---tmpl---list_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_tags/_components---com_tags---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_tags/_components---com_tags---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('tag.php', 'Joomla-Site/com_tags/_components---com_tags---models---tag.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('tags.php', 'Joomla-Site/com_tags/_components---com_tags---models---tags.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('tags.php', 'Joomla-Site/com_tags/_components---com_tags---tags.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('tags.php', 'Joomla-Site/com_tags/_components---com_tags---controllers---tags.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_tags/_components---com_tags---views---tags---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_tags/_components---com_tags---views---tag---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_tags/_components---com_tags---views---tags---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_tags/_components---com_tags---views---tag---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_users</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('JHtmlUsers', 'Joomla-Site/com_users/JHtmlUsers.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersController', 'Joomla-Site/com_users/UsersController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersControllerProfile', 'Joomla-Site/com_users/UsersControllerProfile.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersControllerRegistration', 'Joomla-Site/com_users/UsersControllerRegistration.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersControllerRemind', 'Joomla-Site/com_users/UsersControllerRemind.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersControllerReset', 'Joomla-Site/com_users/UsersControllerReset.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersControllerUser', 'Joomla-Site/com_users/UsersControllerUser.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersHelperRoute', 'Joomla-Site/com_users/UsersHelperRoute.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersModelLogin', 'Joomla-Site/com_users/UsersModelLogin.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersModelProfile', 'Joomla-Site/com_users/UsersModelProfile.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersModelRegistration', 'Joomla-Site/com_users/UsersModelRegistration.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersModelRemind', 'Joomla-Site/com_users/UsersModelRemind.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersModelReset', 'Joomla-Site/com_users/UsersModelReset.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersViewLogin', 'Joomla-Site/com_users/UsersViewLogin.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersViewProfile', 'Joomla-Site/com_users/UsersViewProfile.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersViewRegistration', 'Joomla-Site/com_users/UsersViewRegistration.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersViewRemind', 'Joomla-Site/com_users/UsersViewRemind.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('UsersViewReset', 'Joomla-Site/com_users/UsersViewReset.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('UsersBuildRoute', 'Joomla-Site/com_users/_components---com_users---router.php.html#functionUsersBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('UsersParseRoute', 'Joomla-Site/com_users/_components---com_users---router.php.html#functionUsersParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('complete.php', 'Joomla-Site/com_users/_components---com_users---views---reset---tmpl---complete.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('complete.php', 'Joomla-Site/com_users/_components---com_users---views---registration---tmpl---complete.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('confirm.php', 'Joomla-Site/com_users/_components---com_users---views---reset---tmpl---confirm.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_users/_components---com_users---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_users/_components---com_users---views---profile---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_users/_components---com_users---views---login---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_users/_components---com_users---views---reset---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_users/_components---com_users---views---registration---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_users/_components---com_users---views---remind---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_core.php', 'Joomla-Site/com_users/_components---com_users---views---profile---tmpl---default_core.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_custom.php', 'Joomla-Site/com_users/_components---com_users---views---profile---tmpl---default_custom.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_login.php', 'Joomla-Site/com_users/_components---com_users---views---login---tmpl---default_login.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_logout.php', 'Joomla-Site/com_users/_components---com_users---views---login---tmpl---default_logout.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_params.php', 'Joomla-Site/com_users/_components---com_users---views---profile---tmpl---default_params.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('edit.php', 'Joomla-Site/com_users/_components---com_users---views---profile---tmpl---edit.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('login.php', 'Joomla-Site/com_users/_components---com_users---models---login.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('profile.php', 'Joomla-Site/com_users/_components---com_users---controllers---profile.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('profile.php', 'Joomla-Site/com_users/_components---com_users---models---profile.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('registration.php', 'Joomla-Site/com_users/_components---com_users---controllers---registration.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('registration.php', 'Joomla-Site/com_users/_components---com_users---models---registration.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('remind.php', 'Joomla-Site/com_users/_components---com_users---models---remind.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('remind.php', 'Joomla-Site/com_users/_components---com_users---controllers---remind.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('reset.php', 'Joomla-Site/com_users/_components---com_users---models---reset.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('reset.php', 'Joomla-Site/com_users/_components---com_users---controllers---reset.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_users/_components---com_users---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_users/_components---com_users---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('user.php', 'Joomla-Site/com_users/_components---com_users---controllers---user.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('users.php', 'Joomla-Site/com_users/_components---com_users---users.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('users.php', 'Joomla-Site/com_users/_components---com_users---helpers---html---users.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_users/_components---com_users---views---remind---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_users/_components---com_users---views---reset---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_users/_components---com_users---views---login---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_users/_components---com_users---views---profile---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_users/_components---com_users---views---registration---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_weblinks</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('WeblinksCategories', 'Joomla-Site/com_weblinks/WeblinksCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksController', 'Joomla-Site/com_weblinks/WeblinksController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksControllerWeblink', 'Joomla-Site/com_weblinks/WeblinksControllerWeblink.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksHelperAssociation', 'Joomla-Site/com_weblinks/WeblinksHelperAssociation.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksHelperRoute', 'Joomla-Site/com_weblinks/WeblinksHelperRoute.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksModelCategories', 'Joomla-Site/com_weblinks/WeblinksModelCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksModelCategory', 'Joomla-Site/com_weblinks/WeblinksModelCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksModelForm', 'Joomla-Site/com_weblinks/WeblinksModelForm.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksModelWeblink', 'Joomla-Site/com_weblinks/WeblinksModelWeblink.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksViewCategories', 'Joomla-Site/com_weblinks/WeblinksViewCategories.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksViewCategory', 'Joomla-Site/com_weblinks/WeblinksViewCategory.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksViewForm', 'Joomla-Site/com_weblinks/WeblinksViewForm.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WeblinksViewWeblink', 'Joomla-Site/com_weblinks/WeblinksViewWeblink.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('WeblinksBuildRoute', 'Joomla-Site/com_weblinks/_components---com_weblinks---router.php.html#functionWeblinksBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('WeblinksParseRoute', 'Joomla-Site/com_weblinks/_components---com_weblinks---router.php.html#functionWeblinksParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('association.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---helpers---association.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('categories.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---models---categories.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('categories_default.php', 'Joomla-Site/com_weblinks/_layouts---joomla---content---categories_default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---models---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---helpers---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_weblinks/_templates---beez3---html---com_weblinks---category---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_weblinks/_templates---beez3---html---com_weblinks---categories---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---categories---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---category---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---category---tmpl---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/com_weblinks/_templates---beez3---html---com_weblinks---category---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---categories---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_weblinks/_templates---beez3---html---com_weblinks---category---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_weblinks/_templates---beez3---html---com_weblinks---categories---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---category---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('edit.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---form---tmpl---edit.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('edit.php', 'Joomla-Site/com_weblinks/_templates---beez3---html---com_weblinks---form---edit.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('form.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---models---form.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('icon.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---helpers---icon.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('options_default.php', 'Joomla-Site/com_weblinks/_layouts---joomla---content---options_default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('route.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---helpers---route.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.feed.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---category---view.feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---form---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---categories---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---category---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---views---weblink---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('weblink.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---models---weblink.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('weblink.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---controllers---weblink.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('weblinks.php', 'Joomla-Site/com_weblinks/_components---com_weblinks---weblinks.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">com_wrapper</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('WrapperController', 'Joomla-Site/com_wrapper/WrapperController.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('WrapperViewWrapper', 'Joomla-Site/com_wrapper/WrapperViewWrapper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('WrapperBuildRoute', 'Joomla-Site/com_wrapper/_components---com_wrapper---router.php.html#functionWrapperBuildRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('WrapperParseRoute', 'Joomla-Site/com_wrapper/_components---com_wrapper---router.php.html#functionWrapperParseRoute');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('controller.php', 'Joomla-Site/com_wrapper/_components---com_wrapper---controller.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/com_wrapper/_components---com_wrapper---views---wrapper---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('router.php', 'Joomla-Site/com_wrapper/_components---com_wrapper---router.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('view.html.php', 'Joomla-Site/com_wrapper/_components---com_wrapper---views---wrapper---view.html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('wrapper.php', 'Joomla-Site/com_wrapper/_components---com_wrapper---wrapper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Layout</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('addtab.php', 'Joomla-Site/Layout/_layouts---libraries---cms---html---bootstrap---addtab.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('addtabscript.php', 'Joomla-Site/Layout/_layouts---libraries---cms---html---bootstrap---addtabscript.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('associations.php', 'Joomla-Site/Layout/_layouts---joomla---content---associations.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('associations.php', 'Joomla-Site/Layout/_layouts---joomla---edit---associations.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('author.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---author.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('base.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---base.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('batch.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---batch.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('block.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---block.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_item.php', 'Joomla-Site/Layout/_components---com_content---views---category---tmpl---blog_item.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_style_default_item_title.php', 'Joomla-Site/Layout/_layouts---joomla---content---blog_style_default_item_title.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_style_default_links.php', 'Joomla-Site/Layout/_layouts---joomla---content---blog_style_default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('category_default.php', 'Joomla-Site/Layout/_layouts---joomla---content---category_default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('confirm.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---confirm.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('containerclose.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---containerclose.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('containeropen.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---containeropen.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('create_date.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---create_date.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('details.php', 'Joomla-Site/Layout/_layouts---joomla---edit---details.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('details.php', 'Joomla-Site/Layout/_administrator---templates---hathor---html---layouts---joomla---edit---details.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('endtab.php', 'Joomla-Site/Layout/_layouts---libraries---cms---html---bootstrap---endtab.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('endtabset.php', 'Joomla-Site/Layout/_layouts---libraries---cms---html---bootstrap---endtabset.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('help.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---help.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('hits.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---hits.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('icon.php', 'Joomla-Site/Layout/_layouts---joomla---quickicons---icon.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('iconclass.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---iconclass.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('icons.php', 'Joomla-Site/Layout/_layouts---joomla---content---icons.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('intro_image.php', 'Joomla-Site/Layout/_layouts---joomla---content---intro_image.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('link.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---link.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('metadata.php', 'Joomla-Site/Layout/_layouts---joomla---edit---metadata.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('metadata.php', 'Joomla-Site/Layout/_administrator---templates---hathor---html---layouts---joomla---edit---metadata.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('modify_date.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---modify_date.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('parent_category.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---parent_category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('popup.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---popup.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('publish_date.php', 'Joomla-Site/Layout/_layouts---joomla---content---info_block---publish_date.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('separator.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---separator.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('slider.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---slider.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('standard.php', 'Joomla-Site/Layout/_layouts---joomla---toolbar---standard.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('starttabset.php', 'Joomla-Site/Layout/_layouts---libraries---cms---html---bootstrap---starttabset.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('starttabsetscript.php', 'Joomla-Site/Layout/_layouts---libraries---cms---html---bootstrap---starttabsetscript.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('submenu.php', 'Joomla-Site/Layout/_layouts---joomla---sidebars---submenu.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('submenu.php', 'Joomla-Site/Layout/_administrator---templates---hathor---html---layouts---joomla---sidebars---submenu.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_articles_archive</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModArchiveHelper', 'Joomla-Site/mod_articles_archive/ModArchiveHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_articles_archive/_modules---mod_articles_archive---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_articles_archive/_modules---mod_articles_archive---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_articles_archive.php', 'Joomla-Site/mod_articles_archive/_modules---mod_articles_archive---mod_articles_archive.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_articles_categories</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModArticlesCategoriesHelper', 'Joomla-Site/mod_articles_categories/ModArticlesCategoriesHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_articles_categories/_modules---mod_articles_categories---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/mod_articles_categories/_modules---mod_articles_categories---tmpl---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_articles_categories/_modules---mod_articles_categories---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_articles_categories.php', 'Joomla-Site/mod_articles_categories/_modules---mod_articles_categories---mod_articles_categories.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_articles_category</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModArticlesCategoryHelper', 'Joomla-Site/mod_articles_category/ModArticlesCategoryHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_articles_category/_modules---mod_articles_category---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_articles_category/_modules---mod_articles_category---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_articles_category.php', 'Joomla-Site/mod_articles_category/_modules---mod_articles_category---mod_articles_category.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_articles_latest</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModArticlesLatestHelper', 'Joomla-Site/mod_articles_latest/ModArticlesLatestHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_articles_latest/_modules---mod_articles_latest---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_articles_latest/_modules---mod_articles_latest---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_articles_latest.php', 'Joomla-Site/mod_articles_latest/_modules---mod_articles_latest---mod_articles_latest.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_articles_news</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModArticlesNewsHelper', 'Joomla-Site/mod_articles_news/ModArticlesNewsHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_articles_news/_modules---mod_articles_news---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_articles_news/_modules---mod_articles_news---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('horizontal.php', 'Joomla-Site/mod_articles_news/_modules---mod_articles_news---tmpl---horizontal.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_articles_news.php', 'Joomla-Site/mod_articles_news/_modules---mod_articles_news---mod_articles_news.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('vertical.php', 'Joomla-Site/mod_articles_news/_modules---mod_articles_news---tmpl---vertical.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('_item.php', 'Joomla-Site/mod_articles_news/_modules---mod_articles_news---tmpl---_item.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_articles_popular</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModArticlesPopularHelper', 'Joomla-Site/mod_articles_popular/ModArticlesPopularHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_articles_popular/_modules---mod_articles_popular---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_articles_popular/_modules---mod_articles_popular---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_articles_popular.php', 'Joomla-Site/mod_articles_popular/_modules---mod_articles_popular---mod_articles_popular.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_banners</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModBannersHelper', 'Joomla-Site/mod_banners/ModBannersHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_banners/_modules---mod_banners---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_banners/_modules---mod_banners---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_banners.php', 'Joomla-Site/mod_banners/_modules---mod_banners---mod_banners.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_breadcrumbs</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModBreadCrumbsHelper', 'Joomla-Site/mod_breadcrumbs/ModBreadCrumbsHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_breadcrumbs/_modules---mod_breadcrumbs---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_breadcrumbs/_modules---mod_breadcrumbs---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_breadcrumbs.php', 'Joomla-Site/mod_breadcrumbs/_modules---mod_breadcrumbs---mod_breadcrumbs.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_custom</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_custom/_modules---mod_custom---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_custom.php', 'Joomla-Site/mod_custom/_modules---mod_custom---mod_custom.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_feed</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModFeedHelper', 'Joomla-Site/mod_feed/ModFeedHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_feed/_modules---mod_feed---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_feed/_modules---mod_feed---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_feed.php', 'Joomla-Site/mod_feed/_modules---mod_feed---mod_feed.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_finder</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModFinderHelper', 'Joomla-Site/mod_finder/ModFinderHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_finder/_modules---mod_finder---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_finder/_modules---mod_finder---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_finder.php', 'Joomla-Site/mod_finder/_modules---mod_finder---mod_finder.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_footer</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_footer/_modules---mod_footer---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_footer.php', 'Joomla-Site/mod_footer/_modules---mod_footer---mod_footer.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_languages</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModLanguagesHelper', 'Joomla-Site/mod_languages/ModLanguagesHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_languages/_modules---mod_languages---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_languages/_modules---mod_languages---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_languages.php', 'Joomla-Site/mod_languages/_modules---mod_languages---mod_languages.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_login</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModLoginHelper', 'Joomla-Site/mod_login/ModLoginHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_login/_modules---mod_login---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_logout.php', 'Joomla-Site/mod_login/_modules---mod_login---tmpl---default_logout.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_login/_modules---mod_login---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_login.php', 'Joomla-Site/mod_login/_modules---mod_login---mod_login.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_menu</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModMenuHelper', 'Joomla-Site/mod_menu/ModMenuHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_menu/_modules---mod_menu---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_component.php', 'Joomla-Site/mod_menu/_modules---mod_menu---tmpl---default_component.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_heading.php', 'Joomla-Site/mod_menu/_modules---mod_menu---tmpl---default_heading.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_separator.php', 'Joomla-Site/mod_menu/_modules---mod_menu---tmpl---default_separator.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_url.php', 'Joomla-Site/mod_menu/_modules---mod_menu---tmpl---default_url.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_menu/_modules---mod_menu---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_menu.php', 'Joomla-Site/mod_menu/_modules---mod_menu---mod_menu.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_random_image</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModRandomImageHelper', 'Joomla-Site/mod_random_image/ModRandomImageHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_random_image/_modules---mod_random_image---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_random_image/_modules---mod_random_image---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_random_image.php', 'Joomla-Site/mod_random_image/_modules---mod_random_image---mod_random_image.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_related_items</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModRelatedItemsHelper', 'Joomla-Site/mod_related_items/ModRelatedItemsHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_related_items/_modules---mod_related_items---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_related_items/_modules---mod_related_items---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_related_items.php', 'Joomla-Site/mod_related_items/_modules---mod_related_items---mod_related_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_search</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModSearchHelper', 'Joomla-Site/mod_search/ModSearchHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_search/_modules---mod_search---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_search/_modules---mod_search---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_search.php', 'Joomla-Site/mod_search/_modules---mod_search---mod_search.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_stats</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModStatsHelper', 'Joomla-Site/mod_stats/ModStatsHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_stats/_administrator---modules---mod_stats_admin---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_stats/_modules---mod_stats---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_stats/_modules---mod_stats---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_stats.php', 'Joomla-Site/mod_stats/_modules---mod_stats---mod_stats.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_stats_admin.php', 'Joomla-Site/mod_stats/_administrator---modules---mod_stats_admin---mod_stats_admin.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_syndicate</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModSyndicateHelper', 'Joomla-Site/mod_syndicate/ModSyndicateHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_syndicate/_modules---mod_syndicate---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_syndicate/_modules---mod_syndicate---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_syndicate.php', 'Joomla-Site/mod_syndicate/_modules---mod_syndicate---mod_syndicate.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_tags_popular</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModTagsPopularHelper', 'Joomla-Site/mod_tags_popular/ModTagsPopularHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+							var classe = new WebFXTreeItem('ModTagssimilarHelper', 'Joomla-Site/mod_tags_popular/ModTagssimilarHelper.html');
+				classe.openIcon = 'media/images/AbstractClass.png';
+				classe.icon = 'media/images/AbstractClass.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_tags_popular/_modules---mod_tags_popular---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_tags_popular/_modules---mod_tags_similar---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_tags_popular/_modules---mod_tags_popular---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_tags_popular/_modules---mod_tags_similar---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_tags_popular.php', 'Joomla-Site/mod_tags_popular/_modules---mod_tags_popular---mod_tags_popular.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_tags_similar</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('mod_tags_similar.php', 'Joomla-Site/mod_tags_similar/_modules---mod_tags_similar---mod_tags_similar.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_users_latest</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModUsersLatestHelper', 'Joomla-Site/mod_users_latest/ModUsersLatestHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_users_latest/_modules---mod_users_latest---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_users_latest/_modules---mod_users_latest---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_users_latest.php', 'Joomla-Site/mod_users_latest/_modules---mod_users_latest---mod_users_latest.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_weblinks</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModWeblinksHelper', 'Joomla-Site/mod_weblinks/ModWeblinksHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_weblinks/_modules---mod_weblinks---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_weblinks/_modules---mod_weblinks---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_weblinks.php', 'Joomla-Site/mod_weblinks/_modules---mod_weblinks---mod_weblinks.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_whosonline</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModWhosonlineHelper', 'Joomla-Site/mod_whosonline/ModWhosonlineHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_whosonline/_modules---mod_whosonline---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_whosonline/_modules---mod_whosonline---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_whosonline.php', 'Joomla-Site/mod_whosonline/_modules---mod_whosonline---mod_whosonline.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">mod_wrapper</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('ModWrapperHelper', 'Joomla-Site/mod_wrapper/ModWrapperHelper.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/mod_wrapper/_modules---mod_wrapper---tmpl---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('helper.php', 'Joomla-Site/mod_wrapper/_modules---mod_wrapper---helper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('mod_wrapper.php', 'Joomla-Site/mod_wrapper/_modules---mod_wrapper---mod_wrapper.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Template-Beez3</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('renderMessage', 'Joomla-Site/Template-Beez3/_templates---beez3---html---message.php.html#functionrenderMessage');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('message.php', 'Joomla-Site/Template-Beez3/_templates---beez3---html---message.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Template-beez5</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/Template-beez5/_templates---beez3---html---com_content---categories---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/Template-beez5/_templates---beez3---html---com_content---archive---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_items.php', 'Joomla-Site/Template-beez5/_templates---beez3---html---com_content---archive---default_items.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Template-system</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('modChrome_horz', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_horz');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_html5', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_html5');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_none', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_none');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_outline', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_outline');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_rounded', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_rounded');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_table', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_table');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_xhtml', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html#functionmodChrome_xhtml');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('component.php', 'Joomla-Site/Template-system/_templates---system---component.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('error.php', 'Joomla-Site/Template-system/_templates---system---error.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'Joomla-Site/Template-system/_templates---system---index.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('modules.php', 'Joomla-Site/Template-system/_templates---system---html---modules.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('offline.php', 'Joomla-Site/Template-system/_templates---system---offline.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Templates-beez3</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('modChrome_beezDivision', 'Joomla-Site/Templates-beez3/_templates---beez3---html---modules.php.html#functionmodChrome_beezDivision');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_beezHide', 'Joomla-Site/Templates-beez3/_templates---beez3---html---modules.php.html#functionmodChrome_beezHide');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_beezTabs', 'Joomla-Site/Templates-beez3/_templates---beez3---html---modules.php.html#functionmodChrome_beezTabs');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('blog.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---blog.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_children.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---blog_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_item.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---blog_item.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('blog_links.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---blog_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('component.php', 'Joomla-Site/Templates-beez3/_templates---beez3---component.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---featured---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---article---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---mod_breadcrumbs---default.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_articles.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---default_articles.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_children.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---category---default_children.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_item.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---featured---default_item.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_links.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---featured---default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('default_links.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---article---default_links.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('edit.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_content---form---edit.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('encyclopedia.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---com_contact---contact---encyclopedia.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('error.php', 'Joomla-Site/Templates-beez3/_templates---beez3---error.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'Joomla-Site/Templates-beez3/_templates---beez3---index.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('jsstrings.php', 'Joomla-Site/Templates-beez3/_templates---beez3---jsstrings.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('modules.php', 'Joomla-Site/Templates-beez3/_templates---beez3---html---modules.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Templates-protostar</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+					var subpackagetree_function = new WebFXTreeItem('Function(s)', '');
+			subpackagetree_function.openIcon = 'media/images/function_folder.png';
+			subpackagetree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('modChrome_no', 'Joomla-Site/Templates-protostar/_templates---protostar---html---modules.php.html#functionmodChrome_no');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('modChrome_well', 'Joomla-Site/Templates-protostar/_templates---protostar---html---modules.php.html#functionmodChrome_well');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('pagination_item_active', 'Joomla-Site/Templates-protostar/_templates---protostar---html---pagination.php.html#functionpagination_item_active');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('pagination_item_inactive', 'Joomla-Site/Templates-protostar/_templates---protostar---html---pagination.php.html#functionpagination_item_inactive');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('pagination_list_footer', 'Joomla-Site/Templates-protostar/_templates---protostar---html---pagination.php.html#functionpagination_list_footer');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+							var fic = new WebFXTreeItem('pagination_list_render', 'Joomla-Site/Templates-protostar/_templates---protostar---html---pagination.php.html#functionpagination_list_render');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				subpackagetree_function.add(fic);
+						
+			subpackagetree.add(subpackagetree_function);
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('component.php', 'Joomla-Site/Templates-protostar/_templates---protostar---component.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('error.php', 'Joomla-Site/Templates-protostar/_templates---protostar---error.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('index.php', 'Joomla-Site/Templates-protostar/_templates---protostar---index.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('modules.php', 'Joomla-Site/Templates-protostar/_templates---protostar---html---modules.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('pagination.php', 'Joomla-Site/Templates-protostar/_templates---protostar---html---pagination.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">Application</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+					var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
+			subpackagetree_classe.openIcon = 'media/images/class_folder.png';
+			subpackagetree_classe.icon = 'media/images/class_folder.png';
+			
+							var classe = new WebFXTreeItem('JSite', 'Joomla-Site/Application/JSite.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				subpackagetree_classe.add(classe);
+						
+			subpackagetree.add(subpackagetree_classe);
+		
+				
+			
+	  tree.add(subpackagetree);
+	
+document.write(tree);
+}
+</script>
+</div>
+<p class="notes">
+	Generated by 
+	<a href="http://www.phpdoc.org" target="_blank">phpDocumentor <span class="field">1.4.3</span></a>
+</p>
+</body>
+</html>
