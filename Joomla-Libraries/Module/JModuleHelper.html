@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JModuleHelper</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> JModuleHelper</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Module helper class</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 1.5</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---cms---module---helper.php.html">/libraries/cms/module/helper.php</a> (line <span class="field"><a href="../../filesource/fsource_Joomla-Libraries_Module_librariescmsmodulehelper.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getLayoutPath" title="details" class="method-name">getLayoutPath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$layout</span> = <span class="var-default">'default'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object The</span>
+										<a href="#getModule" title="details" class="method-name">&amp;getModule</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getModules" title="details" class="method-name">&amp;getModules</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isEnabled" title="details" class="method-name">isEnabled</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#load" title="details" class="method-name">&amp;load</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#moduleCache" title="details" class="method-name">moduleCache</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$module</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$moduleparams</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$cacheparams</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#renderModule" title="details" class="method-name">renderModule</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$module</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$attribs</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#_load" title="details" class="method-name">&amp;_load</a>
+										()
+									</div>
+																																																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetLayoutPath" id="getLayoutPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getLayoutPath</span> (line <span class="line-number"><a href="../../__filesource/ource_Joomla-Libraries_Module_librariescmsmodulehelper.php.html#a257">257</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the path to a layout for a module</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The path to the module layout</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getLayoutPath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$layout</span> = <span class="var-default">'default'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$module</span><span class="var-description">: The name of the module</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$layout</span><span class="var-description">: The name of the module layout. If alternative layout, in the form template:filename.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModule" id="getModule"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getModule</span> (line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Libraries_Module_librariescmsmodulehelper.php.html#a31">31</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get module by name (real, eg 'Breadcrumbs' or folder, eg 'mod_breadcrumbs')</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Module object</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object The</span>
+		<span class="method-name">
+			&amp;getModule
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the module</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: The title of the module, optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModules" id="getModules"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getModules</span> (line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Libraries_Module_librariescmsmodulehelper.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get modules by position</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of module objects</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			&amp;getModules
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$position</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$position</span><span class="var-description">: The position of the module</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisEnabled" id="isEnabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isEnabled</span> (line <span class="line-number"><a href="../../__filesofilesource/Joomla-Libraries_Module_librariescmsmodulehelper.php.html#a121">121</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a module is enabled. A given module will only be returned  if it meets the following criteria: it is enabled, it is assigned to  the current menu item or all items, and the user meets the access level  requirements.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> See description for conditions.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isEnabled
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$module</span><span class="var-description">: The module name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static load</span> (line <span class="line-number"><a href="../../__filesourfilesource/omla-Libraries_Module_librariescmsmodulehelper.php.html#a311">311</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load published modules.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			&amp;load
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodmoduleCache" id="moduleCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static moduleCache</span> (line <span class="line-number"><a href="../../__filesourcefilesource/la-Libraries_Module_librariescmsmodulehelper.php.html#a432">432</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Module cache helper</p>
+<p class="description"><p>Caching modes:  To be set in XML:  'static'      One cache file for all pages with the same module parameters  'oldstatic'   1.5 definition of module caching, one cache file for all pages                with the same module id and user aid,  'itemid'      Changes on itemid change, to be called from inside the module:  'safeuri'     Id created from $cacheparams-&gt;modeparams array,  'id'          Module sets own cache id's</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Filter/JFilterInput.html#methodclean">JFilterInput::clean()</a></li>
+				<li><span class="field">since:</span> 1.6</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			moduleCache
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$module</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$moduleparams</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$cacheparams</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$module</span><span class="var-description">: Module object</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$moduleparams</span><span class="var-description">: Module parameters</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$cacheparams</span><span class="var-description">: Module cache parameters - id or url parameters, depending on the module cache mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenderModule" id="renderModule"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static renderModule</span> (line <span class="line-number"><a href="../../__filesource/ffilesource/-Libraries_Module_librariescmsmodulehelper.php.html#a138">138</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Render the module.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML content of the module output.</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			renderModule
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$module</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$attribs</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$module</span><span class="var-description">: A module object.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$attribs</span><span class="var-description">: An array of attributes for the module (probably from the XML).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_load" id="_load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static _load</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Module_librariescmsmodulehelper.php.html#a299">299</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load published modules.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 4.0  Use JModuleHelper::load() instead</li>
+				<li><span class="field">since:</span> 1.5</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			&amp;_load
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:01:51 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

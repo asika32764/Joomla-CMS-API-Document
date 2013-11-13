@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for eaccelerator.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file eaccelerator.php</h1>
+<p>Documentation is available at <a href="../Joomla-Administrator/com_admin/_administrator---components---com_admin---postinstall---eaccelerator.php.html">eaccelerator.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Administrator</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;com_admin</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE.txt</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;This&nbsp;file&nbsp;contains&nbsp;post-installation&nbsp;message&nbsp;handling&nbsp;for&nbsp;eAccelerator&nbsp;compatibility.</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'_JEXEC'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;Checks&nbsp;if&nbsp;the&nbsp;eAccelerator&nbsp;caching&nbsp;method&nbsp;is&nbsp;enabled.&nbsp;This&nbsp;check&nbsp;should&nbsp;be</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;done&nbsp;through&nbsp;the&nbsp;3.x&nbsp;series&nbsp;as&nbsp;the&nbsp;issue&nbsp;impacts&nbsp;migrated&nbsp;sites&nbsp;which&nbsp;will</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;most&nbsp;often&nbsp;come&nbsp;from&nbsp;the&nbsp;previous&nbsp;LTS&nbsp;release&nbsp;(2.5).&nbsp;Remove&nbsp;for&nbsp;version&nbsp;4&nbsp;or</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;when&nbsp;eAccelerator&nbsp;support&nbsp;is&nbsp;added.</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;This&nbsp;check&nbsp;returns&nbsp;true&nbsp;when&nbsp;the&nbsp;eAccelerator&nbsp;caching&nbsp;method&nbsp;is&nbsp;user,&nbsp;meaning</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*&nbsp;that&nbsp;the&nbsp;message&nbsp;concerning&nbsp;it&nbsp;should&nbsp;be&nbsp;displayed.</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">integer&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;3.2</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-key">function&nbsp;</span><a href="../Joomla-Administrator/com_admin/_administrator---components---com_admin---postinstall---eaccelerator.php.html#functionadmin_postinstall_eaccelerator_condition">admin_postinstall_eaccelerator_condition</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$app&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetApplication">getApplication</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$cacheHandler&nbsp;</span>=&nbsp;<span class="src-var">$app</span><span class="src-sym">-&gt;</span><span class="src-id">getCfg</span><span class="src-sym">(</span><span class="src-str">'cacheHandler'</span><span class="src-sym">,&nbsp;</span><span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/ucfirst">ucfirst</a><span class="src-sym">(</span><span class="src-var">$cacheHandler</span><span class="src-sym">)&nbsp;</span>==&nbsp;<span class="src-str">'Eaccelerator'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">&nbsp;*&nbsp;Disables&nbsp;the&nbsp;unsupported&nbsp;eAccelerator&nbsp;caching&nbsp;method,&nbsp;replacing&nbsp;it&nbsp;with&nbsp;the</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;*&nbsp;&quot;file&quot;&nbsp;caching&nbsp;method.</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;</span><span class="src-doc-type">void&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;3.2</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-key">function&nbsp;</span><a href="../Joomla-Administrator/com_admin/_administrator---components---com_admin---postinstall---eaccelerator.php.html#functionadmin_postinstall_eaccelerator_action">admin_postinstall_eaccelerator_action</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$prev&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">JConfig</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$prev&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/Utilities/JArrayHelper.html">JArrayHelper</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Utilities/JArrayHelper.html#methodfromObject">fromObject</a><span class="src-sym">(</span><span class="src-var">$prev</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'cacheHandler'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'file'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$data&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_merge">array_merge</a><span class="src-sym">(</span><span class="src-var">$prev</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$config&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span><span class="src-sym">(</span><span class="src-str">'config'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$config</span><span class="src-sym">-&gt;</span><span class="src-id">loadArray</span><span class="src-sym">(</span><span class="src-var">$data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../Joomla-Platform/_libraries---loader.php.html#functionjimport">jimport</a><span class="src-sym">(</span><span class="src-str">'joomla.filesystem.path'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../Joomla-Platform/_libraries---loader.php.html#functionjimport">jimport</a><span class="src-sym">(</span><span class="src-str">'joomla.filesystem.file'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Set&nbsp;the&nbsp;configuration&nbsp;file&nbsp;path.</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$file&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Administrator/_administrator---includes---defines.php.html#defineJPATH_CONFIGURATION">JPATH_CONFIGURATION</a>&nbsp;</span>.&nbsp;<span class="src-str">'/configuration.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Get&nbsp;the&nbsp;new&nbsp;FTP&nbsp;credentials.</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$ftp&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/Client/JClientHelper.html">JClientHelper</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Client/JClientHelper.html#methodgetCredentials">getCredentials</a><span class="src-sym">(</span><span class="src-str">'ftp'</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Attempt&nbsp;to&nbsp;make&nbsp;the&nbsp;file&nbsp;writeable&nbsp;if&nbsp;using&nbsp;FTP.</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$ftp</span><span class="src-sym">[</span><span class="src-str">'enabled'</span><span class="src-sym">]&nbsp;</span>&amp;&amp;&nbsp;<span class="src-id"><a href="../Joomla-Platform/FileSystem/JPath.html">JPath</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/FileSystem/JPath.html#methodisOwner">isOwner</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">!</span><span class="src-id"><a href="../Joomla-Platform/FileSystem/JPath.html">JPath</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/FileSystem/JPath.html#methodsetPermissions">setPermissions</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">,&nbsp;</span><span class="src-str">'0644'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Legacy/Error/JError.html">JError</a></span><span class="src-sym">::</span><a href="../Joomla-Legacy/Error/JError.html#methodraiseNotice">raiseNotice</a><span class="src-sym">(</span><span class="src-str">'SOME_ERROR_CODE'</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'COM_CONFIG_ERROR_CONFIGURATION_PHP_NOTWRITABLE'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Attempt&nbsp;to&nbsp;write&nbsp;the&nbsp;configuration&nbsp;file&nbsp;as&nbsp;a&nbsp;PHP&nbsp;class&nbsp;named&nbsp;JConfig.</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$configuration&nbsp;</span>=&nbsp;<span class="src-var">$config</span><span class="src-sym">-&gt;</span><a href="../Joomla-Libraries/Application/_libraries---cms---application---cms.php.html#functiontoString">toString</a><span class="src-sym">(</span><span class="src-str">'PHP'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'class'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'JConfig'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'closingtag'&nbsp;</span>=&gt;&nbsp;<span class="src-id">false</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-id"><a href="../Joomla-Platform/FileSystem/JFile.html">JFile</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/FileSystem/JFile.html#methodwrite">write</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">,&nbsp;</span><span class="src-var">$configuration</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Platform/JFactory.html">JFactory</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JFactory.html#methodgetApplication">getApplication</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id">enqueueMessage</span><span class="src-sym">(</span><span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'COM_CONFIG_ERROR_WRITE_FAILED'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-str">'error'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Attempt&nbsp;to&nbsp;make&nbsp;the&nbsp;file&nbsp;unwriteable&nbsp;if&nbsp;using&nbsp;FTP.</span></div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-var">$ftp</span><span class="src-sym">[</span><span class="src-str">'enabled'</span><span class="src-sym">]&nbsp;</span>&amp;&amp;&nbsp;<span class="src-id"><a href="../Joomla-Platform/FileSystem/JPath.html">JPath</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/FileSystem/JPath.html#methodisOwner">isOwner</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">!</span><span class="src-id"><a href="../Joomla-Platform/FileSystem/JPath.html">JPath</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/FileSystem/JPath.html#methodsetPermissions">setPermissions</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">,&nbsp;</span><span class="src-str">'0444'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Legacy/Error/JError.html">JError</a></span><span class="src-sym">::</span><a href="../Joomla-Legacy/Error/JError.html#methodraiseNotice">raiseNotice</a><span class="src-sym">(</span><span class="src-str">'SOME_ERROR_CODE'</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'COM_CONFIG_ERROR_CONFIGURATION_PHP_NOTUNWRITABLE'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 14:59:07 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

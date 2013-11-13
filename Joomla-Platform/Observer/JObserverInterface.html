@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JObserverInterface</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle">Interface JObserverInterface</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Observer pattern interface for Joomla</p>
+<p class="description"><p>A class that wants to observe another class must:</p><p>1) Add: implements JObserverInterface     to its class</p><p>2) Implement a constructor, that can look like this:  	public function __construct(JObservableInterface $observableObject)  	{  	    $observableObject-&gt;attachObserver($this);   	$this-&gt;observableObject = $observableObject;  	}</p><p>3) and must implement the instanciator function createObserver() below, e.g. as follows:  	public static function createObserver(JObservableInterface $observableObject, $params = array())  	{  	    $observer = new self($observableObject);       $observer-&gt;... = $params['...']; ...  	    return $observer;  	}</p><p>4) Then add functions corresponding to the events to be observed,     E.g. to respond to event: $this-&gt;_observers-&gt;update('onBeforeLoad', array($keys, $reset));     following function is needed in the obser:   public function onBeforeLoad($keys, $reset) { ... }</p><p>5) Finally, the binding is made outside the observable and observer classes, using:  JObserverMapper::addObserverClassToClass('ObserverClassname', 'ObservableClassname', array('paramName' =&gt; 'paramValue'));  where the last array will be provided to the observer instanciator function createObserver.</p></p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JObserverInterface">http://docs.joomla.org/JObserverInterface</a></li>
+				<li><span class="field">since:</span> 3.1.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---observer---interface.php.html">/libraries/joomla/observer/interface.php</a> (line <span class="field"><a href="../../filesource/fsource_Joomla-Platform_Observer_librariesjoomlaobserverinterface.php.html#a49">49</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../Joomla-Platform/Observer/JObserverInterface.html">JObserverInterface</a></span>
+										<a href="#createObserver" title="details" class="method-name">createObserver</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Observer/JObservableInterface.html">JObservableInterface</a></span>&nbsp;<span class="var-name">$observableObject</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateObserver" id="createObserver"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static createObserver</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Observer_librariesjoomlaobserverinterface.php.html#a61">61</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates the associated observer instance and attaches it to the $observableObject</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.1.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../Joomla-Platform/Observer/JObserverInterface.html">JObserverInterface</a></span>
+		<span class="method-name">
+			createObserver
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Observer/JObservableInterface.html">JObservableInterface</a></span>&nbsp;<span class="var-name">$observableObject</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Observer/JObservableInterface.html">JObservableInterface</a></span>
+				<span class="var-name">$observableObject</span><span class="var-description">: The observable subject object</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: Params for this observer</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:03:20 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

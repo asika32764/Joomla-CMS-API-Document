@@ -1,0 +1,4247 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFModel</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFModel</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FrameworkOnFramework Model class. The Model is the worhorse. It performs all</p>
+<p class="description"><p>of the business logic based on its state and then returns the raw (processed)  data to the caller, or modifies its own state. It's important to note that  the model doesn't get data directly from the request (this is the  Controller's business) and that it doesn't output anything (that the View's  business).</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---model---model.php.html">/libraries/fof/model/model.php</a> (line <span class="field"><a href="../../filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a22">22</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --FOFModel</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_postinstall/PostinstallModelMessages.html">PostinstallModelMessages</a>
+					</td>
+					<td>
+											Model class to manage postinstall messages
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../FrameworkOnFramework/config/FOFConfigProvider.html">FOFConfigProvider</a></span>
+					<a href="#$configProvider" title="details" class="var-name">$configProvider</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$default_behaviors" title="details" class="var-name">$default_behaviors</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$event_after_delete" title="details" class="var-name">$event_after_delete</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$event_after_save" title="details" class="var-name">$event_after_save</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$event_before_delete" title="details" class="var-name">$event_before_delete</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$event_before_save" title="details" class="var-name">$event_before_save</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$event_change_state" title="details" class="var-name">$event_change_state</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$event_clean_cache" title="details" class="var-name">$event_clean_cache</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$id" title="details" class="var-name">$id</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$id_list" title="details" class="var-name">$id_list</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$input" title="details" class="var-name">$input</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$list" title="details" class="var-name">$list</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../FrameworkOnFramework/model/FOFModelDispatcherBehavior.html">FOFModelDispatcherBehavior</a></span>
+					<a href="#$modelDispatcher" title="details" class="var-name">$modelDispatcher</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$name" title="details" class="var-name">$name</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$option" title="details" class="var-name">$option</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+					<a href="#$otable" title="details" class="var-name">$otable</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPagination.html">JPagination</a></span>
+					<a href="#$pagination" title="details" class="var-name">$pagination</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+					<a href="#$record" title="details" class="var-name">$record</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$state" title="details" class="var-name">$state</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$table" title="details" class="var-name">$table</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$total" title="details" class="var-name">$total</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$_db" title="details" class="var-name">$_db</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_formData" title="details" class="var-name">$_formData</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_forms" title="details" class="var-name">$_forms</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$_savestate" title="details" class="var-name">$_savestate</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$__state_set" title="details" class="var-name">$__state_set</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addIncludePath" title="details" class="method-name">addIncludePath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#addTablePath" title="details" class="method-name">addTablePath</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#getAnInstance" title="details" class="method-name">&amp;getAnInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#getTmpInstance" title="details" class="method-name">&amp;getTmpInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																																																																																																																																																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#_createFileName" title="details" class="method-name">_createFileName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$parts</span> = <span class="var-default">array()</span>])
+									</div>
+																																																																											
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">FOFModel</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">type</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#addBehavior" title="details" class="method-name">addBehavior</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#applyAccessFiltering" title="details" class="method-name">applyAccessFiltering</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$userID</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#buildCountQuery" title="details" class="method-name">buildCountQuery</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#buildQuery" title="details" class="method-name">buildQuery</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#checkin" title="details" class="method-name">checkin</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#checkout" title="details" class="method-name">checkout</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#cleanCache" title="details" class="method-name">cleanCache</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$client_id</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#clearInput" title="details" class="method-name">clearInput</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#clearState" title="details" class="method-name">clearState</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#copy" title="details" class="method-name">copy</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findFormFilename" title="details" class="method-name">findFormFilename</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$paths</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#getClone" title="details" class="method-name">&amp;getClone</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+										<a href="#getDbo" title="details" class="method-name">getDbo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+										<a href="#getFirstItem" title="details" class="method-name">&amp;getFirstItem</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getForm" title="details" class="method-name">getForm</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$loadData</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getHash" title="details" class="method-name">getHash</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getId" title="details" class="method-name">getId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getIds" title="details" class="method-name">getIds</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+										<a href="#getItem" title="details" class="method-name">&amp;getItem</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getItemList" title="details" class="method-name">&amp;getItemList</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getList" title="details" class="method-name">&amp;getList</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Libraries/Pagination/JPagination.html">JPagination</a></span>
+										<a href="#getPagination" title="details" class="method-name">getPagination</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getReorderWhere" title="details" class="method-name">getReorderWhere</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+										<a href="#getSavedTable" title="details" class="method-name">getSavedTable</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getState" title="details" class="method-name">getState</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$filter_type</span> = <span class="var-default">'raw'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+										<a href="#getTable" title="details" class="method-name">getTable</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTableAlias" title="details" class="method-name">getTableAlias</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTableFields" title="details" class="method-name">getTableFields</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getTotal" title="details" class="method-name">getTotal</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">The</span>
+										<a href="#getUserStateFromRequest" title="details" class="method-name">getUserStateFromRequest</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'none'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$setUserState</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hit" title="details" class="method-name">hit</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isCheckedOut" title="details" class="method-name">isCheckedOut</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadForm" title="details" class="method-name">loadForm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$clear</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#loadFormData" title="details" class="method-name">loadFormData</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#move" title="details" class="method-name">move</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dirn</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterCopy" title="details" class="method-name">onAfterCopy</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterDelete" title="details" class="method-name">onAfterDelete</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterGetItem" title="details" class="method-name">onAfterGetItem</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$record</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterHit" title="details" class="method-name">onAfterHit</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">viod</span>
+										<a href="#onAfterLoadForm" title="details" class="method-name">onAfterLoadForm</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$source</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterMove" title="details" class="method-name">onAfterMove</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">viod</span>
+										<a href="#onAfterPreprocessForm" title="details" class="method-name">onAfterPreprocessForm</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterPublish" title="details" class="method-name">onAfterPublish</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterReorder" title="details" class="method-name">onAfterReorder</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterSave" title="details" class="method-name">onAfterSave</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeCopy" title="details" class="method-name">onBeforeCopy</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeDelete" title="details" class="method-name">onBeforeDelete</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">&$id</span>, <span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeHit" title="details" class="method-name">onBeforeHit</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">viod</span>
+										<a href="#onBeforeLoadForm" title="details" class="method-name">onBeforeLoadForm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">&$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$source</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeMove" title="details" class="method-name">onBeforeMove</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">viod</span>
+										<a href="#onBeforePreprocessForm" title="details" class="method-name">onBeforePreprocessForm</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforePublish" title="details" class="method-name">onBeforePublish</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeReorder" title="details" class="method-name">onBeforeReorder</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeSave" title="details" class="method-name">onBeforeSave</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>, <span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onProcessList" title="details" class="method-name">onProcessList</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$resultArray</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#populateSavestate" title="details" class="method-name">populateSavestate</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$defaultSaveState</span> = <span class="var-default">-999</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#populateState" title="details" class="method-name">populateState</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#preprocessForm" title="details" class="method-name">preprocessForm</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">&$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">'content'</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#publish" title="details" class="method-name">publish</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$publish</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$user</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#reorder" title="details" class="method-name">reorder</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#reset" title="details" class="method-name">reset</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#resetSavedState" title="details" class="method-name">resetSavedState</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											(<span class="var-type">array|object</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#savestate" title="details" class="method-name">&amp;savestate</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$newState</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setDbo" title="details" class="method-name">setDbo</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#setId" title="details" class="method-name">setId</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#setIds" title="details" class="method-name">setIds</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$idlist</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#setIDsFromRequest" title="details" class="method-name">setIDsFromRequest</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#setInput" title="details" class="method-name">setInput</a>
+											(<span class="var-type">$input</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#setState" title="details" class="method-name">setState</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#validateForm" title="details" class="method-name">validateForm</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+										<a href="#_createTable" title="details" class="method-name">&amp;_createTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'Table'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#_getList" title="details" class="method-name">&amp;_getList</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limitstart</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#_getListCount" title="details" class="method-name">_getListCount</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">object The</span>
+										<a href="#_real_getState" title="details" class="method-name">_real_getState</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+										<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$arguments</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$configProvider" id="$configProvider"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../FrameworkOnFramework/config/FOFConfigProvider.html">FOFConfigProvider</a></span>
+			<span class="var-name">$configProvider</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/ource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a183">183</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An instance of FOFConfigProvider to provision configuration overrides</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$default_behaviors" id="$default_behaviors"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$default_behaviors</span>
+			 = <span class="var-default">array('filters')</span>			(line <span class="line-number"><a href="../../__fifilesource/rce_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a197">197</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default behaviors to apply to the model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$event_after_delete" id="$event_after_delete"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$event_after_delete</span>
+			 = <span class="var-default"> 'onContentAfterDelete'</span>			(line <span class="line-number"><a href="../../__filefilesource/e_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event to trigger after deleting the data.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$event_after_save" id="$event_after_save"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$event_after_save</span>
+			 = <span class="var-default"> 'onContentAfterSave'</span>			(line <span class="line-number"><a href="../../__filesofilesource/FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event to trigger after saving the data.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$event_before_delete" id="$event_before_delete"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$event_before_delete</span>
+			 = <span class="var-default"> 'onContentBeforeDelete'</span>			(line <span class="line-number"><a href="../../__filesourfilesource/ameworkOnFramework_model_librariesfofmodelmodel.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event to trigger before deleting the data.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$event_before_save" id="$event_before_save"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$event_before_save</span>
+			 = <span class="var-default"> 'onContentBeforeSave'</span>			(line <span class="line-number"><a href="../../__filesourcefilesource/eworkOnFramework_model_librariesfofmodelmodel.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event to trigger before saving the data.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$event_change_state" id="$event_change_state"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$event_change_state</span>
+			 = <span class="var-default"> 'onContentChangeState'</span>			(line <span class="line-number"><a href="../../__filesource/ffilesource/orkOnFramework_model_librariesfofmodelmodel.php.html#a68">68</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event to trigger after changing the published state of the data.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$event_clean_cache" id="$event_clean_cache"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$event_clean_cache</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsofilesource/kOnFramework_model_librariesfofmodelmodel.php.html#a76">76</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event to trigger when cleaning cache.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$id" id="$id"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$id</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsourfilesource/nFramework_model_librariesfofmodelmodel.php.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The first row ID passed to the model's state</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$id_list" id="$id_list"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$id_list</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsourcefilesource/ramework_model_librariesfofmodelmodel.php.html#a82">82</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stores a list of IDs passed to the model's state</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$input" id="$input"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$input</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Ffilesource/mework_model_librariesfofmodelmodel.php.html#a94">94</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Input variables, passed on from the controller, in an associative array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$list" id="$list"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$list</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Frafilesource/work_model_librariesfofmodelmodel.php.html#a100">100</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The list of records made available through getList</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$modelDispatcher" id="$modelDispatcher"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../FrameworkOnFramework/model/FOFModelDispatcherBehavior.html">FOFModelDispatcherBehavior</a></span>
+			<span class="var-name">$modelDispatcher</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Framefilesource/rk_model_librariesfofmodelmodel.php.html#a190">190</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FOFModelDispatcherBehavior for dealing with extra behaviors</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$name" id="$name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$name</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Framewofilesource/_model_librariesfofmodelmodel.php.html#a108">108</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The model (base) name</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$option" id="$option"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$option</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Frameworkfilesource/odel_librariesfofmodelmodel.php.html#a116">116</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The URL option for the component.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$otable" id="$otable"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+			<span class="var-name">$otable</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnfilesource/el_librariesfofmodelmodel.php.html#a122">122</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The table object, populated when saving data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pagination" id="$pagination"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../Joomla-Libraries/Pagination/JPagination.html">JPagination</a></span>
+			<span class="var-name">$pagination</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFrfilesource/_librariesfofmodelmodel.php.html#a128">128</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pagination object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$record" id="$record"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+			<span class="var-name">$record</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramfilesource/ibrariesfofmodelmodel.php.html#a134">134</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The table object, populated when retrieving data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$state" id="$state"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$state</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramewfilesource/rariesfofmodelmodel.php.html#a142">142</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A state object</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$table" id="$table"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$table</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFrameworfilesource/riesfofmodelmodel.php.html#a148">148</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the table to use</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$total" id="$total"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$total</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_filesource/esfofmodelmodel.php.html#a154">154</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Total rows based on the filters set in the model's state</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_db" id="$_db"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$_db</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_mofilesource/fofmodelmodel.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database Connector</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_formData" id="$_formData"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_formData</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_modefilesource/fmodelmodel.php.html#a176">176</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The data to load into a form</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_forms" id="$_forms"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_forms</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_filesource/odelmodel.php.html#a168">168</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of form objects.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_savestate" id="$_savestate"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$_savestate</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_lifilesource/elmodel.php.html#a160">160</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Should I save the model's state in the session?</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$__state_set" id="$__state_set"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$__state_set</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librfilesource/model.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Indicates if the internal state has been set</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddIncludePath" id="addIncludePath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addIncludePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librarfilesource/del.php.html#a444">444</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a directory where FOFModel should search for models. You may  either pass a string or an array of directories.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array with directory elements. If prefix is equal to '', all directories are returned.</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addIncludePath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: A path or array[sting] of paths to search.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: A prefix for models.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddTablePath" id="addTablePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addTablePath</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariefilesource/l.php.html#a490">490</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds to the stack of model table paths in LIFO order.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			addTablePath
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$path</span><span class="var-description">: The directory as a string or directories as an array to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAnInstance" id="getAnInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getAnInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesffilesource/php.html#a209">209</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a new model object. Unless overriden by the $config array, it will  try to automatically populate its state from the request variables.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			&amp;getAnInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Model type, e.g. 'Items'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Model prefix, e.g. 'FoobarModel'</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: Model configuration variables</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTmpInstance" id="getTmpInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getTmpInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfoffilesource/p.html#a404">404</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a new instance of a model, with the state reset to defaults</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			&amp;getTmpInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Model type, e.g. 'Items'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Model prefix, e.g. 'FoobarModel'</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: Model configuration variables</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_createFileName" id="_createFileName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static _createFileName</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmofilesource/html#a505">505</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create the filename for a resource</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The filename</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			_createFileName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$parts</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The resource type to create the filename for.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$parts</span><span class="var-description">: An associative array of filename information.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodefilesource/ml#a524">524</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Public class constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">FOFModel</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">type</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$config</span><span class="var-description">: The configuration array</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></dt>
+						<dd>Class constructor, overridden in descendant classes.</dd>
+					</dl>
+			
+	</div>
+<a name="methodaddBehavior" id="addBehavior"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addBehavior</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmfilesource/#a356">356</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a behavior to the model</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the behavior is found and added</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			addBehavior
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the behavior</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: Optional Behavior configuration</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodapplyAccessFiltering" id="applyAccessFiltering"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">applyAccessFiltering</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodfilesource/2078">2078</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies view access level filtering for the specified user. Useful to  filter a front-end items listing.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Reference to self</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			applyAccessFiltering
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$userID</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$userID</span><span class="var-description">: The user ID to use. Skip it to use the currently logged in user.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbuildCountQuery" id="buildCountQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">buildCountQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodelfilesource/58">1958</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Builds the count query used in getTotal()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			buildCountQuery
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodbuildQuery" id="buildQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">buildQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.pfilesource/">1868</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Builds the SELECT query</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			buildQuery
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overrideLimits</span><span class="var-description">: Are we requested to override the set limits?</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_postinstall/PostinstallModelMessages.html#methodbuildQuery">PostinstallModelMessages::buildQuery()</a>
+								: Builds the SELECT query
+							</li>
+				</ul>
+	</div>
+<a name="methodcheckin" id="checkin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">checkin</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.phpfilesource/1448</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks in the current item</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkin
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcheckout" id="checkout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">checkout</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.hfilesource/30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks out the current item</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkout
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcleanCache" id="cleanCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">cleanCache</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.htmfilesource/</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clean the cache</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cleanCache
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$client_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The cache group</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$client_id</span><span class="var-description">: The ID of the client</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclearInput" id="clearInput"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">clearInput</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#filesource/</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears the input array.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			clearInput
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearState" id="clearState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">clearState</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a9filesource/span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears the model state, but doesn't touch the internal lists of records,  record tables or record id variables. To clear these values, please use  reset().</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			clearState
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcopy" id="copy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">copy</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a130filesource/span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copy one or more records</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			copy
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1349"filesource/an>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes one or several items</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			delete
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfindFormFilename" id="findFormFilename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">findFormFilename</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2247">2filesource/>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Guesses the best candidate for the path to use for a particular form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A string if the path and filename of the form to load is found, false otherwise.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			findFormFilename
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$paths</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$source</span><span class="var-description">: The name of the form file to load, without the .xml extension.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$paths</span><span class="var-description">: The paths to look into. You can declare this to override the default FOF paths.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetClone" id="getClone"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getClone</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1968">196filesource/
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clones the model object and returns the clone</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			&amp;getClone
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDbo" id="getDbo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDbo</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2909">2909<filesource/</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the database driver object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+		<span class="method-name">
+			getDbo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFirstItem" id="getFirstItem"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFirstItem</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1141">1141</afilesource/div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A cross-breed between getItem and getItemList. It runs the complete query,  like getItemList does. However, instead of returning an array of ad-hoc  objects, it binds the data from the first item fetched on the list to an  instance of the table object and returns that table object instead.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+		<span class="method-name">
+			&amp;getFirstItem
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overrideLimits</span><span class="var-description">: Should I override set limits?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetForm" id="getForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2101">2101</a><filesource/v>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A method for getting the form from the model.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A FOFForm object on success, false on failure</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getForm
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$loadData</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Data for the form.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$loadData</span><span class="var-description">: True if the form is to load its own data (default case), false if not.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$source</span><span class="var-description">: The name of the form. If not set we'll try the form_name state variable or fall back to default.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetHash" id="getHash"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHash</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1720">1720</a></sfilesource/
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a hash for this component and view, e.g. &quot;foobar.items.&quot;, used  for determining the keys of the variables which will be placed in the  session storage.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The hash</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHash
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetId" id="getId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getId</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a910">910</a></span>filesource/	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the currently set ID</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetIds" id="getIds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIds</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a946">946</a></span>)
+filesource/!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the list of IDs for batch operations</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of integers</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getIds
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetItem" id="getItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getItem</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1041">1041</a></span>)
+filesource/!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a single item. It uses the id set with setId, or the first ID in  the list of IDs for batch operations</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A copy of the item's FOFTable array</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+		<span class="method-name">
+			&amp;getItem
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: Force a primary key ID to the model. Use null to use the id from the state.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetItemList" id="getItemList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getItemList</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1110">1110</a></span>)
+	<filesource/- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of items</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			&amp;getItemList
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overrideLimits</span><span class="var-description">: Should I override set limits?</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The group by clause</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetList" id="getList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getList</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1097">1097</a></span>)
+	</dfilesource/========== Info from phpDoc block ========= -->
+<p class="short-description">Alias for getItemList</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			&amp;getList
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overrideLimits</span><span class="var-description">: Should I override set limits?</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The group by clause</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2924">2924</a></span>)
+	</divfilesource/======== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the model name</p>
+<p class="description"><p>The model name. By default parsed using the classname or it can be set  by passing a $config['name'] in the class constructor</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The name of the model</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPagination" id="getPagination"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPagination</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1586">1586</a></span>)
+	</div> filesource/====== Info from phpDoc block ========= -->
+<p class="short-description">Get a pagination object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Libraries/Pagination/JPagination.html">JPagination</a></span>
+		<span class="method-name">
+			getPagination
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReorderWhere" id="getReorderWhere"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReorderWhere</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1856">1856</a></span>)
+	</div> 
+	filesource/==== Info from phpDoc block ========= -->
+<p class="short-description">Creates the WHERE part of the reorder query</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getReorderWhere
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSavedTable" id="getSavedTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSavedTable</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1339">1339</a></span>)
+	</div> 
+	
+	filesource/== Info from phpDoc block ========= -->
+<p class="short-description">Returns the table object after the last save() operation</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+		<span class="method-name">
+			getSavedTable
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetState" id="getState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getState</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1656">1656</a></span>)
+	</div> 
+	
+	<!filesource/ Info from phpDoc block ========= -->
+<p class="short-description">Get a filtered state variable</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The variable's value</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getState
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$filter_type</span> = <span class="var-default">'raw'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The name of the state variable</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value to use</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filter_type</span><span class="var-description">: Filter type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTable" id="getTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTable</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1773">1773</a></span>)
+	</div> 
+	
+	<!--filesource/nfo from phpDoc block ========= -->
+<p class="short-description">Method to get a table object, load it if necessary.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A FOFTable object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+		<span class="method-name">
+			getTable
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The table name. Optional.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: The class prefix. Optional.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Configuration array for model. Optional.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTableAlias" id="getTableAlias"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableAlias</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1948">1948</a></span>)
+	</div> 
+	
+	<!-- =filesource/o from phpDoc block ========= -->
+<p class="short-description">Get the alias set for this model's table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The table alias</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTableAlias
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTableFields" id="getTableFields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTableFields</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1926">1926</a></span>)
+	</div> 
+	
+	<!-- ===filesource/from phpDoc block ========= -->
+<p class="short-description">Returns a list of the fields of the table associated with this model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTableFields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTotal" id="getTotal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTotal</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1610">1610</a></span>)
+	</div> 
+	
+	<!-- =====filesource/om phpDoc block ========= -->
+<p class="short-description">Get the number of all items</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getTotal
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUserStateFromRequest" id="getUserStateFromRequest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUserStateFromRequest</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1739">1739</a></span>)
+	</div> 
+	
+	<!-- =======filesource/ phpDoc block ========= -->
+<p class="short-description">Gets the value of a user state variable.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> request user state.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">The</span>
+		<span class="method-name">
+			getUserStateFromRequest
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'none'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$setUserState</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The key of the user state variable.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$request</span><span class="var-description">: The name of the variable passed in a request.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value for the variable if not found. Optional.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Filter for the variable, for valid values see <a href="../../Joomla-Platform/Filter/JFilterInput.html#methodclean">JFilterInput::clean()</a>. Optional.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$setUserState</span><span class="var-description">: Should I save the variable in the user state? Default: true. Optional.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhit" id="hit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hit</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1484">1484</a></span>)
+	</div> 
+	
+	<!-- =========filesource/hpDoc block ========= -->
+<p class="short-description">Increments the hit counter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hit
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisCheckedOut" id="isCheckedOut"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isCheckedOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1466">1466</a></span>)
+	</div> 
+	
+	<!-- ========== filesource/Doc block ========= -->
+<p class="short-description">Tells you if the current item is checked out or not</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isCheckedOut
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadForm" id="loadForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2149">2149</a></span>)
+	</div> 
+	
+	<!-- ========== Infilesource/c block ========= -->
+<p class="short-description">Method to get a form object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> FOFForm object on success, False on error.</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadForm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$clear</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$source</span><span class="var-description">: The form source. Can be XML string if file flag is set to false.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Optional array of options for the form creation.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$clear</span><span class="var-description">: Optional argument to force load a new form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadFormData" id="loadFormData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadFormData</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2327">2327</a></span>)
+	</div> 
+	
+	<!-- ========== Infofilesource/block ========= -->
+<p class="short-description">Method to get the data that should be injected in the form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The default data is an empty array.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			loadFormData
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodmove" id="move"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">move</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1514">1514</a></span>)
+	</div> 
+	
+	<!-- ========== Info ffilesource/ock ========= -->
+<p class="short-description">Moves the current item up or down in the ordering list</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			move
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dirn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dirn</span><span class="var-description">: The direction and magnitude to use (2 means move up by 2 positions, -3 means move down three positions)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterCopy" id="onAfterCopy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterCopy</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2722">2722</a></span>)
+	</div> 
+	
+	<!-- ========== Info frofilesource/k ========= -->
+<p class="short-description">This method runs after a record has been copied</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the copy</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterCopy
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record which was copied</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterDelete" id="onAfterDelete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterDelete</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2663">2663</a></span>)
+	</div> 
+	
+	<!-- ========== Info from filesource/========= -->
+<p class="short-description">This method runs after a record with key value $id is deleted</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return false to raise an error, true otherwise</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterDelete
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The id of the record which was deleted</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterGetItem" id="onAfterGetItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterGetItem</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2497">2497</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phfilesource/======= -->
+<p class="short-description">This method runs after an item has been gotten from the database in a read  operation. You can modify it before it's returned to the MVC triad for  further processing.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterGetItem
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$record</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$record</span><span class="var-description">: The table instance we fetched</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterHit" id="onAfterHit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterHit</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2806">2806</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDfilesource/===== -->
+<p class="short-description">This method runs after a record has been hit</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterHit
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record which was hit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterLoadForm" id="onAfterLoadForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterLoadForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2447">2447</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDocfilesource/=== -->
+<p class="short-description">Allows the manipulation after the form is loaded</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">viod</span>
+		<span class="method-name">
+			onAfterLoadForm
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$source</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">$form</span><span class="var-description">: A FOFForm object.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$source</span><span class="var-description">: The form source. Can be XML string if file flag is set to false.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$options</span><span class="var-description">: Optional array of options for the form creation.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterMove" id="onAfterMove"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterMove</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2848">2848</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc bfilesource/= -->
+<p class="short-description">This method runs after a record has been moved</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterMove
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record which was moved</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterPreprocessForm" id="onAfterPreprocessForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterPreprocessForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2471">2471</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc blofilesource/-->
+<p class="short-description">Allows data and form manipulation after preprocessing the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">viod</span>
+		<span class="method-name">
+			onAfterPreprocessForm
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">$form</span><span class="var-description">: A FOFForm object.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$data</span><span class="var-description">: The data expected for the form.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterPublish" id="onAfterPublish"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterPublish</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2764">2764</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc blockfilesource/>
+<p class="short-description">This method runs after a record has been published</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterPublish
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record which was published</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterReorder" id="onAfterReorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterReorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2890">2890</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block =filesource/<p class="short-description">This method runs after a table is reordered</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterReorder
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance which was reordered</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterSave" id="onAfterSave"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterSave</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2576">2576</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ===filesource/ class="short-description">This method runs after the data is saved to the $table.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterSave
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which was saved</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeCopy" id="onBeforeCopy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeCopy</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2701">2701</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block =====filesource/lass="short-description">This method runs before a record is copied</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the copy</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeCopy
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record being copied</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeDelete" id="onBeforeDelete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeDelete</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2613">2613</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block =======filesource/ss="short-description">This method runs before the record with key value of $id is deleted from $table</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeDelete
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">&$id</span>, <span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">&$id</span><span class="var-description">: The ID of the record being deleted</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance used to delete the record</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeHit" id="onBeforeHit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeHit</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2785">2785</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block =========filesource/="short-description">This method runs before a record is hit</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeHit
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record being hit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeLoadForm" id="onBeforeLoadForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeLoadForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2433">2433</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -filesource/short-description">Allows the manipulation before the form is loaded</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">viod</span>
+		<span class="method-name">
+			onBeforeLoadForm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">&$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$source</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$source</span><span class="var-description">: The form source. Can be XML string if file flag is set to false.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$options</span><span class="var-description">: Optional array of options for the form creation.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeMove" id="onBeforeMove"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeMove</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2827">2827</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->filesource/ort-description">This method runs before a record is moved</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeMove
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record being moved</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforePreprocessForm" id="onBeforePreprocessForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforePreprocessForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2459">2459</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<filesource/t-description">Allows data and form manipulation before preprocessing the form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">viod</span>
+		<span class="method-name">
+			onBeforePreprocessForm
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">$form</span><span class="var-description">: A FOFForm object.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$data</span><span class="var-description">: The data expected for the form.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforePublish" id="onBeforePublish"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforePublish</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2743">2743</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p filesource/description">This method runs before a record is published</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforePublish
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance of the record being published</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeReorder" id="onBeforeReorder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeReorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2869">2869</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p clfilesource/scription">This method runs before a table is reordered</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the operation</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeReorder
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table instance being reordered</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeSave" id="onBeforeSave"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeSave</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2520">2520</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p clasfilesource/ription">This method runs before the $data is saved to the $table. Return false to  stop saving.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return false to prevent saving, true to allow it</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeSave
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>, <span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$data</span><span class="var-description">: The data to save</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table to save the data to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonProcessList" id="onProcessList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onProcessList</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2484">2484</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class=filesource/ption">This method can be overriden to automatically do something with the  list results array. You are supposed to modify the list which was passed  in the parameters; DO NOT return a new array!</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onProcessList
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$resultArray</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$resultArray</span><span class="var-description">: An array of objects, each row representing a record</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_postinstall/PostinstallModelMessages.html#methodonProcessList">PostinstallModelMessages::onProcessList()</a>
+								: List post-processing. This is used to run the programmatic display  conditions against each list item and decide if we have to show it or  not.
+							</li>
+				</ul>
+	</div>
+<a name="methodpopulateSavestate" id="populateSavestate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">populateSavestate</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2039">2039</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="sfilesource/ion">Initialises the _savestate variable</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			populateSavestate
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$defaultSaveState</span> = <span class="var-default">-999</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$defaultSaveState</span><span class="var-description">: The default value for the savestate</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpopulateState" id="populateState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">populateState</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2066">2066</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="shofilesource/n">Method to auto-populate the model state.</p>
+<p class="description"><p>This method should only be called once per instantiation and is designed  to be called on the first call to the getState() method unless the model  configuration flag to ignore the request is set.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			populateState
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpreprocessForm" id="preprocessForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">preprocessForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2352">2352</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="shortfilesource/>Method to allow derived classes to preprocess the form.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/form/FOFFormField.html">FOFFormField</a></li>
+				<li><span class="field">throws:</span> Exception if there is an error in the form event.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			preprocessForm
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">&$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">'content'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">$form</span><span class="var-description">: A FOFForm object.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">&$data</span><span class="var-description">: The data expected for the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The name of the plugin group to import (defaults to &quot;content&quot;).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpublish" id="publish"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">publish</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1386">1386</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-dfilesource/oggles the published state of one or several items</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			publish
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$publish</span> = <span class="var-default">1</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$user</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$publish</span><span class="var-description">: The publishing state to set (e.g. 0 is unpublished)</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$user</span><span class="var-description">: The user ID performing this action</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreorder" id="reorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">reorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1555">1555</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-desfilesource/rders all items in the table</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			reorder
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreset" id="reset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">reset</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a956">956</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-descripfilesource/the model, like it was freshly loaded</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			reset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodresetSavedState" id="resetSavedState"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">resetSavedState</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1026">1026</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-descripfilesource/the saved state for this view</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			resetSavedState
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">save</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1169">1169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-descriptifilesource/ data to the model and tries to save it</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			save
+		</span>
+					(<span class="var-type">array|object</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|object</span>
+				<span class="var-name">$data</span><span class="var-description">: The source data array or object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsavestate" id="savestate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">savestate</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2025">2025</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-descriptionfilesource/del state auto-save status. By default the model is set up to  save its state to the session.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Reference to self</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			&amp;savestate
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$newState</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$newState</span><span class="var-description">: True to save the state, false to not save it.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDbo" id="setDbo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDbo</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2948">2948</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">filesource/ the database driver object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDbo
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
+				<span class="var-name">$db</span><span class="var-description">: A JDatabaseDriver based object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetId" id="setId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setId</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a896">896</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setsfilesource/esets internal data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			setId
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The ID to use</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIds" id="setIds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setIds</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a922">922</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets afilesource/for batch operations from an array and resets the model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			setIds
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$idlist</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$idlist</span><span class="var-description">: An array of item IDs to be set to the model's state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIDsFromRequest" id="setIDsFromRequest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setIDsFromRequest</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a863">863</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets thefilesource/from the request data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			setIDsFromRequest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetInput" id="setInput"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setInput</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1003">1003</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the filesource/t field</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			setInput
+		</span>
+					(<span class="var-type">$input</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$input</span>
+				<span class="var-name">$input</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetState" id="setState"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setState</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2961">2961</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to filesource/te variables</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The previous value of the property or null if not set.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			setState
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: The name of the property.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value of the property to set or null.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateForm" id="validateForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">validateForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2388">2388</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to vafilesource/rm data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of filtered data if valid, false otherwise.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Form/JFormRule.html">JFormRule</a></li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Filter/JFilterInput.html">JFilterInput</a></li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			validateForm
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/form/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">$form</span><span class="var-description">: The form to validate against.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: The data to validate.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The name of the field group to validate.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_createTable" id="_createTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_createTable</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1821">1821</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to loadfilesource/ model object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Table object or boolean false if failed</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+		<span class="method-name">
+			&amp;_createTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'Table'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the view</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: The class prefix. Optional.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: The configuration array to pass to the table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getList" id="_getList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getList</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1754">1754</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an objecfilesource/ul class="tags">
+				<li><span class="field">return:</span> Array of objects</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			&amp;_getList
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limitstart</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: The query</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limitstart</span><span class="var-description">: Offset from start</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span><span class="var-description">: The number of records</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The group by clause</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getListCount" id="_getListCount"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getListCount</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1642">1642</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a record cfilesource/query</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of rows for query</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			_getListCount
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: The query.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_real_getState" id="_real_getState"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_real_getState</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1699">1699</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get model filesource/es</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> property where specified, the state object where omitted</li>
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object The</span>
+		<span class="method-name">
+			_real_getState
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$property</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$property</span><span class="var-description">: Optional parameter name</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: Optional default value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__call" id="__call"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__call</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a2009">2009</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic caller; allows tfilesource/e of model state keys as methods to  set their values.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Reference to self</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$arguments</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the state variable to set</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$arguments</span><span class="var-description">: The value to set the state variable to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1982">1982</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic getter; allows to filesource/of model state keys as properties</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the variable</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the variable to get</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_model_librariesfofmodelmodel.php.html#a1995">1995</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic setter; allows to use the name of model state keys as properties</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the variable</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The value to set the variable to</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:06:08 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFDispatcher</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFDispatcher</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FrameworkOnFramework dispatcher class</p>
+<p class="description"><p>FrameworkOnFramework is a set of classes whcih extend Joomla! 1.5 and later's  MVC framework with features making maintaining complex software much easier,  without tedious repetitive copying of the same code over and over again.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---dispatcher---dispatcher.php.html">/libraries/fof/dispatcher/dispatcher.php</a> (line <span class="field"><a href="../../filesource/fsource_FrameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --FOFDispatcher</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$config" title="details" class="var-name">$config</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$defaultView" title="details" class="var-name">$defaultView</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$fofAuth_AuthMethods" title="details" class="var-name">$fofAuth_AuthMethods</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$fofAuth_Formats" title="details" class="var-name">$fofAuth_Formats</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$fofAuth_Key" title="details" class="var-name">$fofAuth_Key</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$fofAuth_LogoutOnReturn" title="details" class="var-name">$fofAuth_LogoutOnReturn</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$fofAuth_timeStep" title="details" class="var-name">$fofAuth_timeStep</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../../FrameworkOnFramework/input/FOFInput.html">FOFInput</a></span>
+					<a href="#$input" title="details" class="var-name">$input</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../FrameworkOnFramework/dispatcher/FOFDispatcher.html">FOFDispatcher</a></span>
+										<a href="#getAnInstance" title="details" class="method-name">&amp;getAnInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../FrameworkOnFramework/dispatcher/FOFDispatcher.html">FOFDispatcher</a></span>
+										<a href="#getTmpInstance" title="details" class="method-name">&amp;getTmpInstance</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#isCliAdmin" title="details" class="method-name">isCliAdmin</a>
+										()
+									</div>
+																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">FOFDispatcher</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">null|Exception</span>
+										<a href="#dispatch" title="details" class="method-name">dispatch</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTask" title="details" class="method-name">getTask</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterDispatch" title="details" class="method-name">onAfterDispatch</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeDispatch" title="details" class="method-name">onBeforeDispatch</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeDispatchCLI" title="details" class="method-name">onBeforeDispatchCLI</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#transparentAuthentication" title="details" class="method-name">transparentAuthentication</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$config" id="$config"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$config</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/ource_FrameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a24">24</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Configuration variables</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$defaultView" id="$defaultView"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$defaultView</span>
+			 = <span class="var-default"> 'cpanel'</span>			(line <span class="line-number"><a href="../../__fifilesource/rce_FrameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The name of the default view, in case none is specified</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fofAuth_AuthMethods" id="$fofAuth_AuthMethods"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$fofAuth_AuthMethods</span>
+			 = <span class="var-default">array(
+<br />		/* HTTP Basic Authentication using encrypted information protected
+<br />		 * with a TOTP (the username must be &quot;_fof_auth&quot;) */
+<br />		'HTTPBasicAuth_TOTP',
+<br />		/* Encrypted information protected with a TOTP passed in the
+<br />		 * _fofauthentication query string parameter */
+<br />		'QueryString_TOTP',
+<br />		/* HTTP Basic Authentication using a username and password pair in plain text */
+<br />		'HTTPBasicAuth_Plaintext',
+<br />		/* Plaintext, JSON-encoded username and password pair passed in the
+<br />		 * _fofauthentication query string parameter */
+<br />		'QueryString_Plaintext',
+<br />		/* Plaintext username and password in the _fofauthentication_username
+<br />		 * and _fofauthentication_username query string parameters */
+<br />		'SplitQueryString_Plaintext',
+<br />	)</span>			(line <span class="line-number"><a href="../../__filefilesource/e_FrameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Which methods to use to fetch authentication credentials and in which order</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fofAuth_Formats" id="$fofAuth_Formats"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$fofAuth_Formats</span>
+			 = <span class="var-default">array('json', 'csv', 'xml', 'raw')</span>			(line <span class="line-number"><a href="../../__filesofilesource/FrameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Which formats to be handled by transparent authentication</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fofAuth_Key" id="$fofAuth_Key"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$fofAuth_Key</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesourfilesource/ameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The key for the TOTP, Base32 encoded (watch out; Base32, NOT Base64!)</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fofAuth_LogoutOnReturn" id="$fofAuth_LogoutOnReturn"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$fofAuth_LogoutOnReturn</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesourcefilesource/eworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Should I logout the transparently authenticated user on logout?  Recommended to leave it on in order to avoid crashing the sessions table.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fofAuth_timeStep" id="$fofAuth_timeStep"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$fofAuth_timeStep</span>
+			 = <span class="var-default"> 6</span>			(line <span class="line-number"><a href="../../__filesource/ffilesource/orkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The Time Step for the TOTP used in FOF's transparent user authentication</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$input" id="$input"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../../FrameworkOnFramework/input/FOFInput.html">FOFInput</a></span>
+			<span class="var-name">$input</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsofilesource/kOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Input variables</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetAnInstance" id="getAnInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getAnInstance</span> (line <span class="line-number"><a href="../../__filesource/fsourfilesource/nFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a87">87</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a static (Singleton) instance of a particular Dispatcher</p>
+	<ul class="tags">
+				<li><span class="field">staticvar:</span> array $instances: Holds the array of Dispatchers FOF knows about</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../FrameworkOnFramework/dispatcher/FOFDispatcher.html">FOFDispatcher</a></span>
+		<span class="method-name">
+			&amp;getAnInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$option</span><span class="var-description">: The component name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The View name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: Configuration data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTmpInstance" id="getTmpInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getTmpInstance</span> (line <span class="line-number"><a href="../../__filesource/fsourcefilesource/ramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a110">110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a temporary instance of a Dispatcher</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../FrameworkOnFramework/dispatcher/FOFDispatcher.html">FOFDispatcher</a></span>
+		<span class="method-name">
+			&amp;getTmpInstance
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$option</span><span class="var-description">: The component name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The View name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: Configuration data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisCliAdmin" id="isCliAdmin"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static isCliAdmin</span> (line <span class="line-number"><a href="../../__filesource/fsource_Ffilesource/mework_dispatcher_librariesfofdispatcherdispatcher.php.html#a722">722</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main function to detect if we're running in a CLI environment and we're admin</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> isCLI and isAdmin. It's not an associtive array, so we can use list.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			isCliAdmin
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Frafilesource/work_dispatcher_librariesfofdispatcherdispatcher.php.html#a185">185</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Public constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">FOFDispatcher</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: The configuration variables</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></dt>
+						<dd>Class constructor, overridden in descendant classes.</dd>
+					</dl>
+			
+	</div>
+<a name="methoddispatch" id="dispatch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dispatch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Framefilesource/rk_dispatcher_librariesfofdispatcherdispatcher.php.html#a256">256</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The main code of the Dispatcher. It spawns the necessary controller and  runs it.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">null|Exception</span>
+		<span class="method-name">
+			dispatch
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTask" id="getTask"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTask</span> (line <span class="line-number"><a href="../../__filesource/fsource_Framewofilesource/_dispatcher_librariesfofdispatcherdispatcher.php.html#a372">372</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tries to guess the controller task to execute based on the view name and  the HTTP request method.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The best guess of the task to execute</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTask
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The name of the view</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterDispatch" id="onAfterDispatch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterDispatch</span> (line <span class="line-number"><a href="../../__filesource/fsource_Frameworkfilesource/ispatcher_librariesfofdispatcherdispatcher.php.html#a491">491</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes right after the dispatcher runs the controller.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return false to abort</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterDispatch
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodonBeforeDispatch" id="onBeforeDispatch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeDispatch</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnfilesource/patcher_librariesfofdispatcherdispatcher.php.html#a442">442</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes right before the dispatcher tries to instantiate and run the  controller.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return false to abort</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeDispatch
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodonBeforeDispatchCLI" id="onBeforeDispatchCLI"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeDispatchCLI</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFrfilesource/tcher_librariesfofdispatcherdispatcher.php.html#a452">452</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets up some environment variables, so we can work as usually on CLI, too.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return false to abort</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeDispatchCLI
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtransparentAuthentication" id="transparentAuthentication"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">transparentAuthentication</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_dispatcher_librariesfofdispatcherdispatcher.php.html#a508">508</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Transparently authenticates a user</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			transparentAuthentication
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 14:58:54 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

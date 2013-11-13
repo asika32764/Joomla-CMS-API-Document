@@ -95,7 +95,8 @@
 	<div class="info-box-title">Description</div>
 	<div class="nav-bar">
 					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
 						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 						
 					</div>
@@ -118,6 +119,37 @@
 			</div>
 </div>
 
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../FrameworkOnFramework/layout/FOFLayoutFile.html">FOFLayoutFile</a>
+					</td>
+					<td>
+											Base class for rendering a display layout  loaded from from a layout file
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
 
 
 	<a name="sec-var-summary"></a>
@@ -125,6 +157,7 @@
 		<div class="info-box-title">Variable Summary</span></div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
 						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
 							| 
 									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
@@ -132,7 +165,7 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																								<div class="var-title">
+																																																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
 					<span class="var-type">string</span>
 					<a href="#$basePath" title="details" class="var-name">$basePath</a>
@@ -141,6 +174,11 @@
 					<img src="../../media/images/Variable.png" alt=" " />
 					<span class="var-type">string</span>
 					<a href="#$fullPath" title="details" class="var-name">$fullPath</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$includePaths" title="details" class="var-name">$includePaths</a>
 				</div>
 																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
@@ -156,6 +194,7 @@
 		<div class="info-box-title">Method Summary</span></div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
 																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
 				 
 				|
@@ -163,12 +202,26 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																							
+																																																																																																																															
 				<div class="method-definition">
 					<img src="../../media/images/Constructor.png" alt=" "/>
 											<span class="method-result">JLayoutFile</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$layoutId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">null</span>])
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$layoutId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addIncludePath" title="details" class="method-name">addIncludePath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addIncludePaths" title="details" class="method-name">addIncludePaths</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$paths</span>)
 									</div>
 															
 				<div class="method-definition">
@@ -180,9 +233,72 @@
 															
 				<div class="method-definition">
 					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#refreshIncludePaths" title="details" class="method-name">refreshIncludePaths</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#removeIncludePath" title="details" class="method-name">removeIncludePath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#removeIncludePaths" title="details" class="method-name">removeIncludePaths</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$paths</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
 											<span class="method-result">string</span>
 										<a href="#render" title="details" class="method-name">render</a>
 											(<span class="var-type">object</span>&nbsp;<span class="var-name">$displayData</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setClient" title="details" class="method-name">setClient</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$client</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#setComponent" title="details" class="method-name">setComponent</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setDebug" title="details" class="method-name">setDebug</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setLayout" title="details" class="method-name">setLayout</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$layoutId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#sublayout" title="details" class="method-name">sublayout</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$layoutId</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$displayData</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#validComponent" title="details" class="method-name">validComponent</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span> = <span class="var-default">null</span>])
 									</div>
 											</div>
 		</div>
@@ -193,6 +309,7 @@
 		<div class="info-box-title">Variables</div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
 										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
 						
 			
@@ -203,14 +320,14 @@
 		<div class="info-box-body">
 			
 <a name="var$basePath" id="$basePath"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$basePath</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a33">33</a></span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/ource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a33">33</a></span>)
 		</span>
 	</div>
 
@@ -227,14 +344,14 @@
 
 </div>
 <a name="var$fullPath" id="$fullPath"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$fullPath</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a39">39</a></span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a39">39</a></span>)
 		</span>
 	</div>
 
@@ -242,6 +359,30 @@
 	<ul class="tags">
 				<li><span class="field">var:</span> Full path to actual layout files, after possible template override check</li>
 				<li><span class="field">since:</span> 3.0.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$includePaths" id="$includePaths"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$includePaths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Paths to search for layouts</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
 				<li><span class="field">access:</span> protected</li>
 			</ul>
 	
@@ -258,7 +399,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$layoutId</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a27">27</a></span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesofilesource/Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a27">27</a></span>)
 		</span>
 	</div>
 
@@ -274,7 +415,20 @@
 		
 
 </div>
-						
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html">JLayoutBase</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#var$debugMessages">JLayoutBase::$debugMessages</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#var$options">JLayoutBase::$options</a></span><br>
+							</span>
+											</blockquote> 
+										
 		</div>
 	</div>
 	
@@ -283,6 +437,7 @@
 		<div class="info-box-title">Methods</div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
 															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
 																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
 						
@@ -294,7 +449,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a49">49</a></span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesourfilesource/omla-Libraries_Layout_librariescmslayoutfile.php.html#a58">58</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -309,7 +464,7 @@
 		<span class="method-name">
 			__construct
 		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$layoutId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">null</span>])
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$layoutId</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$basePath</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
 			</div>
 	
 			<ul class="parameters">
@@ -319,6 +474,71 @@
 					<li>
 				<span class="var-type">string</span>
 				<span class="var-name">$basePath</span><span class="var-description">: Base path to use when loading layout files</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$options</span><span class="var-description">: Optional custom options to load. JRegistry or array format [@since 3.2]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddIncludePath" id="addIncludePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addIncludePath</span> (line <span class="line-number"><a href="../../__filesourcefilesource/la-Libraries_Layout_librariescmslayoutfile.php.html#a170">170</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add one path to include in layout search. Proxy of addIncludePaths()</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addIncludePath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The path to search for layouts</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddIncludePaths" id="addIncludePaths"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addIncludePaths</span> (line <span class="line-number"><a href="../../__filesource/ffilesource/-Libraries_Layout_librariescmslayoutfile.php.html#a184">184</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add one or more paths to include in layout search</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addIncludePaths
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$paths</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$paths</span><span class="var-description">: The path or array of paths to search for layouts</span>			</li>
 				</ul>
 		
 			
@@ -328,7 +548,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getPath</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a90">90</a></span>)
+		<span class="method-title">getPath</span> (line <span class="line-number"><a href="../../__filesource/fsofilesource/ibraries_Layout_librariescmslayoutfile.php.html#a112">112</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -349,13 +569,109 @@
 	
 		
 			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../FrameworkOnFramework/layout/FOFLayoutFile.html#methodgetPath">FOFLayoutFile::getPath()</a>
+								: Method to finds the full real file path, checking possible overrides
+							</li>
+				</ul>
 	</div>
-<a name="methodrender" id="render"><!-- --></a>
+<a name="methodrefreshIncludePaths" id="refreshIncludePaths"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">render</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a64">64</a></span>)
+		<span class="method-title">refreshIncludePaths</span> (line <span class="line-number"><a href="../../__filesource/fsourfilesource/raries_Layout_librariescmslayoutfile.php.html#a361">361</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Refresh the list of include paths</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			refreshIncludePaths
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodremoveIncludePath" id="removeIncludePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeIncludePath</span> (line <span class="line-number"><a href="../../__filesource/fsourcefilesource/ries_Layout_librariescmslayoutfile.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove one path from the layout search</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeIncludePath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: The path to remove from the layout search</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveIncludePaths" id="removeIncludePaths"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeIncludePaths</span> (line <span class="line-number"><a href="../../__filesource/fsource_Jfilesource/es_Layout_librariescmslayoutfile.php.html#a222">222</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove one or more paths to exclude in layout search</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeIncludePaths
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$paths</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$paths</span><span class="var-description">: The path or array of paths to remove for the layout search</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrender" id="render"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">render</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joofilesource/_Layout_librariescmslayoutfile.php.html#a81">81</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -388,15 +704,218 @@
 					</dl>
 			
 	</div>
+<a name="methodsetClient" id="setClient"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setClient</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomlfilesource/ayout_librariescmslayoutfile.php.html#a313">313</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to initialise the application client</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setClient
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$client</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$client</span><span class="var-description">: Frontend: 'site' or 0 | Backend: 'admin' or 1</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetComponent" id="setComponent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setComponent</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-filesource/out_librariescmslayoutfile.php.html#a268">268</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to change the component where search for layouts</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Component option string | null for none</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			setComponent
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$option</span><span class="var-description">: URL Option of the component. Example: com_content</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDebug" id="setDebug"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDebug</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Lifilesource/t_librariescmslayoutfile.php.html#a407">407</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the debug mode</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDebug
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$debug</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$debug</span><span class="var-description">: Enable / Disable debug</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLayout" id="setLayout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLayout</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Librfilesource/librariescmslayoutfile.php.html#a348">348</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the layout</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setLayout
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$layoutId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$layoutId</span><span class="var-description">: Layout to render</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsublayout" id="sublayout"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">sublayout</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Librarfilesource/brariescmslayoutfile.php.html#a422">422</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Render a layout with the same include paths &amp; options</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The necessary HTML to display the layout</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			sublayout
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$layoutId</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$displayData</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$layoutId</span><span class="var-description">: Object which properties are used inside the layout file to build displayed output</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$displayData</span><span class="var-description">: Data to be rendered</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidComponent" id="validComponent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">validComponent</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Libraries_Layout_librariescmslayoutfile.php.html#a241">241</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate that the active component is valid</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validComponent
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$option</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$option</span><span class="var-description">: URL Option of the component. Example: com_content</span>			</li>
+				</ul>
+		
+			
+	</div>
 							<h4>Inherited Methods</h4>
 				<a name='inherited_methods'><!-- --></a>	
 									<!-- =========== Summary =========== -->
 					<p>Inherited From <span class="classname"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html">JLayoutBase</a></span></p>
 					<blockquote>
 													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodaddDebugMessage">JLayoutBase::addDebugMessage()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
 							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodescape">JLayoutBase::escape()</a></span><br>
 													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodgetDebugMessages">JLayoutBase::getDebugMessages()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodgetOptions">JLayoutBase::getOptions()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
 							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodrender">JLayoutBase::render()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodrenderDebugMessages">JLayoutBase::renderDebugMessages()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodresetOptions">JLayoutBase::resetOptions()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Libraries/Layout/JLayoutBase.html#methodsetOptions">JLayoutBase::setOptions()</a></span><br>
 											</blockquote>
 										
 		</div>
@@ -404,7 +923,7 @@
 
 	
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 08 Sep 2013 12:30:30 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Wed, 13 Nov 2013 15:00:35 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

@@ -1,0 +1,1774 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class JStream</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> JStream</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Joomla! Stream Interface</p>
+<p class="description"><p>The Joomla! stream interface is designed to handle files as streams  where as the legacy JFile static class treated files in a rather  atomic manner.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> http://php.net/manual/en/transports.php Socket Transports (used by some options, particularly HTTP proxy)</li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/filters.php Stream Filters">http://php.net/manual/en/filters.php Stream Filters</a></li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/wrappers.php Stream Wrappers">http://php.net/manual/en/wrappers.php Stream Wrappers</a></li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.stream-get-wrappers.php">http://php.net/manual/en/function.stream-get-wrappers.php</a></li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/intro.stream.php PHP Stream Manual">http://php.net/manual/en/intro.stream.php PHP Stream Manual</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---joomla---filesystem---stream.php.html">/libraries/joomla/filesystem/stream.php</a> (line <span class="field"><a href="../../filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a30">30</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --JStream</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$chunksize" title="details" class="var-name">$chunksize</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">resource</span>
+					<a href="#$context" title="details" class="var-name">$context</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$contextOptions" title="details" class="var-name">$contextOptions</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$dirmode" title="details" class="var-name">$dirmode</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$fh" title="details" class="var-name">$fh</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$filemode" title="details" class="var-name">$filemode</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$filename" title="details" class="var-name">$filename</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$filesize" title="details" class="var-name">$filesize</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$filters" title="details" class="var-name">$filters</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$openmode" title="details" class="var-name">$openmode</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$processingmethod" title="details" class="var-name">$processingmethod</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$readprefix" title="details" class="var-name">$readprefix</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$writeprefix" title="details" class="var-name">$writeprefix</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">JStream</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$writeprefix</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$readprefix</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Destructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__destruct" title="details" class="method-name">__destruct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addContextEntry" title="details" class="method-name">addContextEntry</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$wrapper</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#appendFilter" title="details" class="method-name">appendFilter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filtername</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$read_write</span> = <span class="var-default">STREAM_FILTER_READ</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#applyContextToStream" title="details" class="method-name">applyContextToStream</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#chmod" title="details" class="method-name">chmod</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#close" title="details" class="method-name">close</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#copy" title="details" class="method-name">copy</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dest</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#deleteContextEntry" title="details" class="method-name">deleteContextEntry</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$wrapper</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#eof" title="details" class="method-name">eof</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#filesize" title="details" class="method-name">filesize</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">File</span>
+										<a href="#getFileHandle" title="details" class="method-name">getFileHandle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#gets" title="details" class="method-name">gets</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#get_meta_data" title="details" class="method-name">get_meta_data</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#move" title="details" class="method-name">move</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dest</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#open" title="details" class="method-name">open</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">'r'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_include_path</span> = <span class="var-default">false</span>], [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$detectprocessingmode</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#prependFilter" title="details" class="method-name">prependFilter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filtername</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$read_write</span> = <span class="var-default">STREAM_FILTER_READ</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#read" title="details" class="method-name">read</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#removeFilter" title="details" class="method-name">removeFilter</a>
+											(<span class="var-type">resource</span>&nbsp;<span class="var-name">&$resource</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$byindex</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#seek" title="details" class="method-name">seek</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$whence</span> = <span class="var-default">SEEK_SET</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setContextOptions" title="details" class="method-name">setContextOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$context</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#tell" title="details" class="method-name">tell</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#upload" title="details" class="method-name">upload</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dest</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#write" title="details" class="method-name">write</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">&$string</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$chunk</span> = <span class="var-default">0</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#writeFile" title="details" class="method-name">writeFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$buffer</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#_buildContext" title="details" class="method-name">_buildContext</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_getFilename" title="details" class="method-name">_getFilename</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$chunksize" id="$chunksize"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$chunksize</span>
+			 = <span class="var-default"> 8192</span>			(line <span class="line-number"><a href="../../__filesource/ource_Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default Chunk Size</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$context" id="$context"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">resource</span>
+			<span class="var-name">$context</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a119">119</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Context to use when opening the connection</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$contextOptions" id="$contextOptions"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$contextOptions</span>
+						(line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a127">127</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Context options; used to rebuild the context</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$dirmode" id="$dirmode"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$dirmode</span>
+			 = <span class="var-default"> 0755</span>			(line <span class="line-number"><a href="../../__filesofilesource/Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory Mode</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fh" id="$fh"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$fh</span>
+						(line <span class="line-number"><a href="../../__filesourfilesource/omla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a103">103</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File Handle</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filemode" id="$filemode"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$filemode</span>
+			 = <span class="var-default"> 0644</span>			(line <span class="line-number"><a href="../../__filesourcefilesource/la-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File Mode</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filename" id="$filename"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$filename</span>
+						(line <span class="line-number"><a href="../../__filesource/ffilesource/-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filename</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filesize" id="$filesize"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$filesize</span>
+						(line <span class="line-number"><a href="../../__filesource/fsofilesource/latform_FileSystem_librariesjoomlafilesystemstream.php.html#a111">111</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File size</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filters" id="$filters"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$filters</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsourfilesource/tform_FileSystem_librariesjoomlafilesystemstream.php.html#a95">95</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filters applied to the current stream</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$openmode" id="$openmode"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$openmode</span>
+						(line <span class="line-number"><a href="../../__filesource/fsourcefilesource/orm_FileSystem_librariesjoomlafilesystemstream.php.html#a135">135</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The mode under which the file was opened</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$processingmethod" id="$processingmethod"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$processingmethod</span>
+			 = <span class="var-default"> 'f'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_Jfilesource/m_FileSystem_librariesjoomlafilesystemstream.php.html#a87">87</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Read Processing method</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> gz, bz, f  If a scheme is detected, fopen will be defaulted  To use compression with a network stream use a filter</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$readprefix" id="$readprefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$readprefix</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joofilesource/FileSystem_librariesjoomlafilesystemstream.php.html#a78">78</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prefix of the connection for reading</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$writeprefix" id="$writeprefix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$writeprefix</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_Joomlfilesource/leSystem_librariesjoomlafilesystemstream.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prefix of the connection for writing</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-filesource/System_librariesjoomlafilesystemstream.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JStream</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$writeprefix</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$readprefix</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$writeprefix</span><span class="var-description">: Prefix of the stream (optional). Unlike the JPATH_*, this has a final path separator!</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$readprefix</span><span class="var-description">: The read prefix (optional).</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$context</span><span class="var-description">: The context options (optional).</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></dt>
+						<dd>Class constructor, overridden in descendant classes.</dd>
+					</dl>
+			
+	</div>
+<a name="method__destruct" id="__destruct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Destructor.png" />
+		<span class="method-title">Destructor __destruct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plfilesource/stem_librariesjoomlafilesystemstream.php.html#a159">159</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Destructor</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__destruct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodaddContextEntry" id="addContextEntry"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addContextEntry</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platfilesource/em_librariesjoomlafilesystemstream.php.html#a964">964</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a particular options to the context</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/stream_context_create Stream Context Creation">http://php.net/stream_context_create Stream Context Creation</a></li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/context.php Context Options for various streams">http://php.net/manual/en/context.php Context Options for various streams</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addContextEntry
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$wrapper</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$wrapper</span><span class="var-description">: The wrapper to use</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The option to set</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: The value of the option</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodappendFilter" id="appendFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">appendFilter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platfofilesource/_librariesjoomlafilesystemstream.php.html#a1051">1051</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stream filters  Append a filter to the chain</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.stream-filter-append.php">http://php.net/manual/en/function.stream-filter-append.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			appendFilter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filtername</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$read_write</span> = <span class="var-default">STREAM_FILTER_READ</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filtername</span><span class="var-description">: The key name of the filter.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$read_write</span><span class="var-description">: Optional. Defaults to STREAM_FILTER_READ.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of params for the stream_filter_append call.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodapplyContextToStream" id="applyContextToStream"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">applyContextToStream</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platformfilesource/ibrariesjoomlafilesystemstream.php.html#a1014">1014</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the current context to the stream</p>
+<p class="description"><p>Use this to change the values of the context after you've opened a stream</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			applyContextToStream
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodchmod" id="chmod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">chmod</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Ffilesource/rariesjoomlafilesystemstream.php.html#a834">834</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Chmod wrapper</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			chmod
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: File name.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$mode</span><span class="var-description">: Mode to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclose" id="close"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">close</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Filfilesource/riesjoomlafilesystemstream.php.html#a305">305</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attempt to close a file handle</p>
+<p class="description"><p>Will return false if it failed and true on success  If the file is not open the system will return true, this function destroys the file handle as well</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			close
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcopy" id="copy"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">copy</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSfilesource/esjoomlafilesystemstream.php.html#a1173">1173</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copy a file from src to dest</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			copy
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dest</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$src</span><span class="var-description">: The file path to copy from.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dest</span><span class="var-description">: The file path to copy to.</span>			</li>
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$context</span><span class="var-description">: A valid context resource (optional) created with stream_context_create.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_prefix</span><span class="var-description">: Controls the use of a prefix (optional).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$relative</span><span class="var-description">: Determines if the filename given is relative. Relative paths do not have JPATH_ROOT stripped.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSysfilesource/joomlafilesystemstream.php.html#a1282">1282</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a file</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file path to delete.</span>			</li>
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$context</span><span class="var-description">: A valid context resource (optional) created with stream_context_create.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_prefix</span><span class="var-description">: Controls the use of a prefix (optional).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$relative</span><span class="var-description">: Determines if the filename given is relative. Relative paths do not have JPATH_ROOT stripped.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteContextEntry" id="deleteContextEntry"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">deleteContextEntry</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystefilesource/omlafilesystemstream.php.html#a981">981</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deletes a particular setting from a context</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/stream_context_create">http://php.net/stream_context_create</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteContextEntry
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$wrapper</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$wrapper</span><span class="var-description">: The wrapper to use</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The option to unset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodeof" id="eof"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">eof</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_filesource/lafilesystemstream.php.html#a368">368</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Work out if we're at the end of the file for a stream</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			eof
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfilesize" id="filesize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">filesize</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_lifilesource/filesystemstream.php.html#a414">414</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the file size of the path</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			filesize
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFileHandle" id="getFileHandle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFileHandle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librfilesource/lesystemstream.php.html#a1421">1421</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the internal file handle</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> handler</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">File</span>
+		<span class="method-name">
+			getFileHandle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgets" id="gets"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">gets</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librarfilesource/systemstream.php.html#a485">485</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a line from the stream source.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			gets
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: The number of bytes (optional) to read.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_meta_data" id="get_meta_data"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">get_meta_data</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariefilesource/stemstream.php.html#a900">900</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the stream metadata</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> header/metadata</li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.stream-get-meta-data.php">http://php.net/manual/en/function.stream-get-meta-data.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_meta_data
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodmove" id="move"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">move</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjfilesource/emstream.php.html#a1231">1231</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Moves a file</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			move
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dest</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$src</span><span class="var-description">: The file path to move from.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dest</span><span class="var-description">: The file path to move to.</span>			</li>
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$context</span><span class="var-description">: A valid context resource (optional) created with stream_context_create.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_prefix</span><span class="var-description">: Controls the use of a prefix (optional).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$relative</span><span class="var-description">: Determines if the filename given is relative. Relative paths do not have JPATH_ROOT stripped.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodopen" id="open"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">open</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoofilesource/stream.php.html#a186">186</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generic File Operations</p>
+<p class="description"><p>Open a stream with some lazy loading smarts</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			open
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">'r'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_include_path</span> = <span class="var-default">false</span>], [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$detectprocessingmode</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: Filename</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mode</span><span class="var-description">: Mode string to use</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_include_path</span><span class="var-description">: Use the PHP include path</span>			</li>
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$context</span><span class="var-description">: Context to use when opening</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_prefix</span><span class="var-description">: Use a prefix to open the file</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$relative</span><span class="var-description">: Filename is a relative path (if false, strips JPATH_ROOT to make it relative)</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$detectprocessingmode</span><span class="var-description">: Detect the processing method for the file and use the appropriate function                                            to handle output automatically</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprependFilter" id="prependFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">prependFilter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlfilesource/ream.php.html#a1092">1092</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepend a filter to the chain</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.stream-filter-prepend.php">http://php.net/manual/en/function.stream-filter-prepend.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			prependFilter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filtername</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$read_write</span> = <span class="var-default">STREAM_FILTER_READ</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filtername</span><span class="var-description">: The key name of the filter.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$read_write</span><span class="var-description">: Optional. Defaults to STREAM_FILTER_READ.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: An array of params for the stream_filter_prepend call.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodread" id="read"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">read</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlaffilesource/am.php.html#a542">542</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Read a file</p>
+<p class="description"><p>Handles user space streams appropriately otherwise any read will return 8192</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.fread.php">http://php.net/manual/en/function.fread.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			read
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Length of data to read</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveFilter" id="removeFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">removeFilter</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilfilesource/.php.html#a1133">1133</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove a filter, either by resource (handed out from the append or prepend function)  or via getting the filter list)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Result of operation</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			removeFilter
+		</span>
+					(<span class="var-type">resource</span>&nbsp;<span class="var-name">&$resource</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$byindex</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">&$resource</span><span class="var-description">: The resource.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$byindex</span><span class="var-description">: The index of the filter.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodseek" id="seek"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">seek</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesfilesource/hp.html#a645">645</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Seek the file</p>
+<p class="description"><p>Note: the return value is different to that of fseek</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success, false on failure</li>
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.fseek.php">http://php.net/manual/en/function.fseek.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			seek
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$whence</span> = <span class="var-default">SEEK_SET</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: Offset to use when seeking.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$whence</span><span class="var-description">: Seek mode to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetContextOptions" id="setContextOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setContextOptions</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesysfilesource/.html#a945">945</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Updates the context to the array</p>
+<p class="description"><p>Format is the same as the options for stream_context_create</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/stream_context_create">http://php.net/stream_context_create</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setContextOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$context</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$context</span><span class="var-description">: Options to create the context with</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtell" id="tell"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">tell</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystefilesource/tml#a698">698</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the current position of the file read/write pointer.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			tell
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupload" id="upload"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">upload</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemsfilesource/l#a1331">1331</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Upload a file</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			upload
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dest</span>, [<span class="var-type">resource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span> = <span class="var-default">true</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$src</span><span class="var-description">: The file path to copy from (usually a temp folder).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dest</span><span class="var-description">: The file path to copy to.</span>			</li>
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$context</span><span class="var-description">: A valid context resource (optional) created with stream_context_create.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_prefix</span><span class="var-description">: Controls the use of a prefix (optional).</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$relative</span><span class="var-description">: Determines if the filename given is relative. Relative paths do not have JPATH_ROOT stripped.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwrite" id="write"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">write</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemstrfilesource/a758">758</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File write</p>
+<p class="description"><p>Whilst this function accepts a reference, the underlying fwrite  will do a copy! This will roughly double the memory allocation for  any write you do. Specifying chunked will get around this by only  writing in specific chunk sizes. This defaults to 8192 which is a  sane number to use most of the time (change the default with  JStream::set('chunksize', newsize);)  Note: This doesn't support gzip/bzip2 writing like reading does</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.fwrite.php">http://php.net/manual/en/function.fwrite.php</a></li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			write
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">&$string</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">0</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$chunk</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$string</span><span class="var-description">: Reference to the string to write.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span><span class="var-description">: Length of the string to write.</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$chunk</span><span class="var-description">: Size of chunks to write in.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteFile" id="writeFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">writeFile</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemstreafilesource/356">1356</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes a chunk of data to a file.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			writeFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">&$buffer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$buffer</span><span class="var-description">: The data to write to the file.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_buildContext" id="_buildContext"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_buildContext</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.filesource/">920</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stream contexts  Builds the context from the array</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_buildContext
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_getFilename" id="_getFilename"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getFilename</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_FileSystem_librariesjoomlafilesystemstream.php.html#a1382">1382</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine the appropriate 'filename' of a file</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_getFilename
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_prefix</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$relative</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: Original filename of the file</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mode</span><span class="var-description">: Mode string to retrieve the filename</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_prefix</span><span class="var-description">: Controls the use of a prefix</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$relative</span><span class="var-description">: Determines if the filename given is relative. Relative paths do not have JPATH_ROOT stripped.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:12:43 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

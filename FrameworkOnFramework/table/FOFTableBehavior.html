@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFTableBehavior</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> FOFTableBehavior</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FrameworkOnFramework table behavior class. It defines the events which are  called by a Table.</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 2.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---table---behavior.php.html">/libraries/fof/table/behavior.php</a> (line <span class="field"><a href="../../filesource/fsource_FrameworkOnFramework_table_librariesfoftablebehavior.php.html#a18">18</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a>
+      |
+      --FOFTableBehavior</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-vars">Vars</a>
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../FrameworkOnFramework/table/FOFTableBehaviorAssets.html">FOFTableBehaviorAssets</a>
+					</td>
+					<td>
+											FrameworkOnFramework table behavior class for assets
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../FrameworkOnFramework/table/FOFTableBehaviorTags.html">FOFTableBehaviorTags</a>
+					</td>
+					<td>
+											FrameworkOnFramework table behavior class for tags
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterBind" title="details" class="method-name">onAfterBind</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">object|array</span>&nbsp;<span class="var-name">&$src</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterCopy" title="details" class="method-name">onAfterCopy</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterDelete" title="details" class="method-name">onAfterDelete</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterHit" title="details" class="method-name">onAfterHit</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterLoad" title="details" class="method-name">onAfterLoad</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">&$result</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterMove" title="details" class="method-name">onAfterMove</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterReorder" title="details" class="method-name">onAfterReorder</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterReset" title="details" class="method-name">onAfterReset</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onAfterStore" title="details" class="method-name">onAfterStore</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeBind" title="details" class="method-name">onBeforeBind</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeCopy" title="details" class="method-name">onBeforeCopy</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeDelete" title="details" class="method-name">onBeforeDelete</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeHit" title="details" class="method-name">onBeforeHit</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$log</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeMove" title="details" class="method-name">onBeforeMove</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforePublish" title="details" class="method-name">onBeforePublish</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer|array</span>&nbsp;<span class="var-name">&$cid</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$publish</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeReorder" title="details" class="method-name">onBeforeReorder</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeReset" title="details" class="method-name">onBeforeReset</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#onBeforeStore" title="details" class="method-name">onBeforeStore</a>
+											(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Event/JEvent.html#var$_subject">JEvent::$_subject</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodonAfterBind" id="onAfterBind"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterBind</span> (line <span class="line-number"><a href="../../__filesource/ource_FrameworkOnFramework_table_librariesfoftablebehavior.php.html#a41">41</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after binding data to the table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterBind
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">object|array</span>&nbsp;<span class="var-name">&$src</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">object|array</span>
+				<span class="var-name">&$src</span><span class="var-description">: The data to bind</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../FrameworkOnFramework/table/FOFTableBehaviorAssets.html#methodonAfterBind">FOFTableBehaviorAssets::onAfterBind()</a>
+								: The event which runs after binding data to the table
+							</li>
+					<li>
+				<a href="../../FrameworkOnFramework/table/FOFTableBehaviorTags.html#methodonAfterBind">FOFTableBehaviorTags::onAfterBind()</a>
+								: The event which runs after binding data to the table
+							</li>
+				</ul>
+	</div>
+<a name="methodonAfterCopy" id="onAfterCopy"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterCopy</span> (line <span class="line-number"><a href="../../__fifilesource/rce_FrameworkOnFramework_table_librariesfoftablebehavior.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The even which runs after copying a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the copy without errors</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterCopy
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$oid</span><span class="var-description">: The PK value of the record which was copied (not the new one)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterDelete" id="onAfterDelete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterDelete</span> (line <span class="line-number"><a href="../../__filefilesource/e_FrameworkOnFramework_table_librariesfoftablebehavior.php.html#a155">155</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after deleting a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the deletion without errors</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterDelete
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$oid</span><span class="var-description">: The PK value of the record which was deleted</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../FrameworkOnFramework/table/FOFTableBehaviorTags.html#methodonAfterDelete">FOFTableBehaviorTags::onAfterDelete()</a>
+								: The event which runs after deleting a record
+							</li>
+				</ul>
+	</div>
+<a name="methodonAfterHit" id="onAfterHit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterHit</span> (line <span class="line-number"><a href="../../__filesofilesource/FrameworkOnFramework_table_librariesfoftablebehavior.php.html#a182">182</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after hitting a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the hitting without errors</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterHit
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$oid</span><span class="var-description">: The PK value of the record which was hit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterLoad" id="onAfterLoad"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterLoad</span> (line <span class="line-number"><a href="../../__filesourfilesource/ameworkOnFramework_table_librariesfoftablebehavior.php.html#a54">54</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after loading a record from the database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterLoad
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">&$result</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">&$result</span><span class="var-description">: Did the load succeeded?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterMove" id="onAfterMove"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterMove</span> (line <span class="line-number"><a href="../../__filesourcefilesource/eworkOnFramework_table_librariesfoftablebehavior.php.html#a104">104</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after moving a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow moving without an error</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterMove
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterReorder" id="onAfterReorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterReorder</span> (line <span class="line-number"><a href="../../__filesource/ffilesource/orkOnFramework_table_librariesfoftablebehavior.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after reordering a table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the reordering to complete without an error</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterReorder
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterReset" id="onAfterReset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterReset</span> (line <span class="line-number"><a href="../../__filesource/fsofilesource/kOnFramework_table_librariesfoftablebehavior.php.html#a234">234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after the object is reset to its default values.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the reset to complete without errors</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterReset
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterStore" id="onAfterStore"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onAfterStore</span> (line <span class="line-number"><a href="../../__filesource/fsourfilesource/nFramework_table_librariesfoftablebehavior.php.html#a79">79</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs after storing (saving) data to the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow saving without an error</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onAfterStore
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeBind" id="onBeforeBind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeBind</span> (line <span class="line-number"><a href="../../__filesource/fsourcefilesource/ramework_table_librariesfoftablebehavior.php.html#a28">28</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before binding data to the table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeBind
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$data</span><span class="var-description">: The data to bind</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeCopy" id="onBeforeCopy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeCopy</span> (line <span class="line-number"><a href="../../__filesource/fsource_Ffilesource/mework_table_librariesfoftablebehavior.php.html#a195">195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The even which runs before copying a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the copy to take place</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeCopy
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$oid</span><span class="var-description">: The PK value of the record being copied</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeDelete" id="onBeforeDelete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeDelete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Frafilesource/work_table_librariesfoftablebehavior.php.html#a142">142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs before deleting a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the deletion</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeDelete
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$oid</span><span class="var-description">: The PK value of the record to delete</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../FrameworkOnFramework/table/FOFTableBehaviorAssets.html#methodonBeforeDelete">FOFTableBehaviorAssets::onBeforeDelete()</a>
+								: The event which runs before deleting a record
+							</li>
+				</ul>
+	</div>
+<a name="methodonBeforeHit" id="onBeforeHit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeHit</span> (line <span class="line-number"><a href="../../__filesource/fsource_Framefilesource/rk_table_librariesfoftablebehavior.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs before hitting a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the hit</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeHit
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$oid</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$log</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$oid</span><span class="var-description">: The PK value of the record to hit</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$log</span><span class="var-description">: Should we log the hit?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeMove" id="onBeforeMove"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeMove</span> (line <span class="line-number"><a href="../../__filesource/fsource_Framewofilesource/_table_librariesfoftablebehavior.php.html#a92">92</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs before moving a record</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow moving</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeMove
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$updateNulls</span><span class="var-description">: Should nulls be saved as nulls (true) or just skipped over (false)?</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforePublish" id="onBeforePublish"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforePublish</span> (line <span class="line-number"><a href="../../__filesource/fsource_Frameworkfilesource/able_librariesfoftablebehavior.php.html#a222">222</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs before a record is (un)published</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the (un)publish to proceed</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforePublish
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">integer|array</span>&nbsp;<span class="var-name">&$cid</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$publish</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">integer|array</span>
+				<span class="var-name">&$cid</span><span class="var-description">: The PK IDs of the records being (un)published</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$publish</span><span class="var-description">: <ol><li>to publish, 0 to unpublish</li></ol></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeReorder" id="onBeforeReorder"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeReorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnfilesource/le_librariesfoftablebehavior.php.html#a117">117</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs before reordering a table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow reordering</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeReorder
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: The WHERE clause of the SQL query to run on reordering (record filter)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeReset" id="onBeforeReset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeReset</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFrfilesource/_librariesfoftablebehavior.php.html#a246">246</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The even which runs before the object is reset to its default values.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow the reset to complete</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeReset
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeStore" id="onBeforeStore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onBeforeStore</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_table_librariesfoftablebehavior.php.html#a67">67</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The event which runs before storing (saving) data to the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow saving</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			onBeforeStore
+		</span>
+					(<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$table</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$updateNulls</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/table/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$table</span><span class="var-description">: The table which calls this event</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$updateNulls</span><span class="var-description">: Should nulls be saved as nulls (true) or just skipped over (false)?</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../FrameworkOnFramework/table/FOFTableBehaviorAssets.html#methodonBeforeStore">FOFTableBehaviorAssets::onBeforeStore()</a>
+								: The event which runs before storing (saving) data to the database
+							</li>
+					<li>
+				<a href="../../FrameworkOnFramework/table/FOFTableBehaviorTags.html#methodonBeforeStore">FOFTableBehaviorTags::onBeforeStore()</a>
+								: The event which runs before storing (saving) data to the database
+							</li>
+				</ul>
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#method__construct">JEvent::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Event/JEvent.html#methodupdate">JEvent::update()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 14:52:04 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
