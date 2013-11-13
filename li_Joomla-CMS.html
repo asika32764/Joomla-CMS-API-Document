@@ -84,33 +84,34 @@
 				}
 			</script>
 					</head>
-		<body><select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
-	  <option value="li_default.html">default</option>
-	  <option value="li_akeebabackup.html">akeebabackup</option>
-	  <option value="li_IDNA.html">IDNA</option>
-	  <option value="li_Joomla.html">Joomla</option>
-	  <option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
-	  <option value="li_Joomla-Cli.html">Joomla-Cli</option>
-	  <option value="li_Joomla-CLI.html">Joomla-CLI</option>
-	  <option selected value="li_Joomla-CMS.html">Joomla-CMS</option>
-	  <option value="li_Joomla-Compat.html">Joomla-Compat</option>
-	  <option value="li_Joomla-Installation.html">Joomla-Installation</option>
-	  <option value="li_Joomla-Language.html">Joomla-Language</option>
-	  <option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
-	  <option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
-	  <option value="li_Joomla-Platform.html">Joomla-Platform</option>
-	  <option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
-	  <option value="li_Joomla-Site.html">Joomla-Site</option>
-	  <option value="li_phlyMail.html">phlyMail</option>
-	  <option value="li_PHPMailer.html">PHPMailer</option>
-	  <option value="li_SimplePie.html">SimplePie</option>
-	  <option value="li_utf8.html">utf8</option>
+		<body>
+
+
+<select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
+	<option value="li_default.html">default</option>
+	<option value="li_akeebabackup.html">akeebabackup</option>
+	<option value="li_FrameworkOnFramework.html">FrameworkOnFramework</option>
+	<option value="li_IDNA.html">IDNA</option>
+	<option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
+	<option value="li_Joomla-Cli.html">Joomla-Cli</option>
+	<option selected value="li_Joomla-Cms.html">Joomla-Cms</option>
+	<option value="li_Joomla-Compat.html">Joomla-Compat</option>
+	<option value="li_Joomla-Installation.html">Joomla-Installation</option>
+	<option value="li_Joomla-Language.html">Joomla-Language</option>
+	<option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
+	<option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
+	<option value="li_Joomla-Platform.html">Joomla-Platform</option>
+	<option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
+	<option value="li_Joomla-Site.html">Joomla-Site</option>
+	<option value="li_PHPMailer.html">PHPMailer</option>
+	<option value="li_SimplePie.html">SimplePie</option>
+	<option value="li_utf8.html">utf8</option>
 </select>
-						<h3 class="package-title">Joomla-CMS</h3>
+						<h3 class="package-title">Joomla-Cms</h3>
 <div class="tree">
 <script language="Javascript">
 if (document.getElementById) {
-			var tree = new WebFXTree('<span class="package">Joomla-CMS</span>');
+			var tree = new WebFXTree('<span class="package">Joomla-Cms</span>');
 		tree.setBehavior('classic');
 		tree.openIcon = 'media/images/package.png';
 		tree.icon = 'media/images/package.png';
@@ -120,12 +121,12 @@ if (document.getElementById) {
 			todos.icon = 'media/images/Index.png';
 			tree.add(todos);
 		
-		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Joomla-CMS.html');
+		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Joomla-Cms.html');
 		class_trees.openIcon = 'media/images/Index.png';
 		class_trees.icon = 'media/images/Index.png';
 		tree.add(class_trees);
 
-		var elements = new WebFXTreeItem('Index of elements', 'elementindex_Joomla-CMS.html');
+		var elements = new WebFXTreeItem('Index of elements', 'elementindex_Joomla-Cms.html');
 		elements.openIcon = 'media/images/Index.png';
 		elements.icon = 'media/images/Index.png';
 		tree.add(elements);
@@ -149,11 +150,39 @@ if (document.getElementById) {
 			subpackagetree_file.openIcon = 'media/images/folder.png';
 			subpackagetree_file.icon = 'media/images/folder.png';
 			
-							var file = new WebFXTreeItem('item_title.php', 'Joomla-CMS/Layout/_layouts---joomla---edit---item_title.php.html');
+							var file = new WebFXTreeItem('item_title.php', 'Joomla-Cms/Layout/_layouts---joomla---edit---item_title.php.html');
 				file.openIcon = 'media/images/Page.png';
 				file.icon = 'media/images/Page.png';
 				subpackagetree_file.add(file);
-							var file = new WebFXTreeItem('tags.php', 'Joomla-CMS/Layout/_layouts---joomla---content---tags.php.html');
+							var file = new WebFXTreeItem('tags.php', 'Joomla-Cms/Layout/_layouts---joomla---content---tags.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('title_alias.php', 'Joomla-Cms/Layout/_layouts---joomla---edit---title_alias.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+					
+			subpackagetree.add(subpackagetree_file);
+			
+	  tree.add(subpackagetree);
+							var subpackagetree = new WebFXTreeItem('<span class="sub-package">View</span>', '');
+		
+		subpackagetree.openIcon = 'media/images/package.png';
+		subpackagetree.icon = 'media/images/package.png';
+
+			
+		
+				
+					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
+			subpackagetree_file.openIcon = 'media/images/folder.png';
+			subpackagetree_file.icon = 'media/images/folder.png';
+			
+							var file = new WebFXTreeItem('html.php', 'Joomla-Cms/View/_components---com_config---view---cms---html.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				subpackagetree_file.add(file);
+							var file = new WebFXTreeItem('json.php', 'Joomla-Cms/View/_components---com_config---view---cms---json.php.html');
 				file.openIcon = 'media/images/Page.png';
 				file.icon = 'media/images/Page.png';
 				subpackagetree_file.add(file);

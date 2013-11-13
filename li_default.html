@@ -84,27 +84,28 @@
 				}
 			</script>
 					</head>
-		<body><select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
-	  <option value="li_default.html">default</option>
-	  <option selected value="li_akeebabackup.html">akeebabackup</option>
-	  <option value="li_IDNA.html">IDNA</option>
-	  <option value="li_Joomla.html">Joomla</option>
-	  <option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
-	  <option value="li_Joomla-Cli.html">Joomla-Cli</option>
-	  <option value="li_Joomla-CLI.html">Joomla-CLI</option>
-	  <option value="li_Joomla-CMS.html">Joomla-CMS</option>
-	  <option value="li_Joomla-Compat.html">Joomla-Compat</option>
-	  <option value="li_Joomla-Installation.html">Joomla-Installation</option>
-	  <option value="li_Joomla-Language.html">Joomla-Language</option>
-	  <option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
-	  <option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
-	  <option value="li_Joomla-Platform.html">Joomla-Platform</option>
-	  <option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
-	  <option value="li_Joomla-Site.html">Joomla-Site</option>
-	  <option value="li_phlyMail.html">phlyMail</option>
-	  <option value="li_PHPMailer.html">PHPMailer</option>
-	  <option value="li_SimplePie.html">SimplePie</option>
-	  <option value="li_utf8.html">utf8</option>
+		<body>
+
+
+<select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
+	<option selected value="li_default.html">default</option>
+	<option value="li_akeebabackup.html">akeebabackup</option>
+	<option value="li_FrameworkOnFramework.html">FrameworkOnFramework</option>
+	<option value="li_IDNA.html">IDNA</option>
+	<option value="li_Joomla-Administrator.html">Joomla-Administrator</option>
+	<option value="li_Joomla-Cli.html">Joomla-Cli</option>
+	<option value="li_Joomla-Cms.html">Joomla-Cms</option>
+	<option value="li_Joomla-Compat.html">Joomla-Compat</option>
+	<option value="li_Joomla-Installation.html">Joomla-Installation</option>
+	<option value="li_Joomla-Language.html">Joomla-Language</option>
+	<option value="li_Joomla-Legacy.html">Joomla-Legacy</option>
+	<option value="li_Joomla-Libraries.html">Joomla-Libraries</option>
+	<option value="li_Joomla-Platform.html">Joomla-Platform</option>
+	<option value="li_Joomla-Plugin.html">Joomla-Plugin</option>
+	<option value="li_Joomla-Site.html">Joomla-Site</option>
+	<option value="li_PHPMailer.html">PHPMailer</option>
+	<option value="li_SimplePie.html">SimplePie</option>
+	<option value="li_utf8.html">utf8</option>
 </select>
 						<h3 class="package-title">default</h3>
 <div class="tree">
@@ -137,14 +138,30 @@ if (document.getElementById) {
 			tree_classe.openIcon = 'media/images/class_folder.png';
 			tree_classe.icon = 'media/images/class_folder.png';
 			
-						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    				
+						    						    				var classe = new WebFXTreeItem('ContainerAwareInterface', 'default/ContainerAwareInterface.html');
+				classe.openIcon = 'media/images/Interface.png';
+				classe.icon = 'media/images/Interface.png';
+				tree_classe.add(classe);
+										    						    						    						    				var classe = new WebFXTreeItem('ServiceProviderInterface', 'default/ServiceProviderInterface.html');
+				classe.openIcon = 'media/images/Interface.png';
+				classe.icon = 'media/images/Interface.png';
+				tree_classe.add(classe);
+										    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    						    				
 			tree.add(tree_classe);
 		
 					var tree_classe = new WebFXTreeItem('Class(es)', '');
 			tree_classe.openIcon = 'media/images/class_folder.png';
 			tree_classe.icon = 'media/images/class_folder.png';
 			
-						    				var classe = new WebFXTreeItem('idna_convert', 'default/idna_convert.html');
+						    				var classe = new WebFXTreeItem('Container', 'default/Container.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    						    				var classe = new WebFXTreeItem('DependencyResolutionException', 'default/DependencyResolutionException.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('idna_convert', 'default/idna_convert.html');
 				classe.openIcon = 'media/images/Class.png';
 				classe.icon = 'media/images/Class.png';
 				tree_classe.add(classe);
@@ -152,7 +169,7 @@ if (document.getElementById) {
 				classe.openIcon = 'media/images/Class.png';
 				classe.icon = 'media/images/Class.png';
 				tree_classe.add(classe);
-										    				var classe = new WebFXTreeItem('SimplePie_Author', 'default/SimplePie_Author.html');
+										    						    				var classe = new WebFXTreeItem('SimplePie_Author', 'default/SimplePie_Author.html');
 				classe.openIcon = 'media/images/Class.png';
 				classe.icon = 'media/images/Class.png';
 				tree_classe.add(classe);
@@ -228,23 +245,69 @@ if (document.getElementById) {
 				classe.openIcon = 'media/images/Class.png';
 				classe.icon = 'media/images/Class.png';
 				tree_classe.add(classe);
+										    				var classe = new WebFXTreeItem('version_test', 'default/version_test.html');
+				classe.openIcon = 'media/images/Class.png';
+				classe.icon = 'media/images/Class.png';
+				tree_classe.add(classe);
 								
 			tree.add(tree_classe);
 		
+					var tree_function = new WebFXTreeItem('Function(s)', '');
+			tree_function.openIcon = 'media/images/function_folder.png';
+			tree_function.icon = 'media/images/function_folder.png';
+			
+							var fic = new WebFXTreeItem('password_get_info', 'default/_libraries---compat---password---lib---password.php.html#functionpassword_get_info');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('password_hash', 'default/_libraries---compat---password---lib---password.php.html#functionpassword_hash');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('password_needs_rehash', 'default/_libraries---compat---password---lib---password.php.html#functionpassword_needs_rehash');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('password_verify', 'default/_libraries---compat---password---lib---password.php.html#functionpassword_verify');
+				fic.openIcon = 'media/images/Function.png';
+				fic.icon = 'media/images/Function.png';
+				tree_function.add(fic);
+					
+			tree.add(tree_function);
 			
 					var tree_file = new WebFXTreeItem('File(s)', '');
 			tree_file.openIcon = 'media/images/folder.png';
 			tree_file.icon = 'media/images/folder.png';
 	
-							var file = new WebFXTreeItem('example.php', 'default/_libraries---idna_convert---example.php.html');
+							var file = new WebFXTreeItem('console.php', 'default/_cli---console.php.html');
 				file.openIcon = 'media/images/Page.png';
 				file.icon = 'media/images/Page.png';
 				tree_file.add(file);
-							var file = new WebFXTreeItem('idna_convert.class.php', 'default/_libraries---idna_convert---idna_convert.class.php.html');
+							var file = new WebFXTreeItem('Container.php', 'default/_libraries---framework---Joomla---DI---Container.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('ContainerAwareInterface.php', 'default/_libraries---framework---Joomla---DI---ContainerAwareInterface.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('DependencyResolutionException.php', 'default/_libraries---framework---Joomla---DI---Exception---DependencyResolutionException.php.html');
 				file.openIcon = 'media/images/Page.png';
 				file.icon = 'media/images/Page.png';
 				tree_file.add(file);
 							var file = new WebFXTreeItem('idna_convert.class.php', 'default/_libraries---simplepie---idn---idna_convert.class.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('password.php', 'default/_libraries---compat---password---lib---password.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('ServiceProviderInterface.php', 'default/_libraries---framework---Joomla---DI---ServiceProviderInterface.php.html');
+				file.openIcon = 'media/images/Page.png';
+				file.icon = 'media/images/Page.png';
+				tree_file.add(file);
+							var file = new WebFXTreeItem('version_test.php', 'default/_libraries---compat---password---lib---version_test.php.html');
 				file.openIcon = 'media/images/Page.png';
 				file.icon = 'media/images/Page.png';
 				tree_file.add(file);

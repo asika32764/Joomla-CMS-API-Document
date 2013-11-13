@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for frontediting_modules.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file frontediting_modules.php</h1>
+<p>Documentation is available at <a href="../Joomla-Site/Layout/_layouts---joomla---edit---frontediting_modules.php.html">frontediting_modules.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joomla.Site</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;Layout</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;Copyright&nbsp;(C)&nbsp;2005&nbsp;-&nbsp;2013&nbsp;Open&nbsp;Source&nbsp;Matters,&nbsp;Inc.&nbsp;All&nbsp;rights&nbsp;reserved.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;version&nbsp;2&nbsp;or&nbsp;later;&nbsp;see&nbsp;LICENSE.txt</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'_JEXEC'</span><span class="src-sym">)&nbsp;</span><span class="src-key">or&nbsp;</span><span class="src-key">die</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">//&nbsp;JLayout&nbsp;for&nbsp;standard&nbsp;handling&nbsp;of&nbsp;the&nbsp;edit&nbsp;modules:</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-var">$moduleHtml&nbsp;&nbsp;&nbsp;</span>=<span class="src-sym">&amp;&nbsp;</span><span class="src-var">$displayData</span><span class="src-sym">[</span><span class="src-str">'moduleHtml'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-var">$mod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$displayData</span><span class="src-sym">[</span><span class="src-str">'module'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-var">$position&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-var">$displayData</span><span class="src-sym">[</span><span class="src-str">'position'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-var">$menusEditing&nbsp;</span>=&nbsp;<span class="src-var">$displayData</span><span class="src-sym">[</span><span class="src-str">'menusediting'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/preg_match">preg_match</a><span class="src-sym">(</span><span class="src-str">'/&lt;(?:div|span|nav|ul|ol|h\d)&nbsp;[^&gt;]*class=&quot;[^&quot;]*&nbsp;jmoddiv&quot;/'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$moduleHtml</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Module&nbsp;has&nbsp;already&nbsp;module&nbsp;edit&nbsp;button:</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">//&nbsp;Add&nbsp;css&nbsp;class&nbsp;jmoddiv&nbsp;and&nbsp;data&nbsp;attributes&nbsp;for&nbsp;module-editing&nbsp;URL&nbsp;and&nbsp;for&nbsp;the&nbsp;tooltip:</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-var">$editUrl&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/Uri/JUri.html">JUri</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Uri/JUri.html#methodbase">base</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'administrator/index.php?option=com_modules&amp;view=module&amp;layout=edit&amp;id='&nbsp;</span>.&nbsp;(int)&nbsp;<span class="src-var">$mod</span><span class="src-sym">-&gt;</span><span class="src-id">id</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-comm">//&nbsp;Add&nbsp;class,&nbsp;editing&nbsp;URL&nbsp;and&nbsp;tooltip,&nbsp;and&nbsp;if&nbsp;module&nbsp;of&nbsp;type&nbsp;menu,&nbsp;also&nbsp;the&nbsp;tooltip&nbsp;for&nbsp;editing&nbsp;the&nbsp;menu&nbsp;item:</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-var">$count&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-var">$moduleHtml&nbsp;</span>=&nbsp;<a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Replace&nbsp;first&nbsp;tag&nbsp;of&nbsp;module&nbsp;with&nbsp;a&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'/^(\s*&lt;(?:div|span|nav|ul|ol|h\d)&nbsp;[^&gt;]*class=&quot;[^&quot;]*)&quot;/'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;By&nbsp;itself,&nbsp;adding&nbsp;class&nbsp;jmoddiv&nbsp;and&nbsp;data&nbsp;attributes&nbsp;for&nbsp;the&nbsp;url&nbsp;and&nbsp;tooltip:</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'\\1&nbsp;jmoddiv&quot;&nbsp;data-jmodediturl=&quot;'&nbsp;</span>.&nbsp;<span class="src-var">$editUrl&nbsp;</span>.&nbsp;<span class="src-str">'&quot;&nbsp;data-jmodtip=&quot;'</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><span class="src-id">tooltipText</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'JLIB_HTML_EDIT_MODULE'</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a><span class="src-sym">(</span><span class="src-var">$mod</span><span class="src-sym">-&gt;</span><span class="src-id">title</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'&lt;br&nbsp;/&gt;'&nbsp;</span>.&nbsp;<a href="http://www.php.net/sprintf">sprintf</a><span class="src-sym">(</span><span class="src-id"><a href="../Joomla-Platform/Language/JText.html">JText</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Language/JText.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'JLIB_HTML_EDIT_MODULE_IN_POSITION'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a><span class="src-sym">(</span><span class="src-var">$position</span><span class="src-sym">))</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-num">0</span></div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;<span class="src-str">'&quot;'</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;And&nbsp;if&nbsp;menu&nbsp;editing&nbsp;is&nbsp;enabled&nbsp;and&nbsp;allowed&nbsp;and&nbsp;it's&nbsp;a&nbsp;menu&nbsp;module,&nbsp;add&nbsp;data&nbsp;attributes&nbsp;for&nbsp;menu&nbsp;editing:</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">(</span><span class="src-var">$menusEditing&nbsp;</span>&amp;&amp;&nbsp;<span class="src-var">$mod</span><span class="src-sym">-&gt;</span><span class="src-id">module&nbsp;</span>==&nbsp;<span class="src-str">'mod_menu'&nbsp;</span>?</div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'&quot;&nbsp;data-jmenuedittip=&quot;'&nbsp;</span>.&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><span class="src-id">tooltipText</span><span class="src-sym">(</span><span class="src-str">'JLIB_HTML_EDIT_MENU_ITEM'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'JLIB_HTML_EDIT_MENU_ITEM_ID'</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'&quot;'</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">''</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$moduleHtml</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-num">1</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$count</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$count</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Load&nbsp;once&nbsp;booststrap&nbsp;tooltip&nbsp;and&nbsp;add&nbsp;stylesheet&nbsp;and&nbsp;javascript&nbsp;to&nbsp;head:</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'bootstrap.tooltip'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'bootstrap.popover'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'stylesheet'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'system/frontediting.css'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id"><a href="../Joomla-Libraries/HTML/JHtml.html">JHtml</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/HTML/JHtml.html#method_">_</a><span class="src-sym">(</span><span class="src-str">'script'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'system/frontediting.js'</span><span class="src-sym">,&nbsp;</span><span class="src-id">false</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:01:16 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

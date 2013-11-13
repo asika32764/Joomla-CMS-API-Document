@@ -133,7 +133,7 @@
 			<div class="var-summary">
 																								<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
+					<span class="var-type">array</span>
 					<a href="#$decodedData" title="details" class="var-name">$decodedData</a>
 				</div>
 											</div>
@@ -204,14 +204,16 @@
 	<div class="var-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="var-title">
-			<span class="var-type">mixed</span>
+			<span class="var-type">array</span>
 			<span class="var-name">$decodedData</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a21">21</a></span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/ource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a27">27</a></span>)
 		</span>
 	</div>
 
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The pivoted data from a $_FILES or compatible array.</p>
 	<ul class="tags">
+				<li><span class="field">since:</span> 11.1</li>
 				<li><span class="field">access:</span> protected</li>
 			</ul>
 	
@@ -261,11 +263,11 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a31">31</a></span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a38">38</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Constructor.</p>
+<p class="short-description">The class constructor.</p>
 	<ul class="tags">
 				<li><span class="field">since:</span> 12.1</li>
 				<li><span class="field">access:</span> public</li>
@@ -282,10 +284,10 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type">array</span>
-				<span class="var-name">$source</span><span class="var-description">: Ignored.</span>			</li>
+				<span class="var-name">$source</span><span class="var-description">: The source argument is ignored. $_FILES is always used.</span>			</li>
 					<li>
 				<span class="var-type">array</span>
-				<span class="var-name">$options</span><span class="var-description">: Array of configuration parameters (Optional)</span>			</li>
+				<span class="var-name">$options</span><span class="var-description">: An optional array of configuration options:                            filter : a custom JFilterInput object.</span>			</li>
 				</ul>
 		
 			<hr class="separator" />
@@ -301,7 +303,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">decodeData</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a89">89</a></span>)
+		<span class="method-title">decodeData</span> (line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a98">98</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -332,13 +334,14 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">get</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a60">60</a></span>)
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesofilesource/Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a68">68</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Gets a value from the input data.</p>
 	<ul class="tags">
 				<li><span class="field">return:</span> The filtered input value.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Filter/JFilterInput.html#methodclean">JFilterInput::clean()</a></li>
 				<li><span class="field">since:</span> 11.1</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -354,13 +357,13 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$name</span><span class="var-description">: Name of the value to get.</span>			</li>
+				<span class="var-name">$name</span><span class="var-description">: The name of the input property (usually the name of the files INPUT tag) to get.</span>			</li>
 					<li>
 				<span class="var-type">mixed</span>
-				<span class="var-name">$default</span><span class="var-description">: Default value to return if variable does not exist.</span>			</li>
+				<span class="var-name">$default</span><span class="var-description">: The default value to return if the named property does not exist.</span>			</li>
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$filter</span><span class="var-description">: Filter to apply to the value.</span>			</li>
+				<span class="var-name">$filter</span><span class="var-description">: The filter to apply to the value.</span>			</li>
 				</ul>
 		
 			<hr class="separator" />
@@ -376,11 +379,11 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">set</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a115">115</a></span>)
+		<span class="method-title">set</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Input_librariesjoomlainputfiles.php.html#a124">124</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Sets a value</p>
+<p class="short-description">Sets a value.</p>
 	<ul class="tags">
 				<li><span class="field">since:</span> 11.1</li>
 				<li><span class="field">access:</span> public</li>
@@ -397,10 +400,10 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$name</span><span class="var-description">: Name of the value to set.</span>			</li>
+				<span class="var-name">$name</span><span class="var-description">: The name of the input property to set.</span>			</li>
 					<li>
 				<span class="var-type">mixed</span>
-				<span class="var-name">$value</span><span class="var-description">: Value to assign to the input.</span>			</li>
+				<span class="var-name">$value</span><span class="var-description">: The value to assign to the input property.</span>			</li>
 				</ul>
 		
 			<hr class="separator" />
@@ -447,7 +450,7 @@
 
 	
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 08 Sep 2013 12:30:36 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Wed, 13 Nov 2013 15:00:39 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

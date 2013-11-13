@@ -238,6 +238,18 @@
 								 alt=" class"
 								 title=" class"
 								 style="vertical-align: center"/>
+						<a href="../../Joomla-Administrator/com_contenthistory/ContenthistoryModelHistory.html">ContenthistoryModelHistory</a>
+					</td>
+					<td>
+											Methods supporting a list of contenthistory records.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
 						<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html">FinderModelFilters</a>
 					</td>
 					<td>
@@ -754,7 +766,7 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																<div class="var-title">
+																																																																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
 					<span class="var-type">array</span>
 					<a href="#$cache" title="details" class="var-name">$cache</a>
@@ -766,8 +778,18 @@
 				</div>
 																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$filterFormName" title="details" class="var-name">$filterFormName</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
 					<span class="var-type">array</span>
 					<a href="#$filter_fields" title="details" class="var-name">$filter_fields</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$htmlFormName" title="details" class="var-name">$htmlFormName</a>
 				</div>
 																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
@@ -791,12 +813,26 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																															
+																																																																																																																																							
 				<div class="method-definition">
 					<img src="../../media/images/Constructor.png" alt=" "/>
 											<span class="method-result">JModelList</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
 											([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getActiveFilters" title="details" class="method-name">getActiveFilters</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">JForm/false</span>
+										<a href="#getFilterForm" title="details" class="method-name">getFilterForm</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$loadData</span> = <span class="var-default">true</span>])
 									</div>
 															
 				<div class="method-definition">
@@ -850,9 +886,30 @@
 															
 				<div class="method-definition">
 					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadForm" title="details" class="method-name">loadForm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$clear</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadFormData" title="details" class="method-name">loadFormData</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
 											<span class="method-result">void</span>
 										<a href="#populateState" title="details" class="method-name">populateState</a>
 											([<span class="var-type">string</span>&nbsp;<span class="var-name">$ordering</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#preprocessForm" title="details" class="method-name">preprocessForm</a>
+											(<span class="var-type">JForm</span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">'content'</span>])
 									</div>
 															
 				<div class="method-definition">
@@ -888,7 +945,7 @@
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$cache</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a27">27</a></span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/ource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a27">27</a></span>)
 		</span>
 	</div>
 
@@ -912,7 +969,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$context</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a36">36</a></span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a36">36</a></span>)
 		</span>
 	</div>
 
@@ -940,15 +997,39 @@
 		
 
 </div>
-<a name="var$filter_fields" id="$filter_fields"><!-- --></A>
+<a name="var$filterFormName" id="$filterFormName"><!-- --></A>
 <div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$filterFormName</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a60">60</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the filter form to load</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filter_fields" id="$filter_fields"><!-- --></A>
+<div class="evenrow">
 
 	<div class="var-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$filter_fields</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a44">44</a></span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesofilesource/Joomla-Legacy_Model_librarieslegacymodellist.php.html#a44">44</a></span>)
 		</span>
 	</div>
 
@@ -956,6 +1037,29 @@
 <p class="short-description">Valid filter fields or ordering.</p>
 	<ul class="tags">
 				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$htmlFormName" id="$htmlFormName"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$htmlFormName</span>
+			 = <span class="var-default"> 'adminForm'</span>			(line <span class="line-number"><a href="../../__filesourfilesource/omla-Legacy_Model_librarieslegacymodellist.php.html#a67">67</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Associated HTML form</p>
+	<ul class="tags">
 				<li><span class="field">access:</span> protected</li>
 			</ul>
 	
@@ -972,7 +1076,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
 			<span class="var-name">$query</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a52">52</a></span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesourcefilesource/la-Legacy_Model_librarieslegacymodellist.php.html#a52">52</a></span>)
 		</span>
 	</div>
 
@@ -1053,7 +1157,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a62">62</a></span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/ffilesource/-Legacy_Model_librarieslegacymodellist.php.html#a77">77</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1106,6 +1210,10 @@
 							</li>
 					<li>
 				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#method__construct">ContentModelArticles::__construct()</a>
+								: Constructor.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contenthistory/ContenthistoryModelHistory.html#method__construct">ContenthistoryModelHistory::__construct()</a>
 								: Constructor.
 							</li>
 					<li>
@@ -1234,12 +1342,74 @@
 							</li>
 				</ul>
 	</div>
+<a name="methodgetActiveFilters" id="getActiveFilters"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getActiveFilters</span> (line <span class="line-number"><a href="../../__filesource/fsofilesource/egacy_Model_librarieslegacymodellist.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to get the active filters</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Associative array in the format: array('filter_published' =&gt; 0)</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getActiveFilters
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFilterForm" id="getFilterForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFilterForm</span> (line <span class="line-number"><a href="../../__filesource/fsourfilesource/acy_Model_librarieslegacymodellist.php.html#a333">333</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the filter form</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the JForm object or false</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JForm/false</span>
+		<span class="method-name">
+			getFilterForm
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$loadData</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: data</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$loadData</span><span class="var-description">: load current data</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodgetItems" id="getItems"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getItems</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a113">113</a></span>)
+		<span class="method-title">getItems</span> (line <span class="line-number"><a href="../../__filesource/fsourcefilesource/y_Model_librarieslegacymodellist.php.html#a155">155</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1378,7 +1548,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getListQuery</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a150">150</a></span>)
+		<span class="method-title">getListQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Jfilesource/Model_librarieslegacymodellist.php.html#a193">193</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1430,6 +1600,10 @@
 							</li>
 					<li>
 				<a href="../../Joomla-Site/com_content/ContentModelFeatured.html#methodgetListQuery">ContentModelFeatured::getListQuery()</a>
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contenthistory/ContenthistoryModelHistory.html#methodgetListQuery">ContenthistoryModelHistory::getListQuery()</a>
+								: Build an SQL query to load the list data.
 							</li>
 					<li>
 				<a href="../../Joomla-Administrator/com_finder/FinderModelFilters.html#methodgetListQuery">FinderModelFilters::getListQuery()</a>
@@ -1570,7 +1744,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getPagination</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a165">165</a></span>)
+		<span class="method-title">getPagination</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joofilesource/del_librarieslegacymodellist.php.html#a208">208</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1612,7 +1786,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getStart</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a253">253</a></span>)
+		<span class="method-title">getStart</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomlfilesource/l_librarieslegacymodellist.php.html#a298">298</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1638,6 +1812,7 @@
 		<ul class="redefinitions">
 					<li>
 				<a href="../../Joomla-Site/com_content/ContentModelArticles.html#methodgetStart">ContentModelArticles::getStart()</a>
+								: Method to get the starting number of items for the data set.
 							</li>
 				</ul>
 	</div>
@@ -1646,7 +1821,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getStoreId</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a199">199</a></span>)
+		<span class="method-title">getStoreId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-filesource/librarieslegacymodellist.php.html#a242">242</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1823,7 +1998,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getTotal</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a217">217</a></span>)
+		<span class="method-title">getTotal</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Lefilesource/brarieslegacymodellist.php.html#a260">260</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1878,7 +2053,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getUserStateFromRequest</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a349">349</a></span>)
+		<span class="method-title">getUserStateFromRequest</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legafilesource/arieslegacymodellist.php.html#a657">657</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1918,12 +2093,92 @@
 		
 			
 	</div>
+<a name="methodloadForm" id="loadForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacyfilesource/ieslegacymodellist.php.html#a371">371</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a form object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JForm object on success, False on error.</li>
+				<li><span class="field">see:</span> <a href="../../Joomla-Platform/Form/JForm.html">JForm</a></li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadForm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$source</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$clear</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$source</span><span class="var-description">: The form source. Can be XML string if file flag is set to false.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Optional array of options for the form creation.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$clear</span><span class="var-description">: Optional argument to force load a new form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadFormData" id="loadFormData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadFormData</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Mfilesource/slegacymodellist.php.html#a430">430</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get the data that should be injected in the form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The data for the form.</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadFormData
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Joomla-Administrator/com_installer/InstallerModelUpdate.html#methodloadFormData">InstallerModelUpdate::loadFormData()</a>
+								: Method to get the data that should be injected in the form.
+							</li>
+				</ul>
+	</div>
 <a name="methodpopulateState" id="populateState"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">populateState</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a293">293</a></span>)
+		<span class="method-title">populateState</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Modfilesource/egacymodellist.php.html#a465">465</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1995,6 +2250,10 @@
 							</li>
 					<li>
 				<a href="../../Joomla-Site/com_content/ContentModelFeatured.html#methodpopulateState">ContentModelFeatured::populateState()</a>
+								: Method to auto-populate the model state.
+							</li>
+					<li>
+				<a href="../../Joomla-Administrator/com_contenthistory/ContenthistoryModelHistory.html#methodpopulateState">ContenthistoryModelHistory::populateState()</a>
 								: Method to auto-populate the model state.
 							</li>
 					<li>
@@ -2171,12 +2430,50 @@
 							</li>
 				</ul>
 	</div>
-<a name="method_getListQuery" id="_getListQuery"><!-- --></a>
+<a name="methodpreprocessForm" id="preprocessForm"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">_getListQuery</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a88">88</a></span>)
+		<span class="method-title">preprocessForm</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Modelfilesource/acymodellist.php.html#a617">617</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to allow derived classes to preprocess the form.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">throws:</span> Exception if there is an error in the form event.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			preprocessForm
+		</span>
+					(<span class="var-type">JForm</span>&nbsp;<span class="var-name">$form</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">'content'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Form/JForm.html">JForm</a></span>
+				<span class="var-name">$form</span><span class="var-description">: A JForm object.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: The data expected for the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The name of the plugin group to import (defaults to &quot;content&quot;).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getListQuery" id="_getListQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">_getListQuery</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Legacy_Model_librarieslegacymodellist.php.html#a103">103</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2231,6 +2528,8 @@
 													<img src="../../media/images/Method.png" alt=" "/>
 							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodgetTable">JModelLegacy::getTable()</a></span><br>
 													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodloadHistory">JModelLegacy::loadHistory()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
 							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodpopulateState">JModelLegacy::populateState()</a></span><br>
 													<img src="../../media/images/Method.png" alt=" "/>
 							<span class="method-name"><a href="../../Joomla-Legacy/Model/JModelLegacy.html#methodsetDbo">JModelLegacy::setDbo()</a></span><br>
@@ -2275,7 +2574,7 @@
 
 	
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 08 Sep 2013 12:33:40 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Wed, 13 Nov 2013 15:04:46 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

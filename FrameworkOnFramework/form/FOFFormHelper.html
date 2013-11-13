@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFFormHelper</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFFormHelper</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FOFForm's helper class.</p>
+<p class="description"><p>Provides a storage for filesystem's paths where FOFForm's entities reside and  methods for creating those entities. Also stores objects with entities'  prototypes for further reusing.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---form---helper.php.html">/libraries/fof/form/helper.php</a> (line <span class="field"><a href="../../filesource/fsource_FrameworkOnFramework_form_librariesfofformhelper.php.html#a22">22</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Form/JFormHelper.html">JFormHelper</a>
+   |
+   --FOFFormHelper</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addHeaderPath" title="details" class="method-name">addHeaderPath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#loadClass" title="details" class="method-name">loadClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$entity</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#loadFieldClass" title="details" class="method-name">loadFieldClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#loadFieldType" title="details" class="method-name">loadFieldType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#loadHeaderClass" title="details" class="method-name">loadHeaderClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#loadHeaderType" title="details" class="method-name">loadHeaderType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">mixed</span>
+										<a href="#loadType" title="details" class="method-name">loadType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$entity</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+																																																																							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Form/JFormHelper.html">JFormHelper</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#var$entities">JFormHelper::$entities</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#var$paths">JFormHelper::$paths</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddHeaderPath" id="addHeaderPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static addHeaderPath</span> (line <span class="line-number"><a href="../../__filesource/ource_FrameworkOnFramework_form_librariesfofformhelper.php.html#a227">227</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to add a path to the list of header include paths.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addHeaderPath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadClass" id="loadClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static loadClass</span> (line <span class="line-number"><a href="../../__fifilesource/rce_FrameworkOnFramework_form_librariesfofformhelper.php.html#a137">137</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load a class for one of the form's entities of a particular type.</p>
+<p class="description"><p>Currently, it makes sense to use this method for the &quot;field&quot; and &quot;rule&quot; entities  (but you can support more entities in your subclass).</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Class name on success or false otherwise.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			loadClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$entity</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$entity</span><span class="var-description">: One of the form entities (field or rule).</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type of an entity.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadClass">JFormHelper::loadClass()</a></dt>
+						<dd>Load a class for one of the form's entities of a particular type.</dd>
+					</dl>
+			
+	</div>
+<a name="methodloadFieldClass" id="loadFieldClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static loadFieldClass</span> (line <span class="line-number"><a href="../../__filefilesource/e_FrameworkOnFramework_form_librariesfofformhelper.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attempt to import the JFormField class file if it isn't already imported.</p>
+<p class="description"><p>You can use this method outside of JForm for loading a field for inheritance or composition.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Class name on success or false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			loadFieldClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type of a field whose class should be loaded.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadFieldClass">JFormHelper::loadFieldClass()</a></dt>
+						<dd>Attempt to import the JFormField class file if it isn't already imported.</dd>
+					</dl>
+			
+	</div>
+<a name="methodloadFieldType" id="loadFieldType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static loadFieldType</span> (line <span class="line-number"><a href="../../__filesofilesource/FrameworkOnFramework_form_librariesfofformhelper.php.html#a34">34</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load a form field object given a type.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JFormField object on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			loadFieldType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The field type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadFieldType">JFormHelper::loadFieldType()</a></dt>
+						<dd>Method to load a form field object given a type.</dd>
+					</dl>
+			
+	</div>
+<a name="methodloadHeaderClass" id="loadHeaderClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static loadHeaderClass</span> (line <span class="line-number"><a href="../../__filesourfilesource/ameworkOnFramework_form_librariesfofformhelper.php.html#a120">120</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attempt to import the FOFFormHeader class file if it isn't already imported.</p>
+<p class="description"><p>You can use this method outside of JForm for loading a field for inheritance or composition.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Class name on success or false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			loadHeaderClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Type of a field whose class should be loaded.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadHeaderType" id="loadHeaderType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static loadHeaderType</span> (line <span class="line-number"><a href="../../__filesourcefilesource/eworkOnFramework_form_librariesfofformhelper.php.html#a49">49</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load a form field object given a type.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JFormField object on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			loadHeaderType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The field type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadType" id="loadType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static loadType</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_form_librariesfofformhelper.php.html#a67">67</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load a form entity object given a type.</p>
+<p class="description"><p>Each type is loaded only once and then used as a prototype for other objects of same type.  Please, use this method only with those entities which support types (forms don't support them).</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Entity object on success, false otherwise.</li>
+				<li><span class="field">since:</span> 11.1</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">mixed</span>
+		<span class="method-name">
+			loadType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$entity</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$entity</span><span class="var-description">: The entity.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The entity type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadType">JFormHelper::loadType()</a></dt>
+						<dd>Method to load a form entity object given a type.</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Form/JFormHelper.html">JFormHelper</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddFieldPath">JFormHelper::addFieldPath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddFormPath">JFormHelper::addFormPath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddPath">JFormHelper::addPath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodaddRulePath">JFormHelper::addRulePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadClass">JFormHelper::loadClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadFieldClass">JFormHelper::loadFieldClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadFieldType">JFormHelper::loadFieldType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadRuleClass">JFormHelper::loadRuleClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadRuleType">JFormHelper::loadRuleType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Form/JFormHelper.html#methodloadType">JFormHelper::loadType()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:01:56 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

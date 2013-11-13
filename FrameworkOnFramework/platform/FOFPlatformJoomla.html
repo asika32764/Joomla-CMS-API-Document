@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFPlatformJoomla</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFPlatformJoomla</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html">FOFPlatformInterface</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Part of the FOF Platform Abstraction Layer.</p>
+<p class="description"><p>This implements the platform class for Joomla! 2.5 or later</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---platform---joomla.php.html">/libraries/fof/platform/joomla.php</a> (line <span class="field"><a href="../../filesource/fsource_FrameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../FrameworkOnFramework/platform/FOFPlatform.html">FOFPlatform</a>
+   |
+   --FOFPlatformJoomla</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#authorise" title="details" class="method-name">authorise</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$assetname</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#authorizeAdmin" title="details" class="method-name">authorizeAdmin</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#clearCache" title="details" class="method-name">clearCache</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCache" title="details" class="method-name">getCache</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getComponentBaseDirs" title="details" class="method-name">getComponentBaseDirs</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+										<a href="#getDocument" title="details" class="method-name">getDocument</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTemplateOverridePath" title="details" class="method-name">getTemplateOverridePath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTemplateSuffixes" title="details" class="method-name">getTemplateSuffixes</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/User/JUser.html">JUser</a></span>
+										<a href="#getUser" title="details" class="method-name">getUser</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getUserStateFromRequest" title="details" class="method-name">getUserStateFromRequest</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$request</span>, <span class="var-type"><a href="../../FrameworkOnFramework/input/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'none'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$setUserState</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getViewTemplatePaths" title="details" class="method-name">getViewTemplatePaths</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$layout</span> = <span class="var-default">'default'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tpl</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#importPlugin" title="details" class="method-name">importPlugin</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isBackend" title="details" class="method-name">isBackend</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isCli" title="details" class="method-name">isCli</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#isCliAdmin" title="details" class="method-name">isCliAdmin</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isEnabled" title="details" class="method-name">isEnabled</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isFrontend" title="details" class="method-name">isFrontend</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isGlobalFOFCacheEnabled" title="details" class="method-name">isGlobalFOFCacheEnabled</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#loadTranslations" title="details" class="method-name">loadTranslations</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#loginUser" title="details" class="method-name">loginUser</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$authInfo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#logoutUser" title="details" class="method-name">logoutUser</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#runPlugins" title="details" class="method-name">runPlugins</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#setCache" title="details" class="method-name">setCache</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#supportsAjaxOrdering" title="details" class="method-name">supportsAjaxOrdering</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html">FOFPlatform</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#var$instance">FOFPlatform::$instance</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#var$isEnabled">FOFPlatform::$isEnabled</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#var$ordering">FOFPlatform::$ordering</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#var$paths">FOFPlatform::$paths</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodauthorise" id="authorise"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">authorise</span> (line <span class="line-number"><a href="../../__filesource/ource_FrameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a471">471</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Perform an ACL check.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the user is allowed this action</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodauthorise">FOFPlatformInterface::authorise()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			authorise
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$assetname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: The ACL privilege to check, e.g. core.edit</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$assetname</span><span class="var-description">: The asset name to check, typically the component's name</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodauthorise">FOFPlatform::authorise()</a></dt>
+						<dd>Perform an ACL check.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodauthorise">FOFPlatformInterface::authorise()</a></dt>
+						<dd>Perform an ACL check. Please note that FOF uses by default the Joomla!  CMS convention for ACL privileges, e.g core.edit for the edit privilege.</dd>
+					</dl>
+			
+	</div>
+<a name="methodauthorizeAdmin" id="authorizeAdmin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">authorizeAdmin</span> (line <span class="line-number"><a href="../../__fifilesource/rce_FrameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a303">303</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Authorise access to the component in the back-end.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to allow loading the component, false to halt loading</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodauthorizeAdmin">FOFPlatformInterface::authorizeAdmin()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			authorizeAdmin
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The name of the component.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodauthorizeAdmin">FOFPlatform::authorizeAdmin()</a></dt>
+						<dd>Authorise access to the component in the back-end.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodauthorizeAdmin">FOFPlatformInterface::authorizeAdmin()</a></dt>
+						<dd>By default FOF will only use the Controller's onBefore* methods to</dd>
+					</dl>
+			
+	</div>
+<a name="methodclearCache" id="clearCache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">clearCache</span> (line <span class="line-number"><a href="../../__filefilesource/e_FrameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a664">664</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears the cache of system-wide FOF data. You are supposed to call this in</p>
+<p class="description"><p>your components' installation script post-installation and post-upgrade  methods or whenever you are modifying the structure of database tables  accessed by FOF. Please note that FOF's cache never expires and is not  purged by Joomla!. You MUST use this method to manually purge the cache.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			clearCache
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodclearCache">FOFPlatform::clearCache()</a></dt>
+						<dd>Clears the cache of system-wide FOF data. You are supposed to call this in</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodclearCache">FOFPlatformInterface::clearCache()</a></dt>
+						<dd>Clears the cache of system-wide FOF data. You are supposed to call this in</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetCache" id="getCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCache</span> (line <span class="line-number"><a href="../../__filesofilesource/FrameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a573">573</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves data from the cache. This is supposed to be used for system-side  FOF data, not application data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The cached value</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCache
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The key of the data to retrieve</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value to return if the key is not found or the cache is not populated</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetCache">FOFPlatform::getCache()</a></dt>
+						<dd>Retrieves data from the cache. This is supposed to be used for system-side  FOF data, not application data.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetCache">FOFPlatformInterface::getCache()</a></dt>
+						<dd>Retrieves data from the cache. This is supposed to be used for system-side  FOF data, not application data.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetComponentBaseDirs" id="getComponentBaseDirs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getComponentBaseDirs</span> (line <span class="line-number"><a href="../../__filesourfilesource/ameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the base (root) directories for a given component.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A hash array with keys main, alt, site and admin.</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetComponentBaseDirs">FOFPlatformInterface::getComponentBaseDirs()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getComponentBaseDirs
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The name of the component. For Joomla! this                               is something like &quot;com_example&quot;</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetComponentBaseDirs">FOFPlatform::getComponentBaseDirs()</a></dt>
+						<dd>Returns the base (root) directories for a given component.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetComponentBaseDirs">FOFPlatformInterface::getComponentBaseDirs()</a></dt>
+						<dd>Returns the base (root) directories for a given component. The  &quot;component&quot; is used in the sense of what we call &quot;component&quot; in Joomla!,  &quot;plugin&quot; in WordPress and &quot;module&quot; in Drupal, i.e. an application which  is running inside our main application (CMS).</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetDocument" id="getDocument"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDocument</span> (line <span class="line-number"><a href="../../__filesourcefilesource/eworkOnFramework_platform_librariesfofplatformjoomla.php.html#a342">342</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the JDocument object which handles this component's response.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetDocument">FOFPlatformInterface::getDocument()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Document/JDocument.html">JDocument</a></span>
+		<span class="method-name">
+			getDocument
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetDocument">FOFPlatform::getDocument()</a></dt>
+						<dd>Returns the JDocument object which handles this component's response.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetDocument">FOFPlatformInterface::getDocument()</a></dt>
+						<dd>Returns the JDocument object which handles this component's response. You  may also return null and FOF will a. try to figure out the output type by  examining the &quot;format&quot; input parameter (or fall back to &quot;html&quot;) and b.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTemplateOverridePath" id="getTemplateOverridePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTemplateOverridePath</span> (line <span class="line-number"><a href="../../__filesource/ffilesource/orkOnFramework_platform_librariesfofplatformjoomla.php.html#a231">231</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the absolute path to the application's template overrides  directory for a specific component. We will use it to look for template  files instead of the regular component directorues. If the application  does not have such a thing as template overrides return an empty string.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The path to the template overrides directory</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTemplateOverridePath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$absolute</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The name of the component for which to fetch the overrides</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$absolute</span><span class="var-description">: Should I return an absolute or relative path?</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetTemplateOverridePath">FOFPlatform::getTemplateOverridePath()</a></dt>
+						<dd>Return the absolute path to the application's template overrides  directory for a specific component. We will use it to look for template  files instead of the regular component directorues. If the application  does not have such a thing as template overrides return an empty string.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetTemplateOverridePath">FOFPlatformInterface::getTemplateOverridePath()</a></dt>
+						<dd>Return the absolute path to the application's template overrides  directory for a specific component. We will use it to look for template  files instead of the regular component directorues. If the application  does not have such a thing as template overrides return an empty string.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetTemplateSuffixes" id="getTemplateSuffixes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTemplateSuffixes</span> (line <span class="line-number"><a href="../../__filesource/fsofilesource/kOnFramework_platform_librariesfofplatformjoomla.php.html#a207">207</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get application-specific suffixes to use with template paths. This allows  you to look for view template overrides based on the application version.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A plain array of suffixes to try in template names</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTemplateSuffixes
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetTemplateSuffixes">FOFPlatform::getTemplateSuffixes()</a></dt>
+						<dd>Get application-specific suffixes to use with template paths. This allows  you to look for view template overrides based on the application version.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetTemplateSuffixes">FOFPlatformInterface::getTemplateSuffixes()</a></dt>
+						<dd>Get application-specific suffixes to use with template paths. This allows  you to look for view template overrides based on the application version.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetUser" id="getUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUser</span> (line <span class="line-number"><a href="../../__filesource/fsourfilesource/nFramework_platform_librariesfofplatformjoomla.php.html#a330">330</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return a user object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The JUser object for the specified user</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetUser">FOFPlatformInterface::getUser()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/User/JUser.html">JUser</a></span>
+		<span class="method-name">
+			getUser
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: The user ID to load. Skip or use null to retrieve                         the object for the currently logged in user.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetUser">FOFPlatform::getUser()</a></dt>
+						<dd>Returns the JUser object for the current user</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetUser">FOFPlatformInterface::getUser()</a></dt>
+						<dd>Returns a user object.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetUserStateFromRequest" id="getUserStateFromRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUserStateFromRequest</span> (line <span class="line-number"><a href="../../__filesource/fsourcefilesource/ramework_platform_librariesfofplatformjoomla.php.html#a375">375</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method will try retrieving a variable from the request (input) data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the variable</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetUserStateFromRequest">FOFPlatformInterface::getUserStateFromRequest()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getUserStateFromRequest
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$request</span>, <span class="var-type"><a href="../../FrameworkOnFramework/input/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'none'</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$setUserState</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The user state key for the variable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$request</span><span class="var-description">: The request variable name for the variable</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../FrameworkOnFramework/input/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The FOFInput object with the request (input) data</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: The default value. Default: null</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The filter type for the variable data. Default: none (no filtering)</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$setUserState</span><span class="var-description">: Should I set the user state with the fetched value?</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetUserStateFromRequest">FOFPlatform::getUserStateFromRequest()</a></dt>
+						<dd>This method will try retrieving a variable from the request (input) data.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetUserStateFromRequest">FOFPlatformInterface::getUserStateFromRequest()</a></dt>
+						<dd>This method will try retrieving a variable from the request (input) data.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetViewTemplatePaths" id="getViewTemplatePaths"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getViewTemplatePaths</span> (line <span class="line-number"><a href="../../__filesource/fsource_Ffilesource/mework_platform_librariesfofplatformjoomla.php.html#a166">166</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return a list of the view template paths for this component.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> FOFPlatformInterface::getViewTemplateDirs()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getViewTemplatePaths
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$layout</span> = <span class="var-default">'default'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tpl</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The name of the component. For Joomla! this                                is something like &quot;com_example&quot;</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The name of the view you're looking a                                template for</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$layout</span><span class="var-description">: The layout name to load, e.g. 'default'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tpl</span><span class="var-description">: The sub-template name to load (null by default)</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$strict</span><span class="var-description">: If true, only the specified layout will be searched for.                                Otherwise we'll fall back to the 'default' layout if the                                specified layout is not found.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetViewTemplatePaths">FOFPlatform::getViewTemplatePaths()</a></dt>
+						<dd>Return a list of the view template directories for this component.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodgetViewTemplatePaths">FOFPlatformInterface::getViewTemplatePaths()</a></dt>
+						<dd>Return a list of the view template paths for this component. The paths  are in the format site:/component_name/view_name/layout_name or  admin:/component_name/view_name/layout_name</dd>
+					</dl>
+			
+	</div>
+<a name="methodimportPlugin" id="importPlugin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">importPlugin</span> (line <span class="line-number"><a href="../../__filesource/fsource_Frafilesource/work_platform_librariesfofplatformjoomla.php.html#a428">428</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load plugins of a specific type. Obviously this seems to only be required  in the Joomla! CMS.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodimportPlugin">FOFPlatformInterface::importPlugin()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			importPlugin
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The type of the plugins to be loaded</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodimportPlugin">FOFPlatform::importPlugin()</a></dt>
+						<dd>Load plugins of a specific type. Obviously this seems to only be required  in the Joomla! CMS.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodimportPlugin">FOFPlatformInterface::importPlugin()</a></dt>
+						<dd>Load plugins of a specific type. Obviously this seems to only be required  in the Joomla! CMS.</dd>
+					</dl>
+			
+	</div>
+<a name="methodisBackend" id="isBackend"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isBackend</span> (line <span class="line-number"><a href="../../__filesource/fsource_Framefilesource/rk_platform_librariesfofplatformjoomla.php.html#a488">488</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is this the administrative section of the component?</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisBackend">FOFPlatformInterface::isBackend()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isBackend
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisBackend">FOFPlatform::isBackend()</a></dt>
+						<dd>Is this the administrative section of the component?</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisBackend">FOFPlatformInterface::isBackend()</a></dt>
+						<dd>Is this the administrative section of the component?</dd>
+					</dl>
+			
+	</div>
+<a name="methodisCli" id="isCli"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isCli</span> (line <span class="line-number"><a href="../../__filesource/fsource_Framewofilesource/_platform_librariesfofplatformjoomla.php.html#a516">516</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is this a component running in a CLI application?</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisCli">FOFPlatformInterface::isCli()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isCli
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisCli">FOFPlatform::isCli()</a></dt>
+						<dd>Is this a component running in a CLI application?</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisCli">FOFPlatformInterface::isCli()</a></dt>
+						<dd>Is this a component running in a CLI application?</dd>
+					</dl>
+			
+	</div>
+<a name="methodisCliAdmin" id="isCliAdmin"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isCliAdmin</span> (line <span class="line-number"><a href="../../__filesource/fsource_Frameworkfilesource/latform_librariesfofplatformjoomla.php.html#a82">82</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main function to detect if we're running in a CLI environment and we're admin</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> isCLI and isAdmin. It's not an associtive array, so we can use list.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			isCliAdmin
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisEnabled" id="isEnabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isEnabled</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnfilesource/tform_librariesfofplatformjoomla.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is this platform enabled?</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisEnabled">FOFPlatformInterface::isEnabled()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isEnabled
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisEnabled">FOFPlatform::isEnabled()</a></dt>
+						<dd>Is this platform enabled?</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisEnabled">FOFPlatformInterface::isEnabled()</a></dt>
+						<dd>Is this platform enabled? This is used for automatic platform detection.</dd>
+					</dl>
+			
+	</div>
+<a name="methodisFrontend" id="isFrontend"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isFrontend</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFrfilesource/orm_librariesfofplatformjoomla.php.html#a502">502</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is this the public section of the component?</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisFrontend">FOFPlatformInterface::isFrontend()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isFrontend
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisFrontend">FOFPlatform::isFrontend()</a></dt>
+						<dd>Is this the public section of the component?</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisFrontend">FOFPlatformInterface::isFrontend()</a></dt>
+						<dd>Is this the public section of the component?</dd>
+					</dl>
+			
+	</div>
+<a name="methodisGlobalFOFCacheEnabled" id="isGlobalFOFCacheEnabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isGlobalFOFCacheEnabled</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramfilesource/m_librariesfofplatformjoomla.php.html#a541">541</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is the global FOF cache enabled?</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isGlobalFOFCacheEnabled
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisGlobalFOFCacheEnabled">FOFPlatform::isGlobalFOFCacheEnabled()</a></dt>
+						<dd>Is the global FOF cache enabled?</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodisGlobalFOFCacheEnabled">FOFPlatformInterface::isGlobalFOFCacheEnabled()</a></dt>
+						<dd>Is the global FOF cache enabled?</dd>
+					</dl>
+			
+	</div>
+<a name="methodloadTranslations" id="loadTranslations"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loadTranslations</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramewfilesource/librariesfofplatformjoomla.php.html#a276">276</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load the translation files for a given component.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodloadTranslations">FOFPlatformInterface::loadTranslations()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadTranslations
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span><span class="var-description">: The name of the component. For Joomla! this                               is something like &quot;com_example&quot;</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodloadTranslations">FOFPlatform::loadTranslations()</a></dt>
+						<dd>Load the translation files for a given component.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodloadTranslations">FOFPlatformInterface::loadTranslations()</a></dt>
+						<dd>Load the translation files for a given component. The  &quot;component&quot; is used in the sense of what we call &quot;component&quot; in Joomla!,  &quot;plugin&quot; in WordPress and &quot;module&quot; in Drupal, i.e. an application which  is running inside our main application (CMS).</dd>
+					</dl>
+			
+	</div>
+<a name="methodloginUser" id="loginUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">loginUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFrameworfilesource/brariesfofplatformjoomla.php.html#a678">678</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">logs in a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			loginUser
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$authInfo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$authInfo</span><span class="var-description">: authentification information</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodloginUser">FOFPlatform::loginUser()</a></dt>
+						<dd>logs in a user</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodloginUser">FOFPlatformInterface::loginUser()</a></dt>
+						<dd>logs in a user</dd>
+					</dl>
+			
+	</div>
+<a name="methodlogoutUser" id="logoutUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">logoutUser</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_filesource/ariesfofplatformjoomla.php.html#a708">708</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">logs out a user</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			logoutUser
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodlogoutUser">FOFPlatform::logoutUser()</a></dt>
+						<dd>logs out a user</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodlogoutUser">FOFPlatformInterface::logoutUser()</a></dt>
+						<dd>logs out a user</dd>
+					</dl>
+			
+	</div>
+<a name="methodrunPlugins" id="runPlugins"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">runPlugins</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_plfilesource/iesfofplatformjoomla.php.html#a447">447</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute plugins (system-level triggers) and fetch back an array with  their return values.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A simple array containing the resutls of the plugins triggered</li>
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodrunPlugins">FOFPlatformInterface::runPlugins()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			runPlugins
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$event</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$event</span><span class="var-description">: The event (trigger) name, e.g. onBeforeScratchMyEar</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: A hash array of data sent to the plugins as part of the trigger</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodrunPlugins">FOFPlatform::runPlugins()</a></dt>
+						<dd>Execute plugins (system-level triggers) and fetch back an array with  their return values.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodrunPlugins">FOFPlatformInterface::runPlugins()</a></dt>
+						<dd>Execute plugins (system-level triggers) and fetch back an array with  their return values.</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetCache" id="setCache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCache</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_platfilesource/sfofplatformjoomla.php.html#a555">555</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Saves something to the cache. This is supposed to be used for system-wide  FOF data, not application data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True on success</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setCache
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The key of the data to save</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: The actual data to save</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodsetCache">FOFPlatform::setCache()</a></dt>
+						<dd>Saves something to the cache. This is supposed to be used for system-wide  FOF data, not application data.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodsetCache">FOFPlatformInterface::setCache()</a></dt>
+						<dd>Saves something to the cache. This is supposed to be used for system-wide  FOF data, not application data.</dd>
+					</dl>
+			
+	</div>
+<a name="methodsupportsAjaxOrdering" id="supportsAjaxOrdering"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">supportsAjaxOrdering</span> (line <span class="line-number"><a href="../../__filesource/fsource_FrameworkOnFramework_platform_librariesfofplatformjoomla.php.html#a531">531</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is AJAX re-ordering supported? This is 100% Joomla!-CMS specific. All  other platforms should return false and never ask why.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodsupportsAjaxOrdering">FOFPlatformInterface::supportsAjaxOrdering()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			supportsAjaxOrdering
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodsupportsAjaxOrdering">FOFPlatform::supportsAjaxOrdering()</a></dt>
+						<dd>Is AJAX re-ordering supported? This is 100% Joomla!-CMS specific. All  other platforms should return false and never ask why.</dd>
+					</dl>
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../FrameworkOnFramework/platform/FOFPlatformInterface.html#methodsupportsAjaxOrdering">FOFPlatformInterface::supportsAjaxOrdering()</a></dt>
+						<dd>Is AJAX re-ordering supported? This is 100% Joomla!-CMS specific. All  other platforms should return false and never ask why.</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html">FOFPlatform</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodauthorise">FOFPlatform::authorise()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodauthorizeAdmin">FOFPlatform::authorizeAdmin()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodcheckVersion">FOFPlatform::checkVersion()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodclearCache">FOFPlatform::clearCache()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodforceInstance">FOFPlatform::forceInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetCache">FOFPlatform::getCache()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetComponentBaseDirs">FOFPlatform::getComponentBaseDirs()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetDocument">FOFPlatform::getDocument()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetInstance">FOFPlatform::getInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetOrdering">FOFPlatform::getOrdering()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetTemplateOverridePath">FOFPlatform::getTemplateOverridePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetTemplateSuffixes">FOFPlatform::getTemplateSuffixes()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetUser">FOFPlatform::getUser()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetUserStateFromRequest">FOFPlatform::getUserStateFromRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodgetViewTemplatePaths">FOFPlatform::getViewTemplatePaths()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodimportPlugin">FOFPlatform::importPlugin()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisBackend">FOFPlatform::isBackend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisCli">FOFPlatform::isCli()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisEnabled">FOFPlatform::isEnabled()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisFrontend">FOFPlatform::isFrontend()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodisGlobalFOFCacheEnabled">FOFPlatform::isGlobalFOFCacheEnabled()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodloadTranslations">FOFPlatform::loadTranslations()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodloginUser">FOFPlatform::loginUser()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodlogoutUser">FOFPlatform::logoutUser()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodregisterPlatformPath">FOFPlatform::registerPlatformPath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodrunPlugins">FOFPlatform::runPlugins()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodsetCache">FOFPlatform::setCache()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodsetErrorHandling">FOFPlatform::setErrorHandling()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodsupportsAjaxOrdering">FOFPlatform::supportsAjaxOrdering()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/platform/FOFPlatform.html#methodunregisterPlatformPath">FOFPlatform::unregisterPlatformPath()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:03:40 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

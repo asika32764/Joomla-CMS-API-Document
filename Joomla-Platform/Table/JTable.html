@@ -104,7 +104,7 @@
                 <p class="implements">
             Implements interfaces:
             <ul>
-                <li><a href="../../Joomla/Observer/JObservableInterface.html">JObservableInterface</a></li>            </ul>
+                <li><a href="../../Joomla-Platform/Observer/JObservableInterface.html">JObservableInterface</a></li>            </ul>
         </p>
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Abstract Table class</p>
@@ -272,7 +272,7 @@
 						<a href="../../Joomla-Administrator/com_templates/TemplatesTableStyle.html">TemplatesTableStyle</a>
 					</td>
 					<td>
-											
+											Template style table class.
 										</td>
 				</tr>
 								<tr>
@@ -297,6 +297,18 @@
 					</td>
 					<td>
 											Weblink Table class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Joomla-Libraries/Table/JTableContenthistory.html">JTableContenthistory</a>
+					</td>
+					<td>
+											Content History table.
 										</td>
 				</tr>
 								<tr>
@@ -485,7 +497,12 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																																								<div class="var-title">
+																																																																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$_autoincrement" title="details" class="var-name">$_autoincrement</a>
+				</div>
+																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
 					<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
 					<a href="#$_db" title="details" class="var-name">$_db</a>
@@ -497,7 +514,7 @@
 				</div>
 																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
-					<span class="var-type"><a href="../../Joomla/Observer/JObserverUpdater.html">JObserverUpdater</a></span>
+					<span class="var-type"><a href="../../Joomla-Platform/Observer/JObserverUpdater.html">JObserverUpdater</a></span>
 					<a href="#$_observers" title="details" class="var-name">$_observers</a>
 				</div>
 																<div class="var-title">
@@ -514,6 +531,11 @@
 					<img src="../../media/images/Variable.png" alt=" " />
 					<span class="var-type">string</span>
 					<a href="#$_tbl_key" title="details" class="var-name">$_tbl_key</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_tbl_keys" title="details" class="var-name">$_tbl_keys</a>
 				</div>
 																<div class="var-title">
 					<img src="../../media/images/Variable.png" alt=" " />
@@ -544,26 +566,33 @@
 										<a href="#addIncludePath" title="details" class="method-name">addIncludePath</a>
 											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
 									</div>
-																																																																															
+																																																																																							
 				<div class="method-definition">
 					<img src="../../media/images/StaticMethod.png" alt=" "/>
 					static 						<span class="method-result">mixed</span>
 										<a href="#getInstance" title="details" class="method-name">getInstance</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'JTable'</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
 									</div>
-																																																																																																																																																																																											
+																																																																																																																																																																																																											
 				<div class="method-definition">
 					<img src="../../media/images/Constructor.png" alt=" "/>
 											<span class="method-result">JTable</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
 									</div>
 																							
 				<div class="method-definition">
 					<img src="../../media/images/Method.png" alt=" "/>
 											<span class="method-result">void</span>
+										<a href="#appendPrimaryKeys" title="details" class="method-name">appendPrimaryKeys</a>
+											(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
 										<a href="#attachObserver" title="details" class="method-name">attachObserver</a>
-											(<span class="var-type">JObserverInterface</span>&nbsp;<span class="var-name">$observer</span>)
+											(<span class="var-type"><a href="../../Joomla-Platform/Observer/JObserverInterface.html">JObserverInterface</a></span>&nbsp;<span class="var-name">$observer</span>)
 									</div>
 															
 				<div class="method-definition">
@@ -617,9 +646,9 @@
 																							
 				<div class="method-definition">
 					<img src="../../media/images/Method.png" alt=" "/>
-											<span class="method-result">string</span>
+											<span class="method-result">mixed</span>
 										<a href="#getKeyName" title="details" class="method-name">getKeyName</a>
-										()
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$multiple</span> = <span class="var-default">false</span>])
 									</div>
 															
 				<div class="method-definition">
@@ -631,9 +660,16 @@
 															
 				<div class="method-definition">
 					<img src="../../media/images/Method.png" alt=" "/>
-											<span class="method-result"><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a>|null</span>
+											<span class="method-result"><a href="../../Joomla-Platform/Table/JTableObserver.html">JTableObserver</a>|null</span>
 										<a href="#getObserverOfClass" title="details" class="method-name">getObserverOfClass</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$observerClass</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getPrimaryKey" title="details" class="method-name">getPrimaryKey</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span> = <span class="var-default">array()</span>])
 									</div>
 															
 				<div class="method-definition">
@@ -647,6 +683,13 @@
 					<img src="../../media/images/Method.png" alt=" "/>
 											<span class="method-result">string</span>
 										<a href="#getTableName" title="details" class="method-name">getTableName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#hasPrimaryKey" title="details" class="method-name">hasPrimaryKey</a>
 										()
 									</div>
 															
@@ -780,6 +823,30 @@
 					</div>
 		<div class="info-box-body">
 			
+<a name="var$_autoincrement" id="$_autoincrement"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$_autoincrement</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/ource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a97">97</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Indicates that the primary keys autoincrement.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
 <a name="var$_db" id="$_db"><!-- --></A>
 <div class="evenrow">
 
@@ -788,7 +855,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
 			<span class="var-name">$_db</span>
-						(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a57">57</a></span>)
+						(line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a65">65</a></span>)
 		</span>
 	</div>
 
@@ -812,7 +879,7 @@
 		<span class="var-title">
 			<span class="var-type">boolean</span>
 			<span class="var-name">$_locked</span>
-			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a81">81</a></span>)
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a89">89</a></span>)
 		</span>
 	</div>
 
@@ -834,9 +901,9 @@
 	<div class="var-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="var-title">
-			<span class="var-type"><a href="../../Joomla/Observer/JObserverUpdater.html">JObserverUpdater</a></span>
+			<span class="var-type"><a href="../../Joomla-Platform/Observer/JObserverUpdater.html">JObserverUpdater</a></span>
 			<span class="var-name">$_observers</span>
-						(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a89">89</a></span>)
+						(line <span class="line-number"><a href="../../__filesofilesource/Joomla-Platform_Table_librariesjoomlatabletable.php.html#a105">105</a></span>)
 		</span>
 	</div>
 
@@ -860,7 +927,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../../Joomla-Platform/Access/JAccessRules.html">JAccessRules</a></span>
 			<span class="var-name">$_rules</span>
-						(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a73">73</a></span>)
+						(line <span class="line-number"><a href="../../__filesourfilesource/omla-Platform_Table_librariesjoomlatabletable.php.html#a81">81</a></span>)
 		</span>
 	</div>
 
@@ -885,7 +952,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$_tbl</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a41">41</a></span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesourcefilesource/la-Platform_Table_librariesjoomlatabletable.php.html#a41">41</a></span>)
 		</span>
 	</div>
 
@@ -909,7 +976,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$_tbl_key</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a49">49</a></span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/ffilesource/-Platform_Table_librariesjoomlatabletable.php.html#a49">49</a></span>)
 		</span>
 	</div>
 
@@ -925,15 +992,39 @@
 		
 
 </div>
-<a name="var$_trackAssets" id="$_trackAssets"><!-- --></A>
+<a name="var$_tbl_keys" id="$_tbl_keys"><!-- --></A>
 <div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_tbl_keys</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsofilesource/latform_Table_librariesjoomlatabletable.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the primary key fields in the table.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_trackAssets" id="$_trackAssets"><!-- --></A>
+<div class="oddrow">
 
 	<div class="var-header">
 		<img src="../../media/images/Variable.png" />
 		<span class="var-title">
 			<span class="var-type">boolean</span>
 			<span class="var-name">$_trackAssets</span>
-			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a65">65</a></span>)
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../../__filesource/fsourfilesource/tform_Table_librariesjoomlatabletable.php.html#a73">73</a></span>)
 		</span>
 	</div>
 
@@ -975,11 +1066,11 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodaddIncludePath" id="addIncludePath"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/StaticMethod.png" />
-		<span class="method-title">static addIncludePath</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a263">263</a></span>)
+		<span class="method-title">static addIncludePath</span> (line <span class="line-number"><a href="../../__filesource/fsourcefilesource/orm_Table_librariesjoomlatabletable.php.html#a308">308</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1009,15 +1100,15 @@
 			
 	</div>
 <a name="methodgetInstance" id="getInstance"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/StaticMethod.png" />
-		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a214">214</a></span>)
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_Jfilesource/m_Table_librariesjoomlatabletable.php.html#a256">256</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Static method to get an instance of a JTable class if it can be found in  the table include paths.  To add include paths for searching for JTable  classes @see JTable::addIncludePath().</p>
+<p class="short-description">Static method to get an instance of a JTable class if it can be found in  the table include paths.  To add include paths for searching for JTable  classes see JTable::addIncludePath().</p>
 	<ul class="tags">
 				<li><span class="field">return:</span> A JTable object if found or boolean false if one could not be found.</li>
 				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getInstance">http://docs.joomla.org/JTable/getInstance</a></li>
@@ -1048,11 +1139,11 @@
 			
 	</div>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a102">102</a></span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joofilesource/Table_librariesjoomlatabletable.php.html#a118">118</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1067,7 +1158,7 @@
 		<span class="method-name">
 			__construct
 		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>&nbsp;<span class="var-name">$db</span>)
 			</div>
 	
 			<ul class="parameters">
@@ -1075,8 +1166,8 @@
 				<span class="var-type">string</span>
 				<span class="var-name">$table</span><span class="var-description">: Name of the table to model.</span>			</li>
 					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$key</span><span class="var-description">: Name of the primary key field in the table.</span>			</li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span><span class="var-description">: Name of the primary key field in the table or array of field names that compose the primary key.</span>			</li>
 					<li>
 				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseDriver.html">JDatabaseDriver</a></span>
 				<span class="var-name">$db</span><span class="var-description">: JDatabaseDriver object.</span>			</li>
@@ -1140,6 +1231,10 @@
 							</li>
 					<li>
 				<a href="../../Joomla-Administrator/com_weblinks/WeblinksTableWeblink.html#method__construct">WeblinksTableWeblink::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../../Joomla-Libraries/Table/JTableContenthistory.html#method__construct">JTableContenthistory::__construct()</a>
 								: Constructor
 							</li>
 					<li>
@@ -1212,12 +1307,46 @@
 							</li>
 				</ul>
 	</div>
+<a name="methodappendPrimaryKeys" id="appendPrimaryKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">appendPrimaryKeys</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomlfilesource/ble_librariesjoomlatabletable.php.html#a415">415</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to append the primary keys for this table to a query.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			appendPrimaryKeys
+		</span>
+					(<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$pk</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+				<span class="var-name">$query</span><span class="var-description">: A query object to append.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$pk</span><span class="var-description">: Optional primary key parameter.</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodattachObserver" id="attachObserver"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">attachObserver</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a153">153</a></span>)
+		<span class="method-title">attachObserver</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-filesource/e_librariesjoomlatabletable.php.html#a194">194</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1233,15 +1362,21 @@
 		<span class="method-name">
 			attachObserver
 		</span>
-					(<span class="var-type">JObserverInterface</span>&nbsp;<span class="var-name">$observer</span>)
+					(<span class="var-type"><a href="../../Joomla-Platform/Observer/JObserverInterface.html">JObserverInterface</a></span>&nbsp;<span class="var-name">$observer</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"><a href="../../Joomla/Observer/JObserverInterface.html">JObserverInterface</a>|<a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a></span>
+				<span class="var-type"><a href="../../Joomla-Platform/Observer/JObserverInterface.html">JObserverInterface</a>|<a href="../../Joomla-Platform/Table/JTableObserver.html">JTableObserver</a></span>
 				<span class="var-name">$observer</span><span class="var-description">: The observer object</span>			</li>
 				</ul>
 		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../../Joomla-Platform/Observer/JObservableInterface.html#methodattachObserver">JObservableInterface::attachObserver()</a></dt>
+						<dd>Adds an observer to this JObservableInterface instance.</dd>
+					</dl>
 			
 	</div>
 <a name="methodbind" id="bind"><!-- --></a>
@@ -1249,7 +1384,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">bind</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a477">477</a></span>)
+		<span class="method-title">bind</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Plfilesource/librariesjoomlatabletable.php.html#a587">587</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1354,7 +1489,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">check</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a607">607</a></span>)
+		<span class="method-title">check</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platfilesource/brariesjoomlatabletable.php.html#a735">735</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1482,7 +1617,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">checkIn</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a929">929</a></span>)
+		<span class="method-title">checkIn</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platfofilesource/ariesjoomlatabletable.php.html#a1081">1081</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1516,7 +1651,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">checkOut</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a881">881</a></span>)
+		<span class="method-title">checkOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platformfilesource/iesjoomlatabletable.php.html#a1018">1018</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1554,11 +1689,11 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a806">806</a></span>)
+		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Tfilesource/sjoomlatabletable.php.html#a930">930</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Deletes this row in database (or if provided, the row of key $pk)</p>
+<p class="short-description">Method to delete a row from the database table by primary key value.</p>
 	<ul class="tags">
 				<li><span class="field">return:</span> True on success.</li>
 				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/delete">http://docs.joomla.org/JTable/delete</a></li>
@@ -1619,7 +1754,7 @@
 							</li>
 					<li>
 				<a href="../../Joomla-Legacy/Table/JTableMenuType.html#methoddelete">JTableMenuType::delete()</a>
-								: Override parent delete method to delete tags information.
+								: Method to delete a row from the database table by primary key value.
 							</li>
 					<li>
 				<a href="../../Joomla-Legacy/Table/JTableSession.html#methoddelete">JTableSession::delete()</a>
@@ -1632,7 +1767,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getDbo</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a385">385</a></span>)
+		<span class="method-title">getDbo</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Tabfilesource/oomlatabletable.php.html#a492">492</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1660,7 +1795,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getFields</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a180">180</a></span>)
+		<span class="method-title">getFields</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Tablefilesource/mlatabletable.php.html#a221">221</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1688,26 +1823,31 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getKeyName</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a372">372</a></span>)
+		<span class="method-title">getKeyName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_lfilesource/atabletable.php.html#a464">464</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Method to get the primary key field name for the table.</p>
 	<ul class="tags">
-				<li><span class="field">return:</span> The name of the primary key for the table.</li>
+				<li><span class="field">return:</span> Array of primary key field names or string containing the first primary key field.</li>
 				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/getKeyName">http://docs.joomla.org/JTable/getKeyName</a></li>
 				<li><span class="field">since:</span> 11.1</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">string</span>
+		<span class="method-result">mixed</span>
 		<span class="method-name">
 			getKeyName
 		</span>
-				()
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$multiple</span> = <span class="var-default">false</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$multiple</span><span class="var-description">: True to return all primary keys (as an array) or false to return just the first one (as a string).</span>			</li>
+				</ul>
 		
 			
 	</div>
@@ -1716,7 +1856,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getNextOrder</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1054">1054</a></span>)
+		<span class="method-title">getNextOrder</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_libfilesource/abletable.php.html#a1278">1278</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1751,7 +1891,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getObserverOfClass</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a167">167</a></span>)
+		<span class="method-title">getObserverOfClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librafilesource/letable.php.html#a208">208</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1762,7 +1902,7 @@
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result"><a href="../../Joomla/Table/JTableObserver.html">JTableObserver</a>|null</span>
+		<span class="method-result"><a href="../../Joomla-Platform/Table/JTableObserver.html">JTableObserver</a>|null</span>
 		<span class="method-name">
 			getObserverOfClass
 		</span>
@@ -1777,12 +1917,44 @@
 		
 			
 	</div>
-<a name="methodgetRules" id="getRules"><!-- --></a>
+<a name="methodgetPrimaryKey" id="getPrimaryKey"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getRules</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a435">435</a></span>)
+		<span class="method-title">getPrimaryKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librarifilesource/table.php.html#a1312">1312</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the primary key values for this table using passed in values as a default.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of primary key names and values.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPrimaryKey
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$keys</span><span class="var-description">: Optional primary key values to use.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRules" id="getRules"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesfilesource/ble.php.html#a542">542</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1805,11 +1977,11 @@
 			
 	</div>
 <a name="methodgetTableName" id="getTableName"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">getTableName</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a359">359</a></span>)
+		<span class="method-title">getTableName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjofilesource/e.php.html#a449">449</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1832,12 +2004,39 @@
 		
 			
 	</div>
+<a name="methodhasPrimaryKey" id="hasPrimaryKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">hasPrimaryKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomfilesource/php.html#a1138">1138</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate that the primary key has been set.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if the primary key(s) have been set.</li>
+				<li><span class="field">since:</span> 12.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasPrimaryKey
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
 <a name="methodhit" id="hit"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">hit</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a974">974</a></span>)
+		<span class="method-title">hit</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlafilesource/p.html#a1183">1183</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1845,6 +2044,7 @@
 	<ul class="tags">
 				<li><span class="field">return:</span> True on success.</li>
 				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/hit">http://docs.joomla.org/JTable/hit</a></li>
+				<li><span class="field">throws:</span> UnexpectedValueException</li>
 				<li><span class="field">since:</span> 11.1</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -1870,7 +2070,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">isCheckedOut</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1020">1020</a></span>)
+		<span class="method-title">isCheckedOut</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatafilesource/html#a1244">1244</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1906,7 +2106,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">load</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a528">528</a></span>)
+		<span class="method-title">load</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatablfilesource/ml#a639">639</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1914,6 +2114,7 @@
 	<ul class="tags">
 				<li><span class="field">return:</span> True if successful. False if row not found.</li>
 				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/load">http://docs.joomla.org/JTable/load</a></li>
+				<li><span class="field">throws:</span> InvalidArgumentException</li>
 				<li><span class="field">throws:</span> RuntimeException</li>
 				<li><span class="field">throws:</span> UnexpectedValueException</li>
 				<li><span class="field">since:</span> 11.1</li>
@@ -1952,7 +2153,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">move</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1154">1154</a></span>)
+		<span class="method-title">move</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletfilesource/#a1403">1403</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1998,7 +2199,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">publish</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1250">1250</a></span>)
+		<span class="method-title">publish</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletabfilesource/1499">1499</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2085,7 +2286,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">reorder</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1091">1091</a></span>)
+		<span class="method-title">reorder</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletablefilesource/40">1340</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2119,11 +2320,11 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">reset</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a450">450</a></span>)
+		<span class="method-title">reset</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.pfilesource/>557</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Method to reset class properties to the defaults set in the class  definition. It will ignore the primary key as well as any private class  properties.</p>
+<p class="short-description">Method to reset class properties to the defaults set in the class  definition. It will ignore the primary key as well as any private class  properties (except $_errors).</p>
 	<ul class="tags">
 				<li><span class="field">link:</span> <a href="http://docs.joomla.org/JTable/reset">http://docs.joomla.org/JTable/reset</a></li>
 				<li><span class="field">since:</span> 11.1</li>
@@ -2146,7 +2347,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">save</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a756">756</a></span>)
+		<span class="method-title">save</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.phpfilesource/80</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2186,7 +2387,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">setDBO</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a400">400</a></span>)
+		<span class="method-title">setDBO</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.hfilesource/</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2219,7 +2420,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">setRules</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a416">416</a></span>)
+		<span class="method-title">setRules</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.htmfilesource/a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2250,7 +2451,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">store</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a626">626</a></span>)
+		<span class="method-title">store</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#filesource/</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2314,6 +2515,10 @@
 								: Overload the store method for the Weblinks table.
 							</li>
 					<li>
+				<a href="../../Joomla-Libraries/Table/JTableContenthistory.html#methodstore">JTableContenthistory::store()</a>
+								: Overrides JTable::store to set modified hash, user id, and save date.
+							</li>
+					<li>
 				<a href="../../Joomla-Libraries/Table/JTableContenttype.html#methodstore">JTableContenttype::store()</a>
 								: Overridden JTable::store.
 							</li>
@@ -2364,7 +2569,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">_getAssetName</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a300">300</a></span>)
+		<span class="method-title">_getAssetName</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a3filesource/span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2396,6 +2601,10 @@
 				<a href="../../Joomla-Legacy/Table/JTableContent.html#method_getAssetName">JTableContent::_getAssetName()</a>
 								: Method to compute the default name of the asset.
 							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableModule.html#method_getAssetName">JTableModule::_getAssetName()</a>
+								: Method to compute the default name of the asset.
+							</li>
 				</ul>
 	</div>
 <a name="method_getAssetParentId" id="_getAssetParentId"><!-- --></a>
@@ -2403,7 +2612,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">_getAssetParentId</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a337">337</a></span>)
+		<span class="method-title">_getAssetParentId</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a391filesource/an>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2443,6 +2652,10 @@
 				<a href="../../Joomla-Legacy/Table/JTableContent.html#method_getAssetParentId">JTableContent::_getAssetParentId()</a>
 								: Method to get the parent asset id for the record
 							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableModule.html#method_getAssetParentId">JTableModule::_getAssetParentId()</a>
+								: Method to get the parent asset id for the record
+							</li>
 				</ul>
 	</div>
 <a name="method_getAssetTitle" id="_getAssetTitle"><!-- --></a>
@@ -2450,7 +2663,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">_getAssetTitle</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a318">318</a></span>)
+		<span class="method-title">_getAssetTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a372">filesource/>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2484,6 +2697,10 @@
 				<a href="../../Joomla-Legacy/Table/JTableContent.html#method_getAssetTitle">JTableContent::_getAssetTitle()</a>
 								: Method to return the title to use for the asset table.
 							</li>
+					<li>
+				<a href="../../Joomla-Legacy/Table/JTableModule.html#method_getAssetTitle">JTableModule::_getAssetTitle()</a>
+								: Method to return the title to use for the asset table.
+							</li>
 				</ul>
 	</div>
 <a name="method_lock" id="_lock"><!-- --></a>
@@ -2491,7 +2708,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">_lock</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1323">1323</a></span>)
+		<span class="method-title">_lock</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1597">1filesource/>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2519,7 +2736,7 @@
 	
 	<div class="method-header">
 		<img src="../../media/images/Method.png" />
-		<span class="method-title">_unlock</span> (line <span class="line-number"><a href="../../filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1338">1338</a></span>)
+		<span class="method-title">_unlock</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Platform_Table_librariesjoomlatabletable.php.html#a1612">1612</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -2573,7 +2790,7 @@
 
 	
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 08 Sep 2013 12:39:58 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Wed, 13 Nov 2013 15:13:10 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

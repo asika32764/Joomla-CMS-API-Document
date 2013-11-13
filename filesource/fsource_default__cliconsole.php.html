@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for console.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file console.php</h1>
+<p>Documentation is available at <a href="../default/_cli---console.php.html">console.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><a href="http://www.php.net/error_reporting">error_reporting</a><span class="src-sym">(</span><span class="src-num">32764</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;Constant&nbsp;that&nbsp;is&nbsp;checked&nbsp;in&nbsp;included&nbsp;files&nbsp;to&nbsp;prevent&nbsp;direct&nbsp;access.</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;define()&nbsp;is&nbsp;used&nbsp;in&nbsp;the&nbsp;installation&nbsp;folder&nbsp;rather&nbsp;than&nbsp;&quot;const&quot;&nbsp;to&nbsp;not&nbsp;error&nbsp;for&nbsp;PHP&nbsp;5.2&nbsp;and&nbsp;lower</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a8"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'_JEXEC'</span><span class="src-sym">,&nbsp;</span><span class="src-num">1</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'JPATH_BASE'</span><span class="src-sym">,&nbsp;</span>__DIR__&nbsp;.&nbsp;<span class="src-str">'/..'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">require_once&nbsp;</span><span class="src-id">JPATH_BASE&nbsp;</span>.&nbsp;<span class="src-str">'/includes/defines.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-inc">require_once&nbsp;</span><span class="src-id">JPATH_BASE&nbsp;</span>.&nbsp;<span class="src-str">'/includes/framework.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-id"><a href="../Joomla-Platform/JLoader.html">JLoader</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/JLoader.html#methodregisterNamespace">registerNamespace</a><span class="src-sym">(</span><span class="src-str">'Joomla'</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Joomla-Administrator/_administrator---includes---defines.php.html#defineJPATH_LIBRARIES">JPATH_LIBRARIES</a>&nbsp;</span>.&nbsp;<span class="src-str">'/framework'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">//&nbsp;JLoader::registerNamespace('Psr',&nbsp;JPATH_LIBRARIES&nbsp;.&nbsp;'/psr');</span></div></li>
+<li><div class="src-line"><a name="a22"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a23"></a>use&nbsp;<span class="src-id">Joomla</span>\<span class="src-id">Console</span>\<span class="src-id">Command</span>\<span class="src-id">DefaultCommand</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a25"></a>try</div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$command&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">DefaultCommand</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$command</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Application/_libraries---joomla---application---daemon.php.html#functionexecute">execute</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a31"></a>catch<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$command</span><span class="src-sym">-&gt;</span><span class="src-id">renderException</span><span class="src-sym">(</span><span class="src-var">$e</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-sym">}</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 14:54:00 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

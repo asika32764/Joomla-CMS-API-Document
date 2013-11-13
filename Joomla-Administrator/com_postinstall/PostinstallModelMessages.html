@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PostinstallModelMessages</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PostinstallModelMessages</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Model class to manage postinstall messages</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_administrator---components---com_postinstall---models---messages.php.html">/administrator/components/com_postinstall/models/messages.php</a> (line <span class="field"><a href="../../filesource/fsource_Joomla-Administrator_com_postinstall_administratorcomponentscom_postinstallmodelsmessages.php.html#a19">19</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a>
+      |
+      --PostinstallModelMessages</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+										<a href="#buildQuery" title="details" class="method-name">buildQuery</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getExtensionName" title="details" class="method-name">getExtensionName</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onProcessList" title="details" class="method-name">onProcessList</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$resultArray</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$resultArray</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#resetMessages" title="details" class="method-name">resetMessages</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$configProvider">FOFModel::$configProvider</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$default_behaviors">FOFModel::$default_behaviors</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$event_after_delete">FOFModel::$event_after_delete</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$event_after_save">FOFModel::$event_after_save</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$event_before_delete">FOFModel::$event_before_delete</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$event_before_save">FOFModel::$event_before_save</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$event_change_state">FOFModel::$event_change_state</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$event_clean_cache">FOFModel::$event_clean_cache</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$id">FOFModel::$id</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$id_list">FOFModel::$id_list</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$input">FOFModel::$input</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$list">FOFModel::$list</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$modelDispatcher">FOFModel::$modelDispatcher</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$name">FOFModel::$name</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$option">FOFModel::$option</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$otable">FOFModel::$otable</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$pagination">FOFModel::$pagination</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$record">FOFModel::$record</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$state">FOFModel::$state</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$table">FOFModel::$table</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$total">FOFModel::$total</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$_db">FOFModel::$_db</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$_formData">FOFModel::$_formData</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$_forms">FOFModel::$_forms</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$_savestate">FOFModel::$_savestate</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#var$__state_set">FOFModel::$__state_set</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodbuildQuery" id="buildQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">buildQuery</span> (line <span class="line-number"><a href="../../__filesource/ource_Joomla-Administrator_com_postinstall_administratorcomponentscom_postinstallmodelsmessages.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Builds the SELECT query</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+		<span class="method-name">
+			buildQuery
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$overrideLimits</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overrideLimits</span><span class="var-description">: Are we requested to override the set limits?</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/model/FOFModel.html#methodbuildQuery">FOFModel::buildQuery()</a></dt>
+						<dd>Builds the SELECT query</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetExtensionName" id="getExtensionName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getExtensionName</span> (line <span class="line-number"><a href="../../__fifilesource/rce_Joomla-Administrator_com_postinstall_administratorcomponentscom_postinstallmodelsmessages.php.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the name of an extension, as registered in the #__extensions table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The extension name</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getExtensionName
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$eid</span><span class="var-description">: The extension ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonProcessList" id="onProcessList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">onProcessList</span> (line <span class="line-number"><a href="../../__filefilesource/e_Joomla-Administrator_com_postinstall_administratorcomponentscom_postinstallmodelsmessages.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List post-processing. This is used to run the programmatic display  conditions against each list item and decide if we have to show it or  not.</p>
+<p class="description"><p>Do note that this a core method of the RAD Layer which operates directly  on the list it's being fed. A little touch of modern magic.</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onProcessList
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$resultArray</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$resultArray</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$resultArray</span><span class="var-description">: A list of items to process</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$resultArray</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonProcessList">FOFModel::onProcessList()</a></dt>
+						<dd>This method can be overriden to automatically do something with the  list results array. You are supposed to modify the list which was passed  in the parameters; DO NOT return a new array!</dd>
+					</dl>
+			
+	</div>
+<a name="methodresetMessages" id="resetMessages"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">resetMessages</span> (line <span class="line-number"><a href="../../__filesource/fsource_Joomla-Administrator_com_postinstall_administratorcomponentscom_postinstallmodelsmessages.php.html#a99">99</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resets all messages for an extension</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> False if we fail, a db cursor otherwise</li>
+				<li><span class="field">since:</span> 3.2</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			resetMessages
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$eid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$eid</span><span class="var-description">: The extension ID whose messages we'll reset</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../FrameworkOnFramework/model/FOFModel.html">FOFModel</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method__construct">FOFModel::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodaddBehavior">FOFModel::addBehavior()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodaddIncludePath">FOFModel::addIncludePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodaddTablePath">FOFModel::addTablePath()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodapplyAccessFiltering">FOFModel::applyAccessFiltering()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodbuildCountQuery">FOFModel::buildCountQuery()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodbuildQuery">FOFModel::buildQuery()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodcheckin">FOFModel::checkin()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodcheckout">FOFModel::checkout()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodcleanCache">FOFModel::cleanCache()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodclearInput">FOFModel::clearInput()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodclearState">FOFModel::clearState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodcopy">FOFModel::copy()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methoddelete">FOFModel::delete()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodfindFormFilename">FOFModel::findFormFilename()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetAnInstance">FOFModel::getAnInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetClone">FOFModel::getClone()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetDbo">FOFModel::getDbo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetFirstItem">FOFModel::getFirstItem()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetForm">FOFModel::getForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetHash">FOFModel::getHash()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetId">FOFModel::getId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetIds">FOFModel::getIds()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetItem">FOFModel::getItem()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetItemList">FOFModel::getItemList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetList">FOFModel::getList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetName">FOFModel::getName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetPagination">FOFModel::getPagination()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetReorderWhere">FOFModel::getReorderWhere()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetSavedTable">FOFModel::getSavedTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetState">FOFModel::getState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetTable">FOFModel::getTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetTableAlias">FOFModel::getTableAlias()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetTableFields">FOFModel::getTableFields()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetTmpInstance">FOFModel::getTmpInstance()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetTotal">FOFModel::getTotal()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodgetUserStateFromRequest">FOFModel::getUserStateFromRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodhit">FOFModel::hit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodisCheckedOut">FOFModel::isCheckedOut()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodloadForm">FOFModel::loadForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodloadFormData">FOFModel::loadFormData()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodmove">FOFModel::move()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterCopy">FOFModel::onAfterCopy()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterDelete">FOFModel::onAfterDelete()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterGetItem">FOFModel::onAfterGetItem()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterHit">FOFModel::onAfterHit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterLoadForm">FOFModel::onAfterLoadForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterMove">FOFModel::onAfterMove()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterPreprocessForm">FOFModel::onAfterPreprocessForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterPublish">FOFModel::onAfterPublish()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterReorder">FOFModel::onAfterReorder()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonAfterSave">FOFModel::onAfterSave()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeCopy">FOFModel::onBeforeCopy()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeDelete">FOFModel::onBeforeDelete()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeHit">FOFModel::onBeforeHit()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeLoadForm">FOFModel::onBeforeLoadForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeMove">FOFModel::onBeforeMove()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforePreprocessForm">FOFModel::onBeforePreprocessForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforePublish">FOFModel::onBeforePublish()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeReorder">FOFModel::onBeforeReorder()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonBeforeSave">FOFModel::onBeforeSave()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodonProcessList">FOFModel::onProcessList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodpopulateSavestate">FOFModel::populateSavestate()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodpopulateState">FOFModel::populateState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodpreprocessForm">FOFModel::preprocessForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodpublish">FOFModel::publish()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodreorder">FOFModel::reorder()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodreset">FOFModel::reset()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodresetSavedState">FOFModel::resetSavedState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsave">FOFModel::save()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsavestate">FOFModel::savestate()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsetDbo">FOFModel::setDbo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsetId">FOFModel::setId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsetIds">FOFModel::setIds()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsetIDsFromRequest">FOFModel::setIDsFromRequest()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsetInput">FOFModel::setInput()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodsetState">FOFModel::setState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#methodvalidateForm">FOFModel::validateForm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method_createFileName">FOFModel::_createFileName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method_createTable">FOFModel::_createTable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method_getList">FOFModel::_getList()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method_getListCount">FOFModel::_getListCount()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method_real_getState">FOFModel::_real_getState()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method__call">FOFModel::__call()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method__get">FOFModel::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../FrameworkOnFramework/model/FOFModel.html#method__set">FOFModel::__set()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 13 Nov 2013 15:05:40 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
