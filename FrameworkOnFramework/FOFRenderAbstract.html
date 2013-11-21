@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFRenderAbstract</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> FOFRenderAbstract</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Abstract view renderer class. The renderer is what turns XML view templates  into actual HTML code, renders the submenu links and potentially wraps the  HTML output in a div with a component-specific ID.</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 2.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---render---abstract.php.html">/libraries/fof/render/abstract.php</a> (line <span class="field"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a17">17</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFRenderJoomla.html">FOFRenderJoomla</a>
+					</td>
+					<td>
+											Default Joomla! 1.5, 1.7, 2.5 view renderer class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFRenderStrapper.html">FOFRenderStrapper</a>
+					</td>
+					<td>
+											Akeeba Strapper view renderer class.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$enabled" title="details" class="var-name">$enabled</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$priority" title="details" class="var-name">$priority</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">object</span>
+										<a href="#getInformation" title="details" class="method-name">getInformation</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#postRender" title="details" class="method-name">postRender</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#preRender" title="details" class="method-name">preRender</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#renderCategoryLinkbar" title="details" class="method-name">renderCategoryLinkbar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderForm" title="details" class="method-name">renderForm</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$formType</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$raw</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderFormBrowse" title="details" class="method-name">renderFormBrowse</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderFormEdit" title="details" class="method-name">renderFormEdit</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderFormRaw" title="details" class="method-name">renderFormRaw</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$formType</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#renderFormRead" title="details" class="method-name">renderFormRead</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$enabled" id="$enabled"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$enabled</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a23">23</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Is this renderer enabled?</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$priority" id="$priority"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$priority</span>
+			 = <span class="var-default"> 50</span>			(line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a20">20</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Priority of this renderer. Higher means more important</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInformation" id="getInformation"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getInformation</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a30">30</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the information about this renderer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			getInformation
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpostRender" id="postRender"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">postRender</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a60">60</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Echoes any HTML to show after the view template</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			postRender
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The current view</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$task</span><span class="var-description">: The current task</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input array (request parameters)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: The view configuration array</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla.html#methodpostRender">FOFRenderJoomla::postRender()</a>
+								: Echoes any HTML to show after the view template
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderStrapper.html#methodpostRender">FOFRenderStrapper::postRender()</a>
+								: Echoes any HTML to show after the view template
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla3.html#methodpostRender">FOFRenderJoomla3::postRender()</a>
+								: Echoes any HTML to show after the view template
+							</li>
+				</ul>
+	</div>
+<a name="methodpreRender" id="preRender"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">preRender</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a48">48</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Echoes any HTML to show before the view template</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			preRender
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$task</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span><span class="var-description">: The current view</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$task</span><span class="var-description">: The current task</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input array (request parameters)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: The view configuration array</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla.html#methodpreRender">FOFRenderJoomla::preRender()</a>
+								: Echoes any HTML to show before the view template
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderStrapper.html#methodpreRender">FOFRenderStrapper::preRender()</a>
+								: Echoes any HTML to show before the view template
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla3.html#methodpreRender">FOFRenderJoomla3::preRender()</a>
+								: Echoes any HTML to show before the view template
+							</li>
+				</ul>
+	</div>
+<a name="methodrenderCategoryLinkbar" id="renderCategoryLinkbar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">renderCategoryLinkbar</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a155">155</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders the submenu (link bar) for a category view when it is used in a  extension</p>
+<p class="description"><p>Note: this function has to be called from the addSubmenu function in  		 the ExtensionNameHelper class located in  		 administrator/components/com_ExtensionName/helpers/Extensionname.php</p><p>Example Code:</p><p>class ExtensionNameHelper 	{  		public static function addSubmenu($vName) 		{ 			// Load FOF 			include_once JPATH_LIBRARIES . '/fof/include.php';</p><p>if (!defined('FOF_INCLUDED')) 			{ 				JError::raiseError('500', 'FOF is not installed'); 			}</p><p>if (FOFPlatform::getInstance()-&gt;checkVersion(JVERSION, '3.0', 'ge')) 			{ 				$strapper = new FOFRenderJoomla3; 			} 			else 			{ 				$strapper = new FOFRenderJoomla; 			}</p><p>$strapper-&gt;renderCategoryLinkbar('com_babioonevent'); 		} 	}</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			renderCategoryLinkbar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span><span class="var-description">: The name of the extension</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: Extra configuration variables for the toolbar</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenderForm" id="renderForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">renderForm</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a73">73</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders a FOFForm and returns the corresponding HTML</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML rendering of the form</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderForm
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$formType</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$raw</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">&$form</span><span class="var-description">: The form to render</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">$model</span><span class="var-description">: The model providing our data</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$formType</span><span class="var-description">: The form type: edit, browse or read</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$raw</span><span class="var-description">: If true, the raw form fields rendering (without the surrounding form tag) is returned.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenderFormBrowse" id="renderFormBrowse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">renderFormBrowse</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a184">184</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders a FOFForm for a Browse view and returns the corresponding HTML</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML rendering of the form</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderFormBrowse
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">&$form</span><span class="var-description">: The form to render</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">$model</span><span class="var-description">: The model providing our data</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input object</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla.html#methodrenderFormBrowse">FOFRenderJoomla::renderFormBrowse()</a>
+								: Renders a FOFForm for a Browse view and returns the corresponding HTML
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderStrapper.html#methodrenderFormBrowse">FOFRenderStrapper::renderFormBrowse()</a>
+								: Renders a FOFForm for a Browse view and returns the corresponding HTML
+							</li>
+				</ul>
+	</div>
+<a name="methodrenderFormEdit" id="renderFormEdit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">renderFormEdit</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a206">206</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders a FOFForm for an Edit view and returns the corresponding HTML</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML rendering of the form</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderFormEdit
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">&$form</span><span class="var-description">: The form to render</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">$model</span><span class="var-description">: The model providing our data</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input object</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla.html#methodrenderFormEdit">FOFRenderJoomla::renderFormEdit()</a>
+								: Renders a FOFForm for an Edit view and returns the corresponding HTML
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderStrapper.html#methodrenderFormEdit">FOFRenderStrapper::renderFormEdit()</a>
+								: Renders a FOFForm for an Edit view and returns the corresponding HTML
+							</li>
+				</ul>
+	</div>
+<a name="methodrenderFormRaw" id="renderFormRaw"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">renderFormRaw</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a218">218</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders a raw FOFForm and returns the corresponding HTML</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML rendering of the form</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderFormRaw
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$formType</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">&$form</span><span class="var-description">: The form to render</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">$model</span><span class="var-description">: The model providing our data</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input object</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$formType</span><span class="var-description">: The form type e.g. 'edit' or 'read'</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla.html#methodrenderFormRaw">FOFRenderJoomla::renderFormRaw()</a>
+								: Renders a raw FOFForm and returns the corresponding HTML
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderStrapper.html#methodrenderFormRaw">FOFRenderStrapper::renderFormRaw()</a>
+								: Renders a raw FOFForm and returns the corresponding HTML
+							</li>
+				</ul>
+	</div>
+<a name="methodrenderFormRead" id="renderFormRead"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">renderFormRead</span> (line <span class="line-number"><a href="../filesource/fsource_FrameworkOnFramework__librariesfofrenderabstract.php.html#a195">195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renders a FOFForm for a Read view and returns the corresponding HTML</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The HTML rendering of the form</li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			renderFormRead
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>&nbsp;<span class="var-name">&$form</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFForm.html">FOFForm</a></span>
+				<span class="var-name">&$form</span><span class="var-description">: The form to render</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">$model</span><span class="var-description">: The model providing our data</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFInput.html">FOFInput</a></span>
+				<span class="var-name">$input</span><span class="var-description">: The input object</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderJoomla.html#methodrenderFormRead">FOFRenderJoomla::renderFormRead()</a>
+								: Renders a FOFForm for a Read view and returns the corresponding HTML
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFRenderStrapper.html#methodrenderFormRead">FOFRenderStrapper::renderFormRead()</a>
+								: Renders a FOFForm for a Read view and returns the corresponding HTML
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 19 Nov 2013 09:53:22 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

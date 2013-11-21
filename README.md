@@ -3,7 +3,7 @@ Joomla CMS API Document
 
 This is Joomla!CMS & Platform API Document.
 
-Generated from Joomla!CMS 3.1.5, containes all libraries, components, modules and plugins codes.
+Generated from Joomla!CMS 3.2.0, containes all libraries, components, modules and plugins codes.
 
 -----
 
