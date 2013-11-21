@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFModelBehavior</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> FOFModelBehavior</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FrameworkOnFramework model behavior class. It defines the events which are  called by a Model.</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 2.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---model---behavior.php.html">/libraries/fof/model/behavior.php</a> (line <span class="field"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a17">17</a></span>)
+		</p>
+		
+				
+		<pre><a href="../Joomla-Platform/Object/JObject.html">JObject</a>
+   |
+   --<a href="../Joomla-Platform/Event/JEvent.html">JEvent</a>
+      |
+      --FOFModelBehavior</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-vars">Vars</a>
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFModelBehaviorAccess.html">FOFModelBehaviorAccess</a>
+					</td>
+					<td>
+											FrameworkOnFramework model behavior class to filter front-end access to items  based on the viewing access levels.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFModelBehaviorEnabled.html">FOFModelBehaviorEnabled</a>
+					</td>
+					<td>
+											FrameworkOnFramework model behavior class to filter front-end access to items  that are enabled.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFModelBehaviorFilters.html">FOFModelBehaviorFilters</a>
+					</td>
+					<td>
+											FrameworkOnFramework model behavior class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFModelBehaviorLanguage.html">FOFModelBehaviorLanguage</a>
+					</td>
+					<td>
+											FrameworkOnFramework model behavior class to filter front-end access to items  based on the language.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../FrameworkOnFramework/FOFModelBehaviorPrivate.html">FOFModelBehaviorPrivate</a>
+					</td>
+					<td>
+											FrameworkOnFramework model behavior class to filter front-end access to items  craeted by the currently logged in user only.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterBuildQuery" title="details" class="method-name">onAfterBuildQuery</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type"><a href="../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>&nbsp;<span class="var-name">&$query</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterCopy" title="details" class="method-name">onAfterCopy</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterDelete" title="details" class="method-name">onAfterDelete</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterGetItem" title="details" class="method-name">onAfterGetItem</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$record</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterHit" title="details" class="method-name">onAfterHit</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterMove" title="details" class="method-name">onAfterMove</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterPublish" title="details" class="method-name">onAfterPublish</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterReorder" title="details" class="method-name">onAfterReorder</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onAfterSave" title="details" class="method-name">onAfterSave</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeBuildQuery" title="details" class="method-name">onBeforeBuildQuery</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type"><a href="../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>&nbsp;<span class="var-name">&$query</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeCopy" title="details" class="method-name">onBeforeCopy</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeDelete" title="details" class="method-name">onBeforeDelete</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeHit" title="details" class="method-name">onBeforeHit</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeMove" title="details" class="method-name">onBeforeMove</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforePublish" title="details" class="method-name">onBeforePublish</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeReorder" title="details" class="method-name">onBeforeReorder</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#onBeforeSave" title="details" class="method-name">onBeforeSave</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Event/JEvent.html#var$_subject">JEvent::$_subject</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Object/JObject.html#var$_errors">JObject::$_errors</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodonAfterBuildQuery" id="onAfterBuildQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterBuildQuery</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after we have built the query used to fetch a record  list in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterBuildQuery
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type"><a href="../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>&nbsp;<span class="var-name">&$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+					<li>
+				<span class="var-type"><a href="../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+				<span class="var-name">&$query</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorAccess.html#methodonAfterBuildQuery">FOFModelBehaviorAccess::onAfterBuildQuery()</a>
+								: This event runs after we have built the query used to fetch a record  list in a model. It is used to apply automatic query filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorEnabled.html#methodonAfterBuildQuery">FOFModelBehaviorEnabled::onAfterBuildQuery()</a>
+								: This event runs after we have built the query used to fetch a record  list in a model. It is used to apply automatic query filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorFilters.html#methodonAfterBuildQuery">FOFModelBehaviorFilters::onAfterBuildQuery()</a>
+								: This event runs after we have built the query used to fetch a record  list in a model. It is used to apply automatic query filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorLanguage.html#methodonAfterBuildQuery">FOFModelBehaviorLanguage::onAfterBuildQuery()</a>
+								: This event runs after we have built the query used to fetch a record  list in a model. It is used to apply automatic query filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorPrivate.html#methodonAfterBuildQuery">FOFModelBehaviorPrivate::onAfterBuildQuery()</a>
+								: This event runs after we have built the query used to fetch a record  list in a model. It is used to apply automatic query filters.
+							</li>
+				</ul>
+	</div>
+<a name="methodonAfterCopy" id="onAfterCopy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterCopy</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a139">139</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after copying a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterCopy
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterDelete" id="onAfterDelete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterDelete</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a128">128</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after deleting a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterDelete
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterGetItem" id="onAfterGetItem"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterGetItem</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after getting a single item</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterGetItem
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type"><a href="../FrameworkOnFramework/FOFTable.html">FOFTable</a></span>&nbsp;<span class="var-name">&$record</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFTable.html">FOFTable</a></span>
+				<span class="var-name">&$record</span><span class="var-description">: The record loaded by this model</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorAccess.html#methodonAfterGetItem">FOFModelBehaviorAccess::onAfterGetItem()</a>
+								: The event runs after FOFModel has called FOFTable and retrieved a single  item from the database. It is used to apply automatic filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorEnabled.html#methodonAfterGetItem">FOFModelBehaviorEnabled::onAfterGetItem()</a>
+								: The event runs after FOFModel has called FOFTable and retrieved a single  item from the database. It is used to apply automatic filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorLanguage.html#methodonAfterGetItem">FOFModelBehaviorLanguage::onAfterGetItem()</a>
+								: The event runs after FOFModel has called FOFTable and retrieved a single  item from the database. It is used to apply automatic filters.
+							</li>
+					<li>
+				<a href="../FrameworkOnFramework/FOFModelBehaviorPrivate.html#methodonAfterGetItem">FOFModelBehaviorPrivate::onAfterGetItem()</a>
+								: The event runs after FOFModel has called FOFTable and retrieved a single  item from the database. It is used to apply automatic filters.
+							</li>
+				</ul>
+	</div>
+<a name="methodonAfterHit" id="onAfterHit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterHit</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a161">161</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after registering a hit on a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterHit
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterMove" id="onAfterMove"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterMove</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a172">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after moving a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterMove
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterPublish" id="onAfterPublish"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterPublish</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a150">150</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after publishing a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterPublish
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterReorder" id="onAfterReorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterReorder</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after reordering records in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterReorder
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonAfterSave" id="onAfterSave"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onAfterSave</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a117">117</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs after saving a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onAfterSave
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeBuildQuery" id="onBeforeBuildQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeBuildQuery</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a106">106</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs when we are building the query used to fetch a record  list in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeBuildQuery
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type"><a href="../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>&nbsp;<span class="var-name">&$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+					<li>
+				<span class="var-type"><a href="../Joomla-Platform/Database/JDatabaseQuery.html">JDatabaseQuery</a></span>
+				<span class="var-name">&$query</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeCopy" id="onBeforeCopy"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeCopy</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a49">49</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before copying a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeCopy
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeDelete" id="onBeforeDelete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeDelete</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a38">38</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before deleting a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeDelete
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeHit" id="onBeforeHit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeHit</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before registering a hit on a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeHit
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeMove" id="onBeforeMove"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeMove</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a82">82</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before moving a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeMove
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforePublish" id="onBeforePublish"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforePublish</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a60">60</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before publishing a record in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforePublish
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeReorder" id="onBeforeReorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeReorder</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a93">93</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before changing the records' order in a model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeReorder
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonBeforeSave" id="onBeforeSave"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">onBeforeSave</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofmodelbehavior.php.html#a27">27</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This event runs before saving data in the model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			onBeforeSave
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model which calls this event</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$data</span><span class="var-description">: The data to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Joomla-Platform/Event/JEvent.html">JEvent</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Event/JEvent.html#method__construct">JEvent::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Event/JEvent.html#methodupdate">JEvent::update()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Joomla-Platform/Object/JObject.html">JObject</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#method__construct">JObject::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methoddef">JObject::def()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodget">JObject::get()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodgetError">JObject::getError()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodgetErrors">JObject::getErrors()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodgetProperties">JObject::getProperties()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodset">JObject::set()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodsetError">JObject::setError()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#methodsetProperties">JObject::setProperties()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Object/JObject.html#method__toString">JObject::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 19 Nov 2013 09:54:40 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

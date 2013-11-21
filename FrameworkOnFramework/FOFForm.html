@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFForm</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFForm</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FOFForm is an extension to JForm which support not only edit views but also  browse (record list) and read (single record display) views based on XML  forms.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---form---form.php.html">/libraries/fof/form/form.php</a> (line <span class="field"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a18">18</a></span>)
+		</p>
+		
+				
+		<pre><a href="../Joomla-Platform/Form/JForm.html">JForm</a>
+   |
+   --FOFForm</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+					<a href="#$model" title="details" class="var-name">$model</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>
+					<a href="#$view" title="details" class="var-name">$view</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addFieldPath" title="details" class="method-name">addFieldPath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addFormPath" title="details" class="method-name">addFormPath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addHeaderPath" title="details" class="method-name">addHeaderPath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#addRulePath" title="details" class="method-name">addRulePath</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+									</div>
+																																																															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../FrameworkOnFramework/FOFForm.html">object FOFForm</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+									</div>
+																																																																																																																																			
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findHeader" title="details" class="method-name">findHeader</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#findHeadersByGroup" title="details" class="method-name">&amp;findHeadersByGroup</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nested</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getAttribute" title="details" class="method-name">getAttribute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+										<a href="#getData" title="details" class="method-name">getData</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#getHeader" title="details" class="method-name">getHeader</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getHeaderset" title="details" class="method-name">getHeaderset</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+										<a href="#getModel" title="details" class="method-name">&amp;getModel</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>
+										<a href="#getView" title="details" class="method-name">&amp;getView</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#loadCSSFiles" title="details" class="method-name">loadCSSFiles</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadFieldType" title="details" class="method-name">loadFieldType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadHeader" title="details" class="method-name">loadHeader</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadHeaderType" title="details" class="method-name">loadHeaderType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#loadJSFiles" title="details" class="method-name">loadJSFiles</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#loadRuleType" title="details" class="method-name">loadRuleType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setModel" title="details" class="method-name">setModel</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setView" title="details" class="method-name">setView</a>
+											(<span class="var-type"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>&nbsp;<span class="var-name">&$view</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$model" id="$model"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+			<span class="var-name">$model</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The model attached to this view</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$view" id="$view"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>
+			<span class="var-name">$view</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The view used to render this form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../Joomla-Platform/Form/JForm.html">JForm</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$data">JForm::$data</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$errors">JForm::$errors</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$forms">JForm::$forms</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$name">JForm::$name</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$options">JForm::$options</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$repeat">JForm::$repeat</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Joomla-Platform/Form/JForm.html#var$xml">JForm::$xml</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddFieldPath" id="addFieldPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static addFieldPath</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a570">570</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for FOFFormHelper::addFieldPath().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addFieldPath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodaddFieldPath">JForm::addFieldPath()</a></dt>
+						<dd>Proxy for <a href="../Joomla-Platform/Form/JFormHelper.html#methodaddFieldPath">JFormHelper::addFieldPath()</a>.</dd>
+					</dl>
+			
+	</div>
+<a name="methodaddFormPath" id="addFormPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static addFormPath</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a599">599</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for FOFFormHelper::addFormPath().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">see:</span> FOFFormHelper::addFormPath()</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addFormPath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodaddFormPath">JForm::addFormPath()</a></dt>
+						<dd>Proxy for JFormHelper::addFormPath().</dd>
+					</dl>
+			
+	</div>
+<a name="methodaddHeaderPath" id="addHeaderPath"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static addHeaderPath</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a584">584</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for <a href="../FrameworkOnFramework/FOFFormHelper.html#methodaddHeaderPath">FOFFormHelper::addHeaderPath()</a>.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addHeaderPath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddRulePath" id="addRulePath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static addRulePath</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a614">614</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for FOFFormHelper::addRulePath().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The list of paths that have been added.</li>
+				<li><span class="field">see:</span> FOFFormHelper::addRulePath()</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			addRulePath
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$new</span><span class="var-description">: A path or array of paths to add.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodaddRulePath">JForm::addRulePath()</a></dt>
+						<dd>Proxy for JFormHelper::addRulePath().</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a50">50</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an instance of a form.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> instance.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">throws:</span> InvalidArgumentException if no data provided.</li>
+				<li><span class="field">throws:</span> RuntimeException if the form could not be loaded.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../FrameworkOnFramework/FOFForm.html">object FOFForm</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$xpath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: The name of an XML file or string to load as the form definition.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: An array of form options.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replace</span><span class="var-description">: Flag to toggle whether form fields should be replaced if a field                             already exists with the same group/name.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xpath</span><span class="var-description">: An optional xpath to search for the fields.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodgetInstance">JForm::getInstance()</a></dt>
+						<dd>Method to get an instance of a form.</dd>
+					</dl>
+			
+	</div>
+<a name="methodfindHeader" id="findHeader"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">findHeader</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a389">389</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a header field represented as an XML element object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The XML element object for the field or boolean false on error.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			findHeader
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfindHeadersByGroup" id="findHeadersByGroup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">findHeadersByGroup</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a284">284</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of &lt;header /&gt; elements from the form XML document which are  in a control group by name.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Boolean false on error or array of SimpleXMLElement objects.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			&amp;findHeadersByGroup
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$nested</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the fields.                             Null will return all fields. False will return fields not in a group.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$nested</span><span class="var-description">: True to also include fields in nested groups that are inside of the                             group for which to find fields.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAttribute" id="getAttribute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAttribute</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a98">98</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the value of an attribute of the form itself</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span><span class="var-description">: The name of the attribute</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span><span class="var-description">: Optional default value to return</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodgetAttribute">JForm::getAttribute()</a></dt>
+						<dd>Returns the value of an attribute of the form itself</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetData" id="getData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getData</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a reference to the protected $data object, allowing direct  access to and manipulation of the form's data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The form's data registry</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Joomla-Platform/Registry/JRegistry.html">JRegistry</a></span>
+		<span class="method-name">
+			getData
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodgetData">JForm::getData()</a></dt>
+						<dd>Getter for the form data</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetHeader" id="getHeader"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHeader</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a359">359</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get a header field represented as a FOFFormHeader object.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The FOFFormHeader object for the field or boolean false on error.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getHeader
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The name of the header field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The optional value to use as the default for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetHeaderset" id="getHeaderset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHeaderset</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a239">239</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to get an array of FOFFormHeader objects in the headerset.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The array of FOFFormHeader objects in the headerset.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getHeaderset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetModel" id="getModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getModel</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a205">205</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the FOFModel attached to this form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+		<span class="method-name">
+			&amp;getModel
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetView" id="getView"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getView</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a227">227</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the FOFView attached to this form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>
+		<span class="method-name">
+			&amp;getView
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadCSSFiles" id="loadCSSFiles"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadCSSFiles</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads the CSS files defined in the form, based on its cssfiles attribute</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadCSSFiles
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadFieldType" id="loadFieldType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadFieldType</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a525">525</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for <a href="../FrameworkOnFramework/FOFFormHelper.html#methodloadFieldType">FOFFormHelper::loadFieldType()</a>.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> FOFFormField object on success, false otherwise.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadFieldType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The field type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodloadFieldType">JForm::loadFieldType()</a></dt>
+						<dd>Proxy for <a href="../Joomla-Platform/Form/JFormHelper.html#methodloadFieldType">JFormHelper::loadFieldType()</a>.</dd>
+					</dl>
+			
+	</div>
+<a name="methodloadHeader" id="loadHeader"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadHeader</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a482">482</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method to load, setup and return a FOFFormHeader object based on field data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The FOFFormHeader object for the field or boolean false on error.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadHeader
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The XML element object representation of the form field.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$group</span><span class="var-description">: The optional dot-separated form group path on which to find the field.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: The optional value to use as the default for the field.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadHeaderType" id="loadHeaderType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadHeaderType</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a540">540</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for <a href="../FrameworkOnFramework/FOFFormHelper.html#methodloadHeaderType">FOFFormHelper::loadHeaderType()</a>.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> FOFFormHeader object on success, false otherwise.</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadHeaderType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The field type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadJSFiles" id="loadJSFiles"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadJSFiles</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a158">158</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads the Javascript files defined in the form, based on its jsfiles attribute</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadJSFiles
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadRuleType" id="loadRuleType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadRuleType</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a556">556</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Proxy for FOFFormHelper::loadRuleType().</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JFormRule object on success, false otherwise.</li>
+				<li><span class="field">see:</span> FOFFormHelper::loadRuleType()</li>
+				<li><span class="field">since:</span> 2.0</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadRuleType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$new</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: The rule type.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$new</span><span class="var-description">: Flag to toggle whether we should get a new instance of the object.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Joomla-Platform/Form/JForm.html#methodloadRuleType">JForm::loadRuleType()</a></dt>
+						<dd>Proxy for JFormHelper::loadRuleType().</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetModel" id="setModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setModel</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a195">195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attaches a FOFModel to this form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setModel
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>&nbsp;<span class="var-name">&$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFModel.html">FOFModel</a></span>
+				<span class="var-name">&$model</span><span class="var-description">: The model to attach to the form</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetView" id="setView"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setView</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofformform.php.html#a217">217</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attaches a FOFView to this form</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setView
+		</span>
+					(<span class="var-type"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>&nbsp;<span class="var-name">&$view</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../FrameworkOnFramework/FOFView.html">FOFView</a></span>
+				<span class="var-name">&$view</span><span class="var-description">: The view to attach to the form</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Joomla-Platform/Form/JForm.html">JForm</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#method__construct">JForm::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodaddFieldPath">JForm::addFieldPath()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodaddFormPath">JForm::addFormPath()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodaddNode">JForm::addNode()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodaddRulePath">JForm::addRulePath()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodbind">JForm::bind()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodbindLevel">JForm::bindLevel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodfilter">JForm::filter()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodfilterField">JForm::filterField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodfindField">JForm::findField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodfindFieldsByFieldset">JForm::findFieldsByFieldset()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodfindFieldsByGroup">JForm::findFieldsByGroup()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodfindGroup">JForm::findGroup()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetAttribute">JForm::getAttribute()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetControlGroup">JForm::getControlGroup()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetControlGroups">JForm::getControlGroups()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetData">JForm::getData()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetErrors">JForm::getErrors()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetField">JForm::getField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetFieldAttribute">JForm::getFieldAttribute()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetFieldset">JForm::getFieldset()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetFieldsets">JForm::getFieldsets()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetFormControl">JForm::getFormControl()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetGroup">JForm::getGroup()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetInput">JForm::getInput()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetInstance">JForm::getInstance()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetLabel">JForm::getLabel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetName">JForm::getName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetValue">JForm::getValue()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodgetXml">JForm::getXml()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodload">JForm::load()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodloadField">JForm::loadField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodloadFieldType">JForm::loadFieldType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodloadFile">JForm::loadFile()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodloadRuleType">JForm::loadRuleType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodmergeNode">JForm::mergeNode()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodmergeNodes">JForm::mergeNodes()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodremoveField">JForm::removeField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodremoveGroup">JForm::removeGroup()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodreset">JForm::reset()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodsetField">JForm::setField()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodsetFieldAttribute">JForm::setFieldAttribute()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodsetFields">JForm::setFields()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodsetValue">JForm::setValue()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodsyncPaths">JForm::syncPaths()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodvalidate">JForm::validate()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Joomla-Platform/Form/JForm.html#methodvalidateField">JForm::validateField()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 19 Nov 2013 10:03:44 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

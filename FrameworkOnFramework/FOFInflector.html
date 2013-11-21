@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFInflector</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFInflector</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FOFInflector to pluralize and singularize English nouns.</p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---inflector---inflector.php.html">/libraries/fof/inflector/inflector.php</a> (line <span class="field"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a20">20</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$_cache" title="details" class="var-name">$_cache</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">array</span>
+					<a href="#$_rules" title="details" class="var-name">$_rules</a>
+				</div>
+																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#addWord" title="details" class="method-name">addWord</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$singular</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$plural</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#camelize" title="details" class="method-name">camelize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#classify" title="details" class="method-name">classify</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#explode" title="details" class="method-name">explode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getPart" title="details" class="method-name">getPart</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#humanize" title="details" class="method-name">humanize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#implode" title="details" class="method-name">implode</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$words</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isPlural" title="details" class="method-name">isPlural</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isSingular" title="details" class="method-name">isSingular</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#pluralize" title="details" class="method-name">pluralize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#singularize" title="details" class="method-name">singularize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#tableize" title="details" class="method-name">tableize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#underscore" title="details" class="method-name">underscore</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#variablize" title="details" class="method-name">variablize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+																																																																																																																															</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_cache" id="$_cache"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$_cache</span>
+			 = <span class="var-default">array(<br />		'singularized' =&gt; array(),'pluralized'=&gt;array())</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a117">117</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cache of pluralized and singularized nouns.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_rules" id="$_rules"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$_rules</span>
+			 = <span class="var-default">array<br />	(<br />		'pluralization'   =&gt; array(<br />			'/move$/i'                      =&gt; 'moves',<br />			'/sex$/i'                       =&gt; 'sexes',<br />			'/child$/i'                     =&gt; 'children',<br />			'/man$/i'                       =&gt; 'men',<br />			'/foot$/i'                      =&gt; 'feet',<br />			'/person$/i'                    =&gt; 'people',<br />			'/taxon$/i'                     =&gt; 'taxa',<br />			'/(quiz)$/i'                    =&gt; '$1zes',<br />			'/^(ox)$/i'                     =&gt; '$1en',<br />			'/(m|l)ouse$/i'                 =&gt; '$1ice',<br />			'/(matr|vert|ind|suff)ix|ex$/i' =&gt; '$1ices',<br />			'/(x|ch|ss|sh)$/i'              =&gt; '$1es',<br />			'/([^aeiouy]|qu)y$/i'           =&gt; '$1ies',<br />			'/(?:([^f])fe|([lr])f)$/i'      =&gt; '$1$2ves',<br />			'/sis$/i'                       =&gt; 'ses',<br />			'/([ti]|addend)um$/i'           =&gt; '$1a',<br />			'/(alumn|formul)a$/i'           =&gt; '$1ae',<br />			'/(buffal|tomat|her)o$/i'       =&gt; '$1oes',<br />			'/(bu)s$/i'                     =&gt; '$1ses',<br />			'/(alias|status)$/i'            =&gt; '$1es',<br />			'/(octop|vir)us$/i'             =&gt; '$1i',<br />			'/(gen)us$/i'                   =&gt; '$1era',<br />			'/(ax|test)is$/i'               =&gt; '$1es',<br />			'/s$/i'                         =&gt; 's',<br />			'/$/'                           =&gt; 's',<br />		),'singularization'=&gt;array('/cookies$/i'=&gt;'cookie','/moves$/i'=&gt;'move','/sexes$/i'=&gt;'sex','/children$/i'=&gt;'child','/men$/i'=&gt;'man','/feet$/i'=&gt;'foot','/people$/i'=&gt;'person','/taxa$/i'=&gt;'taxon','/databases$/i'=&gt;'database','/(quiz)zes$/i'=&gt;'\1','/(matr|suff)ices$/i'=&gt;'\1ix','/(vert|ind)ices$/i'=&gt;'\1ex','/^(ox)en/i'=&gt;'\1','/(alias|status)es$/i'=&gt;'\1','/(tomato|hero|buffalo)es$/i'=&gt;'\1','/([octop|vir])i$/i'=&gt;'\1us','/(gen)era$/i'=&gt;'\1us','/(cris|^ax|test)es$/i'=&gt;'\1is','/(shoe)s$/i'=&gt;'\1','/(o)es$/i'=&gt;'\1','/(bus)es$/i'=&gt;'\1','/([m|l])ice$/i'=&gt;'\1ouse','/(x|ch|ss|sh)es$/i'=&gt;'\1','/(m)ovies$/i'=&gt;'\1ovie','/(s)eries$/i'=&gt;'\1eries','/([^aeiouy]|qu)ies$/i'=&gt;'\1y','/([lr])ves$/i'=&gt;'\1f','/(tive)s$/i'=&gt;'\1','/(hive)s$/i'=&gt;'\1','/([^f])ves$/i'=&gt;'\1fe','/(^analy)ses$/i'=&gt;'\1sis','/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$/i'=&gt;'\1\2sis','/([ti]|addend)a$/i'=&gt;'\1um','/(alumn|formul)ae$/i'=&gt;'$1a','/(n)ews$/i'=&gt;'\1ews','/(.*)ss$/i'=&gt;'\1ss','/(.*)s$/i'=&gt;'\1',),'countable'=&gt;array('aircraft','cannon','deer','equipment','fish','information','money','moose','rice','series','sheep','species','swine',))</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rules for pluralizing and singularizing of nouns.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaddWord" id="addWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static addWord</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a139">139</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a word to the cache, useful to make exceptions or to add words in other languages.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			addWord
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$singular</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$plural</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$singular</span><span class="var-description">: word.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$plural</span><span class="var-description">: word.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcamelize" id="camelize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static camelize</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a234">234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns given word as CamelCased.</p>
+<p class="description"><p>Converts a word like &quot;foo_bar&quot; or &quot;foo bar&quot; to &quot;FooBar&quot;. It  will remove non alphanumeric characters from the word, so  &quot;who's online&quot; will be converted to &quot;WhoSOnline&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> UpperCamelCasedWord</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			camelize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: Word to convert to camel case.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclassify" id="classify"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static classify</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a342">342</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a table name to its class name according to Koowa naming conventions.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> SingularClassName</li>
+				<li><span class="field">see:</span> <a href="../FrameworkOnFramework/FOFInflector.html#methodtableize">FOFInflector::tableize()</a></li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">example:</span> example not found</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			classify
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: Table name for getting related ClassName.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexplode" id="explode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static explode</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a269">269</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert any &quot;CamelCased&quot; word into an array of strings</p>
+<p class="description"><p>Returns an array of strings each of which is a substring of string formed  by splitting it at the camelcased letters.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array of strings</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			explode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: Word to explode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPart" id="getPart"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getPart</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a423">423</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a part of a CamelCased word by index.</p>
+<p class="description"><p>Use a negative index to start at the last part of the word (-1 is the  last part)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getPart
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$index</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: Word</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$index</span><span class="var-description">: Index of the part</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span><span class="var-description">: Default value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhumanize" id="humanize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static humanize</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a301">301</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a human-readable string from $word.</p>
+<p class="description"><p>Returns a human-readable string from $word, by replacing  underscores with a space, and by upper-casing the initial  character by default.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Human-readable word</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			humanize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: String to &quot;humanize&quot;</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodimplode" id="implode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static implode</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a283">283</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert  an array of strings into a &quot;CamelCased&quot; word.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> UpperCamelCasedWord</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			implode
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$words</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$words</span><span class="var-description">: Array to implode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisPlural" id="isPlural"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isPlural</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a396">396</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check to see if an Enlish word is plural.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isPlural
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: String to be checked.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisSingular" id="isSingular"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isSingular</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a374">374</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check to see if an English word is singular</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isSingular
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The word to check</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpluralize" id="pluralize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static pluralize</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a152">152</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Singular English word to plural.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Plural noun.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			pluralize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: word to pluralize.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsingularize" id="singularize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static singularize</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a191">191</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Plural English word to singular.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Singular noun.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			singularize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: Word to singularize.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtableize" id="tableize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static tableize</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a320">320</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a class name to its table name according to Koowa  naming conventions.</p>
+<p class="description"><p>Converts &quot;Person&quot; to &quot;people&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> plural_table_name</li>
+				<li><span class="field">see:</span> <a href="../FrameworkOnFramework/FOFInflector.html#methodclassify">FOFInflector::classify()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			tableize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$className</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$className</span><span class="var-description">: Class name for getting related table_name.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunderscore" id="underscore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static underscore</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a251">251</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a word &quot;into_it_s_underscored_version&quot;</p>
+<p class="description"><p>Convert any &quot;CamelCased&quot; or &quot;ordinary Word&quot; into an &quot;underscored_word&quot;.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Underscored word</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			underscore
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: Word to underscore</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvariablize" id="variablize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static variablize</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfofinflectorinflector.php.html#a358">358</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns camelBacked version of a string. Same as camelize but first char is lowercased.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../FrameworkOnFramework/FOFInflector.html#methodcamelize">FOFInflector::camelize()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			variablize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: String to be camelBacked.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 19 Nov 2013 10:05:37 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

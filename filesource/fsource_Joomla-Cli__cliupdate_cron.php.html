@@ -52,10 +52,10 @@
 <li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;*&nbsp;This&nbsp;script&nbsp;will&nbsp;fetch&nbsp;the&nbsp;update&nbsp;information&nbsp;for&nbsp;all&nbsp;extensions&nbsp;and&nbsp;store</span></div></li>
 <li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;*&nbsp;them&nbsp;in&nbsp;the&nbsp;database,&nbsp;speeding&nbsp;up&nbsp;your&nbsp;administrator.</span></div></li>
 <li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;*</span></div></li>
-<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;Joomla.Cli</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;Joomla.CLI</span></div></li>
 <li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;2.5</span></div></li>
 <li><div class="src-line"><a name="a45"></a><span class="src-doc">&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a46"></a><span class="src-key">class&nbsp;</span><a href="../Joomla-Cli/Updatecron.html">Updatecron</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../Joomla-Platform/Application/JApplicationCli.html">JApplicationCli</a></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-key">class&nbsp;</span><a href="../Joomla-CLI/Updatecron.html">Updatecron</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../Joomla-Platform/Application/JApplicationCli.html">JApplicationCli</a></div></li>
 <li><div class="src-line"><a name="a47"></a><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
 <li><div class="src-line"><a name="a49"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Entry&nbsp;point&nbsp;for&nbsp;the&nbsp;script</span></div></li>
@@ -64,7 +64,7 @@
 <li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
 <li><div class="src-line"><a name="a53"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;2.5</span></div></li>
 <li><div class="src-line"><a name="a54"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-Cli/Updatecron.html#methoddoExecute">doExecute</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Joomla-CLI/Updatecron.html#methoddoExecute">doExecute</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
 <li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Get&nbsp;the&nbsp;update&nbsp;cache&nbsp;time</span></div></li>
 <li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$component&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Libraries/Component/JComponentHelper.html">JComponentHelper</a></span><span class="src-sym">::</span><a href="../Joomla-Libraries/Component/JComponentHelper.html#methodgetComponent">getComponent</a><span class="src-sym">(</span><span class="src-str">'com_installer'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
@@ -74,18 +74,18 @@
 <li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$cache_timeout&nbsp;</span>=&nbsp;<span class="src-num">3600&nbsp;</span>*&nbsp;<span class="src-var">$cache_timeout</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a63"></a>&nbsp;</div></li>
 <li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Find&nbsp;all&nbsp;updates</span></div></li>
-<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Application/JApplicationCli.html#methodout">out</a><span class="src-sym">(</span><span class="src-str">'Fetching&nbsp;updates...'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">out</span><span class="src-sym">(</span><span class="src-str">'Fetching&nbsp;updates...'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$updater&nbsp;</span>=&nbsp;<span class="src-id"><a href="../Joomla-Platform/Updater/JUpdater.html">JUpdater</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Updater/JUpdater.html#methodgetInstance">getInstance</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$updater</span><span class="src-sym">-&gt;</span><span class="src-id">findUpdates</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-var">$cache_timeout</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Application/JApplicationCli.html#methodout">out</a><span class="src-sym">(</span><span class="src-str">'Finished&nbsp;fetching&nbsp;updates'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">out</span><span class="src-sym">(</span><span class="src-str">'Finished&nbsp;fetching&nbsp;updates'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a70"></a><span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a71"></a>&nbsp;</div></li>
-<li><div class="src-line"><a name="a72"></a><span class="src-id"><a href="../Joomla-Platform/Application/JApplicationCli.html">JApplicationCli</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Application/JApplicationCli.html#methodgetInstance">getInstance</a><span class="src-sym">(</span><span class="src-str">'Updatecron'</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Application/JApplicationCli.html#methodexecute">execute</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-id"><a href="../Joomla-Platform/Application/JApplicationCli.html">JApplicationCli</a></span><span class="src-sym">::</span><a href="../Joomla-Platform/Application/JApplicationCli.html#methodgetInstance">getInstance</a><span class="src-sym">(</span><span class="src-str">'Updatecron'</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="../Joomla-Platform/Application/_libraries---joomla---application---daemon.php.html#functionexecute">execute</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 </ol></div>
 </div>
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 Nov 2013 15:14:57 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Tue, 19 Nov 2013 15:16:13 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</body>
 </html>

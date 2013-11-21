@@ -1,0 +1,2389 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class FOFLessParser</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> FOFLessParser</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This class is taken verbatim from:</p>
+<p class="description"><p>lessphp v0.3.8  http://leafo.net/lessphp</p><p>LESS css compiler, adapted from http://lesscss.org</p><p>Copyright 2012, Leaf Corcoran &lt;leafot@gmail.com&gt;  Licensed under MIT or GPLv3, see LICENSE</p><p>Responsible for taking a string of LESS code and converting it into a syntax tree</p></p>
+	<ul class="tags">
+				<li><span class="field">since:</span> 2.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_libraries---fof---less---parser---parser.php.html">/libraries/fof/less/parser/parser.php</a> (line <span class="field"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a25">25</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																				<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$commentMulti" title="details" class="var-name">$commentMulti</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$commentMultiLeft" title="details" class="var-name">$commentMultiLeft</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$commentMultiRight" title="details" class="var-name">$commentMultiRight</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$commentSingle" title="details" class="var-name">$commentSingle</a>
+				</div>
+																																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$literalCache" title="details" class="var-name">$literalCache</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$nextBlockId" title="details" class="var-name">$nextBlockId</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$operatorString" title="details" class="var-name">$operatorString</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$precedence" title="details" class="var-name">$precedence</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$supressDivisionProps" title="details" class="var-name">$supressDivisionProps</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$whitePattern" title="details" class="var-name">$whitePattern</a>
+				</div>
+																				<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$blockDirectives" title="details" class="var-name">$blockDirectives</a>
+				</div>
+																																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$inParens" title="details" class="var-name">$inParens</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$lineDirectives" title="details" class="var-name">$lineDirectives</a>
+				</div>
+																																																											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">FOFLessParser</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$lessc</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$sourceName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#append" title="details" class="method-name">append</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$prop</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$pos</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#argumentDef" title="details" class="method-name">argumentDef</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$args</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$isVararg</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">','</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#argumentValues" title="details" class="method-name">argumentValues</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$args</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">','</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#assign" title="details" class="method-name">assign</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#color" title="details" class="method-name">color</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#end" title="details" class="method-name">end</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#expHelper" title="details" class="method-name">expHelper</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$lhs</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$minP</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#expression" title="details" class="method-name">expression</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#expressionList" title="details" class="method-name">expressionList</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$exps</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">[type]</span>
+										<a href="#fixTags" title="details" class="method-name">fixTags</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#func" title="details" class="method-name">func</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$func</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#genericList" title="details" class="method-name">genericList</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">$parseItem</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$flatten</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#guard" title="details" class="method-name">guard</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$guard</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#guardGroup" title="details" class="method-name">guardGroup</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$guardGroup</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#guards" title="details" class="method-name">guards</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$guards</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#import" title="details" class="method-name">import</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#interpolation" title="details" class="method-name">interpolation</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isDirective" title="details" class="method-name">isDirective</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dirname</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">$directives</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#keyword" title="details" class="method-name">keyword</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$word</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#literal" title="details" class="method-name">literal</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$what</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$eatWhitespace</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#match" title="details" class="method-name">match</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$regex</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$eatWhitespace</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#mediaExpression" title="details" class="method-name">mediaExpression</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">[type]</span>
+										<a href="#mediaQuery" title="details" class="method-name">mediaQuery</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#mediaQueryList" title="details" class="method-name">mediaQueryList</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#mixinTags" title="details" class="method-name">mixinTags</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$tags</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#openString" title="details" class="method-name">openString</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$end</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$nestingOpen</span> = <span class="var-default">null</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$rejectStrs</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parenValue" title="details" class="method-name">parenValue</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">[type]</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$buffer</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#parseChunk" title="details" class="method-name">parseChunk</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#peek" title="details" class="method-name">peek</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$regex</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span> = <span class="var-default">null</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$from</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">[type]</span>
+										<a href="#pop" title="details" class="method-name">pop</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#propertyValue" title="details" class="method-name">propertyValue</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$keyName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">stdClass</span>
+										<a href="#pushBlock" title="details" class="method-name">pushBlock</a>
+											([<span class="var-type">[type]</span>&nbsp;<span class="var-name">$selectors</span> = <span class="var-default">null</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">stdClass</span>
+										<a href="#pushSpecialBlock" title="details" class="method-name">pushSpecialBlock</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">[type]</span>
+										<a href="#removeComments" title="details" class="method-name">removeComments</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$text</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#seek" title="details" class="method-name">seek</a>
+											([<span class="var-type">[type]</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#string" title="details" class="method-name">string</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#tag" title="details" class="method-name">tag</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$tag</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$simple</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#tagBracket" title="details" class="method-name">tagBracket</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#tagExpression" title="details" class="method-name">tagExpression</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#tags" title="details" class="method-name">tags</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$tags</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$simple</span> = <span class="var-default">false</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">','</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#throwError" title="details" class="method-name">throwError</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span> = <span class="var-default">&quot;parse error&quot;</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#to" title="details" class="method-name">to</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$what</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$until</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allowNewline</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#unit" title="details" class="method-name">unit</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$unit</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#value" title="details" class="method-name">value</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#variable" title="details" class="method-name">variable</a>
+											(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#whitespace" title="details" class="method-name">whitespace</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$commentMulti" id="$commentMulti"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$commentMulti</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$commentMultiLeft" id="$commentMultiLeft"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$commentMultiLeft</span>
+			 = <span class="var-default"> &quot;/*&quot;</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$commentMultiRight" id="$commentMultiRight"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$commentMultiRight</span>
+			 = <span class="var-default"> &quot;*/&quot;</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$commentSingle" id="$commentSingle"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$commentSingle</span>
+			 = <span class="var-default"> &quot;//&quot;</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$literalCache" id="$literalCache"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$literalCache</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a75">75</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$nextBlockId" id="$nextBlockId"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$nextBlockId</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$operatorString" id="$operatorString"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$operatorString</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$precedence" id="$precedence"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$precedence</span>
+			 = <span class="var-default">array(<br />		'=&lt;'					 =&gt; 0,<br />		'&gt;='					 =&gt; 0,<br />		'='						 =&gt; 0,<br />		'&lt;'						 =&gt; 0,<br />		'&gt;'						 =&gt; 0,<br />		'+'						 =&gt; 1,<br />		'-'						 =&gt; 1,<br />		'*'						 =&gt; 2,<br />		'/'						 =&gt; 2,<br />		'%'						 =&gt; 2,<br />	)</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$supressDivisionProps" id="$supressDivisionProps"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$supressDivisionProps</span>
+			 = <span class="var-default">array('/border-radius$/i', '/^font$/i')</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$whitePattern" id="$whitePattern"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/StaticVariable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$whitePattern</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$blockDirectives" id="$blockDirectives"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$blockDirectives</span>
+			 = <span class="var-default">array(&quot;font-face&quot;, &quot;keyframes&quot;, &quot;page&quot;, &quot;-moz-document&quot;)</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$inParens" id="$inParens"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$inParens</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a72">72</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">if we are in parens we can be more liberal with whitespace around  operators because it must evaluate to a single value and thus is less  ambiguous.</p>
+<p class="description"><p>Consider:      property1: 10 -5; // is two numbers, 10 and -5      property2: (10 -5); // should evaluate to 5</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$lineDirectives" id="$lineDirectives"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$lineDirectives</span>
+			 = <span class="var-default">array(&quot;charset&quot;)</span>			(line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a83">83</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">FOFLessParser</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$lessc</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$sourceName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$lessc</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sourceName</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodappend" id="append"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">append</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2114">2114</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Append a property to the current block</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			append
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$prop</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$pos</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$prop</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$pos</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodargumentDef" id="argumentDef"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">argumentDef</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1225">1225</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume an argument definition list surrounded by ()  each argument is a variable name with optional value  or at the end a ... or a variable named followed by ...</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			argumentDef
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$args</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$isVararg</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">','</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$args</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$isVararg</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$delim</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodargumentValues" id="argumentValues"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">argumentValues</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1169">1169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume a list of property values delimited by ; and wrapped in ()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			argumentValues
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$args</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">','</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$args</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$delim</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodassign" id="assign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">assign</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1638">1638</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume an assignment operator  Can optionally take a name that will be set to the current property name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			assign
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcolor" id="color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">color</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1142">1142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">a # color</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			color
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodend" id="end"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">end</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1672">1672</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume an end of statement delimiter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			end
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodexpHelper" id="expHelper"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">expHelper</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a511">511</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Recursively parse infix equation with $lhs at precedence $minP</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			expHelper
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$lhs</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$minP</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$lhs</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$minP</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexpression" id="expression"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">expression</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a474">474</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attempt to consume an expression.</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://en.wikipedia.org/wiki/Operator-precedence_parser#Pseudo-code">http://en.wikipedia.org/wiki/Operator-precedence_parser#Pseudo-code</a></li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			expression
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexpressionList" id="expressionList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">expressionList</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a446">446</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">a list of expressions</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			expressionList
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$exps</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$exps</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfixTags" id="fixTags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">fixTags</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a425">425</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[fixTags description]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> [description]</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">[type]</span>
+		<span class="method-name">
+			fixTags
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$tags</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfunc" id="func"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">func</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1535">1535</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A css function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			func
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$func</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$func</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenericList" id="genericList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">genericList</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1845">1845</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[genericList description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			genericList
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">$parseItem</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$flatten</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$parseItem</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$delim</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$flatten</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodguard" id="guard"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">guard</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1770">1770</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[guard description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			guard
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$guard</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$guard</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodguardGroup" id="guardGroup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">guardGroup</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1737">1737</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A bunch of guards that are and'd together</p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> rename to guardGroup</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			guardGroup
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$guardGroup</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$guardGroup</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodguards" id="guards"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">guards</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1694">1694</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[guards description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			guards
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$guards</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$guards</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodimport" id="import"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">import</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a752">752</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">an import statement</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			import
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinterpolation" id="interpolation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">interpolation</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1079">1079</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[interpolation description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			interpolation
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisDirective" id="isDirective"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isDirective</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a409">409</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[isDirective description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isDirective
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dirname</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">$directives</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dirname</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$directives</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodkeyword" id="keyword"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">keyword</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1655">1655</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume a keyword</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			keyword
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$word</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodliteral" id="literal"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">literal</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1802">1802</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[literal description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			literal
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$what</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$eatWhitespace</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$what</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$eatWhitespace</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmatch" id="match"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">match</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1930">1930</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Try to match something on head of buffer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			match
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$regex</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$eatWhitespace</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$regex</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$eatWhitespace</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmediaExpression" id="mediaExpression"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">mediaExpression</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a863">863</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[mediaExpression description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			mediaExpression
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmediaQuery" id="mediaQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">mediaQuery</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a801">801</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[mediaQuery description]</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> [description]</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">[type]</span>
+		<span class="method-name">
+			mediaQuery
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmediaQueryList" id="mediaQueryList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">mediaQueryList</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a782">782</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[mediaQueryList description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			mediaQueryList
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmixinTags" id="mixinTags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">mixinTags</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1336">1336</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of tags of specifying mixin path  Optionally separated by &gt; (lazy, accepts extra &gt;)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			mixinTags
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$tags</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodopenString" id="openString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">openString</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a901">901</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An unbounded string stopped by $end</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			openString
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$end</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$nestingOpen</span> = <span class="var-default">null</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$rejectStrs</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$end</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$nestingOpen</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$rejectStrs</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparenValue" id="parenValue"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">parenValue</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a622">622</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[parenValue description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parenValue
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a115">115</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse text</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> [description]</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">[type]</span>
+		<span class="method-name">
+			parse
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$buffer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$buffer</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseChunk" id="parseChunk"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">parseChunk</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a192">192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse a single chunk off the head of the buffer and append it to the  current parse environment.</p>
+<p class="description"><p>Returns false when the buffer is empty, or when there is an error.</p><p>This function is called repeatedly until the entire document is  parsed.</p><p>This parser is most similar to a recursive descent parser. Single  functions represent discrete grammatical rules for the language, and  they are able to capture the text that represents those rules.</p><p>Consider the function lessc::keyword(). (all parse functions are  structured the same)</p><p>The function takes a single reference argument. When calling the  function it will attempt to match a keyword on the head of the buffer.  If it is successful, it will place the keyword in the referenced  argument, advance the position in the buffer, and return true. If it  fails then it won't advance the buffer and it will return false.</p><p>All of these parse functions are powered by lessc::match(), which behaves  the same way, but takes a literal regular expression. Sometimes it is  more convenient to use match instead of creating a new function.</p><p>Because of the format of the functions, to parse an entire string of  grammatical rules, you can chain them together using &amp;&amp;.</p><p>But, if some of the rules in the chain succeed before one fails, then  the buffer position will be left at an invalid state. In order to  avoid this, lessc::seek() is used to remember and set buffer positions.</p><p>Before parsing a chain, use $s = $this-&gt;seek() to remember the current  position into $s. Then if a chain fails, use $this-&gt;seek($s) to  go back where we started.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			parseChunk
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpeek" id="peek"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">peek</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1996">1996</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Match something without consuming it</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			peek
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$regex</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span> = <span class="var-default">null</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$from</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$regex</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$from</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpop" id="pop"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">pop</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2129">2129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pop something off the stack</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> [description]</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">[type]</span>
+		<span class="method-name">
+			pop
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpropertyValue" id="propertyValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">propertyValue</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a573">573</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume a list of values for a property</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			propertyValue
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$keyName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$value</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$keyName</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpushBlock" id="pushBlock"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">pushBlock</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2074">2074</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[pushBlock description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			pushBlock
+		</span>
+					([<span class="var-type">[type]</span>&nbsp;<span class="var-name">$selectors</span> = <span class="var-default">null</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$selectors</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$type</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpushSpecialBlock" id="pushSpecialBlock"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">pushSpecialBlock</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2101">2101</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Push a block that doesn't multiply tags</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">stdClass</span>
+		<span class="method-name">
+			pushSpecialBlock
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$type</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveComments" id="removeComments"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">removeComments</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2146">2146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove comments from $text</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> [description]</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">[type]</span>
+		<span class="method-name">
+			removeComments
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$text</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodseek" id="seek"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">seek</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2016">2016</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Seek to a spot in the buffer or return where we are on no argument</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			seek
+		</span>
+					([<span class="var-type">[type]</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$where</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstring" id="string"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">string</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a995">995</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[string description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			string
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtag" id="tag"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">tag</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1424">1424</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A single tag</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			tag
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$tag</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$simple</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$tag</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$simple</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtagBracket" id="tagBracket"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">tagBracket</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1362">1362</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A bracketed value (contained within in a tag definition)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			tagBracket
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$value</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtagExpression" id="tagExpression"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">tagExpression</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1400">1400</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[tagExpression description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			tagExpression
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$value</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtags" id="tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">tags</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1306">1306</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume a list of tags  This accepts a hanging delimiter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			tags
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$tags</span>, [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$simple</span> = <span class="var-default">false</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$delim</span> = <span class="var-default">','</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$tags</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$simple</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$delim</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodthrowError" id="throwError"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">throwError</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a2040">2040</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[throwError description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			throwError
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span> = <span class="var-default">&quot;parse error&quot;</span>], [<span class="var-type">[type]</span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$count</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodto" id="to"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">to</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1894">1894</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Advance counter to next occurrence of $what  $until - don't include $what in advance  $allowNewline, if string, will be used as valid char set</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			to
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">$what</span>, <span class="var-type">[type]</span>&nbsp;<span class="var-name">&$out</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$until</span> = <span class="var-default">false</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allowNewline</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">$what</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$out</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$until</span><span class="var-description">: [description]</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allowNewline</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunit" id="unit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">unit</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1112">1112</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">[unit description]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			unit
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$unit</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$unit</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalue" id="value"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">value</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a657">657</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">a single value</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			value
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$value</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvariable" id="variable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">variable</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1606">1606</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Consume a less variable</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			variable
+		</span>
+					(<span class="var-type">[type]</span>&nbsp;<span class="var-name">&$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">[type]</span>
+				<span class="var-name">&$name</span><span class="var-description">: [description]</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwhitespace" id="whitespace"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">whitespace</span> (line <span class="line-number"><a href="../__filesource/fsource_FrameworkOnFramework__librariesfoflessparserparser.php.html#a1959">1959</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Watch some whitespace</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			whitespace
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 19 Nov 2013 10:10:23 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
